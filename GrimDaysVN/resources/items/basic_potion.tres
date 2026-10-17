@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="VNItemTemplate" format=3 uid="uid://baqcqb55do1n8"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/crafting/resources/item_template.gd" id="7_45vtn"]
+
+[sub_resource type="Resource" id="Resource_55gla"]
+metadata/__load_path__ = "res://content/assets/placeholder/equip_icon_potion_red_0.png"
+
+[sub_resource type="Resource" id="Resource_o0hgu"]
+
+[sub_resource type="Resource" id="Resource_xj7ub"]
+
+[resource]
+script = ExtResource("7_45vtn")
+id = 4
+display_name = "Basic Health Vial"
+description = "A basic restorative, refined from small ectoplasm. Gives a mild amount of health instantly on use and then slowly restores injuries for a short time.
+
+Can not be used while other effects are active."
+icon = SubResource("Resource_55gla")
+types = Array[int]([2, 3])
+max_stack = 5
+cash_value = 1000
+positive_effects = [SubResource("Resource_o0hgu"), SubResource("Resource_xj7ub")]

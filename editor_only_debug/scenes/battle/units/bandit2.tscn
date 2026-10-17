@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cl0efvnxffgv3"]
+
+[ext_resource type="Texture2D" uid="uid://cbvro82qpcq2n" path="res://editor_only_debug/visuals/placeholder/bandit2-battle-skin-placeholder.png" id="1_vq4w1"]
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/_scripts/battle/unit/unit_2d_sprite.gd" id="2_j6h66"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="3_1262d"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="4_sos3u"]
+[ext_resource type="Texture2D" uid="uid://b5th0dnbswyuy" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect7/effect7_1.png" id="5_yksui"]
+[ext_resource type="Texture2D" uid="uid://dhju27msvn7fa" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect7/effect7_2.png" id="6_v8qf2"]
+[ext_resource type="Texture2D" uid="uid://c8v0arwe553i2" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect7/effect7_3.png" id="7_cxhjb"]
+[ext_resource type="Texture2D" uid="uid://umvkt8grlup0" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect7/effect7_4.png" id="8_bknef"]
+[ext_resource type="Texture2D" uid="uid://bbdy743j32d3o" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect7/effect7_5.png" id="9_cyh3w"]
+[ext_resource type="Texture2D" uid="uid://cfv355xxwt2cm" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect7/effect7_6.png" id="10_djjwx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35m4c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yksui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v8qf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cxhjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bknef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cyh3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_djjwx")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="man-in-black_battle" type="Sprite2D" node_paths=PackedStringArray("collision_area", "raycaster", "attack_particle")]
+position = Vector2(-36, 13)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_vq4w1")
+script = ExtResource("2_j6h66")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+attack_particle = NodePath("AttackAnimation")
+
+[node name="Appearance Area" parent="." instance=ExtResource("3_1262d")]
+position = Vector2(168, -120)
+
+[node name="8_way_raycasts" parent="." instance=ExtResource("4_sos3u")]
+position = Vector2(166.667, -40)
+
+[node name="AttackAnimation" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(935.767, 50)
+rotation = -0.17453292
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_35m4c")

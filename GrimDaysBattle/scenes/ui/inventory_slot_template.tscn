@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://6ephp6hse8wa"]
+
+[ext_resource type="Texture2D" uid="uid://c3cmgjkmmx8xq" path="res://GrimDays/assets/visuals/ui/UI MMORPG Dark Templar/Backpack inventory big/Cell.png" id="1_untc1"]
+
+[node name="Inventory_Slot" type="NinePatchRect"]
+custom_minimum_size = Vector2(60, 60)
+texture = ExtResource("1_untc1")
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3

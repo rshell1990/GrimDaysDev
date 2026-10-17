@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://cu2ld6ckqg41g"]
+
+[ext_resource type="Resource" uid="uid://o0y07vqbvbf6" path="res://GrimDaysBattle/resources/actions/celine/heavy_blows_single_rank/heavy_blows_single_rank.tres" id="1_js55w"]
+[ext_resource type="Texture2D" uid="uid://rjxbcx625uwh" path="res://editor_only_debug/visuals/skill_icons/Warriorskill_05_nobg.png" id="1_y24fn"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="2_js55w"]
+
+[resource]
+script = ExtResource("2_js55w")
+action = ExtResource("1_js55w")
+id = &"heavy_blows_node"
+display_name = "Heavy Blows"
+icon = ExtResource("1_y24fn")
+description = "Adds a chance to delay the target a turn to the combination of attacks."
+row = 2
+maximum_rank = 5
+previous_node = &"quick_jab_node"
+composite = true
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

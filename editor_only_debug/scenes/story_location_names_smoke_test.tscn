@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://editor_only_debug/scripts/debug/story_location_names_smoke_test.gd" id="1_test"]
+
+[node name="StoryLocationNamesSmokeTest" type="Node"]
+script = ExtResource("1_test")

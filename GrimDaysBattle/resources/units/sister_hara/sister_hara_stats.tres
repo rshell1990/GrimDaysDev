@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="UnitStatTemplateCollection" format=3 uid="uid://dkmuypcra0wsx"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_0dxsk"]
+[ext_resource type="Resource" uid="uid://ciarqax4avr6o" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/level.tres" id="2_1f1s7"]
+[ext_resource type="Resource" uid="uid://bpqp43ku1r7mu" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/experience.tres" id="3_w7wvq"]
+[ext_resource type="Resource" uid="uid://cfwwntgy6yu4s" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/endurance.tres" id="4_4dla7"]
+[ext_resource type="Resource" uid="uid://dw8ij6pbjp6v0" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/finesse.tres" id="5_anc1t"]
+[ext_resource type="Resource" uid="uid://bnpj3tlqmhx3b" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/luck.tres" id="6_lup82"]
+[ext_resource type="Resource" uid="uid://cb6fivgc426l" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/mysticism.tres" id="7_p0ou5"]
+[ext_resource type="Resource" uid="uid://bjlo4bn8xidqe" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/perception.tres" id="8_b3b4j"]
+[ext_resource type="Resource" uid="uid://cibyw8nh5vb07" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/strength.tres" id="9_pwdlo"]
+[ext_resource type="Resource" uid="uid://d4etw6ttglqpg" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/vitality.tres" id="10_j3cwq"]
+[ext_resource type="Resource" uid="uid://dod4kxylu3yoi" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/weight.tres" id="11_wxtbl"]
+[ext_resource type="Resource" uid="uid://bkrt4gga2hk8w" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/damage_modifier.tres" id="12_0rtmm"]
+[ext_resource type="Resource" uid="uid://brpjfhgn5a8jv" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/willpower.tres" id="13_dccea"]
+[ext_resource type="Resource" uid="uid://bh22wmjlxbnw2" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/energy.tres" id="14_sv7mm"]
+[ext_resource type="Resource" uid="uid://brhw0s7f5h7bh" path="res://GrimDaysBattle/resources/units/harlok/stats/calculated/mana.tres" id="14_yvl4f"]
+[ext_resource type="Resource" uid="uid://f2pbgh2eapi1" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/health.tres" id="15_8lwtf"]
+[ext_resource type="Resource" uid="uid://dl3hhorrer8xy" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/magical_damage.tres" id="16_kcro8"]
+[ext_resource type="Resource" uid="uid://byvledkkhduyu" path="res://GrimDaysBattle/resources/units/sister_hara/stats/scaling/magic_resistance.tres" id="17_ptvgy"]
+[ext_resource type="Resource" uid="uid://tq4vdmc1o7wx" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/physical_damage.tres" id="18_b1h0j"]
+[ext_resource type="Resource" uid="uid://6v2mx5a4us8d" path="res://GrimDaysBattle/resources/units/sister_hara/stats/scaling/physical_resistance.tres" id="19_74w7c"]
+[ext_resource type="Resource" uid="uid://bwjdfloiq1epv" path="res://GrimDaysBattle/resources/units/sister_hara/stats/scaling/accuracy.tres" id="20_sdnuj"]
+[ext_resource type="Resource" uid="uid://tvuqbqydh3gg" path="res://GrimDaysBattle/resources/units/sister_hara/stats/scaling/critical_strike.tres" id="21_bxxi7"]
+[ext_resource type="Resource" uid="uid://csc301uip3asx" path="res://GrimDaysBattle/resources/units/sister_hara/stats/scaling/evasion.tres" id="22_31ue8"]
+[ext_resource type="Resource" uid="uid://bijoebm5et5aj" path="res://GrimDaysBattle/resources/units/sister_hara/stats/scaling/lucky_evasion.tres" id="23_w5eiy"]
+[ext_resource type="Resource" uid="uid://bokenewdc4r7w" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/swiftness.tres" id="24_tocgr"]
+[ext_resource type="Resource" uid="uid://ctc61u4g1641t" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/weight_limit.tres" id="25_s6fgu"]
+[ext_resource type="Resource" uid="uid://bcwjrqe86yvq" path="res://GrimDaysBattle/resources/units/sister_hara/stats/special/encumberance.tres" id="26_jmgce"]
+[ext_resource type="Script" uid="uid://dxag8jqccajir" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_collection.gd" id="27_uc4ao"]
+[ext_resource type="Resource" uid="uid://dxf1mtss44wol" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/barter.tres" id="28_vtxcj"]
+[ext_resource type="Resource" uid="uid://ctajvyswic8fx" path="res://GrimDaysBattle/resources/units/sister_hara/stats/flat/charisma.tres" id="29_4uils"]
+
+[resource]
+script = ExtResource("27_uc4ao")
+all = Array[ExtResource("1_0dxsk")]([ExtResource("2_1f1s7"), ExtResource("3_w7wvq"), ExtResource("4_4dla7"), ExtResource("5_anc1t"), ExtResource("6_lup82"), ExtResource("7_p0ou5"), ExtResource("8_b3b4j"), ExtResource("9_pwdlo"), ExtResource("10_j3cwq"), ExtResource("13_dccea"), ExtResource("11_wxtbl"), ExtResource("12_0rtmm"), ExtResource("14_yvl4f"), ExtResource("14_sv7mm"), ExtResource("15_8lwtf"), ExtResource("16_kcro8"), ExtResource("17_ptvgy"), ExtResource("18_b1h0j"), ExtResource("19_74w7c"), ExtResource("20_sdnuj"), ExtResource("21_bxxi7"), ExtResource("22_31ue8"), ExtResource("23_w5eiy"), ExtResource("24_tocgr"), ExtResource("25_s6fgu"), ExtResource("26_jmgce"), ExtResource("28_vtxcj"), ExtResource("29_4uils")])
+id = &"sister_hara_stats"
+metadata/_custom_type_script = "uid://dxag8jqccajir"

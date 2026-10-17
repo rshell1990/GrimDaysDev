@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://s0dqr8k63066"]
+
+[ext_resource type="Script" uid="uid://r0trq4xmvmxn" path="res://GrimDaysBattle/scripts/_Global/_repositories.gd" id="1_p4pg0"]
+[ext_resource type="Script" uid="uid://bamj7tw8qpa74" path="res://GrimDaysBattle/scripts/_Global/_repository.gd" id="1_u8580"]
+[ext_resource type="Resource" uid="uid://c6c54t24daryh" path="res://GrimDaysBattle/resources/units/_units.tres" id="3_pgbqv"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/items/_equipment.tres" id="4_equipment"]
+
+[node name="Repositories" type="Node" unique_id=1038055414]
+script = ExtResource("1_p4pg0")
+
+[node name="AudioFX" type="Node" parent="." unique_id=499065909]
+script = ExtResource("1_u8580")
+
+[node name="AudioMusic" type="Node" parent="." unique_id=296396469]
+script = ExtResource("1_u8580")
+
+[node name="AudioVoice" type="Node" parent="." unique_id=1480543402]
+script = ExtResource("1_u8580")
+
+[node name="AudioSong" type="Node" parent="." unique_id=1715546765]
+script = ExtResource("1_u8580")
+
+[node name="AudioAmbience" type="Node" parent="." unique_id=2096052993]
+script = ExtResource("1_u8580")
+
+[node name="BattleStages" type="Node" parent="." unique_id=586468891]
+script = ExtResource("1_u8580")
+
+[node name="BattleUnits" type="Node" parent="." unique_id=557665394]
+script = ExtResource("1_u8580")
+resource = ExtResource("3_pgbqv")
+
+[node name="BattleEquipment" type="Node" parent="." unique_id=2113121429]
+script = ExtResource("1_u8580")
+resource = ExtResource("4_equipment")
+
+[node name="BattleUnitSkills" type="Node" parent="." unique_id=693311512]
+script = ExtResource("1_u8580")

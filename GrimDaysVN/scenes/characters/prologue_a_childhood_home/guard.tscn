@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bdk4yr3xeisy1"]
+
+[ext_resource type="Script" uid="uid://bsh5mg3guqgvc" path="res://GrimDaysVN/scripts/layered_characters/layered_character_operator.gd" id="1_nwb04"]
+[ext_resource type="Script" uid="uid://b11pxbt1vlwyu" path="res://GrimDaysVN/scripts/system_vram_management/sprite_2d_load_on_demand.gd" id="2_3rh83"]
+[ext_resource type="Texture2D" uid="uid://bpbt7i3ofll0k" path="res://GrimDaysVN/visuals/placeholder/character/guard/guard-temp.png" id="2_kjkm3"]
+[ext_resource type="Script" uid="uid://b1jub2t5ubsme" path="res://GrimDaysVN/scripts/utilities/randomized_speed_animation_player.gd" id="3_kjkm3"]
+
+[sub_resource type="Animation" id="Animation_qfarr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_452hx"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 25), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.98), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3hdg"]
+_data = {
+&"RESET": SubResource("Animation_qfarr"),
+&"idle": SubResource("Animation_452hx")
+}
+
+[node name="Guard" type="CanvasGroup" unique_id=1671884028 node_paths=PackedStringArray("groups")]
+script = ExtResource("1_nwb04")
+default_layers = Dictionary[StringName, StringName]({
+&"Base": &"Neutral"
+})
+groups = {
+&"Base": NodePath("Base")
+}
+
+[node name="Base" type="Node2D" parent="." unique_id=393095816]
+position = Vector2(290, 675)
+
+[node name="Neutral" type="Sprite2D" parent="Base" unique_id=2010833481]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_kjkm3")
+script = ExtResource("2_3rh83")
+path = "uid://bpbt7i3ofll0k"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1988157960]
+libraries/ = SubResource("AnimationLibrary_e3hdg")
+autoplay = &"idle"
+script = ExtResource("3_kjkm3")

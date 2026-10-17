@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://ckr4d8ssbpc24"]
+
+[ext_resource type="Curve" uid="uid://cvmxx2o6ibjyi" path="res://GrimDaysBattle/resources/units/sister_katherine/stats/calculated/physical_damage_per_point_in_strength.tres" id="1_snn1g"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_l2x75"]
+
+[resource]
+script = ExtResource("2_l2x75")
+influenced_by = 10
+growth_curve = ExtResource("1_snn1g")
+type = 310
+id = &"PhysicalDamage"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

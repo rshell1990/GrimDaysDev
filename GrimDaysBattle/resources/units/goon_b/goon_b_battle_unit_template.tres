@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="BattleUnitTemplate" format=3 uid="uid://bhilwci38js1s"]
+
+[ext_resource type="Resource" uid="uid://s0sv4urabrmo" path="res://GrimDaysBattle/resources/actions/street_bullies/spine_animated_basic_attack.tres" id="1_ck4jn"]
+[ext_resource type="PackedScene" uid="uid://cykm0e52oyem6" path="res://GrimDaysBattle/scenes/battle/units/goon_b_spine_animation.tscn" id="2_8vv77"]
+[ext_resource type="Script" uid="uid://cb7akesf5u8d3" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template.gd" id="3_euxpj"]
+[ext_resource type="Script" uid="uid://drwr8dgs5cpum" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template_collection.gd" id="4_almih"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="5_0k7es"]
+[ext_resource type="Resource" uid="uid://cymobviiv8cda" path="res://GrimDaysBattle/resources/units/goon_b/goon_b_leveling_tiers.tres" id="6_0uhs3"]
+[ext_resource type="Resource" uid="uid://47v2e20vx7av" path="res://GrimDaysBattle/resources/effects/harlok_model/play_animation_when_damaged.tres" id="6_ck4jn"]
+[ext_resource type="Resource" uid="uid://dj0tspsauybug" path="res://GrimDaysBattle/resources/effects/play_male_scream_on_defeat.tres" id="7_ie2vp"]
+[ext_resource type="Texture2D" uid="uid://y86jldsojr0d" path="res://GrimDaysBattle/assets/visuals/battle_portraits/goon_b_portrait.png" id="7_mch4j"]
+[ext_resource type="Resource" uid="uid://inw5hu387vt6" path="res://GrimDaysBattle/resources/effects/harlok_model/play_animation_when_defeated.tres" id="7_xexwq"]
+[ext_resource type="Script" uid="uid://bjm8hu372yam1" path="res://GrimDaysBattle/scripts/Unit/Resources/unit_template.gd" id="8_y7nhk"]
+[ext_resource type="Resource" uid="uid://bwxjqsnq71yrs" path="res://GrimDaysBattle/resources/units/goon_b/goon_b_stats.tres" id="10_t70fc"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/goon_b_collection.tres" id="90_collection"]
+
+[sub_resource type="Resource" id="Resource_jh8xl"]
+script = ExtResource("4_almih")
+metadata/_custom_type_script = "uid://drwr8dgs5cpum"
+
+[resource]
+script = ExtResource("8_y7nhk")
+display_name = "Goon B"
+unit_archetype = "Warrior"
+level = 2.0
+portrait = ExtResource("7_mch4j")
+battle_sprite = ExtResource("2_8vv77")
+basic_action_template = ExtResource("1_ck4jn")
+experience_reward = 600
+skill_collection = ExtResource("90_collection")
+leveling_tiers = ExtResource("6_0uhs3")
+stats = ExtResource("10_t70fc")
+starting_attribute_points_spent = {
+"combat": 9,
+"non_combat": 0
+}
+intrinsic_effects = Array[ExtResource("5_0k7es")]([ExtResource("6_ck4jn"), ExtResource("7_ie2vp"), ExtResource("7_xexwq")])
+equipment = SubResource("Resource_jh8xl")
+id = &"GoonBTeen"
+metadata/_custom_type_script = "uid://bjm8hu372yam1"

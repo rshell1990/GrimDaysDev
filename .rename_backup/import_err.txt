@@ -1,0 +1,1765 @@
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/Globals.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/Globals.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste/imported/Globals.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/game.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/game.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/game.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: res://dreams_of_celeste_vn/scenes/autoloads/game.tscn.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: res://dreams_of_celeste_battle/scenes/_global/repositories.tscn.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/DD_SceneManager.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/DD_SceneManager.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste/imported/DD_SceneManager.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/TheDuriel/Logger/LoggerConfig.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/TheDuriel/Logger/LoggerConfig.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Cannot set object script. Parameter should be null or a reference to a valid script.
+   at: set_script (core/object/object.cpp:975)
+SCRIPT ERROR: Parse Error: Cannot assign a value of type Resource to constant "APP_CONFIG" with specified type CustomLoggerConfig.
+   at: GDScript::reload (res://GrimDays/imported/TheDuriel/Logger/Logger.gd:172)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://addons/sound_manager/abstract_audio_player_pool.gd:0)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://addons/sound_manager/sound_effects.gd:0)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://addons/sound_manager/sound_manager.gd:0)
+ERROR: Failed to load script "res://addons/sound_manager/sound_manager.gd" with error "File not found".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Cannot open file 'res://dreams_of_celeste/imported/confirmation_modal.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/confirmation_modal.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste/imported/confirmation_modal.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: res://dreams_of_celeste/imported/confirmation_modal.tscn.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to create an autoload, can't load from UID or path: res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/Globals.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/Globals.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://ckb6uii70ciok.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/game.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/game.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/game.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://b8k88oafa8hrw.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://dqq31tcad4368.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://s0dqr8k63066.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://d0f6by3budwvi.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b6ao8esnum7c2.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhyml37vcxp86.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/DD_SceneManager.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/DD_SceneManager.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bixdwgbijmufo.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b88qp8wpnqntl.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhpha7vckt63y.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dq4rj5dyhn1k7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://bmqf6sl83ghb0.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://0sjmgojb7u7p.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://cmcartj7nu75o.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://tg1syjj5x6eg.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste/imported/confirmation_modal.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/confirmation_modal.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste/imported/confirmation_modal.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://r6ul4ft3vkai.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bms58lw25ngft.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://defha4p4o57rj.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://djgqg4mn6b1e7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/dialogic/plugin.gd:35)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/ui/vn_textbox_layer_clean.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] collect_styles (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:64)
+       [1] _ready (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:47)
+       [2] _add_editor (res://addons/dialogic/Editor/editors_manager.gd:72)
+       [3] _ready (res://addons/dialogic/Editor/editors_manager.gd:47)
+       [4] _enter_tree (res://addons/dialogic/plugin.gd:39)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/ui/vn_textbox_layer_clean.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] collect_styles (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:64)
+       [1] _ready (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:47)
+       [2] _add_editor (res://addons/dialogic/Editor/editors_manager.gd:72)
+       [3] _ready (res://addons/dialogic/Editor/editors_manager.gd:47)
+       [4] _enter_tree (res://addons/dialogic/plugin.gd:39)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/ui/fullscreen_text.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] collect_styles (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:64)
+       [1] _ready (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:47)
+       [2] _add_editor (res://addons/dialogic/Editor/editors_manager.gd:72)
+       [3] _ready (res://addons/dialogic/Editor/editors_manager.gd:47)
+       [4] _enter_tree (res://addons/dialogic/plugin.gd:39)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/ui/fullscreen_text.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] collect_styles (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:64)
+       [1] _ready (res://addons/dialogic/Modules/StyleEditor/style_editor.gd:47)
+       [2] _add_editor (res://addons/dialogic/Editor/editors_manager.gd:72)
+       [3] _ready (res://addons/dialogic/Editor/editors_manager.gd:47)
+       [4] _enter_tree (res://addons/dialogic/plugin.gd:39)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/Globals.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/Globals.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://ckb6uii70ciok.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/game.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/game.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/game.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://b8k88oafa8hrw.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://dqq31tcad4368.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://s0dqr8k63066.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://d0f6by3budwvi.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b6ao8esnum7c2.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhyml37vcxp86.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/DD_SceneManager.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/DD_SceneManager.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bixdwgbijmufo.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b88qp8wpnqntl.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhpha7vckt63y.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dq4rj5dyhn1k7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://bmqf6sl83ghb0.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://0sjmgojb7u7p.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://cmcartj7nu75o.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://tg1syjj5x6eg.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Cannot open file 'res://dreams_of_celeste/imported/confirmation_modal.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/confirmation_modal.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste/imported/confirmation_modal.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://r6ul4ft3vkai.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bms58lw25ngft.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://defha4p4o57rj.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://djgqg4mn6b1e7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/input_helper/plugin.gd:16)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/Globals.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/Globals.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://ckb6uii70ciok.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/game.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/game.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/game.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://b8k88oafa8hrw.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://dqq31tcad4368.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://s0dqr8k63066.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://d0f6by3budwvi.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b6ao8esnum7c2.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhyml37vcxp86.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/DD_SceneManager.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/DD_SceneManager.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bixdwgbijmufo.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b88qp8wpnqntl.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhpha7vckt63y.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dq4rj5dyhn1k7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://bmqf6sl83ghb0.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://0sjmgojb7u7p.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://cmcartj7nu75o.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://tg1syjj5x6eg.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Cannot open file 'res://dreams_of_celeste/imported/confirmation_modal.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/confirmation_modal.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste/imported/confirmation_modal.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://r6ul4ft3vkai.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bms58lw25ngft.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://defha4p4o57rj.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://djgqg4mn6b1e7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/replay_recorder/plugin.gd:105)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!named_globals.has(p_name)" is true.
+   at: remove_named_global_constant (modules/gdscript/gdscript.cpp:2143)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/Globals.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/Globals.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://ckb6uii70ciok.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/game.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/game.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/game.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://b8k88oafa8hrw.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://dqq31tcad4368.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/repositories.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/repositories.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/repositories.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://s0dqr8k63066.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Cannot open file 'res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_battle/scenes/_global/battle_controller.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://d0f6by3budwvi.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/general_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b6ao8esnum7c2.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_battle/scripts/_Global/_signal_bus.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhyml37vcxp86.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste/imported/DD_SceneManager.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/DD_SceneManager.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bixdwgbijmufo.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_a_major_refactor/save_and_load/save_and_load.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://b88qp8wpnqntl.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/input_observer.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dhpha7vckt63y.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/overrides/dd_text_input_subsystem.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://dq4rj5dyhn1k7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/autoloads/ui_manager.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://bmqf6sl83ghb0.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_administrators.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://0sjmgojb7u7p.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/_observers/system_headquarters.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://cmcartj7nu75o.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/_globals/system_helpers.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://tg1syjj5x6eg.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Cannot open file 'res://dreams_of_celeste/imported/confirmation_modal.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste/imported/confirmation_modal.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste/imported/confirmation_modal.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://r6ul4ft3vkai.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/camera/camera_common_operations.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://bms58lw25ngft.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Attempt to open script 'res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd' resulted in error 'File not found'.
+   at: load_source_code (modules/gdscript/gdscript.cpp:1139)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scripts/dialogic/dialogic_relay.gd.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, can't load from UID or path: uid://defha4p4o57rj.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:336)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Cannot open file 'res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn'.
+   at: load (scene/resources/resource_format_text.cpp:1442)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed loading resource: res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn.
+   at: _load (core/io/resource_loader.cpp:317)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to instantiate scene state of "res://dreams_of_celeste_vn/scenes/ui/screen_shaker.tscn", node count is 0. Make sure the PackedScene resource is valid.
+   at: instantiate (scene/resources/packed_scene.cpp:173)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Failed to create an autoload, path is not pointing to a scene or a script: uid://djgqg4mn6b1e7.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:354)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: Condition "!info->node" is true. Continuing.
+   at: update_autoload (editor/settings/editor_autoload_settings.cpp:566)
+   GDScript backtrace (most recent call first):
+       [0] _enter_tree (res://addons/sound_manager/plugin.gd:6)
+ERROR: BUG: Unreferenced static string to 0: CVTT Compress
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: servers
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: EditorRect2D
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @warning_ignore_restore
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @warning_ignore_start
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @export_category
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @export_flags
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @export_node_path
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @export_placeholder
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @export_multiline
+   at: unref (core/string/string_name.cpp:118)
+ERROR: BUG: Unreferenced static string to 0: @abstract
+   at: unref (core/string/string_name.cpp:118)
+WARNING: A Thread object is being destroyed without its completion having been realized.
+Please call wait_to_finish() on it to ensure correct cleanup.
+   at: ~Thread (core/os/thread.cpp:116)
+ERROR: 7 RID allocations of type '23NavMeshGeometryParser2D' were leaked at exit.
+ERROR: 6 RID allocations of type '23NavMeshGeometryParser3D' were leaked at exit.
+ERROR: Pages in use exist at exit in PagedAllocator: N12VariantPools11BucketLargeE
+   at: ~PagedAllocator (./core/templates/paged_allocator.h:170)

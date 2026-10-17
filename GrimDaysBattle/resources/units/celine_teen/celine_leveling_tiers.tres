@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelingTierDefinitionCollection" format=3 uid="uid://dxc6kpbvt3ulf"]
+
+[ext_resource type="Script" uid="uid://cmldk6gn0vowq" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers.gd" id="1_q470n"]
+[ext_resource type="Resource" uid="uid://cggshplr6gokj" path="res://GrimDaysBattle/resources/units/celine_teen/tier_1_to_9.tres" id="2_qifk5"]
+[ext_resource type="Script" uid="uid://de34ja1bnjdse" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers_collection.gd" id="3_nisc8"]
+
+[resource]
+script = ExtResource("3_nisc8")
+all = Array[ExtResource("1_q470n")]([ExtResource("2_qifk5")])
+id = &"CelineLevelingTiers"
+metadata/_custom_type_script = "uid://de34ja1bnjdse"

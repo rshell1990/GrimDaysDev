@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgt66ovv4ih0n"]
+
+[ext_resource type="Script" uid="uid://dolt2gifo1adb" path="res://content/scripts/game_event_flow_control/event_administrator.gd" id="1_i8wm2"]
+[ext_resource type="Script" uid="uid://42u5kwvfuxp2" path="res://content/scripts/game_event_flow_control/event_director.gd" id="2_8f4kq"]
+
+[node name="EventAdministrator" type="Node"]
+script = ExtResource("1_i8wm2")
+
+[node name="EventDirector" type="Node" parent="."]
+script = ExtResource("2_8f4kq")

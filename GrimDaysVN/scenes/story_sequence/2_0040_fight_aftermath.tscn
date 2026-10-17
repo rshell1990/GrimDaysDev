@@ -1,0 +1,280 @@
+[gd_scene format=3 uid="uid://bjeyutybaam1l"]
+
+[ext_resource type="Script" uid="uid://chh6hse6t2nik" path="res://GrimDaysVN/scripts/base/sequenced_scene_operator.gd" id="1_hdaqr"]
+[ext_resource type="Script" uid="uid://bev085rgp0wxo" path="res://GrimDaysVN/scripts/system_vram_management/loadable_world_environment.gd" id="2_t3qul"]
+[ext_resource type="Script" uid="uid://bf6ayx7s0tcud" path="res://GrimDaysVN/scripts/system_vram_management/load_on_demand.gd" id="4_rr5hd"]
+[ext_resource type="Script" uid="uid://bnk2hgab27rqy" path="res://GrimDaysVN/scripts/system_vram_management/loadable_directional_light.gd" id="6_2fccm"]
+[ext_resource type="Script" uid="uid://d4gu30o5h0hhe" path="res://GrimDaysVN/scripts/camera/main_camera_operator.gd" id="9_4mg8m"]
+[ext_resource type="Script" uid="uid://cpukc8u4rc1uk" path="res://GrimDaysVN/scripts/camera/camera_move_to_preset.gd" id="10_2flra"]
+[ext_resource type="Script" uid="uid://biglwdp5ucpsq" path="res://GrimDaysVN/scripts/camera/camera_move_to_point.gd" id="11_itkky"]
+[ext_resource type="Resource" uid="uid://c5sh7b04qs8k6" path="res://GrimDaysVN/dialogic/scripts/2_0040_storm_drives_party_into_dark_mage_tower.dtl" id="12_ui2dk"]
+[ext_resource type="Script" uid="uid://f3je221i45hf" path="res://GrimDaysVN/scripts/game_event_flow_control/sequence_animations.gd" id="16_qe6ik"]
+[ext_resource type="Script" uid="uid://dmu40sx37ycym" path="res://GrimDaysVN/scripts/system_vram_management/loadable_generic_audio_stream_player.gd" id="17_wdlvh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yx4cn"]
+
+[sub_resource type="Sky" id="Sky_xc44c"]
+sky_material = SubResource("ProceduralSkyMaterial_yx4cn")
+
+[sub_resource type="Environment" id="Environment_h8fte"]
+background_mode = 1
+sky = SubResource("Sky_xc44c")
+sky_custom_fov = 97.9
+ssao_radius = 10.52
+ssao_intensity = 16.0
+ssao_power = 4.09811
+ssao_detail = 0.87
+ssao_horizon = 0.71
+ssil_radius = 6.87
+ssil_intensity = 11.46
+ssil_sharpness = 0.49
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 0.7
+sdfgi_cascades = 6
+sdfgi_min_cell_size = 12.980005
+sdfgi_energy = 2.3
+glow_enabled = true
+glow_levels/3 = 3.77
+glow_levels/4 = 3.35
+glow_levels/5 = 1.93
+glow_levels/6 = 3.31
+glow_strength = 0.35
+glow_mix = 0.188
+glow_bloom = 0.18
+glow_blend_mode = 0
+glow_hdr_threshold = 0.35
+glow_hdr_scale = 1.96
+glow_hdr_luminance_cap = 5.93
+glow_map_strength = 0.0
+fog_mode = 1
+fog_light_color = Color(0.409513, 0.2014, 0.53, 1)
+fog_light_energy = 0.81
+fog_density = 0.5362
+volumetric_fog_density = 0.0232
+volumetric_fog_emission = Color(0.0163333, 0, 0.02, 1)
+volumetric_fog_emission_energy = 92.02
+volumetric_fog_anisotropy = -0.9
+volumetric_fog_length = 77.34
+volumetric_fog_detail_spread = 0.5
+volumetric_fog_ambient_inject = 0.4
+volumetric_fog_sky_affect = 0.744
+adjustment_contrast = 1.15
+
+[sub_resource type="Animation" id="Animation_2oe07"]
+resource_name = "RESET"
+length = 0.001
+step = 0.01
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SequenceAnimator")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Aftermath/start", -1, 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/Harlok\'s Defeat:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 7.53)]
+}
+
+[sub_resource type="Animation" id="Animation_ordfs"]
+resource_name = "reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/Harlok\'s Defeat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q64ws"]
+resource_name = "start"
+length = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SequenceAnimator")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("12_ui2dk"), ""],
+"method": &"trigger_timeline"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ordfs"]
+_data = {
+&"RESET": SubResource("Animation_2oe07"),
+&"reveal": SubResource("Animation_ordfs"),
+&"start": SubResource("Animation_q64ws")
+}
+
+[sub_resource type="Animation" id="Animation_wiwr2"]
+resource_name = "RESET"
+length = 0.001
+step = 0.01
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SequenceAnimator")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Aftermath/start", -1, 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/Harlok\'s Defeat:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 7.53)]
+}
+
+[sub_resource type="Animation" id="Animation_qd2hk"]
+resource_name = "reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/Harlok\'s Defeat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cujlf"]
+resource_name = "start"
+length = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SequenceAnimator")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("12_ui2dk"), ""],
+"method": &"trigger_timeline"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0isr"]
+_data = {
+&"RESET": SubResource("Animation_wiwr2"),
+&"reveal": SubResource("Animation_qd2hk"),
+&"start": SubResource("Animation_cujlf")
+}
+
+[node name="2_0040_fight_aftermath" type="Node" unique_id=2068614189 node_paths=PackedStringArray("animator")]
+script = ExtResource("1_hdaqr")
+animator = NodePath("SequenceAnimator")
+metadata/_custom_type_script = "uid://chh6hse6t2nik"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1464967845]
+environment = SubResource("Environment_h8fte")
+script = ExtResource("2_t3qul")
+metadata/_custom_type_script = "uid://bev085rgp0wxo"
+
+[node name="Background" type="Node" parent="." unique_id=1743372630]
+
+[node name="Harlok\'s Defeat" type="Sprite3D" parent="Background" unique_id=100932938]
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+texture = null
+script = ExtResource("4_rr5hd")
+
+[node name="Lighting By Time" type="DirectionalLight3D" parent="Background" unique_id=1544891479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 105, 1461)
+visible = false
+light_energy = 0.1
+script = ExtResource("6_2fccm")
+metadata/_custom_type_script = "uid://bnk2hgab27rqy"
+
+[node name="Main" type="Camera3D" parent="." unique_id=661562879 groups=["main_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.53)
+current = true
+fov = 107.5
+size = 415.0
+near = 0.001
+script = ExtResource("9_4mg8m")
+
+[node name="Move to Phantom" type="Node" parent="Main" unique_id=2099704584]
+script = ExtResource("10_2flra")
+
+[node name="Move to Custom" type="Node" parent="Main" unique_id=779785679]
+script = ExtResource("11_itkky")
+
+[node name="SequenceAnimator" type="AnimationPlayer" parent="." unique_id=1082195608]
+libraries/ = SubResource("AnimationLibrary_ordfs")
+libraries/Aftermath = SubResource("AnimationLibrary_t0isr")
+autoplay = &"Aftermath/RESET"
+script = ExtResource("16_qe6ik")
+
+[node name="Audio One" type="AudioStreamPlayer" parent="." unique_id=1018161605]
+script = ExtResource("17_wdlvh")
+metadata/_custom_type_script = "uid://dmu40sx37ycym"
+
+[node name="Audio Two" type="AudioStreamPlayer" parent="." unique_id=957654454]
+script = ExtResource("17_wdlvh")
+metadata/_custom_type_script = "uid://dmu40sx37ycym"

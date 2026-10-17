@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CameraFXS" format=3 uid="uid://cwcw13brmk12m"]
+
+[ext_resource type="Script" uid="uid://2krb5cq0fhk1" path="res://GrimDaysVN/scripts/camera/resources/camera_effect.gd" id="1_5rvxa"]
+[ext_resource type="Script" uid="uid://bkdn2fgimuk20" path="res://GrimDaysVN/scripts/camera/resources/camera_effects.gd" id="1_cmrox"]
+[ext_resource type="Resource" uid="uid://bdy7qkbj3c74y" path="res://GrimDaysVN/resources/camera_effects/quake.tres" id="1_prv3s"]
+[ext_resource type="Resource" uid="uid://ct5s55tq3pwte" path="res://GrimDaysVN/resources/camera_effects/hpunch.tres" id="2_mbktp"]
+[ext_resource type="Resource" uid="uid://bc2b85cvhrl3o" path="res://GrimDaysVN/resources/camera_effects/vpunch.tres" id="3_v1a0h"]
+[ext_resource type="Resource" uid="uid://c6umb2g6muu5e" path="res://GrimDaysVN/resources/camera_effects/shake.tres" id="5_j6e7e"]
+[ext_resource type="Resource" uid="uid://don41eqnikhfb" path="res://GrimDaysVN/resources/camera_effects/character_shake.tres" id="6_kt0jn"]
+
+[resource]
+script = ExtResource("1_cmrox")
+directory = Array[ExtResource("1_5rvxa")]([ExtResource("1_prv3s"), ExtResource("2_mbktp"), ExtResource("3_v1a0h"), ExtResource("5_j6e7e"), ExtResource("6_kt0jn")])

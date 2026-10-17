@@ -1,0 +1,490 @@
+[gd_scene format=3 uid="uid://bbde2jmd81mf"]
+
+[ext_resource type="Script" uid="uid://chh6hse6t2nik" path="res://GrimDaysVN/scripts/base/sequenced_scene_operator.gd" id="1_nimtr"]
+[ext_resource type="Script" uid="uid://bev085rgp0wxo" path="res://GrimDaysVN/scripts/system_vram_management/loadable_world_environment.gd" id="2_qmlka"]
+[ext_resource type="Script" uid="uid://bf6ayx7s0tcud" path="res://GrimDaysVN/scripts/system_vram_management/load_on_demand.gd" id="3_rdwg2"]
+[ext_resource type="Script" uid="uid://bnk2hgab27rqy" path="res://GrimDaysVN/scripts/system_vram_management/loadable_directional_light.gd" id="4_qx6ll"]
+[ext_resource type="Script" uid="uid://d4gu30o5h0hhe" path="res://GrimDaysVN/scripts/camera/main_camera_operator.gd" id="5_wvx48"]
+[ext_resource type="Script" uid="uid://cpukc8u4rc1uk" path="res://GrimDaysVN/scripts/camera/camera_move_to_preset.gd" id="6_6e6t8"]
+[ext_resource type="Script" uid="uid://biglwdp5ucpsq" path="res://GrimDaysVN/scripts/camera/camera_move_to_point.gd" id="7_y8lor"]
+[ext_resource type="Script" uid="uid://m5rjykhbinqb" path="res://GrimDaysVN/scripts/system_vram_management/loadable_canvas_layer.gd" id="8_3aeua"]
+[ext_resource type="Script" uid="uid://f3je221i45hf" path="res://GrimDaysVN/scripts/game_event_flow_control/sequence_animations.gd" id="9_r03gd"]
+[ext_resource type="Resource" uid="uid://bwj8l4vl6m5s1" path="res://GrimDaysVN/dialogic/scripts/2_0100_renia_claims_blades_as_assassins_attack.dtl" id="16_r03gd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yx4cn"]
+
+[sub_resource type="Sky" id="Sky_xc44c"]
+sky_material = SubResource("ProceduralSkyMaterial_yx4cn")
+
+[sub_resource type="Environment" id="Environment_h8fte"]
+background_mode = 1
+sky = SubResource("Sky_xc44c")
+sky_custom_fov = 97.9
+ssao_radius = 10.52
+ssao_intensity = 16.0
+ssao_power = 4.09811
+ssao_detail = 0.87
+ssao_horizon = 0.71
+ssil_radius = 6.87
+ssil_intensity = 11.46
+ssil_sharpness = 0.49
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 0.7
+sdfgi_cascades = 6
+sdfgi_min_cell_size = 12.980005
+sdfgi_energy = 2.3
+glow_enabled = true
+glow_levels/3 = 3.77
+glow_levels/4 = 3.35
+glow_levels/5 = 1.93
+glow_levels/6 = 3.31
+glow_strength = 0.35
+glow_mix = 0.188
+glow_bloom = 0.18
+glow_blend_mode = 0
+glow_hdr_threshold = 0.35
+glow_hdr_scale = 1.96
+glow_hdr_luminance_cap = 5.93
+glow_map_strength = 0.0
+fog_mode = 1
+fog_light_color = Color(0.409513, 0.2014, 0.53, 1)
+fog_light_energy = 0.81
+fog_density = 0.5362
+volumetric_fog_density = 0.0232
+volumetric_fog_emission = Color(0.0163333, 0, 0.02, 1)
+volumetric_fog_emission_energy = 92.02
+volumetric_fog_anisotropy = -0.9
+volumetric_fog_length = 77.34
+volumetric_fog_detail_spread = 0.5
+volumetric_fog_ambient_inject = 0.4
+volumetric_fog_sky_affect = 0.744
+adjustment_enabled = true
+
+[sub_resource type="Animation" id="Animation_wiwr2"]
+length = 0.001
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background/CG 3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background/CG 4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background/CG 5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background/CG 6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background/CG 7:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background/CG 8:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r03gd"]
+resource_name = "cg2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rdt06"]
+resource_name = "cg3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_u731a"]
+resource_name = "cg4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f20ox"]
+resource_name = "cg5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 5:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vf26n"]
+resource_name = "cg6"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 6:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r106m"]
+resource_name = "cg7"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 6:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 7:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qmlka"]
+resource_name = "cg8"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 7:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CG 8:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cujlf"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CG 1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SequenceAnimator")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.96666664),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("16_r03gd"), ""],
+"method": &"trigger_timeline"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0isr"]
+_data = {
+&"RESET": SubResource("Animation_wiwr2"),
+&"cg2": SubResource("Animation_r03gd"),
+&"cg3": SubResource("Animation_rdt06"),
+&"cg4": SubResource("Animation_u731a"),
+&"cg5": SubResource("Animation_f20ox"),
+&"cg6": SubResource("Animation_vf26n"),
+&"cg7": SubResource("Animation_r106m"),
+&"cg8": SubResource("Animation_qmlka"),
+&"start": SubResource("Animation_cujlf")
+}
+
+[node name="Base Sequence" type="Node" unique_id=116373608 node_paths=PackedStringArray("animator")]
+script = ExtResource("1_nimtr")
+animator = NodePath("SequenceAnimator")
+metadata/_custom_type_script = "uid://chh6hse6t2nik"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1649297937]
+environment = SubResource("Environment_h8fte")
+script = ExtResource("2_qmlka")
+metadata/_custom_type_script = "uid://bev085rgp0wxo"
+
+[node name="Background" type="Node" parent="." unique_id=340514449]
+
+[node name="CG 8" type="Sprite3D" parent="Background" unique_id=525778617]
+transform = Transform3D(8.2, 0, 0, 0, 8.2, 0, 0, 0, 8.2, 0, 0, -20)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://ccmyfm7f1y7ax"
+
+[node name="CG 7" type="Sprite3D" parent="Background" unique_id=1420878162]
+transform = Transform3D(4.03, 0, 0, 0, 4.03, 0, 0, 0, 4.03, 0, 0, -16)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://c2f75yfmegvfe"
+
+[node name="CG 6" type="Sprite3D" parent="Background" unique_id=1752850340]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, -12)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://dugc41kc6wpl"
+
+[node name="CG 5" type="Sprite3D" parent="Background" unique_id=854715185]
+transform = Transform3D(3.78, 0, 0, 0, 3.78, 0, 0, 0, 3.78, 0, 0, -9.28)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://12qy3uad14dq"
+
+[node name="CG 4" type="Sprite3D" parent="Background" unique_id=273368410]
+transform = Transform3D(3.3, 0, 0, 0, 3.3, 0, 0, 0, 3.3, 0, 0, -7.825)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://wcf4yg7txbs6"
+
+[node name="CG 3" type="Sprite3D" parent="Background" unique_id=1465669458]
+transform = Transform3D(2.145, 0, 0, 0, 2.145, 0, 0, 0, 2.145, 0, 0, -5.075)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://c33k5otq2unlk"
+
+[node name="CG 2" type="Sprite3D" parent="Background" unique_id=1152095489]
+transform = Transform3D(2.65, 0, 0, 0, 2.65, 0, 0, 0, 2.65, -2.075, 1.58, -3.59)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://p1r0ll0v1k36"
+
+[node name="CG 1" type="Sprite3D" parent="Background" unique_id=847477638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.415)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 2
+script = ExtResource("3_rdwg2")
+path = "uid://p1r0ll0v1k36"
+
+[node name="Lighting By Time" type="DirectionalLight3D" parent="Background" unique_id=575655466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 105, 1461)
+visible = false
+light_energy = 0.1
+script = ExtResource("4_qx6ll")
+metadata/_custom_type_script = "uid://bnk2hgab27rqy"
+
+[node name="Main" type="Camera3D" parent="." unique_id=812084898 groups=["main_camera"]]
+current = true
+fov = 107.5
+size = 415.0
+near = 0.001
+script = ExtResource("5_wvx48")
+
+[node name="Move to Phantom" type="Node" parent="Main" unique_id=910801290]
+script = ExtResource("6_6e6t8")
+
+[node name="Move to Custom" type="Node" parent="Main" unique_id=1631073525]
+script = ExtResource("7_y8lor")
+
+[node name="Cover" type="CanvasLayer" parent="." unique_id=190280189]
+layer = 128
+script = ExtResource("8_3aeua")
+metadata/_custom_type_script = "uid://m5rjykhbinqb"
+
+[node name="SequenceAnimator" type="AnimationPlayer" parent="." unique_id=717531613]
+libraries/ = SubResource("AnimationLibrary_t0isr")
+autoplay = &"RESET"
+script = ExtResource("9_r03gd")

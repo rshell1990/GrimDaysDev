@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EffectScalingCombatStatChangeTemplate" format=3 uid="uid://3p33f25r8m6s"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_8ajyb"]
+[ext_resource type="Resource" uid="uid://c1swo70g1fav2" path="res://GrimDaysBattle/resources/actions/celine/slash_single_rank/slash_single_rank_ranks_1_effects_damage_chance_to_bleed.tres" id="2_ta5ut"]
+[ext_resource type="Script" uid="uid://cqciwrhufos0l" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="2_vknax"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="4_eyw5e"]
+
+[resource]
+script = ExtResource("2_vknax")
+scales_from_sender = true
+scales_with_damage = true
+scales_with = 310
+scales_by = -1.1
+scales_by_by_rank = PackedFloat64Array(-1.1, -1.15, -1.2, -1.25, -1.3)
+stat = 210
+effects_on_hit = Array[ExtResource("1_8ajyb")]([ExtResource("2_ta5ut")])
+target = 3
+kind = 300
+damage_type = 100
+trigger = 200
+template_scene = ExtResource("4_eyw5e")
+id = &"slash_single_rank_ranks_1_effects_damage"
+metadata/_custom_type_script = "uid://cqciwrhufos0l"

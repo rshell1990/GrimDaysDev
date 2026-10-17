@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cipfhrhflilxl"]
+
+[ext_resource type="Shader" uid="uid://bhrkl3cl2gpwb" path="res://addons/post_processing/shaders/fish_eye.gdshader" id="1_qeluc"]
+[ext_resource type="PackedScene" uid="uid://dft0q1edxah0l" path="res://content/scenes/root/prime_map.tscn" id="1_rc72d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qeluc"]
+shader = ExtResource("1_qeluc")
+shader_parameter/aspect = 1.0
+shader_parameter/distortion = 1.0
+shader_parameter/radius = 1.0
+shader_parameter/alpha = -2.377
+shader_parameter/crop = 1.0
+shader_parameter/crop_color = Color(0.83, 0.83, 0.83, 1)
+
+[node name="Control" type="SubViewportContainer"]
+material = SubResource("ShaderMaterial_qeluc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SubViewport" type="SubViewport" parent="."]
+own_world_3d = true
+handle_input_locally = false
+msaa_3d = 1
+fsr_sharpness = 0.7
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Map" parent="SubViewport" instance=ExtResource("1_rc72d")]

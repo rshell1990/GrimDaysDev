@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_delay_turn.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_delay_turn.tscn" id="scene"]
+
+[resource]
+script = ExtResource("script")
+id = &"street_bullies_shoulder_delay"
+template_scene = ExtResource("scene")
+target = 3
+kind = 200
+trigger = 200
+always_hits = true
+

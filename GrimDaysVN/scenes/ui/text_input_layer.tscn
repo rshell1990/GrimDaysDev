@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://8sm5x6v68cdl"]
+
+[ext_resource type="Script" uid="uid://cjdvjwjrj86sj" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.gd" id="1_swm0d"]
+[ext_resource type="Script" uid="uid://g18r0tj2hptv" path="res://GrimDaysVN/scripts/ui/text_input_manager.gd" id="2_36tyn"]
+[ext_resource type="Script" uid="uid://buew1ukby4tpa" path="res://GrimDaysVN/scripts/overrides/dd_text_input_node.gd" id="3_fxoth"]
+[ext_resource type="Texture2D" uid="uid://dxvxlgiib2oyk" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_background_greyscaled.png" id="3_i2me4"]
+[ext_resource type="Script" uid="uid://b5yq8ak513ovb" path="res://GrimDaysVN/scripts/ui/scriplets/automatically_color_panel.gd" id="4_pxgow"]
+[ext_resource type="FontVariation" uid="uid://stfv5o7qaeim" path="res://GrimDaysVN/resources/fonts/nordams_bold.tres" id="6_i66qm"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="6_lpup4"]
+[ext_resource type="FontVariation" uid="uid://cvlbsx642gx6o" path="res://GrimDaysVN/resources/fonts/nordams_.tres" id="7_1fvyi"]
+[ext_resource type="Script" uid="uid://cdymw4iw67olf" path="res://GrimDaysVN/scripts/ui/color_input.gd" id="7_68pbp"]
+[ext_resource type="StyleBox" uid="uid://c1wyko7hlbp0c" path="res://GrimDaysVN/resources/gui/green_back.tres" id="7_l6ci6"]
+[ext_resource type="StyleBox" uid="uid://hto4ykwx0ngt" path="res://GrimDaysVN/resources/gui/green_back_hover.tres" id="8_h8oi6"]
+[ext_resource type="Script" uid="uid://pevt0auern8u" path="res://GrimDaysVN/scripts/ui/scriplets/menu_buttons.gd" id="9_snoky"]
+[ext_resource type="StyleBox" uid="uid://deraoib6rgva6" path="res://GrimDaysVN/resources/gui/default_UI.tres" id="10_sm78k"]
+[ext_resource type="StyleBox" uid="uid://cem3yn4eoeklj" path="res://GrimDaysVN/resources/gui/frame.tres" id="11_jgl6g"]
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://GrimDaysVN/resources/fonts/elanor_bold.tres" id="13_by61m"]
+[ext_resource type="Script" uid="uid://cu24lo1yfy3dx" path="res://GrimDaysVN/scripts/ui/secondary_font_operator.gd" id="16_7cv38"]
+[ext_resource type="Script" uid="uid://c5e8ablvqubpj" path="res://GrimDaysVN/scripts/ui/tiertiary_font_operator.gd" id="17_lh4tx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f577"]
+texture = ExtResource("3_i2me4")
+texture_margin_left = 46.5651
+texture_margin_top = 47.0
+texture_margin_right = 46.5651
+texture_margin_bottom = 47.0
+expand_margin_top = 5.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(0, 0, 110, 109.184)
+
+[sub_resource type="Theme" id="Theme_8xwp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frod8"]
+bg_color = Color(0.235371, 0.23537, 0.235371, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjdmq"]
+bg_color = Color(0.207843, 0.207843, 0.207843, 0.537255)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq20s"]
+bg_color = Color(0.157753, 0.157753, 0.157753, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="TextInputLayer" type="CanvasLayer" unique_id=352446558]
+layer = 128
+script = ExtResource("1_swm0d")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1614068902]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0941176, 0.0941176, 0.0941176, 0.929412)
+script = ExtResource("2_36tyn")
+
+[node name="DialogicNode_TextInput" type="Control" parent="." unique_id=352923134]
+custom_minimum_size = Vector2(1400, 0)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -700.0
+offset_top = -143.0
+offset_right = 700.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_fxoth")
+input_line_edit = NodePath("TextInputPanel/VBoxContainer/InputField")
+text_label = NodePath("TextInputPanel/VBoxContainer/TextLabel")
+confirmation_button = NodePath("TextInputPanel/VBoxContainer/Quit")
+metadata/_edit_layout_mode = 1
+
+[node name="TextInputPanel" type="Panel" parent="DialogicNode_TextInput" unique_id=1982795583 node_paths=PackedStringArray("background", "frame")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2f577")
+script = ExtResource("4_pxgow")
+background = NodePath(".")
+frame = NodePath("../Panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogicNode_TextInput/TextInputPanel" unique_id=1026788729]
+custom_minimum_size = Vector2(1200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -169.0
+offset_right = 600.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="TextLabel" type="Label" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" unique_id=1389229117]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme = SubResource("Theme_8xwp1")
+theme_override_fonts/font = ExtResource("6_i66qm")
+theme_override_font_sizes/font_size = 60
+text = "Please enter some text:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="InputField" type="LineEdit" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" unique_id=391328700]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.58345, 0.58345, 0.58345, 1)
+theme_override_fonts/font = ExtResource("7_1fvyi")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_frod8")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_qjdmq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_iq20s")
+alignment = 1
+script = ExtResource("7_68pbp")
+
+[node name="Quit" type="Button" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" unique_id=1580849002 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(225, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("6_lpup4")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_l6ci6")
+theme_override_styles/pressed = ExtResource("7_l6ci6")
+theme_override_styles/hover = ExtResource("8_h8oi6")
+theme_override_styles/disabled = ExtResource("7_l6ci6")
+theme_override_styles/focus = ExtResource("7_l6ci6")
+alignment = 2
+script = ExtResource("9_snoky")
+label = NodePath("Margin3/Label")
+
+[node name="Margin3" type="MarginContainer" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer/Quit" unique_id=724459797]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -34.5
+offset_right = 114.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer/Quit/Margin3" unique_id=1663315436]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("13_by61m")
+theme_override_font_sizes/font_size = 40
+text = "Confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer/Quit" unique_id=1659979541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("10_sm78k")
+
+[node name="Panel" type="Panel" parent="DialogicNode_TextInput" unique_id=1991933119]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = -11.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("11_jgl6g")
+
+[node name="SecondaryFontOperator" type="Control" parent="." unique_id=244378967 node_paths=PackedStringArray("nodes_with_normal_text", "nodes_with_bold_text", "nodes_to_scale_text")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("16_7cv38")
+nodes_with_normal_text = [NodePath("../DialogicNode_TextInput/TextInputPanel/VBoxContainer/InputField")]
+nodes_with_bold_text = [NodePath("../DialogicNode_TextInput/TextInputPanel/VBoxContainer/TextLabel")]
+nodes_to_scale_text = [NodePath("../DialogicNode_TextInput/TextInputPanel/VBoxContainer/TextLabel"), NodePath("../DialogicNode_TextInput/TextInputPanel/VBoxContainer/InputField")]
+
+[node name="TertiaryFontOperator" type="Control" parent="SecondaryFontOperator" unique_id=619052825 node_paths=PackedStringArray("nodes_with_bold_text", "nodes_to_scale_text")]
+anchors_preset = 0
+offset_left = 360.0
+offset_top = 543.0
+offset_right = 400.0
+offset_bottom = 583.0
+script = ExtResource("17_lh4tx")
+nodes_with_bold_text = [NodePath("../../DialogicNode_TextInput/TextInputPanel/VBoxContainer/Quit/Margin3/Label")]
+nodes_to_scale_text = [NodePath("../../DialogicNode_TextInput/TextInputPanel/VBoxContainer/Quit/Margin3/Label")]
+
+[connection signal="visibility_changed" from="DialogicNode_TextInput" to="ColorRect" method="_on_text_input_layer_visibility_changed"]

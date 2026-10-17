@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b1bb63b8d7ofn"]
+
+[ext_resource type="Script" uid="uid://ck62krim5rvt5" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_trigger_animation.gd" id="1_gi7gx"]
+
+[node name="EffectTriggerAnimation" type="Node"]
+script = ExtResource("1_gi7gx")

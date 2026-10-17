@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://fi7kn60ebif"]
+
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="1_skill"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/_basic/_basic_attack/basic_attack_ranks.tres" id="2_ranks"]
+
+[resource]
+script = ExtResource("1_skill")
+display_name = "Basic Attack"
+attack_animation = &"basic_attack"
+target = 3
+target_amount = 1
+type = 2
+ranks = ExtResource("2_ranks")
+id = &"basic_attack"

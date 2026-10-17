@@ -1,0 +1,1172 @@
+[gd_scene format=3 uid="uid://j5pi8fhqqa3l"]
+
+[ext_resource type="Script" uid="uid://chh6hse6t2nik" path="res://GrimDaysVN/scripts/base/sequenced_scene_operator.gd" id="1_ss2w7"]
+[ext_resource type="Script" uid="uid://bev085rgp0wxo" path="res://GrimDaysVN/scripts/system_vram_management/loadable_world_environment.gd" id="2_rkn81"]
+[ext_resource type="Script" uid="uid://bf6ayx7s0tcud" path="res://GrimDaysVN/scripts/system_vram_management/load_on_demand.gd" id="3_w42if"]
+[ext_resource type="Script" uid="uid://dxg7ljdus8gry" path="res://GrimDaysVN/scripts/spine_characters/character_base_operator.gd" id="5_eojs0"]
+[ext_resource type="Script" uid="uid://d4gu30o5h0hhe" path="res://GrimDaysVN/scripts/camera/main_camera_operator.gd" id="5_f8uxr"]
+[ext_resource type="Script" uid="uid://cpukc8u4rc1uk" path="res://GrimDaysVN/scripts/camera/camera_move_to_preset.gd" id="6_dp16p"]
+[ext_resource type="Texture2D" uid="uid://bpbt7i3ofll0k" path="res://GrimDaysVN/visuals/placeholder/character/guard/guard-temp.png" id="7_eojs0"]
+[ext_resource type="Script" uid="uid://5btu4jneopqq" path="res://GrimDaysVN/scripts/spine_characters/character_walk_to_point.gd" id="7_i54jt"]
+[ext_resource type="Script" uid="uid://biglwdp5ucpsq" path="res://GrimDaysVN/scripts/camera/camera_move_to_point.gd" id="7_qgnxu"]
+[ext_resource type="Script" uid="uid://m5rjykhbinqb" path="res://GrimDaysVN/scripts/system_vram_management/loadable_canvas_layer.gd" id="8_i6jta"]
+[ext_resource type="Script" uid="uid://dflpl35kr2d1e" path="res://GrimDaysVN/scripts/spine_characters/character_run_to_point.gd" id="8_nfv4n"]
+[ext_resource type="Script" uid="uid://f3je221i45hf" path="res://GrimDaysVN/scripts/game_event_flow_control/sequence_animations.gd" id="9_reyrl"]
+[ext_resource type="Script" uid="uid://d1b6tpnye2i5d" path="res://GrimDaysVN/scripts/spine_characters/character_transfer_layers.gd" id="9_vfi2h"]
+[ext_resource type="Script" uid="uid://5id0ulnv0rt3" path="res://GrimDaysVN/scripts/spine_characters/character_place_on_screen.gd" id="10_vvcd8"]
+[ext_resource type="Script" uid="uid://b0atgv71qatv6" path="res://GrimDaysVN/scripts/spine_characters/character_operator_collisions.gd" id="11_b1m6p"]
+[ext_resource type="Script" uid="uid://bsh5mg3guqgvc" path="res://GrimDaysVN/scripts/layered_characters/layered_character_operator.gd" id="12_vycsv"]
+[ext_resource type="Script" uid="uid://b11pxbt1vlwyu" path="res://GrimDaysVN/scripts/system_vram_management/sprite_2d_load_on_demand.gd" id="13_p4eog"]
+[ext_resource type="Texture2D" uid="uid://c2wm31bs02t7d" path="res://GrimDaysVN/visuals/characters/celine_young/celeste_10_yrs_baby_neutral_face.png" id="14_eojs0"]
+[ext_resource type="Texture2D" uid="uid://d0pgounrcbvx7" path="res://GrimDaysVN/visuals/characters/celine_young/normal/celeste_10_yrs_angry.png" id="14_s8g0c"]
+[ext_resource type="Script" uid="uid://b1jub2t5ubsme" path="res://GrimDaysVN/scripts/utilities/randomized_speed_animation_player.gd" id="15_jue3k"]
+[ext_resource type="Resource" uid="uid://drlnqa0233r1b" path="res://GrimDaysVN/dialogic/scripts/1_0100_renia_shows_karak_reclamation_plan.dtl" id="20_vv3gu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yx4cn"]
+
+[sub_resource type="Sky" id="Sky_xc44c"]
+sky_material = SubResource("ProceduralSkyMaterial_yx4cn")
+
+[sub_resource type="Environment" id="Environment_h8fte"]
+background_mode = 1
+sky = SubResource("Sky_xc44c")
+sky_custom_fov = 97.9
+ssao_radius = 10.52
+ssao_intensity = 16.0
+ssao_power = 4.09811
+ssao_detail = 0.87
+ssao_horizon = 0.71
+ssil_radius = 6.87
+ssil_intensity = 11.46
+ssil_sharpness = 0.49
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 0.7
+sdfgi_cascades = 6
+sdfgi_min_cell_size = 12.980005
+sdfgi_energy = 2.3
+glow_enabled = true
+glow_levels/3 = 3.77
+glow_levels/4 = 3.35
+glow_levels/5 = 1.93
+glow_levels/6 = 3.31
+glow_strength = 0.35
+glow_mix = 0.188
+glow_bloom = 0.18
+glow_blend_mode = 0
+glow_hdr_threshold = 0.35
+glow_hdr_scale = 1.96
+glow_hdr_luminance_cap = 5.93
+glow_map_strength = 0.0
+fog_mode = 1
+fog_light_color = Color(0.409513, 0.2014, 0.53, 1)
+fog_light_energy = 0.81
+fog_density = 0.5362
+volumetric_fog_density = 0.0232
+volumetric_fog_emission = Color(0.0163333, 0, 0.02, 1)
+volumetric_fog_emission_energy = 92.02
+volumetric_fog_anisotropy = -0.9
+volumetric_fog_length = 77.34
+volumetric_fog_detail_spread = 0.5
+volumetric_fog_ambient_inject = 0.4
+volumetric_fog_sky_affect = 0.744
+adjustment_contrast = 1.15
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eojs0"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+angle_min = 1.0728835e-05
+angle_max = 23.20001
+direction = Vector3(1, 1.235, -0.145)
+spread = 40.0
+initial_velocity_max = 1.0
+gravity = Vector3(0, 5, 0)
+scale_min = 0.19999999
+scale_max = 2.0
+turbulence_noise_strength = 1.85
+turbulence_noise_scale = 5.792
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6s2qm"]
+albedo_color = Color(1, 0.3775, 0.17000002, 1)
+emission_enabled = true
+emission = Color(5.1803036, 2.53725, 0.77521396, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_i54jt"]
+material = SubResource("StandardMaterial3D_6s2qm")
+radius = 1.441
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nfv4n"]
+albedo_color = Color(1, 0.3775, 0.17000002, 1)
+emission_enabled = true
+emission = Color(5.1803036, 2.53725, 0.77521396, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vfi2h"]
+material = SubResource("StandardMaterial3D_nfv4n")
+radius = 1.441
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvcd8"]
+albedo_color = Color(1, 0.3775, 0.17000002, 1)
+emission_enabled = true
+emission = Color(5.1803036, 2.53725, 0.77521396, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_b1m6p"]
+material = SubResource("StandardMaterial3D_vvcd8")
+radius = 1.441
+height = 4.0
+
+[sub_resource type="Animation" id="Animation_qfarr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_452hx"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 25), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.98), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3hdg"]
+_data = {
+&"RESET": SubResource("Animation_qfarr"),
+&"idle": SubResource("Animation_452hx")
+}
+
+[sub_resource type="GDScript" id="GDScript_t4wwe"]
+resource_name = "character_sprite_kneel"
+script/source = "extends Node
+
+signal moving()
+signal stopped()
+var character:CharacterOperator
+
+func _ready():
+	character = get_parent().get_parent()
+	character.listen_for(moving, character.set_moving)
+	character.listen_for(stopped, character.set_stopped)
+
+func execute(data:Dictionary) -> void:
+	moving.emit()
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	await tween.tween_property(character, \"position:y\", data.target_x * -1.0, AnimationTimes.LONG).finished
+	stopped.emit()
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n4qqy"]
+size = Vector3(250, 850, 10)
+
+[sub_resource type="Animation" id="Animation_6s2qm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i54jt"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 25), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.98), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfv4n"]
+_data = {
+&"RESET": SubResource("Animation_6s2qm"),
+&"idle": SubResource("Animation_i54jt")
+}
+
+[sub_resource type="Animation" id="Animation_wiwr2"]
+length = 0.001
+step = 0.01
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SequenceAnimator")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"start", -1, 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/ParentsSleeping:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background/CelineAngry:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background/CelinePsycho:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background/ParentsFrozen:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background/ParentsBurning/GPUParticles3D:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background/ParentsBurning/GPUParticles3D2:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Background/ParentsBurning/GPUParticles3D3:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Background/ParentsBurning:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Background/Cover:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Background/HouseC:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Background/HouseB:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Background/Closefront/Guard:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Background/Closefront/Celine Young:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Cover/ColorRect:color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Background/ParentsBurning2:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nfv4n"]
+resource_name = "fade_in_angry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CelinePsycho:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/CelineAngry:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eojs0"]
+resource_name = "fade_out_angry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CelineAngry:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b1m6p"]
+resource_name = "fade_out_burning"
+length = 3.5000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/ParentsBurning/GPUParticles3D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/ParentsBurning/GPUParticles3D2:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background/ParentsBurning/GPUParticles3D3:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background/ParentsBurning:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background/ParentsBurning2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p4eog"]
+resource_name = "fade_out_cover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cover/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vfi2h"]
+resource_name = "fade_out_frozen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/ParentsFrozen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/ParentsBurning/GPUParticles3D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background/ParentsBurning/GPUParticles3D2:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background/ParentsBurning/GPUParticles3D3:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background/CelineAngry:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background/CelinePsycho:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vvcd8"]
+resource_name = "fade_out_psycho"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/CelinePsycho:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vv3gu"]
+resource_name = "fade_out_sleeping"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/ParentsSleeping:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cujlf"]
+resource_name = "start"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SequenceAnimator")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("20_vv3gu"), ""],
+"method": &"trigger_timeline"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vycsv"]
+resource_name = "transition_to_outside"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/Cover:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background/HouseC:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background/HouseB:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background/Closefront/Guard:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background/Closefront/Celine Young:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0isr"]
+_data = {
+&"RESET": SubResource("Animation_wiwr2"),
+&"fade_in_angry": SubResource("Animation_nfv4n"),
+&"fade_out_angry": SubResource("Animation_eojs0"),
+&"fade_out_burning": SubResource("Animation_b1m6p"),
+&"fade_out_cover": SubResource("Animation_p4eog"),
+&"fade_out_frozen": SubResource("Animation_vfi2h"),
+&"fade_out_psycho": SubResource("Animation_vvcd8"),
+&"fade_out_sleeping": SubResource("Animation_vv3gu"),
+&"start": SubResource("Animation_cujlf"),
+&"transition_to_outside": SubResource("Animation_vycsv")
+}
+
+[node name="Base Sequence" type="Node" unique_id=690060353 node_paths=PackedStringArray("animator")]
+script = ExtResource("1_ss2w7")
+animator = NodePath("SequenceAnimator")
+metadata/_custom_type_script = "uid://chh6hse6t2nik"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1293685875]
+environment = SubResource("Environment_h8fte")
+script = ExtResource("2_rkn81")
+metadata/_custom_type_script = "uid://bev085rgp0wxo"
+
+[node name="Background" type="Node" parent="." unique_id=1313793250]
+
+[node name="HouseA" type="Sprite3D" parent="Background" unique_id=972744587]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, -100)
+alpha_cut = 1
+script = ExtResource("3_w42if")
+path = "uid://dxcffrf702lt8"
+
+[node name="HouseB" type="Sprite3D" parent="Background" unique_id=839622988]
+transform = Transform3D(59.5, 0, 0, 0, 59.5, 0, 0, 0, 59.5, 0, 0, -99)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 1
+script = ExtResource("3_w42if")
+path = "uid://cf0g6vyqo2g8q"
+
+[node name="HouseC" type="Sprite3D" parent="Background" unique_id=39289958]
+transform = Transform3D(59, 0, 0, 0, 59, 0, 0, 0, 59, 0, 0, -98)
+modulate = Color(1, 1, 1, 0)
+alpha_cut = 1
+script = ExtResource("3_w42if")
+path = "uid://mvi3s6knbqu1"
+
+[node name="Cover" type="Sprite3D" parent="Background" unique_id=756148287]
+transform = Transform3D(59, 0, 0, 0, 59, 0, 0, 0, 59, 0, 0, -98)
+modulate = Color(0, 0, 0, 1)
+alpha_cut = 1
+script = ExtResource("3_w42if")
+path = "uid://cs3fu2ad0a5u8"
+
+[node name="ParentsBurning2" type="Sprite3D" parent="Background" unique_id=1700851790]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, -58.425, -56.37, -71)
+modulate = Color(1, 1, 1, 0)
+shaded = true
+script = ExtResource("3_w42if")
+path = "uid://dsc7wfqn34h8t"
+metadata/_custom_type_script = "uid://bf6ayx7s0tcud"
+
+[node name="ParentsBurning" type="Sprite3D" parent="Background" unique_id=375604856]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, -58.425, -56.37, -71)
+shaded = true
+script = ExtResource("3_w42if")
+path = "uid://c18vp8bto7ue1"
+metadata/_custom_type_script = "uid://bf6ayx7s0tcud"
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Background/ParentsBurning" unique_id=816003076]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -3.605, -2.55, 0.803)
+emitting = false
+amount = 80
+lifetime = 36.44
+speed_scale = 3.4
+explosiveness = 0.06
+randomness = 0.05
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_eojs0")
+draw_pass_1 = SubResource("CapsuleMesh_i54jt")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Background/ParentsBurning" unique_id=2091488979]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 3.6, -2.55, 0.803)
+emitting = false
+amount = 80
+lifetime = 36.44
+speed_scale = 3.4
+explosiveness = 0.06
+randomness = 0.05
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_eojs0")
+draw_pass_1 = SubResource("CapsuleMesh_vfi2h")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Background/ParentsBurning" unique_id=367938410]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -2.55, 0.803)
+emitting = false
+amount = 80
+lifetime = 36.44
+speed_scale = 3.4
+explosiveness = 0.06
+randomness = 0.05
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_eojs0")
+draw_pass_1 = SubResource("CapsuleMesh_b1m6p")
+
+[node name="ParentsFrozen" type="Sprite3D" parent="Background" unique_id=504080129]
+transform = Transform3D(54.86, 0, 0, 0, 54.86, 0, 0, 0, 54.86, -11.045, -10.7, -70.545)
+script = ExtResource("3_w42if")
+path = "uid://1jenyojehtnu"
+metadata/_custom_type_script = "uid://bf6ayx7s0tcud"
+
+[node name="CelinePsycho" type="Sprite3D" parent="Background" unique_id=1871978814]
+transform = Transform3D(86.625, 0, 0, 0, 86.625, 0, 0, 0, 86.625, 0, 0, -65.385)
+script = ExtResource("3_w42if")
+path = "uid://bl117wet1nhug"
+metadata/_custom_type_script = "uid://bf6ayx7s0tcud"
+
+[node name="CelineAngry" type="Sprite3D" parent="Background" unique_id=1660321768]
+transform = Transform3D(84.56, 0, 0, 0, 84.56, 0, 0, 0, 84.56, 0, 0, -60.8)
+script = ExtResource("3_w42if")
+path = "uid://c33pfxsxn7rd1"
+metadata/_custom_type_script = "uid://bf6ayx7s0tcud"
+
+[node name="ParentsSleeping" type="Sprite3D" parent="Background" unique_id=933246445]
+transform = Transform3D(50.65, 0, 0, 0, 50.65, 0, 0, 0, 50.65, 0, 0, -55.54)
+script = ExtResource("3_w42if")
+path = "uid://x1gokduod4hb"
+metadata/_custom_type_script = "uid://bf6ayx7s0tcud"
+
+[node name="Closefront" type="Node3D" parent="Background" unique_id=1890157837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15, 90)
+
+[node name="Guard" type="Sprite3D" parent="Background/Closefront" unique_id=2131304916 node_paths=PackedStringArray("sprite", "outer_view", "movement_holder", "collision_area")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -100, 0, 0)
+lod_bias = 0.001
+modulate = Color(1, 1, 1, 0)
+pixel_size = 0.7
+alpha_scissor_threshold = 0.207
+alpha_hash_scale = 0.95
+alpha_antialiasing_edge = 0.61
+texture_filter = 5
+script = ExtResource("5_eojs0")
+sprite = NodePath("Outer view/Guard")
+outer_view = NodePath("Outer view")
+movement_holder = NodePath("Movement Handlers")
+collision_area = NodePath("Collision Area")
+metadata/_custom_type_script = "uid://dxg7ljdus8gry"
+
+[node name="Outer view" type="SubViewport" parent="Background/Closefront/Guard" unique_id=1289785791]
+transparent_bg = true
+size = Vector2i(821, 1408)
+
+[node name="Guard" type="CanvasGroup" parent="Background/Closefront/Guard/Outer view" unique_id=1671884028 node_paths=PackedStringArray("groups")]
+script = ExtResource("12_vycsv")
+default_layers = Dictionary[StringName, StringName]({
+&"Base": &"Neutral"
+})
+groups = {
+&"Base": NodePath("Base")
+}
+
+[node name="Base" type="Node2D" parent="Background/Closefront/Guard/Outer view/Guard" unique_id=393095816]
+position = Vector2(450, 720)
+scale = Vector2(1.18, 1.18)
+
+[node name="Neutral" type="Sprite2D" parent="Background/Closefront/Guard/Outer view/Guard/Base" unique_id=2010833481]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_eojs0")
+script = ExtResource("13_p4eog")
+path = "uid://bpbt7i3ofll0k"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Closefront/Guard/Outer view/Guard" unique_id=1988157960]
+libraries/ = SubResource("AnimationLibrary_e3hdg")
+autoplay = &"idle"
+script = ExtResource("15_jue3k")
+
+[node name="Movement Handlers" type="Node" parent="Background/Closefront/Guard" unique_id=48872472]
+
+[node name="Walk" type="Node" parent="Background/Closefront/Guard/Movement Handlers" unique_id=1824540344]
+unique_name_in_owner = true
+script = ExtResource("7_i54jt")
+
+[node name="Run" type="Node" parent="Background/Closefront/Guard/Movement Handlers" unique_id=641081979]
+unique_name_in_owner = true
+script = ExtResource("8_nfv4n")
+
+[node name="Transfer" type="Node" parent="Background/Closefront/Guard/Movement Handlers" unique_id=438939908]
+unique_name_in_owner = true
+script = ExtResource("9_vfi2h")
+
+[node name="Place" type="Node" parent="Background/Closefront/Guard/Movement Handlers" unique_id=81948864]
+unique_name_in_owner = true
+script = ExtResource("10_vvcd8")
+
+[node name="Kneel" type="Node" parent="Background/Closefront/Guard/Movement Handlers" unique_id=1670250082]
+unique_name_in_owner = true
+script = SubResource("GDScript_t4wwe")
+
+[node name="Collision Area" type="Area3D" parent="Background/Closefront/Guard" unique_id=1699875391]
+script = ExtResource("11_b1m6p")
+
+[node name="Shape" type="CollisionShape3D" parent="Background/Closefront/Guard/Collision Area" unique_id=531575732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.486954, 0, 5)
+shape = SubResource("BoxShape3D_n4qqy")
+
+[node name="Celine Young" type="Sprite3D" parent="Background/Closefront" unique_id=824425683 node_paths=PackedStringArray("sprite", "outer_view", "movement_holder", "collision_area")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+lod_bias = 0.001
+modulate = Color(1, 1, 1, 0)
+pixel_size = 0.7
+alpha_scissor_threshold = 0.207
+alpha_hash_scale = 0.95
+alpha_antialiasing_edge = 0.61
+texture_filter = 5
+script = ExtResource("5_eojs0")
+sprite = NodePath("Outer view/Celine Young")
+outer_view = NodePath("Outer view")
+movement_holder = NodePath("Movement Handlers")
+collision_area = NodePath("Collision Area")
+metadata/_custom_type_script = "uid://dxg7ljdus8gry"
+
+[node name="Outer view" type="SubViewport" parent="Background/Closefront/Celine Young" unique_id=329732557]
+transparent_bg = true
+size = Vector2i(821, 1408)
+
+[node name="Celine Young" type="CanvasGroup" parent="Background/Closefront/Celine Young/Outer view" unique_id=111653129 node_paths=PackedStringArray("groups")]
+script = ExtResource("12_vycsv")
+default_layers = Dictionary[StringName, StringName]({
+&"Base": &"Neutral"
+})
+groups = {
+&"Base": NodePath("Base"),
+&"Normal": NodePath("Normal"),
+&"Psycho": NodePath("Psycho")
+}
+
+[node name="Base" type="Node2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young" unique_id=1085408889]
+position = Vector2(410.5, 704)
+
+[node name="Neutral" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Base" unique_id=978502416]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://83i0w04pnhdn"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="WithBaby" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Base" unique_id=1105106637]
+position = Vector2(144, -110)
+texture = ExtResource("14_eojs0")
+script = ExtResource("13_p4eog")
+path = "uid://c2wm31bs02t7d"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Normal" type="Node2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young" unique_id=50392537]
+z_index = 10
+z_as_relative = false
+position = Vector2(410.5, 704)
+
+[node name="Angry" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Normal" unique_id=412046985]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("14_s8g0c")
+script = ExtResource("13_p4eog")
+path = "uid://d0pgounrcbvx7"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Crying" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Normal" unique_id=1782891750]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://brq385fbhp4tl"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Happy" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Normal" unique_id=1002749106]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://b58nmelkn0wjg"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Sad" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Normal" unique_id=1826970488]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://cf56j6vb7xpj"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Shocked" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Normal" unique_id=1065867655]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://v0i3r42a241m"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Neutral" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Normal" unique_id=525754794]
+
+[node name="Psycho" type="Node2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young" unique_id=1649940893]
+z_index = 10
+z_as_relative = false
+position = Vector2(410.5, 704)
+
+[node name="Angry" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Psycho" unique_id=1300629783]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://dfarybeyxy1sh"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Crying" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Psycho" unique_id=1896777049]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://daeap5027ovej"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Happy" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Psycho" unique_id=150596006]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://b5qw7ayf535ms"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Sad" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Psycho" unique_id=1662836432]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://be6hso6jadflp"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Shocked" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Psycho" unique_id=1758880799]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("13_p4eog")
+path = "uid://c6e6y2g2a421"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Neutral" type="Sprite2D" parent="Background/Closefront/Celine Young/Outer view/Celine Young/Psycho" unique_id=1368919960]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Closefront/Celine Young/Outer view/Celine Young" unique_id=1893541421]
+libraries/ = SubResource("AnimationLibrary_nfv4n")
+autoplay = &"idle"
+script = ExtResource("15_jue3k")
+
+[node name="Movement Handlers" type="Node" parent="Background/Closefront/Celine Young" unique_id=2103941204]
+
+[node name="Walk" type="Node" parent="Background/Closefront/Celine Young/Movement Handlers" unique_id=1474658222]
+script = ExtResource("7_i54jt")
+
+[node name="Run" type="Node" parent="Background/Closefront/Celine Young/Movement Handlers" unique_id=1581724964]
+script = ExtResource("8_nfv4n")
+
+[node name="Transfer" type="Node" parent="Background/Closefront/Celine Young/Movement Handlers" unique_id=931378913]
+script = ExtResource("9_vfi2h")
+
+[node name="Place" type="Node" parent="Background/Closefront/Celine Young/Movement Handlers" unique_id=551633972]
+script = ExtResource("10_vvcd8")
+
+[node name="Kneel" type="Node" parent="Background/Closefront/Celine Young/Movement Handlers" unique_id=2106510782]
+script = SubResource("GDScript_t4wwe")
+
+[node name="Collision Area" type="Area3D" parent="Background/Closefront/Celine Young" unique_id=569496126]
+script = ExtResource("11_b1m6p")
+
+[node name="Shape" type="CollisionShape3D" parent="Background/Closefront/Celine Young/Collision Area" unique_id=456619378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.486954, 0, 5)
+shape = SubResource("BoxShape3D_n4qqy")
+
+[node name="Main" type="Camera3D" parent="." unique_id=799054801 groups=["main_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.2147293, 139.77826)
+current = true
+fov = 107.5
+size = 415.0
+near = 0.001
+script = ExtResource("5_f8uxr")
+
+[node name="Move to Phantom" type="Node" parent="Main" unique_id=299850358]
+script = ExtResource("6_dp16p")
+
+[node name="Move to Custom" type="Node" parent="Main" unique_id=1915030538]
+script = ExtResource("7_qgnxu")
+
+[node name="Cover" type="CanvasLayer" parent="." unique_id=302301510]
+layer = 128
+script = ExtResource("8_i6jta")
+metadata/_custom_type_script = "uid://m5rjykhbinqb"
+
+[node name="ColorRect" type="ColorRect" parent="Cover" unique_id=25662044]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SequenceAnimator" type="AnimationPlayer" parent="." unique_id=370231912]
+libraries/ = SubResource("AnimationLibrary_t0isr")
+autoplay = &"RESET"
+script = ExtResource("9_reyrl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=399578989]
+light_color = Color(1, 0.8617661, 0.8077841, 1)
+light_energy = 0.727
+
+[connection signal="area_entered" from="Background/Closefront/Guard/Collision Area" to="Background/Closefront/Guard/Collision Area" method="_on_collision_entered"]
+[connection signal="area_exited" from="Background/Closefront/Guard/Collision Area" to="Background/Closefront/Guard/Collision Area" method="_on_collision_exited"]
+[connection signal="area_entered" from="Background/Closefront/Celine Young/Collision Area" to="Background/Closefront/Celine Young/Collision Area" method="_on_collision_entered"]
+[connection signal="area_exited" from="Background/Closefront/Celine Young/Collision Area" to="Background/Closefront/Celine Young/Collision Area" method="_on_collision_exited"]

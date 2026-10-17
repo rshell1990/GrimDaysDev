@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" format=3 uid="uid://jn01gxq0gs2r"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://dtcttjtkeyqoy" path="res://GrimDaysBattle/assets/spine/harlok/Harlok sprite combat.atlas" id="1_o1fbo"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://do84rhqixms1m" path="res://GrimDaysBattle/assets/spine/harlok/Harlok sprite combat.skel" id="2_sjh2f"]
+
+[resource]
+atlas_res = ExtResource("1_o1fbo")
+skeleton_file_res = ExtResource("2_sjh2f")

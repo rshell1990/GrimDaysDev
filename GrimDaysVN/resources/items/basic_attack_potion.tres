@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="VNItemTemplate" format=3 uid="uid://8lsf7fpmln07"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/crafting/resources/item_template.gd" id="5_umodb"]
+
+[sub_resource type="Resource" id="Resource_1xskc"]
+metadata/__load_path__ = "res://content/assets/placeholder/equip_icon_potion_green_4.png"
+
+[sub_resource type="Resource" id="Resource_y0b1e"]
+
+[resource]
+script = ExtResource("5_umodb")
+id = 5
+display_name = "Basic Attack Booster"
+description = "Refined and processed ghostly materials make this basic attack booster.  For a short time it will bolster the user's power.
+
+Can not be used while other effects are active."
+icon = SubResource("Resource_1xskc")
+types = Array[int]([2, 3])
+max_stack = 3
+cash_value = 1500
+positive_effects = [SubResource("Resource_y0b1e")]

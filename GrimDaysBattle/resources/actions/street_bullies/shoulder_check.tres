@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://dyxgf8vb8pmv3"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_efy8d"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/effects/street_bullies/shoulder_check_damage.tres" id="e0"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="effect"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="effects"]
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="rank"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="ranks"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="script"]
+
+[sub_resource type="Resource" id="Effects"]
+script = ExtResource("effects")
+all = Array[ExtResource("effect")]([ExtResource("e0")])
+
+[sub_resource type="Resource" id="Rank"]
+script = ExtResource("rank")
+level = 1
+cost = Dictionary[int, int]({
+220: 5
+})
+effects = SubResource("Effects")
+
+[sub_resource type="Resource" id="Ranks"]
+script = ExtResource("ranks")
+generated = true
+rank_count = 5
+base_rank = SubResource("Rank")
+cost_increase_per_rank = Dictionary[int, int]({
+220: 2
+})
+
+[resource]
+script = ExtResource("script")
+display_name = "Shoulder Check"
+description = "Add a shoulder strike with a chance to delay the target one pending position."
+attack_animation = &"basic_attack"
+target = 3
+target_amount = 1
+type = 4
+ranks = SubResource("Ranks")
+id = &"street_bullies_shoulder_check"

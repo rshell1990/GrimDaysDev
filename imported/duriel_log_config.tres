@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CustomLoggerConfig" format=3 uid="uid://cbc5y8k74aucm"]
+
+[ext_resource type="Script" uid="uid://cfum350fnadbr" path="res://GrimDays/imported/TheDuriel/Logger/LoggerConfig.gd" id="1_mhkk2"]
+
+[resource]
+script = ExtResource("1_mhkk2")
+log_confirms = true
+log_hints = true
+log_warnings = true
+log_errors = true
+assert_errors = false
+metadata/_custom_type_script = "uid://cfum350fnadbr"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EffectCappedChangeStatTemplate" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_capped_change_stat.gd" id="1_definition"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_stat_change.tscn" id="2_runtime"]
+
+[resource]
+script = ExtResource("1_definition")
+id = &"defend_330"
+stat = 330
+amount = 35.0
+contribution_cap = 90.0
+duration = 1
+lifetime = 1
+stacking = 1
+target = 0
+kind = 0
+trigger = 700
+description = "Adds up to 35 Physical Resistance points after scaling, without raising it above 90. Lasts until round end."
+template_scene = ExtResource("2_runtime")

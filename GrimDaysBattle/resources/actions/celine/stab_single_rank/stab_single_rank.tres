@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://d3uga64mn4eqd"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_xl5kk"]
+[ext_resource type="Resource" uid="uid://fffdvndok7kc" path="res://GrimDaysBattle/resources/actions/celine/stab_single_rank/stab_single_rank_ranks.tres" id="2_n4yms"]
+[ext_resource type="Texture2D" uid="uid://bjjgvlxvuiivp" path="res://editor_only_debug/visuals/skill_icons/Assassinskill_21_nobg.png" id="2_xfsgb"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="3_xfsgb"]
+
+[resource]
+script = ExtResource("3_xfsgb")
+display_name = "Stab"
+description = "When wielding a bladed weapon, after slashing you attempt to stab your target for additional damage.  A successful hit will cause your target to bleed for a short while.  Stab has an increased chance to critically strike."
+icon = ExtResource("2_xfsgb")
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("2_n4yms")
+id = &"stab_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

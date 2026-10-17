@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://dq8ep8xpcv614"]
+
+[ext_resource type="Script" uid="uid://bubtvug6hrhxy" path="res://GrimDaysVN/scripts/base/portraited_scene_operator.gd" id="1_uxlke"]
+[ext_resource type="Script" uid="uid://d4gu30o5h0hhe" path="res://GrimDaysVN/scripts/camera/main_camera_operator.gd" id="3_c5dxq"]
+[ext_resource type="Script" uid="uid://cpukc8u4rc1uk" path="res://GrimDaysVN/scripts/camera/camera_move_to_preset.gd" id="4_un8bk"]
+[ext_resource type="Script" uid="uid://biglwdp5ucpsq" path="res://GrimDaysVN/scripts/camera/camera_move_to_point.gd" id="5_s250y"]
+[ext_resource type="Script" uid="uid://f3je221i45hf" path="res://GrimDaysVN/scripts/game_event_flow_control/sequence_animations.gd" id="6_3pl1l"]
+[ext_resource type="Script" uid="uid://dwd80k75farcu" path="res://GrimDaysVN/scripts/spine_characters/character_layer_operator.gd" id="6_t5wtp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yx4cn"]
+
+[sub_resource type="Sky" id="Sky_xc44c"]
+sky_material = SubResource("ProceduralSkyMaterial_yx4cn")
+
+[sub_resource type="Environment" id="Environment_3kom5"]
+background_mode = 1
+background_energy_multiplier = 0.9
+sky = SubResource("Sky_xc44c")
+sky_custom_fov = 111.5
+sky_rotation = Vector3(0, 2.39634, 0)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.05
+tonemap_white = 0.34
+ssao_radius = 10.52
+ssao_intensity = 16.0
+ssao_power = 4.09811
+ssao_detail = 0.87
+ssao_horizon = 0.71
+ssil_radius = 6.87
+ssil_intensity = 11.46
+ssil_sharpness = 0.49
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 0.7
+sdfgi_cascades = 6
+sdfgi_min_cell_size = 12.980005
+sdfgi_energy = 2.3
+glow_levels/3 = 3.77
+glow_levels/4 = 3.35
+glow_levels/5 = 1.93
+glow_levels/6 = 3.31
+glow_intensity = 0.35
+glow_strength = 0.28
+glow_mix = 0.188
+glow_bloom = 0.25
+glow_blend_mode = 0
+glow_hdr_threshold = 0.35
+glow_hdr_scale = 0.45
+glow_hdr_luminance_cap = 1.06
+glow_map_strength = 0.0
+fog_mode = 1
+fog_light_color = Color(0.409513, 0.2014, 0.53, 1)
+fog_light_energy = 0.81
+fog_density = 0.5362
+volumetric_fog_density = 0.0232
+volumetric_fog_emission = Color(0.0163333, 0, 0.02, 1)
+volumetric_fog_emission_energy = 92.02
+volumetric_fog_anisotropy = -0.9
+volumetric_fog_length = 77.34
+volumetric_fog_detail_spread = 0.5
+volumetric_fog_ambient_inject = 0.4
+volumetric_fog_sky_affect = 0.744
+adjustment_contrast = 1.15
+
+[sub_resource type="Animation" id="Animation_vnkdq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 40)]
+}
+
+[sub_resource type="Animation" id="Animation_l31md"]
+resource_name = "movement_loop"
+length = 2.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 4.71), Vector3(0, 10, -20)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyolj"]
+_data = {
+&"RESET": SubResource("Animation_vnkdq"),
+&"movement_loop": SubResource("Animation_l31md")
+}
+
+[sub_resource type="Animation" id="Animation_6jfmy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wjg1v"]
+resource_name = "cover_screen"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rt71s"]
+_data = {
+&"RESET": SubResource("Animation_6jfmy"),
+&"cover_screen": SubResource("Animation_wjg1v")
+}
+
+[node name="Portraited Scene" type="Node3D" unique_id=1842698577 node_paths=PackedStringArray("background_holder", "foreground_holder")]
+script = ExtResource("1_uxlke")
+background_holder = NodePath("Background")
+foreground_holder = NodePath("FG")
+metadata/_custom_type_script = "uid://bubtvug6hrhxy"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1054451212]
+environment = SubResource("Environment_3kom5")
+
+[node name="Background" type="Node3D" parent="." unique_id=1502501781]
+transform = Transform3D(600, 0, 0, 0, 600, 0, 0, 0, 600, 0, 0, 0)
+
+[node name="Main" type="Camera3D" parent="." unique_id=684771786 groups=["main_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+current = true
+fov = 107.5
+size = 415.0
+near = 0.029
+far = 2500.0
+script = ExtResource("3_c5dxq")
+metadata/_custom_type_script = "uid://d4gu30o5h0hhe"
+
+[node name="Move to Phantom" type="Node" parent="Main" unique_id=1044707399]
+script = ExtResource("4_un8bk")
+
+[node name="Move to Custom" type="Node" parent="Main" unique_id=1032563208]
+script = ExtResource("5_s250y")
+
+[node name="Phantom Cameras" type="Node" parent="." unique_id=1882898993]
+
+[node name="Far" type="Camera3D" parent="Phantom Cameras" unique_id=1785102498 groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, -80)
+fov = 107.5
+size = 0.225
+near = 80.0
+far = 450.0
+
+[node name="Mid" type="Camera3D" parent="Phantom Cameras" unique_id=1211650444 groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -20)
+fov = 107.5
+size = 0.225
+near = 40.0
+far = 450.0
+
+[node name="Close" type="Camera3D" parent="Phantom Cameras" unique_id=966427621 groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.651, 4.71)
+fov = 107.5
+size = 0.225
+near = 0.001
+far = 600.0
+
+[node name="Character Depths" type="Node" parent="." unique_id=1999820181]
+
+[node name="OutOfScene" type="Sprite3D" parent="Character Depths" unique_id=1041805926 groups=["sprite_depth"]]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, -28.121, -17.24)
+script = ExtResource("6_t5wtp")
+start_hidden = true
+metadata/_custom_type_script = "uid://dwd80k75farcu"
+
+[node name="Closefront" type="Sprite3D" parent="Character Depths" unique_id=1499468743 groups=["sprite_depth"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15, -15)
+script = ExtResource("6_t5wtp")
+metadata/_custom_type_script = "uid://dwd80k75farcu"
+
+[node name="Closeback" type="Sprite3D" parent="Character Depths" unique_id=1417032463 groups=["sprite_depth"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25, -50)
+script = ExtResource("6_t5wtp")
+metadata/_custom_type_script = "uid://dwd80k75farcu"
+
+[node name="Midfront" type="Sprite3D" parent="Character Depths" unique_id=1263046161 groups=["sprite_depth"]]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, -65, -225)
+script = ExtResource("6_t5wtp")
+metadata/_custom_type_script = "uid://dwd80k75farcu"
+
+[node name="Midback" type="Sprite3D" parent="Character Depths" unique_id=448388186 groups=["sprite_depth"]]
+transform = Transform3D(2.75, 0, 0, 0, 2.75, 0, 0, 0, 2.75, 0, -80, -300)
+script = ExtResource("6_t5wtp")
+metadata/_custom_type_script = "uid://dwd80k75farcu"
+
+[node name="Far" type="Sprite3D" parent="Character Depths" unique_id=1339208840 groups=["sprite_depth"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -115, -475)
+layers = 7
+script = ExtResource("6_t5wtp")
+metadata/_custom_type_script = "uid://dwd80k75farcu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2137016951]
+libraries/ = SubResource("AnimationLibrary_lyolj")
+autoplay = &"RESET"
+
+[node name="FG" type="Node3D" parent="." unique_id=807353364]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 11.366, -34.905)
+
+[node name="SequenceAnimator" type="AnimationPlayer" parent="." unique_id=359112501]
+libraries/ = SubResource("AnimationLibrary_rt71s")
+script = ExtResource("6_3pl1l")
+metadata/_custom_type_script = "uid://f3je221i45hf"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=471341844]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

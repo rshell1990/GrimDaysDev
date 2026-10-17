@@ -1,0 +1,4 @@
+# Prepare the selected test level, then use the production basement battle handoff.
+do DialogicRelay.add_item_to_unit("CelineTeen", "basic_dagger", 1)
+do UIDirector.show_story_party_preparation()
+jump 2_0095_battle_with_nuns/

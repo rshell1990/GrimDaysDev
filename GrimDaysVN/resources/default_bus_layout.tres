@@ -1,0 +1,163 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://blsfkw81b7k71"]
+
+[ext_resource type="Script" uid="uid://hupngmasuq41" path="res://addons/ovani_audio_linker/OvaniAudioLinker.gd" id="1_o3ihl"]
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_4hwih"]
+resource_name = "_hidden_ OvaniAudioLinker"
+buffer_length = 0.5
+script = ExtResource("1_o3ihl")
+BusName = &"Master"
+RefCount = 1
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_lyrkr"]
+resource_name = "LowPassFilter"
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_0dwfb"]
+resource_name = "PitchShift"
+pitch_scale = 1.45
+
+[sub_resource type="AudioEffectEQ21" id="AudioEffectEQ21_4yaa3"]
+resource_name = "EQ21"
+
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_bidn0"]
+resource_name = "HighPassFilter"
+resonance = 0.6
+
+[sub_resource type="AudioEffectChorus" id="AudioEffectChorus_r2j40"]
+resource_name = "Chorus"
+voice_count = 3
+voice/1/delay_ms = 5.93
+voice/1/rate_hz = 5.3
+voice/2/rate_hz = 13.6
+voice/3/delay_ms = 12.0
+voice/3/rate_hz = 1.0
+voice/3/depth_ms = 0.0
+voice/3/level_db = -7.8
+voice/3/cutoff_hz = 16000.0
+voice/3/pan = 0.0
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_vfmei"]
+resource_name = "Compressor"
+ratio = 12.3
+gain = 4.3
+mix = 0.52
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_01qca"]
+resource_name = "Distortion"
+mode = 2
+pre_gain = 3.44
+drive = 0.29
+post_gain = -2.98
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_sblmg"]
+resource_name = "Reverb"
+room_size = 0.59
+damping = 0.33
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_4hwih"]
+resource_name = "Reverb"
+room_size = 0.91
+damping = 0.06
+wet = 0.31
+
+[sub_resource type="AudioEffectEQ6" id="AudioEffectEQ6_4hwih"]
+resource_name = "EQ6"
+band_db/32_hz = 7.2
+band_db/100_hz = 11.8
+band_db/320_hz = -0.3
+band_db/1000_hz = -37.5
+band_db/3200_hz = -51.5
+band_db/10000_hz = -57.4
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_4hwih"]
+resource_name = "PitchShift"
+pitch_scale = 0.4
+
+[sub_resource type="AudioEffectEQ10" id="AudioEffectEQ10_4hwih"]
+resource_name = "EQ10"
+band_db/250_hz = -12.7
+band_db/500_hz = -47.5
+band_db/1000_hz = -60.0
+band_db/2000_hz = -60.0
+band_db/4000_hz = -60.0
+band_db/8000_hz = -60.0
+band_db/16000_hz = -60.0
+
+[resource]
+bus/0/volume_db = 0.227245
+bus/0/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_4hwih")
+bus/0/effect/0/enabled = true
+bus/1/name = &"Music"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -0.0505047
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectLowPassFilter_lyrkr")
+bus/1/effect/0/enabled = false
+bus/1/effect/1/effect = SubResource("AudioEffectPitchShift_0dwfb")
+bus/1/effect/1/enabled = false
+bus/1/effect/2/effect = SubResource("AudioEffectEQ21_4yaa3")
+bus/1/effect/2/enabled = false
+bus/2/name = &"SFX"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"Effect Ambient"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.385006
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectHighPassFilter_bidn0")
+bus/3/effect/0/enabled = false
+bus/3/effect/1/effect = SubResource("AudioEffectChorus_r2j40")
+bus/3/effect/1/enabled = false
+bus/3/effect/2/effect = SubResource("AudioEffectCompressor_vfmei")
+bus/3/effect/2/enabled = false
+bus/3/effect/3/effect = SubResource("AudioEffectDistortion_01qca")
+bus/3/effect/3/enabled = false
+bus/4/name = &"Ovani"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"Master"
+bus/5/name = &"SFX_Reverb"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 0.0
+bus/5/send = &"SFX"
+bus/5/effect/0/effect = SubResource("AudioEffectReverb_sblmg")
+bus/5/effect/0/enabled = true
+bus/6/name = &"SFX_Multi"
+bus/6/solo = false
+bus/6/mute = false
+bus/6/bypass_fx = false
+bus/6/volume_db = 0.0
+bus/6/send = &"SFX"
+bus/6/effect/0/effect = SubResource("AudioEffectReverb_4hwih")
+bus/6/effect/0/enabled = true
+bus/6/effect/1/effect = SubResource("AudioEffectEQ6_4hwih")
+bus/6/effect/1/enabled = true
+bus/6/effect/2/effect = SubResource("AudioEffectPitchShift_4hwih")
+bus/6/effect/2/enabled = true
+bus/6/effect/3/effect = SubResource("AudioEffectEQ10_4hwih")
+bus/6/effect/3/enabled = true
+bus/7/name = &"SFX_Multi Copy"
+bus/7/solo = false
+bus/7/mute = false
+bus/7/bypass_fx = false
+bus/7/volume_db = -0.00384331
+bus/7/send = &"SFX"
+bus/7/effect/0/effect = SubResource("AudioEffectReverb_4hwih")
+bus/7/effect/0/enabled = true
+bus/7/effect/1/effect = SubResource("AudioEffectEQ6_4hwih")
+bus/7/effect/1/enabled = true
+bus/7/effect/2/effect = SubResource("AudioEffectPitchShift_4hwih")
+bus/7/effect/2/enabled = false
+bus/7/effect/3/effect = SubResource("AudioEffectEQ10_4hwih")
+bus/7/effect/3/enabled = false

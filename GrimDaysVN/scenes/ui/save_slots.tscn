@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://dc5f1dnyv4tgd"]
+
+[ext_resource type="PackedScene" uid="uid://cprkjafaqmelm" path="res://GrimDaysVN/scenes/ui/default_save_slot.tscn" id="1_sy3ts"]
+[ext_resource type="Script" uid="uid://o4bii2ng5prl" path="res://GrimDaysVN/scripts/ui/scriplets/Save/save_slots_page.gd" id="1_ydox0"]
+[ext_resource type="Script" uid="uid://dy3m7620gorob" path="res://GrimDaysVN/scripts/ui/scriplets/Save/prefix_selection_coloring.gd" id="3_52esc"]
+[ext_resource type="StyleBox" uid="uid://cfqu8tj7eb0qr" path="res://GrimDaysVN/resources/gui/grey_back.tres" id="4_g2pyt"]
+[ext_resource type="FontVariation" uid="uid://b1ymikdqcxbjb" path="res://GrimDays/fonts/answer_variant.tres" id="5_om8sb"]
+[ext_resource type="Script" uid="uid://dqrhwrb0v8dcr" path="res://GrimDaysVN/scripts/ui/mimic_text_parent.gd" id="6_hn8o4"]
+[ext_resource type="Script" uid="uid://n8gtsbi2h6ga" path="res://GrimDaysVN/scripts/ui/notifying_label.gd" id="6_m6nab"]
+[ext_resource type="Shader" uid="uid://bul810ga6nl1i" path="res://GrimDaysVN/resources/shaders/player.gdshader" id="7_l1tq6"]
+[ext_resource type="Script" uid="uid://c5e8ablvqubpj" path="res://GrimDaysVN/scripts/ui/tiertiary_font_operator.gd" id="7_oemlv"]
+[ext_resource type="Texture2D" uid="uid://cyvxrpcwaru6v" path="res://GrimDays/assets/visuals/ui/vn_gui_library/placeholder/icon_arrow/icon_arrow_25.png" id="8_slb8f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_441ux"]
+bg_color = Color(0.09009846, 0.09009849, 0.09009843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xomts"]
+bg_color = Color(0.16062859, 0.16062865, 0.16062853, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73ug5"]
+bg_color = Color(0.47843137, 0, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ause1"]
+bg_color = Color(0.11087205, 0, 0.02591909, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_leact"]
+shader = ExtResource("7_l1tq6")
+shader_parameter/desaturation = 0.0
+shader_parameter/damage = 0.0
+shader_parameter/outline_width = 150.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/damage_color = Color(0, 0, 0, 1)
+shader_parameter/screen = ExtResource("8_slb8f")
+shader_parameter/visibility = 1.0
+
+[node name="save_slots_page" type="Control" unique_id=1983239413 node_paths=PackedStringArray("slots", "prefix_options", "prefix_label")]
+custom_minimum_size = Vector2(1920, 800)
+layout_mode = 3
+anchors_preset = 0
+offset_top = 135.0
+offset_right = 1920.0
+offset_bottom = 935.0
+size_flags_horizontal = 3
+script = ExtResource("1_ydox0")
+slots = [NodePath("MarginContainer/VBoxContainer/Default Save Slot"), NodePath("MarginContainer/VBoxContainer/Default Save Slot2"), NodePath("MarginContainer/VBoxContainer/Default Save Slot3"), NodePath("MarginContainer/VBoxContainer/Default Save Slot4")]
+prefix_options = NodePath("MarginContainer2/Panel2/Prefix Selection")
+prefix_label = NodePath("MarginContainer2/Panel2/Prefix Selection/Notifying")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1364249040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1299119829]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 25
+
+[node name="Default Save Slot" parent="MarginContainer/VBoxContainer" unique_id=1666391786 instance=ExtResource("1_sy3ts")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="Default Save Slot2" parent="MarginContainer/VBoxContainer" unique_id=1387977874 instance=ExtResource("1_sy3ts")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="Default Save Slot3" parent="MarginContainer/VBoxContainer" unique_id=454131880 instance=ExtResource("1_sy3ts")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="Default Save Slot4" parent="MarginContainer/VBoxContainer" unique_id=751418595 instance=ExtResource("1_sy3ts")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=666762892 node_paths=PackedStringArray("background", "frame")]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 720.0
+offset_right = 1750.0
+offset_bottom = 840.0
+tooltip_text = "This is a test to see how thigns look."
+mouse_filter = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("3_52esc")
+background = NodePath("Panel2/Prefix Selection")
+frame = NodePath("")
+
+[node name="Panel2" type="Panel" parent="MarginContainer2" unique_id=292292570]
+clip_children = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("4_g2pyt")
+
+[node name="Prefix Selection" type="OptionButton" parent="MarginContainer2/Panel2" unique_id=2071796066]
+custom_minimum_size = Vector2(1600, 100)
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 81.0
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("5_om8sb")
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_441ux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xomts")
+theme_override_styles/hover = SubResource("StyleBoxFlat_73ug5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ause1")
+alignment = 1
+
+[node name="Notifying" type="Label" parent="MarginContainer2/Panel2/Prefix Selection" unique_id=1676642120]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -23.0
+offset_right = 97.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_om8sb")
+theme_override_font_sizes/font_size = 40
+text = "This is a test"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_m6nab")
+metadata/_custom_type_script = "uid://n8gtsbi2h6ga"
+
+[node name="Mimic" type="Label" parent="MarginContainer2/Panel2/Prefix Selection/Notifying" unique_id=2115349979]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -24.0
+offset_right = 94.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_om8sb")
+theme_override_font_sizes/font_size = 40
+text = "This is a test"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_hn8o4")
+metadata/_custom_type_script = "uid://dqrhwrb0v8dcr"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=291925430]
+material = SubResource("ShaderMaterial_leact")
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 1661.0
+offset_top = 751.0
+offset_right = 1725.0
+offset_bottom = 815.0
+rotation = 3.14159
+pivot_offset = Vector2(32, 32)
+mouse_filter = 2
+texture = ExtResource("8_slb8f")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="TertiaryFontOperator" type="Control" parent="." unique_id=1127790147 node_paths=PackedStringArray("nodes_with_bold_text", "nodes_to_scale_text")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_oemlv")
+nodes_with_bold_text = [NodePath("../MarginContainer2/Panel2/Prefix Selection/Notifying"), NodePath("../MarginContainer2/Panel2/Prefix Selection/Notifying/Mimic")]
+nodes_to_scale_text = [NodePath("../MarginContainer2/Panel2/Prefix Selection/Notifying"), NodePath("../MarginContainer2/Panel2/Prefix Selection/Notifying/Mimic")]
+
+[connection signal="item_selected" from="MarginContainer2/Panel2/Prefix Selection" to="." method="_on_prefix_selection_item_selected"]
+[connection signal="mouse_entered" from="MarginContainer2/Panel2/Prefix Selection" to="MarginContainer2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer2/Panel2/Prefix Selection" to="MarginContainer2" method="_on_mouse_exited"]

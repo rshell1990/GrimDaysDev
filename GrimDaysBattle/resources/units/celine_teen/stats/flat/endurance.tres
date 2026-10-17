@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://bcv23ps4p3ms0"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_lab8s"]
+
+[resource]
+script = ExtResource("1_lab8s")
+type = 50
+starting_amount = 5.0
+id = &"Endurance"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

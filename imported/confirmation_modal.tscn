@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://r6ul4ft3vkai"]
+
+[ext_resource type="Script" uid="uid://bqine3kqvy52e" path="res://GrimDays/imported/confirmation_modal.gd" id="1_a3gho"]
+[ext_resource type="Texture2D" uid="uid://b4ggaqhh6b3xu" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Chat/Buttons/Button Group Normal.png" id="2_47w8j"]
+[ext_resource type="FontVariation" uid="uid://b1ymikdqcxbjb" path="res://GrimDays/fonts/answer_variant.tres" id="3_o5cvj"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="5_4bfbl"]
+[ext_resource type="StyleBox" uid="uid://cfqu8tj7eb0qr" path="res://GrimDaysVN/resources/gui/grey_back.tres" id="5_a5ece"]
+[ext_resource type="StyleBox" uid="uid://c1l04gqf55rdi" path="res://GrimDaysVN/resources/gui/red_back.tres" id="6_fk5vl"]
+[ext_resource type="Script" uid="uid://pevt0auern8u" path="res://GrimDaysVN/scripts/ui/scriplets/menu_buttons.gd" id="8_dteue"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rq3it"]
+texture = ExtResource("2_47w8j")
+modulate_color = Color(1, 0.4708262, 0.60055476, 1)
+
+[node name="ConfirmationModal" type="CanvasLayer" unique_id=205034119 node_paths=PackedStringArray("background")]
+process_mode = 3
+process_priority = 10
+layer = 128
+script = ExtResource("1_a3gho")
+background = NodePath("Modal")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=110962536]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0338533, 0.0338533, 0.0338533, 0.941176)
+
+[node name="Modal" type="PanelContainer" parent="." unique_id=673211207]
+custom_minimum_size = Vector2(128, 64)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -188.5
+offset_right = 825.0
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rq3it")
+
+[node name="MarginContainer" type="MarginContainer" parent="Modal" unique_id=641693489]
+custom_minimum_size = Vector2(1400, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 68
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 94
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Modal/MarginContainer" unique_id=1500422000]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="HeaderLabel" type="Label" parent="Modal/MarginContainer/VBoxContainer" unique_id=212840767]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_o5cvj")
+theme_override_font_sizes/font_size = 78
+text = "Are you sure?"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MessageLabel" type="Label" parent="Modal/MarginContainer/VBoxContainer" unique_id=167041345]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_o5cvj")
+theme_override_font_sizes/font_size = 48
+text = "Message body here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="GridContainer" parent="Modal/MarginContainer/VBoxContainer" unique_id=766998053]
+layout_mode = 2
+theme_override_constants/h_separation = 250
+columns = 2
+
+[node name="ConfirmButton" type="Button" parent="Modal/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1105129091 node_paths=PackedStringArray("label")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_4bfbl")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("5_a5ece")
+theme_override_styles/pressed = ExtResource("5_a5ece")
+theme_override_styles/hover = ExtResource("6_fk5vl")
+theme_override_styles/disabled = ExtResource("5_a5ece")
+theme_override_styles/focus = ExtResource("5_a5ece")
+alignment = 2
+script = ExtResource("8_dteue")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.47843137, 0, 0.2, 1)
+label = NodePath("Margin3/Label")
+
+[node name="Margin3" type="MarginContainer" parent="Modal/MarginContainer/VBoxContainer/HBoxContainer/ConfirmButton" unique_id=297074570]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = -23
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="Modal/MarginContainer/VBoxContainer/HBoxContainer/ConfirmButton/Margin3" unique_id=1114372663]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_o5cvj")
+theme_override_font_sizes/font_size = 48
+text = "Yes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CancelButton" type="Button" parent="Modal/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1571507462 node_paths=PackedStringArray("label")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_4bfbl")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("5_a5ece")
+theme_override_styles/pressed = ExtResource("5_a5ece")
+theme_override_styles/hover = ExtResource("6_fk5vl")
+theme_override_styles/disabled = ExtResource("5_a5ece")
+theme_override_styles/focus = ExtResource("5_a5ece")
+alignment = 2
+script = ExtResource("8_dteue")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.47843137, 0, 0.2, 1)
+label = NodePath("Margin3/Label")
+
+[node name="Margin3" type="MarginContainer" parent="Modal/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" unique_id=1617878668]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = -23
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="Modal/MarginContainer/VBoxContainer/HBoxContainer/CancelButton/Margin3" unique_id=1677976397]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_o5cvj")
+theme_override_font_sizes/font_size = 48
+text = "No"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Modal/MarginContainer/VBoxContainer/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="Modal/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]

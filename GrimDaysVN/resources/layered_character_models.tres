@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="LayeredCharacterModels" format=3 uid="uid://73wdohf41rbb"]
+
+[ext_resource type="Script" uid="uid://boietvq7r1opy" path="res://GrimDaysVN/scripts/layered_characters/layered_character_model_dictionary.gd" id="1_xdvym"]
+
+[resource]
+script = ExtResource("1_xdvym")
+all = Dictionary[StringName, StringName]({
+&"Boris": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/boris.tscn",
+&"CelineTeen": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/celine_teen.tscn",
+&"CelineYoung": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/celine_young.tscn",
+&"Draegor": &"res://GrimDaysVN/scenes/characters/prologue_c_inquisitor_tower/draegor.tscn",
+&"Draken": &"res://GrimDaysVN/scenes/characters/prologue_d_on_the_run/draken.tscn",
+&"Father": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/father.tscn",
+&"FemaleInquisitor": &"res://GrimDaysVN/scenes/characters/prologue_c_inquisitor_tower/female_inquisitor.tscn",
+&"GoonA": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/harlok_goon_a.tscn",
+&"GoonB": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/harlok_goon_b.tscn",
+&"Guard": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/guard.tscn",
+&"Harlok": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/harlok.tscn",
+&"Kayana": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/kayanna.tscn",
+&"Knight": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/knight.tscn",
+&"Madison": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/madison.tscn",
+&"MaleInquisitor": &"res://GrimDaysVN/scenes/characters/prologue_c_inquisitor_tower/male_inquisitor.tscn",
+&"Mother": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/mother.tscn",
+&"Nashar": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/nashar.tscn",
+&"NunB": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/nun_b.tscn",
+&"NunC": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/nun_c.tscn",
+&"OrphanageGuard": &"res://GrimDaysVN/scenes/characters/prologue_a_childhood_home/orphanage_guard.tscn",
+&"SisterHara": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/nun_a.tscn",
+&"Ursula": &"res://GrimDaysVN/scenes/characters/prologue_b_orphanage/ursula.tscn"
+})
+metadata/_custom_type_script = "uid://boietvq7r1opy"

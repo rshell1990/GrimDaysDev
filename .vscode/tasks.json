@@ -1,0 +1,85 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Godot: Open project in editor",
+			"type": "shell",
+			"command": "${env:USERPROFILE}\\Downloads\\Godot_v4.7.2-stable_win64\\Godot_v4.7.2-stable_win64.exe",
+			"args": [
+				"--editor",
+				"--path",
+				"${workspaceFolder}"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Godot: Lint project",
+			"type": "process",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy", "Bypass",
+				"-File", "${workspaceFolder}\\lint.ps1"
+			],
+			"problemMatcher": {
+				"owner": "gdscript-style",
+				"fileLocation": "absolute",
+				"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+): (error|warning|info): (.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
+		},
+		{
+			"label": "Godot: Lint current script",
+			"type": "process",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy", "Bypass",
+				"-File", "${workspaceFolder}\\lint.ps1",
+				"-Paths", "${file}"
+			],
+			"problemMatcher": {
+				"owner": "gdscript-style",
+				"fileLocation": "absolute",
+				"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+): (error|warning|info): (.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
+		},
+		{
+			"label": "Godot: Validate project",
+			"type": "process",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy", "Bypass",
+				"-File", "${workspaceFolder}\\tools\\validate-godot.ps1",
+				"-EnginePath", "${config:godotTools.editorPath.godot4}"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Godot: Test lint tooling",
+			"type": "process",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy", "Bypass",
+				"-File", "${workspaceFolder}\\tools\\test-lint.ps1"
+			],
+			"problemMatcher": []
+		}
+	]
+}

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RankTemplate" format=3 uid="uid://prt7xjn7hx3h"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_2do7m"]
+[ext_resource type="Resource" uid="uid://bpwdbwn0lqar4" path="res://GrimDaysBattle/resources/actions/celine/unnatural_recovery_single_rank/unnatural_recover_single_rank_ranks_1_effects.tres" id="1_r3tqu"]
+
+[resource]
+script = ExtResource("1_2do7m")
+level = 1
+cost = Dictionary[int, int]({
+230: 20
+})
+effects = ExtResource("1_r3tqu")
+id = &"unnatural_recover_single_rank_ranks_1"
+metadata/_custom_type_script = "uid://o71l6u31qrs2"

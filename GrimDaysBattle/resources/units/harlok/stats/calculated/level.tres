@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://de5pe3771vffv"]
+
+[ext_resource type="Curve" uid="uid://b83mgcntjfg6v" path="res://GrimDaysBattle/resources/units/harlok/stats/calculated/level_gained_by_experience_earned.tres" id="1_ymr5q"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_rjvkw"]
+
+[resource]
+script = ExtResource("2_rjvkw")
+influenced_by = 110
+growth_curve = ExtResource("1_ymr5q")
+type = 300
+id = &"Level"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

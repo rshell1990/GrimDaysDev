@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://de7gfw4pg4svr"]
+
+[ext_resource type="Environment" uid="uid://ebdwxcoxh1ur" path="res://content/resources/mid_specs_prime_indoors.tres" id="2_lbk0x"]
+[ext_resource type="Script" uid="uid://d4gu30o5h0hhe" path="res://content/scripts/camera/main_camera_operator.gd" id="4_fywmx"]
+[ext_resource type="Script" uid="uid://cpukc8u4rc1uk" path="res://content/scripts/camera/camera_move_to_preset.gd" id="5_ms25d"]
+[ext_resource type="Script" uid="uid://biglwdp5ucpsq" path="res://content/scripts/camera/camera_move_to_point.gd" id="6_ch627"]
+[ext_resource type="Script" uid="uid://dugt0o0rg81xv" path="res://content/scripts/ui/cover.gd" id="8_asmag"]
+
+[node name="Base Location" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_lbk0x")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Background" type="Sprite3D" parent="Background" groups=["background"]]
+transform = Transform3D(3.25, 0, 0, 0, 3.25, 0, 0, 0, 3.25, 0, 0, -600)
+layers = 1023
+pixel_size = 0.8
+transparent = false
+shaded = true
+double_sided = false
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+shadow_normal_bias = 5.51
+shadow_transmittance_bias = 1.896
+shadow_blur = 5.615
+sky_mode = 1
+
+[node name="Main" type="Camera3D" parent="." groups=["main_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1425)
+current = true
+fov = 107.5
+size = 415.0
+near = 0.001
+script = ExtResource("4_fywmx")
+
+[node name="Move to Phantom" type="Node" parent="Main"]
+script = ExtResource("5_ms25d")
+
+[node name="Move to Custom" type="Node" parent="Main"]
+script = ExtResource("6_ch627")
+
+[node name="Phantom Cameras" type="Node" parent="."]
+
+[node name="Far" type="Camera3D" parent="Phantom Cameras" groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1425)
+visible = false
+fov = 107.5
+size = 0.225
+near = 0.001
+
+[node name="Mid" type="Camera3D" parent="Phantom Cameras" groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 200, 1200)
+visible = false
+cull_mask = 1048574
+fov = 107.5
+size = 0.225
+near = 0.001
+
+[node name="Close" type="Camera3D" parent="Phantom Cameras" groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 400, 800)
+visible = false
+cull_mask = 1048572
+fov = 107.5
+size = 0.225
+near = 0.001
+
+[node name="Cover" type="CanvasLayer" parent="."]
+layer = 128
+script = ExtResource("8_asmag")
+
+[node name="ColorRect" type="ColorRect" parent="Cover"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

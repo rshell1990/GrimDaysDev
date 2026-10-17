@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RankTemplate" format=3 uid="uid://bo33l5r2e3bsm"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="3_rank"]
+[ext_resource type="Resource" uid="uid://b4pxe3qy64kwo" path="res://GrimDaysBattle/resources/actions/celine/frenzy_single_rank/frenzy_single_rank_ranks_1_effects.tres" id="external_Effects"]
+
+[resource]
+script = ExtResource("3_rank")
+level = 1
+cost = Dictionary[int, int]({
+220: 2
+})
+effects = ExtResource("external_Effects")
+id = &"frenzy_base_rank"

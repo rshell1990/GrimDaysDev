@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFont" format=3 uid="uid://c7sinad63245v"]
+
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="1_3bf3y"]
+[ext_resource type="FontVariation" uid="uid://um62ob08oor8" path="res://GrimDaysVN/resources/fonts/vandal_bold.tres" id="1_n5l5y"]
+[ext_resource type="FontVariation" uid="uid://cr7wtnsoovqhn" path="res://GrimDaysVN/resources/fonts/vandal_bold_italics.tres" id="2_ui0k7"]
+[ext_resource type="FontVariation" uid="uid://biijrjvhit3qd" path="res://GrimDaysVN/resources/fonts/vanal_italics.tres" id="3_ba01x"]
+[ext_resource type="FontVariation" uid="uid://cktgaxml3vrr7" path="res://GrimDaysVN/resources/fonts/vandal_.tres" id="4_ct7ys"]
+
+[resource]
+script = ExtResource("1_3bf3y")
+id = "vandal"
+normal = ExtResource("4_ct7ys")
+italics = ExtResource("3_ba01x")
+bold = ExtResource("1_n5l5y")
+combo = ExtResource("2_ui0k7")

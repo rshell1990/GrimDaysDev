@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" format=3 uid="uid://c67l31i3dhyf0"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://bblndfl8gd4mi" path="res://GrimDaysBattle/assets/spine/bandits/Harlock.atlas" id="1_5fpw6"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://wr3xhdb6ja3c" path="res://GrimDaysBattle/assets/spine/bandits/Harlock.skel" id="2_fmrjd"]
+
+[resource]
+atlas_res = ExtResource("1_5fpw6")
+skeleton_file_res = ExtResource("2_fmrjd")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1q8k3vbn7x2m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_basic_attack"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="BasicAttackParticle" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_basic_attack")

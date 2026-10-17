@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="BattleUnitTemplate" format=3 uid="uid://bmechhvsr0ky8"]
+
+[ext_resource type="Resource" uid="uid://s0sv4urabrmo" path="res://GrimDaysBattle/resources/actions/street_bullies/spine_animated_basic_attack.tres" id="1_xxqrl"]
+[ext_resource type="PackedScene" uid="uid://bgcu0umfw8o0p" path="res://GrimDaysBattle/scenes/battle/units/harlok_spine_animation.tscn" id="2_31q11"]
+[ext_resource type="Script" uid="uid://cb7akesf5u8d3" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template.gd" id="3_acsuw"]
+[ext_resource type="Script" uid="uid://drwr8dgs5cpum" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template_collection.gd" id="4_ht2g1"]
+[ext_resource type="Resource" uid="uid://bgi7h8602bmga" path="res://GrimDaysBattle/resources/units/harlok/harlok_leveling_tiers.tres" id="5_4u6nw"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="5_jb4qs"]
+[ext_resource type="Texture2D" uid="uid://c58s4waei2qri" path="res://GrimDaysBattle/assets/visuals/battle_portraits/harlok_portrait.png" id="6_31q11"]
+[ext_resource type="Resource" uid="uid://47v2e20vx7av" path="res://GrimDaysBattle/resources/effects/harlok_model/play_animation_when_damaged.tres" id="6_xxqrl"]
+[ext_resource type="Resource" uid="uid://dj0tspsauybug" path="res://GrimDaysBattle/resources/effects/play_male_scream_on_defeat.tres" id="7_riyht"]
+[ext_resource type="Resource" uid="uid://inw5hu387vt6" path="res://GrimDaysBattle/resources/effects/harlok_model/play_animation_when_defeated.tres" id="7_u308b"]
+[ext_resource type="Resource" uid="uid://ck8f51vtw3llb" path="res://GrimDaysBattle/resources/units/harlok/harlok_stats.tres" id="8_u308b"]
+[ext_resource type="Script" uid="uid://bjm8hu372yam1" path="res://GrimDaysBattle/scripts/Unit/Resources/unit_template.gd" id="8_xxqrl"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/harlok_collection.tres" id="90_collection"]
+
+[sub_resource type="Resource" id="Resource_jh8xl"]
+script = ExtResource("4_ht2g1")
+metadata/_custom_type_script = "uid://drwr8dgs5cpum"
+
+[resource]
+script = ExtResource("8_xxqrl")
+display_name = "Harlok"
+unit_archetype = "Warrior"
+level = 3.0
+portrait = ExtResource("6_31q11")
+battle_sprite = ExtResource("2_31q11")
+basic_action_template = ExtResource("1_xxqrl")
+experience_reward = 1200
+skill_collection = ExtResource("90_collection")
+leveling_tiers = ExtResource("5_4u6nw")
+stats = ExtResource("8_u308b")
+intrinsic_effects = Array[ExtResource("5_jb4qs")]([ExtResource("6_xxqrl"), ExtResource("7_riyht"), ExtResource("7_u308b")])
+equipment = SubResource("Resource_jh8xl")
+id = &"HarlokTeen"
+metadata/_custom_type_script = "uid://bjm8hu372yam1"

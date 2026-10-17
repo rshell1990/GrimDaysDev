@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://cx217sc1xgtmr"]
+
+[ext_resource type="Script" uid="uid://d4gu30o5h0hhe" path="res://content/scripts/camera/main_camera_operator.gd" id="4_7ntcd"]
+[ext_resource type="Script" uid="uid://cpukc8u4rc1uk" path="res://content/scripts/camera/camera_move_to_preset.gd" id="5_grmix"]
+[ext_resource type="Script" uid="uid://biglwdp5ucpsq" path="res://content/scripts/camera/camera_move_to_point.gd" id="6_qkano"]
+[ext_resource type="Script" uid="uid://dwd80k75farcu" path="res://content/scripts/spine_characters/character_layer_operator.gd" id="7_ywtsg"]
+[ext_resource type="Script" uid="uid://dugt0o0rg81xv" path="res://content/scripts/ui/cover.gd" id="8_gmc2q"]
+
+[node name="Base Sequence" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Sprite Background" type="Sprite3D" parent="Background"]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, -100)
+shaded = true
+
+[node name="Lighting By Time" type="DirectionalLight3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 105, 1461)
+light_energy = 0.1
+
+[node name="Main" type="Camera3D" parent="." groups=["main_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -200, -100, 325)
+current = true
+fov = 107.5
+size = 415.0
+near = 0.001
+script = ExtResource("4_7ntcd")
+
+[node name="Move to Phantom" type="Node" parent="Main"]
+script = ExtResource("5_grmix")
+
+[node name="Move to Custom" type="Node" parent="Main"]
+script = ExtResource("6_qkano")
+
+[node name="Phantom Cameras" type="Node" parent="."]
+
+[node name="Far" type="Camera3D" parent="Phantom Cameras" groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1425)
+visible = false
+fov = 107.5
+size = 0.225
+near = 0.001
+
+[node name="Mid" type="Camera3D" parent="Phantom Cameras" groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 200, 1200)
+visible = false
+cull_mask = 1048574
+fov = 107.5
+size = 0.225
+near = 0.001
+
+[node name="Close" type="Camera3D" parent="Phantom Cameras" groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 400, 800)
+visible = false
+cull_mask = 1048572
+fov = 107.5
+size = 0.225
+near = 0.001
+
+[node name="Character Depths" type="Node" parent="."]
+
+[node name="Closefront" type="Sprite3D" parent="Character Depths" groups=["sprite_depth"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -120, 1120)
+script = ExtResource("7_ywtsg")
+
+[node name="Closeback" type="Sprite3D" parent="Character Depths" groups=["sprite_depth"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -30, 1040)
+layers = 3
+script = ExtResource("7_ywtsg")
+
+[node name="Midfront" type="Sprite3D" parent="Character Depths" groups=["sprite_depth"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 960)
+layers = 3
+script = ExtResource("7_ywtsg")
+
+[node name="Midback" type="Sprite3D" parent="Character Depths" groups=["sprite_depth"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 80, 880)
+layers = 7
+script = ExtResource("7_ywtsg")
+
+[node name="Far" type="Sprite3D" parent="Character Depths" groups=["sprite_depth"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 130, 800)
+layers = 7
+script = ExtResource("7_ywtsg")
+
+[node name="Cover" type="CanvasLayer" parent="."]
+layer = 128
+script = ExtResource("8_gmc2q")
+
+[node name="ColorRect" type="ColorRect" parent="Cover"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFont" format=3 uid="uid://dmgbitb7xruli"]
+
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="1_ra3dr"]
+[ext_resource type="FontVariation" uid="uid://drilw8dmaf5pa" path="res://GrimDaysVN/resources/fonts/josefin_bold.tres" id="1_t0cid"]
+[ext_resource type="FontVariation" uid="uid://u8jiv2c76whl" path="res://GrimDaysVN/resources/fonts/josefin_bold_italics.tres" id="2_e2jvm"]
+[ext_resource type="FontVariation" uid="uid://bakr62y1ldipr" path="res://GrimDaysVN/resources/fonts/josefin_italics.tres" id="3_fbkhg"]
+[ext_resource type="FontVariation" uid="uid://brrjggndjoico" path="res://GrimDaysVN/resources/fonts/josefin_.tres" id="4_ggxuo"]
+
+[resource]
+script = ExtResource("1_ra3dr")
+id = "josefin"
+normal = ExtResource("4_ggxuo")
+italics = ExtResource("3_fbkhg")
+bold = ExtResource("1_t0cid")
+combo = ExtResource("2_e2jvm")

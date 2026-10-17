@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFont" format=3 uid="uid://2b27eq5fs7j1"]
+
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://GrimDaysVN/resources/fonts/elanor_bold.tres" id="1_udwgt"]
+[ext_resource type="FontVariation" uid="uid://dnajvg2yjov1u" path="res://GrimDaysVN/resources/fonts/elanor_bold_italics.tres" id="2_vjuaa"]
+[ext_resource type="FontVariation" uid="uid://nd76cgx2tgku" path="res://GrimDaysVN/resources/fonts/elanor_italics.tres" id="3_an2ig"]
+[ext_resource type="FontVariation" uid="uid://chteovppxif7j" path="res://GrimDaysVN/resources/fonts/elanor_.tres" id="4_2uw0c"]
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="5_45rda"]
+
+[resource]
+script = ExtResource("5_45rda")
+id = "elanor"
+normal = ExtResource("4_2uw0c")
+italics = ExtResource("3_an2ig")
+bold = ExtResource("1_udwgt")
+combo = ExtResource("2_vjuaa")

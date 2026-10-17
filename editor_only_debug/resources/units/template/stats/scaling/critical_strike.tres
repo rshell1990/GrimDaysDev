@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://bpw0ohq8uw3aa"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_sev35"]
+
+[resource]
+script = ExtResource("1_sev35")
+influenced_by = 80
+type = 380
+id = &"CriticalStrike"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://brmh5gclpuqyb"]
+
+[ext_resource type="Texture2D" uid="uid://b6ln72mdv7ppo" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/Hero_iconFr.png" id="2_bheef"]
+[ext_resource type="Texture2D" uid="uid://cvl5dafvmyfcd" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_A_Lil_Ready.png" id="3_nfrxh"]
+[ext_resource type="FontFile" uid="uid://fa3cdvpk7238" path="res://GrimDays/assets/visuals/ui/Font/Berry Rotunda.ttf" id="4_vs7ll"]
+[ext_resource type="Texture2D" uid="uid://3fyf5ayqlcwn" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_A_Lil_aimed.png" id="4_wyisc"]
+[ext_resource type="Texture2D" uid="uid://ktr4g0tgwqpo" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_A_Lil_active.png" id="5_itnsb"]
+[ext_resource type="Texture2D" uid="uid://cr4kujas3esuj" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_A_Long_active.png" id="6_nfrxh"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="7_8ew8h"]
+[ext_resource type="Texture2D" uid="uid://c5inbdf4t6emj" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/round_bl.png" id="8_utedp"]
+[ext_resource type="Texture2D" uid="uid://cuwwfbycxcp8" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Background_r_blue.png" id="29_5qtvj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j7b51"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05vi5"]
+texture = ExtResource("3_nfrxh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kh0q7"]
+texture = ExtResource("4_wyisc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lefe"]
+texture = ExtResource("5_itnsb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqhub"]
+texture = ExtResource("3_nfrxh")
+modulate_color = Color(0.42, 0.42, 0.42, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dksfx"]
+texture = ExtResource("4_wyisc")
+
+[node name="Party Member Empty Template" type="Panel" unique_id=1657841281]
+custom_minimum_size = Vector2(192, 210)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_j7b51")
+
+[node name="Background Texture" type="TextureRect" parent="." unique_id=1385628097]
+clip_children = 2
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -64.0
+offset_right = 62.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("29_5qtvj")
+expand_mode = 5
+
+[node name="Portrait Texture" type="TextureRect" parent="Background Texture" unique_id=1321861226]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 0
+offset_left = -5.5
+offset_top = 2.0
+offset_right = 134.5
+offset_bottom = 142.0
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 5
+flip_h = true
+
+[node name="Accent Graphic" type="TextureRect" parent="." unique_id=946757070]
+custom_minimum_size = Vector2(164, 164)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.4119
+offset_top = -83.5
+offset_right = 88.4119
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bheef")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Active" type="CheckBox" parent="Accent Graphic" unique_id=440225472]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -12.5
+offset_right = 12.5
+offset_bottom = 29.0
+grow_horizontal = 2
+
+[node name="Up" type="Button" parent="Accent Graphic" unique_id=1988406003]
+custom_minimum_size = Vector2(24, 24)
+custom_maximum_size = Vector2(24, 24)
+layout_mode = 1
+offset_right = 24.0
+offset_bottom = 24.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_05vi5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4lefe")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_yqhub")
+theme_override_styles/focus = SubResource("StyleBoxTexture_dksfx")
+text = "↑"
+
+[node name="Down" type="Button" parent="Accent Graphic" unique_id=1659459711]
+custom_minimum_size = Vector2(24, 24)
+custom_maximum_size = Vector2(24, 24)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_05vi5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4lefe")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_yqhub")
+theme_override_styles/focus = SubResource("StyleBoxTexture_dksfx")
+text = "↓"
+
+[node name="Notification Frame" type="TextureRect" parent="." unique_id=444029842]
+custom_maximum_size = Vector2(120, 25)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = -49.0
+offset_right = -34.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("6_nfrxh")
+expand_mode = 5
+
+[node name="Select" type="Button" parent="." unique_id=438323903]
+custom_maximum_size = Vector2(160, 125)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -46.5
+offset_right = 80.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Name" type="Label" parent="." unique_id=194881696]
+layout_mode = 0
+offset_top = 158.0
+offset_right = 192.0
+offset_bottom = 181.0
+theme_override_colors/font_shadow_color = Color(0.27, 0.27, 0.27, 0.49411765)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_8ew8h")
+text = "Ally"
+horizontal_alignment = 1
+
+[node name="Level Frame" type="TextureRect" parent="." unique_id=641436375]
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_right = 48.0
+grow_vertical = 0
+texture = ExtResource("8_utedp")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Level Label" type="Label" parent="Level Frame" unique_id=1287262394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 13.0
+offset_right = -2.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.13, 0.13, 0.13, 0.76862746)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_vs7ll")
+theme_override_font_sizes/font_size = 12
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://ctheiddys0srv"]
+
+[ext_resource type="Curve" uid="uid://djba7ch4pjdvv" path="res://GrimDaysBattle/resources/units/sister_anastasia/stats/calculated/mana_gained_per_mysticsm.tres" id="1_bemcw"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_67d77"]
+
+[resource]
+script = ExtResource("2_67d77")
+influenced_by = 70
+growth_curve = ExtResource("1_bemcw")
+type = 230
+id = &"Mana"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

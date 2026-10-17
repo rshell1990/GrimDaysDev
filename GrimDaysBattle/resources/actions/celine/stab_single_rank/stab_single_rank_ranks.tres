@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RanksTemplate" format=3 uid="uid://fffdvndok7kc"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_bgxph"]
+[ext_resource type="Resource" uid="uid://ci6i7djgwqv5v" path="res://GrimDaysBattle/resources/actions/celine/stab_single_rank/stab_single_rank_ranks_1.tres" id="2_7i3tk"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="3_ofcqp"]
+
+[resource]
+script = ExtResource("3_ofcqp")
+generated = true
+rank_count = 5
+base_rank = ExtResource("2_7i3tk")
+cost_increase_per_rank = Dictionary[int, int]({
+220: 1
+})
+id = &"stab_single_rank_ranks"
+metadata/_custom_type_script = "uid://cmooful7o2yxq"

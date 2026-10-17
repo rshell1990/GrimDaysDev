@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://bmn5g414x4o4n"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_rxswj"]
+[ext_resource type="Resource" uid="uid://duk1jqf4l7f06" path="res://GrimDaysBattle/resources/actions/celine/beatdown_single_rank/beatdown_single_rank_ranks.tres" id="2_3tv14"]
+[ext_resource type="Texture2D" uid="uid://clm7jtd1nl1v2" path="res://editor_only_debug/visuals/ui/vn_gui_library/2000_Icons/500_skillicons/Skill_standart/Warriorskill_30.png" id="2_6514t"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="3_6514t"]
+
+[resource]
+script = ExtResource("3_6514t")
+display_name = "Beatdown"
+description = "Your unarmed attack sequence of straight punch, quick jab, and uppercut now has a chance to be extended with up to three additional punches. Each punch has an independent chance to trigger, with a lower chance for each additional punch."
+icon = ExtResource("2_6514t")
+attack_animation = &"Attacking (Basic) NO WEAPON"
+use_spine = true
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("2_3tv14")
+id = &"beatdown_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

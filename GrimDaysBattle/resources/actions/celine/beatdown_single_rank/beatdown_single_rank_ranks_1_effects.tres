@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3 uid="uid://ch1day1uvqfy7"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_g7orp"]
+[ext_resource type="Resource" uid="uid://c1mua7ak2i7qd" path="res://GrimDaysBattle/resources/actions/celine/beatdown_single_rank/beatdown_single_rank_ranks_1_effects_effect_chain_1_another_punch.tres" id="2_4dgcv"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="2_8f3cj"]
+[ext_resource type="Resource" uid="uid://hcn28q8wvqci" path="res://GrimDaysBattle/resources/actions/celine/beatdown_single_rank/beatdown_single_rank_ranks_1_effects_effect_chain_2_another_punch.tres" id="3_luyrw"]
+[ext_resource type="Resource" uid="uid://75nifaw032um" path="res://GrimDaysBattle/resources/actions/celine/beatdown_single_rank/beatdown_single_rank_ranks_1_effects_effect_chain_3_another_punch.tres" id="4_eqqu8"]
+
+[resource]
+script = ExtResource("2_8f3cj")
+all = Array[ExtResource("1_g7orp")]([ExtResource("2_4dgcv"), ExtResource("3_luyrw"), ExtResource("4_eqqu8")])
+id = &"beatdown_single_rank_ranks_1_effects"
+metadata/_custom_type_script = "uid://dw0pgj3kb31c6"

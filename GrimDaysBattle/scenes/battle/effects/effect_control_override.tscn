@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://dm18sipv3bdcs" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_control_override.gd" id="1_control"]
+
+[node name="EffectControlOverride" type="Node"]
+script = ExtResource("1_control")

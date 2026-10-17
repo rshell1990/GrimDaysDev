@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://bwjdfloiq1epv"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_vtksu"]
+[ext_resource type="Curve" uid="uid://cy3flyaaxm4i3" path="res://GrimDaysBattle/resources/units/sister_hara/stats/scaling/accuracy-perception_needed_1-9_for_maximum.tres" id="2_elg0w"]
+
+[resource]
+script = ExtResource("1_vtksu")
+influenced_by = 40
+to_stat_maximum_curve = ExtResource("2_elg0w")
+maximum = 85.0
+minimum = 60.0
+type = 340
+id = &"Accuracy"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

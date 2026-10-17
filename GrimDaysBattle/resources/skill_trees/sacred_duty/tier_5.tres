@@ -1,0 +1,12 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tier_definition.gd" id="script"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_node_definition.gd" id="node"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/sacred_duty/nodes/merciful_hands.tres" id="merciful_hands"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/sacred_duty/nodes/righteous_resolve.tres" id="righteous_resolve"]
+
+[resource]
+script = ExtResource("script")
+column = 4
+minimum_stats = Dictionary[int, float]({300: 5.0})
+nodes = Array[ExtResource("node")]([ExtResource("merciful_hands"), ExtResource("righteous_resolve")])

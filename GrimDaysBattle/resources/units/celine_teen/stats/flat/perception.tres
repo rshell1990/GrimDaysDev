@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://cnl1sfuwbf4xp"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_6tc36"]
+
+[resource]
+script = ExtResource("1_6tc36")
+type = 40
+starting_amount = 7.0
+id = &"Perception"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

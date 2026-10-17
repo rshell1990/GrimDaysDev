@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dqq31tcad4368"]
+
+[ext_resource type="Script" uid="uid://bkvk2tcqeejfq" path="res://GrimDaysVN/scripts/repositories/repositories.gd" id="1_fqrri"]
+[ext_resource type="Script" uid="uid://bhatrauufgsk" path="res://GrimDaysVN/scripts/repositories/camera_effects_repository.gd" id="2_d5ade"]
+[ext_resource type="Resource" uid="uid://deqe50wt5u0dx" path="res://GrimDaysVN/resources/tooltips/all_tooltips.tres" id="3_ttt68"]
+[ext_resource type="Script" uid="uid://r7halgulsmw1" path="res://GrimDaysVN/scripts/repositories/scene_templates_repository.gd" id="4_2opi8"]
+[ext_resource type="Script" uid="uid://b1l2lq35km6uc" path="res://GrimDaysVN/scripts/repositories/tooltip_repository.gd" id="5_okgvp"]
+[ext_resource type="Script" uid="uid://dwf3lvxk8ok3k" path="res://GrimDaysVN/scripts/repositories/music_repository.gd" id="9_m2vvb"]
+[ext_resource type="Script" uid="uid://h3apsy73aegg" path="res://GrimDaysVN/scripts/repositories/character_model_repository.gd" id="9_m6tgo"]
+[ext_resource type="Script" uid="uid://c372ngnl7wi87" path="res://GrimDaysVN/scripts/repositories/sounds_repository.gd" id="10_2xwmj"]
+[ext_resource type="Resource" uid="uid://73wdohf41rbb" path="res://GrimDaysVN/resources/layered_character_models.tres" id="10_81y5v"]
+[ext_resource type="Script" uid="uid://emd5jbfml50l" path="res://GrimDaysVN/scripts/navigation/resources/locations.gd" id="10_lcoow"]
+[ext_resource type="Script" uid="uid://clt3g2x8xkpa" path="res://GrimDaysVN/scripts/repositories/ambient_repository.gd" id="11_cfgxh"]
+[ext_resource type="Script" uid="uid://87tkajwcfmj" path="res://GrimDaysVN/scripts/navigation/resources/master_locations.gd" id="11_p34hp"]
+[ext_resource type="Resource" uid="uid://2v2knb8rj7pa" path="res://GrimDaysVN/resources/events/all_events_prototype_1.tres" id="14_lcoow"]
+[ext_resource type="Script" uid="uid://brwsvax5qnv0n" path="res://GrimDaysVN/scripts/repositories/font_repository.gd" id="15_i1p3x"]
+[ext_resource type="Resource" uid="uid://lidhrn1tm3bd" path="res://GrimDaysVN/resources/fonts/all_fonts.tres" id="16_lvhsp"]
+[ext_resource type="Script" uid="uid://dvhiwemeiii0o" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/dialogic_timeline_reference.gd" id="17_1tr7w"]
+[ext_resource type="Script" uid="uid://dpbi1bm03u6ik" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/dialogic_timelines.gd" id="18_a6el5"]
+[ext_resource type="Script" uid="uid://b6ixnkyaj1cgs" path="res://GrimDaysVN/scripts/repositories/dd_ovani_repository.gd" id="18_sbny5"]
+[ext_resource type="Script" uid="uid://poyamgm0jd82" path="res://GrimDaysVN/scripts/repositories/locations_respository.gd" id="27_2nj54"]
+[ext_resource type="Script" uid="uid://cxk403v8re5hd" path="res://GrimDaysVN/scripts/repositories/event_repository.gd" id="29_xv56i"]
+[ext_resource type="Script" uid="uid://bgwfk8n0iep85" path="res://GrimDaysVN/scripts/repositories/quest_repository.gd" id="31_fokgl"]
+[ext_resource type="Resource" uid="uid://bdaykuf4hxjm4" path="res://GrimDaysVN/resources/Quests/all_quests.tres" id="32_7l83i"]
+[ext_resource type="Script" uid="uid://nbartodqre34" path="res://GrimDaysVN/scripts/repositories/system_timelines.gd" id="48_l8bl2"]
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/repositories/item_repository.gd" id="49_item_repository"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/items/imported/all_items.tres" id="50_item_templates"]
+
+[sub_resource type="Resource" id="Resource_ao0f6"]
+script = ExtResource("11_p34hp")
+all = Array[ExtResource("10_lcoow")]([])
+metadata/_custom_type_script = "uid://87tkajwcfmj"
+
+[sub_resource type="Resource" id="Resource_lcoow"]
+script = ExtResource("18_a6el5")
+metadata/_custom_type_script = "uid://dpbi1bm03u6ik"
+
+[node name="VNRepositories" type="Node" unique_id=1236650493]
+script = ExtResource("1_fqrri")
+
+[node name="AudioSongs" type="Node" parent="." unique_id=1981340819]
+script = ExtResource("18_sbny5")
+
+[node name="AudioMusic" type="Node" parent="." unique_id=549508977]
+script = ExtResource("9_m2vvb")
+
+[node name="AudioSounds" type="Node" parent="." unique_id=401132582]
+script = ExtResource("10_2xwmj")
+
+[node name="AudioAmbient" type="Node" parent="." unique_id=2125989540]
+script = ExtResource("11_cfgxh")
+
+[node name="CameraFX" type="Node" parent="." unique_id=662570906]
+script = ExtResource("2_d5ade")
+
+[node name="Fonts" type="Node" parent="." unique_id=739414259]
+script = ExtResource("15_i1p3x")
+resource = ExtResource("16_lvhsp")
+
+[node name="LayeredCharacters" type="Node" parent="." unique_id=917016938]
+script = ExtResource("9_m6tgo")
+resource = ExtResource("10_81y5v")
+metadata/_custom_type_script = "uid://h3apsy73aegg"
+
+[node name="GameLocations" type="Node" parent="." unique_id=285925431]
+script = ExtResource("27_2nj54")
+resource = SubResource("Resource_ao0f6")
+
+[node name="GameEvents" type="Node" parent="." unique_id=2125501362]
+script = ExtResource("29_xv56i")
+resource = ExtResource("14_lcoow")
+
+[node name="GameQuests" type="Node" parent="." unique_id=989688970]
+script = ExtResource("31_fokgl")
+resource = ExtResource("32_7l83i")
+
+[node name="SystemScenes" type="Node" parent="." unique_id=667813932]
+script = ExtResource("4_2opi8")
+
+[node name="SystemTimelines" type="Node" parent="." unique_id=956801118]
+script = ExtResource("48_l8bl2")
+resource = SubResource("Resource_lcoow")
+
+[node name="SystemTooltips" type="Node" parent="." unique_id=840821496]
+script = ExtResource("5_okgvp")
+resource = ExtResource("3_ttt68")
+
+[node name="GameVNItems" type="Node" parent="."]
+script = ExtResource("49_item_repository")
+resource = ExtResource("50_item_templates")

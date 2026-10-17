@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EffectStunTemplate" format=3 uid="uid://dmqg0thkbsgi6"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_kr8b2"]
+[ext_resource type="Script" uid="uid://hvpvo4obi8yt" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_stun.gd" id="2_gjf6b"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_stun.tscn" id="3_8ir25"]
+
+[resource]
+script = ExtResource("2_gjf6b")
+duration = 1
+target = 3
+kind = 100
+tag = 0
+always_hits = true
+template_scene = ExtResource("3_8ir25")
+id = &"uppercut_single_rank_ranks_1_effects_damage_stun"
+metadata/_custom_type_script = "uid://hvpvo4obi8yt"

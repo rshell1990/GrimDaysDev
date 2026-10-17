@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://cu1xe6swj513m"
+path="res://.godot/imported/Harlok sprite combat.skel-46cf9cf2f9ea1de1090f3dab77ddba19.spskel"
+
+[deps]
+
+source_file="res://GrimDaysBattle/assets/spine/harlok_goon_b/Harlok sprite combat.skel"
+dest_files=["res://.godot/imported/Harlok sprite combat.skel-46cf9cf2f9ea1de1090f3dab77ddba19.spskel"]
+
+[params]
+

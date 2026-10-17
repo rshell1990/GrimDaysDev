@@ -1,0 +1,10 @@
+[gd_resource type="FontVariation" format=3 uid="uid://brrjggndjoico"]
+
+[ext_resource type="FontFile" uid="uid://cwrf3lb0fgor3" path="res://GrimDays/fonts/JosefinSans-Bold.ttf" id="1_mce82"]
+
+[resource]
+base_font = ExtResource("1_mce82")
+variation_embolden = 0.2
+spacing_top = 2
+spacing_bottom = 2
+baseline_offset = 0.15

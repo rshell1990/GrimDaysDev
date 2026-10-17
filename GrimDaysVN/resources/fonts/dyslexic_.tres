@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" format=3 uid="uid://duv1c4jyedksy"]
+
+[ext_resource type="FontFile" uid="uid://d3g28pejqn4rs" path="res://GrimDays/fonts/OpenDyslexic3-Regular.ttf" id="1_jqj76"]
+
+[resource]
+base_font = ExtResource("1_jqj76")
+spacing_top = -8
+spacing_bottom = -8
+baseline_offset = -0.05

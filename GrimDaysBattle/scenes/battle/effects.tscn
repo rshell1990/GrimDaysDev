@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cfcmky65r261v"]
+
+[ext_resource type="Script" uid="uid://puwk13nnmuig" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_manager.gd" id="1_o6mfc"]
+[ext_resource type="Script" uid="uid://4c7iivfkfetw" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_on_equip.gd" id="2_r73me"]
+[ext_resource type="Script" uid="uid://cdwk1f7470lbg" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_before_hit.gd" id="3_xvwbl"]
+[ext_resource type="Script" uid="uid://coefjm84ll2ji" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_after_hit.gd" id="4_fbidd"]
+[ext_resource type="Script" uid="uid://x6asykccfy0d" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_before_hitting.gd" id="5_ax5fj"]
+[ext_resource type="Script" uid="uid://bb8uoqu771xyv" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_after_hitting.gd" id="6_6jm7s"]
+[ext_resource type="Script" uid="uid://dlu30rn84nrro" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_on_defeat.gd" id="7_lppos"]
+[ext_resource type="Script" uid="uid://cq6igsg2dlab3" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_on_kill.gd" id="8_3vncl"]
+[ext_resource type="Script" uid="uid://fx33ml6oix7r" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors_processing_finished.gd" id="9_an4lx"]
+[ext_resource type="Script" uid="uid://dpxyvvviqhotf" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_directors.gd" id="10_round"]
+
+[node name="Effects" type="Node"]
+script = ExtResource("1_o6mfc")
+
+[node name="On Equip" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_r73me")
+
+[node name="Before Hit" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_xvwbl")
+
+[node name="After Hit" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_fbidd")
+
+[node name="Before Hitting" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_ax5fj")
+
+[node name="After Hitting" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_6jm7s")
+
+[node name="On Defeat" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("7_lppos")
+
+[node name="On Kill" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_3vncl")
+
+[node name="On Processing Finished" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("9_an4lx")
+
+[node name="On Round Over" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("10_round")

@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://7cte6jenv0fy"]
+
+[ext_resource type="Script" uid="uid://b2tmg0x7iyph" path="res://content/scripts/ui/system_message.gd" id="1_ui2bg"]
+[ext_resource type="StyleBox" uid="uid://bm1kmkmyfp1pi" path="res://GrimDaysVN/resources/squared_background.tres" id="2_amavs"]
+[ext_resource type="FontVariation" uid="uid://chteovppxif7j" path="res://GrimDaysVN/resources/fonts/elanor_.tres" id="3_v6nlx"]
+[ext_resource type="FontVariation" uid="uid://nd76cgx2tgku" path="res://GrimDaysVN/resources/fonts/elanor_italics.tres" id="4_3ay8d"]
+[ext_resource type="FontVariation" uid="uid://dnajvg2yjov1u" path="res://GrimDaysVN/resources/fonts/elanor_bold_italics.tres" id="5_mbrk8"]
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://GrimDaysVN/resources/fonts/elanor_bold.tres" id="6_ngw8t"]
+[ext_resource type="StyleBox" uid="uid://cem3yn4eoeklj" path="res://GrimDaysVN/resources/gui/frame.tres" id="7_jad3p"]
+[ext_resource type="Script" uid="uid://b5yq8ak513ovb" path="res://content/scripts/ui/scriplets/automatically_color_panel.gd" id="8_uyscj"]
+
+[node name="SystemMessage" type="Control" node_paths=PackedStringArray("shadow_label", "message_label")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ui2bg")
+shadow_label = NodePath("Notification Template/MarginContainer/shadow")
+message_label = NodePath("Notification Template/MarginContainer/shadow/message")
+
+[node name="Notification Template" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.447059)
+custom_minimum_size = Vector2(1400, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -700.0
+offset_top = 50.0
+offset_right = 700.0
+offset_bottom = 130.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("2_amavs")
+
+[node name="MarginContainer" type="MarginContainer" parent="Notification Template"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="shadow" type="RichTextLabel" parent="Notification Template/MarginContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_v6nlx")
+theme_override_fonts/italics_font = ExtResource("4_3ay8d")
+theme_override_fonts/bold_italics_font = ExtResource("5_mbrk8")
+theme_override_fonts/bold_font = ExtResource("6_ngw8t")
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[center]Sample Notification a test to see how this handles me adding more and more text to this stupid thing.  It's all I have to know if this works.
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+
+[node name="message" type="RichTextLabel" parent="Notification Template/MarginContainer/shadow"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 1357.0
+offset_bottom = 79.0
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.28, 0.28, 1)
+theme_override_fonts/normal_font = ExtResource("3_v6nlx")
+theme_override_fonts/italics_font = ExtResource("4_3ay8d")
+theme_override_fonts/bold_italics_font = ExtResource("5_mbrk8")
+theme_override_fonts/bold_font = ExtResource("6_ngw8t")
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[center]Sample Notification a test to see how this handles me adding more and more text to this stupid thing.  It's all I have to know if this works.
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+
+[node name="Frame" type="Panel" parent="Notification Template" node_paths=PackedStringArray("background", "frame")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_jad3p")
+script = ExtResource("8_uyscj")
+background = NodePath("..")
+frame = NodePath(".")

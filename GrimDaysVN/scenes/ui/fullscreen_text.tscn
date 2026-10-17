@@ -1,0 +1,1626 @@
+[gd_scene format=3 uid="uid://bc5x4d6iykwad"]
+
+[ext_resource type="Script" uid="uid://dg7ekwlqjqrit" path="res://GrimDaysVN/scripts/overrides/dd_vn_textbox_layer.gd" id="1_sxvcu"]
+[ext_resource type="Script" uid="uid://bfc03rn8slceu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/animations.gd" id="2_f424j"]
+[ext_resource type="FontVariation" uid="uid://bc5ju4sx6055t" path="res://GrimDaysVN/resources/fonts/cassius_.tres" id="4_u817l"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="5_kac4s"]
+[ext_resource type="FontVariation" uid="uid://bc4xs6tbper4o" path="res://GrimDaysVN/resources/fonts/cassius_bold_italics.tres" id="6_15i5a"]
+[ext_resource type="FontVariation" uid="uid://x7b7yodpctfk" path="res://GrimDaysVN/resources/fonts/cassius_italics.tres" id="7_0om1t"]
+[ext_resource type="Script" uid="uid://drhfq6rmdeuri" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="8_s1t50"]
+[ext_resource type="Script" uid="uid://dpv2dfiv5dhmr" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="9_cvv1b"]
+[ext_resource type="Script" uid="uid://dve1vwse2peji" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="10_2l2pq"]
+[ext_resource type="Texture2D" uid="uid://b0rpqfg4fhebk" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/next.svg" id="11_pug7l"]
+[ext_resource type="Texture2D" uid="uid://du0wxd6fey2wn" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Game Menu & Pause/Buttons/Button Normal.png" id="12_7a8qx"]
+[ext_resource type="Texture2D" uid="uid://6pbjxcyug8d3" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Game Menu & Pause/Buttons/Button Hover.png" id="13_wvy4c"]
+[ext_resource type="Script" uid="uid://fykaqko6prc8" path="res://GrimDaysVN/scripts/ui/autoadvance_indicator.gd" id="14_6ghhf"]
+[ext_resource type="Texture2D" uid="uid://4swoc16msbv7" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_foreground_greyscaled.png" id="15_1ebre"]
+[ext_resource type="FontFile" uid="uid://vlu6kitg7y57" path="res://GrimDays/assets/visuals/ui/gui/fonts/gentium.ttf" id="16_orgs6"]
+[ext_resource type="Texture2D" uid="uid://t8onr55fdfu" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Mini Message/Button/Button normal.png" id="17_e2q2w"]
+[ext_resource type="Script" uid="uid://bldt7xlfum7ov" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="18_4n4o4"]
+[ext_resource type="Texture2D" uid="uid://ce5hwob5wl6yd" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Middle Message/Button/Button normal.png" id="19_o4geh"]
+[ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="20_pr4ek"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="21_d627h"]
+[ext_resource type="StyleBox" uid="uid://c1wyko7hlbp0c" path="res://GrimDaysVN/resources/gui/green_back.tres" id="22_4al1f"]
+[ext_resource type="StyleBox" uid="uid://hto4ykwx0ngt" path="res://GrimDaysVN/resources/gui/green_back_hover.tres" id="23_d5lhv"]
+[ext_resource type="Script" uid="uid://c3brlagrfequn" path="res://GrimDaysVN/scripts/ui/scriplets/icon_buttons.gd" id="24_cgrtt"]
+[ext_resource type="Script" uid="uid://c0h5bw0fy8nyg" path="res://GrimDaysVN/scripts/ui/scriplets/quick_menu_control.gd" id="25_la258"]
+[ext_resource type="Texture2D" uid="uid://ce5srqn45gm1x" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_toggle_idle.png" id="26_odutt"]
+[ext_resource type="StyleBox" uid="uid://deraoib6rgva6" path="res://GrimDaysVN/resources/gui/default_UI.tres" id="27_ti0c7"]
+[ext_resource type="PackedScene" uid="uid://bhsoq7qlornfs" path="res://GrimDaysVN/scenes/root/tooltip_trigger.tscn" id="28_1nxpe"]
+[ext_resource type="Texture2D" uid="uid://cc6q2k7pfy0xt" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_back_idle.png" id="29_u8abw"]
+[ext_resource type="Texture2D" uid="uid://h47q5liu6ikv" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_auto_idle.png" id="30_7n6bn"]
+[ext_resource type="Texture2D" uid="uid://cuo2sj05agjjb" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_skip_idle.png" id="31_3e13n"]
+[ext_resource type="Texture2D" uid="uid://b471mhrybkc6y" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_log_idle.png" id="32_ntylc"]
+[ext_resource type="Texture2D" uid="uid://he0ywbvod302" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_extras_idle.png" id="33_ve4yb"]
+[ext_resource type="Texture2D" uid="uid://ccf7ypdcnqnnx" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_settings_idle.png" id="34_xxfi7"]
+[ext_resource type="Texture2D" uid="uid://bmpokkj5bu3p5" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_save_idle.png" id="35_hb04x"]
+[ext_resource type="Texture2D" uid="uid://dxmfpfl6utw0q" path="res://GrimDays/assets/visuals/ui/vn_gui_library/quick_menu_load_idle.png" id="36_fih8q"]
+[ext_resource type="Script" uid="uid://dimobped82n2s" path="res://GrimDaysVN/scripts/ui/primary_font_operator.gd" id="37_dhy2e"]
+
+[sub_resource type="Animation" id="Animation_au0a2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/AnimationParent/Sizer/DialogTextPanel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/AnimationParent/Sizer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/AnimationParent/Sizer/NameLabelHolder:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Anchor/AnimationParent/Sizer/Quick Menu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6kbwc"]
+resource_name = "new_text"
+length = 0.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent/Sizer/DialogTextPanel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(3, 3, 3, 3, 3),
+"points": PackedFloat32Array(0, -0.025, 0, 0.025, 0, 0.005, -0.025, 0, 0.025, 0, -0.005, -0.025, 0, 0.025, 0, 0.005, -0.025, 0, 0.025, 0, 0, -0.025, 0, 0.025, 0),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_g6k55"]
+resource_name = "textbox_fade_up"
+length = 0.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(0.35, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/AnimationParent/Sizer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/AnimationParent/Sizer/NameLabelHolder:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(0.35, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/AnimationParent/Sizer/Quick Menu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(0.35, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_htbgc"]
+resource_name = "textbox_pop"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/AnimationParent:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0899883, 0.0258223, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/AnimationParent:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.793957, 0.778082), Vector2(0.937299, 1.14248), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/AnimationParent:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c14kh"]
+_data = {
+&"RESET": SubResource("Animation_au0a2"),
+&"new_text": SubResource("Animation_6kbwc"),
+&"textbox_fade_up": SubResource("Animation_g6k55"),
+&"textbox_pop": SubResource("Animation_htbgc")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sxvcu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx7v8"]
+texture = ExtResource("12_7a8qx")
+texture_margin_left = 54.948437
+texture_margin_top = 22.470928
+texture_margin_right = 52.666237
+texture_margin_bottom = 18.78429
+region_rect = Rect2(0, 0, 164, 47)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ntmxw"]
+texture = ExtResource("13_wvy4c")
+region_rect = Rect2(0, 0, 164, 47)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqtqg"]
+texture = ExtResource("15_1ebre")
+texture_margin_left = 50.0
+texture_margin_top = 50.0
+texture_margin_right = 50.0
+texture_margin_bottom = 50.0
+expand_margin_left = 25.0
+expand_margin_top = 25.0
+expand_margin_right = 25.0
+expand_margin_bottom = 25.0
+region_rect = Rect2(0, 1.22244, 110, 108.994)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntmxw"]
+bg_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
+
+[sub_resource type="GDScript" id="GDScript_yexsk"]
+resource_name = "choice_watching"
+script/source = "extends ScrollContainer
+
+func _ready() -> void:
+	var vbox = get_child(0)
+	var button = vbox.get_child(0) as Button
+	button.visibility_changed.connect(on_visibility_changed)
+
+func on_visibility_changed() -> void:
+	var vbox = get_child(0)
+	var button = vbox.get_child(0) as Button
+	if button.visible:
+		modulate.a = 1.0
+	else:
+		modulate.a = 0.0
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4g5ea"]
+texture = ExtResource("17_e2q2w")
+texture_margin_left = 50.0
+texture_margin_top = 21.0
+texture_margin_right = 50.0
+texture_margin_bottom = 21.02963
+region_rect = Rect2(0, 0, 195, 46)
+modulate_color = Color(0.18837145, 0.18837145, 0.18837145, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2jyx7"]
+texture = ExtResource("17_e2q2w")
+texture_margin_left = 50.0
+texture_margin_top = 21.0
+texture_margin_right = 50.0
+texture_margin_bottom = 21.02963
+region_rect = Rect2(0, 0, 195, 46)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yexsk"]
+texture = ExtResource("19_o4geh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2wab"]
+texture = ExtResource("15_1ebre")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 19.7498
+texture_margin_bottom = 20.0
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[node name="Fullscreen Text" type="Control" unique_id=2006677500]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_sxvcu")
+next_indicator_animation = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1748758047]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Animations" type="AnimationPlayer" parent="." unique_id=1421608964]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_c14kh")
+autoplay = &"RESET"
+script = ExtResource("2_f424j")
+
+[node name="Anchor" type="Control" parent="." unique_id=2008456986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationParent" type="Control" parent="Anchor" unique_id=1868165402]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.793957, 0.778082)
+mouse_filter = 2
+
+[node name="Sizer" type="Control" parent="Anchor/AnimationParent" unique_id=857455352]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -50.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="DialogTextPanel" type="PanelContainer" parent="Anchor/AnimationParent/Sizer" unique_id=1217003093]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -701.53
+offset_top = -416.59
+offset_right = 898.47
+offset_bottom = 483.41
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sxvcu")
+metadata/_edit_layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=275659280]
+layout_mode = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 85
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer" unique_id=1046357003 node_paths=PackedStringArray("textbox_root")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.31, 0.31, 0.31, 0.89411765)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/bold_font_size = 80
+theme_override_font_sizes/bold_italics_font_size = 80
+theme_override_font_sizes/italics_font_size = 80
+theme_override_font_sizes/mono_font_size = 80
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+visible_characters_behavior = 1
+script = ExtResource("8_s1t50")
+alignment = 1
+textbox_root = NodePath("../../../../..")
+
+[node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer/DialogicNode_DialogText" unique_id=469457782]
+unique_name_in_owner = true
+script = ExtResource("9_cvv1b")
+enabled = false
+play_every_character = 0
+
+[node name="NextIndicator" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=906176508]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+script = ExtResource("10_2l2pq")
+show_on_questions = true
+texture = ExtResource("11_pug7l")
+metadata/_edit_layout_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=1763329014]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 305
+
+[node name="AutoAdvanceProgressbar" type="ProgressBar" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer2" unique_id=526853982]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_yx7v8")
+theme_override_styles/fill = SubResource("StyleBoxTexture_ntmxw")
+max_value = 1.0
+step = 0.001
+value = 0.5
+show_percentage = false
+script = ExtResource("14_6ghhf")
+
+[node name="DialogicTextFrrame" type="Panel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=1913147924]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rqtqg")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=729052237]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 74
+theme_override_constants/margin_top = 77
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 80
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3" unique_id=193275366]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ntmxw")
+script = SubResource("GDScript_yexsk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer" unique_id=1735380614]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="DialogicNode_ChoiceButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=1727165281 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton" unique_id=1418338365]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton/MarginContainer" unique_id=1142523961]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton2" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=744929896 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton2" unique_id=414003040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton2/MarginContainer" unique_id=1982421144]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton3" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=1218246465 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton3" unique_id=1268762763]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton3/MarginContainer" unique_id=579446690]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton4" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=1242789638 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton4" unique_id=1650725067]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton4/MarginContainer" unique_id=2050267814]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton5" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=1965720564 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton5" unique_id=259712071]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton5/MarginContainer" unique_id=153870819]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton6" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=801676402 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton6" unique_id=1764640130]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton6/MarginContainer" unique_id=1949837362]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton7" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=1289128876 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton7" unique_id=144677872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton7/MarginContainer" unique_id=1776593503]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton8" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=819680518 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton8" unique_id=427467460]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton8/MarginContainer" unique_id=1527750317]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton9" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=2031439534 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton9" unique_id=1618981497]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton9/MarginContainer" unique_id=1058977608]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogicNode_ChoiceButton10" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer" unique_id=1429675063 node_paths=PackedStringArray("text_node")]
+visible = false
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("16_orgs6")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_4g5ea")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2jyx7")
+script = ExtResource("18_4n4o4")
+text_node = NodePath("MarginContainer/RichTextLabel")
+metadata/_custom_type_script = "uid://bldt7xlfum7ov"
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton10" unique_id=2123138040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer3/ScrollContainer/VBoxContainer/DialogicNode_ChoiceButton10/MarginContainer" unique_id=1138019748]
+custom_minimum_size = Vector2(1066, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09, 0.09, 0.09, 0.7607843)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_u817l")
+theme_override_fonts/bold_font = ExtResource("5_kac4s")
+theme_override_fonts/bold_italics_font = ExtResource("6_15i5a")
+theme_override_fonts/italics_font = ExtResource("7_0om1t")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabelHolder" type="Control" parent="Anchor/AnimationParent/Sizer" unique_id=665637153]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -495.0
+offset_top = -370.0
+offset_right = 533.0
+offset_bottom = -268.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="NameLabelPanel" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/NameLabelHolder" unique_id=1147594044]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.428
+anchor_top = 3.824
+anchor_right = 0.428
+anchor_bottom = 3.824
+offset_left = -440.412
+offset_top = -374.048
+offset_right = 78.588
+offset_bottom = -290.048
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yexsk")
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = true
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/NameLabelHolder/NameLabelPanel" unique_id=2069715474]
+layout_mode = 2
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_bottom = 43
+
+[node name="DialogicNode_NameLabel" type="Label" parent="Anchor/AnimationParent/Sizer/NameLabelHolder/NameLabelPanel/MarginContainer" unique_id=906231728 node_paths=PackedStringArray("name_label_root")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.38039216)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_kac4s")
+theme_override_font_sizes/font_size = 48
+text = "Sample Example "
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+script = ExtResource("20_pr4ek")
+name_label_root = NodePath("../..")
+
+[node name="NameLabelFrame" type="Panel" parent="Anchor/AnimationParent/Sizer/NameLabelHolder/NameLabelPanel" unique_id=416671654]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q2wab")
+
+[node name="Quick Menu Toggle" type="Button" parent="Anchor/AnimationParent/Sizer" unique_id=733975675]
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 835.0
+offset_top = -292.0
+offset_right = 928.13
+offset_bottom = -212.0
+scale = Vector2(0.626, 0.626)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+toggle_mode = true
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu Toggle" unique_id=395141083 node_paths=PackedStringArray("player")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("25_la258")
+player = NodePath("../../../../../Animations")
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu Toggle/Margin3" unique_id=11840369]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("26_odutt")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu Toggle/Margin3" unique_id=1019850620]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("26_odutt")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu Toggle" unique_id=1965639002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.00012207
+offset_right = 7.62939e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Tooltip Trigger" parent="Anchor/AnimationParent/Sizer/Quick Menu Toggle" unique_id=2055289504 node_paths=PackedStringArray("triggered_by") instance=ExtResource("28_1nxpe")]
+layout_mode = 1
+mouse_filter = 1
+tooltip_id = "quick_toggle"
+triggered_by = NodePath("..")
+
+[node name="Quick Menu" type="Control" parent="Anchor/AnimationParent/Sizer" unique_id=512504316]
+visible = false
+anchors_preset = 0
+offset_left = -75.0
+offset_top = -673.0
+offset_right = -35.0
+offset_bottom = -633.0
+scale = Vector2(0.66, 0.66)
+
+[node name="Back" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=939193351]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 1921.0
+offset_top = 628.0
+offset_right = 2014.1302
+offset_bottom = 708.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Back" unique_id=126680772]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Back/Margin3" unique_id=1593192538]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("29_u8abw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Back/Margin3" unique_id=39390187]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("29_u8abw")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Back" unique_id=193006665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Node" type="Node" parent="Anchor/AnimationParent/Sizer/Quick Menu/Back" unique_id=320500606]
+
+[node name="Auto" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=1460950713]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 2021.0
+offset_top = 628.0
+offset_right = 2114.1301
+offset_bottom = 708.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+toggle_mode = true
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Auto" unique_id=1942664520]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Auto/Margin3" unique_id=320257779]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("30_7n6bn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Auto/Margin3" unique_id=150518603]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("30_7n6bn")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Auto" unique_id=444878669]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Skip" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=928481523]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 1921.0
+offset_top = 732.0
+offset_right = 2014.1302
+offset_bottom = 812.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+toggle_mode = true
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Skip" unique_id=1093603237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Skip/Margin3" unique_id=212435805]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(53.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("31_3e13n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Skip/Margin3" unique_id=1016839736]
+position = Vector2(48.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("31_3e13n")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Skip" unique_id=1484810484]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Log" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=1530719002]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 2021.0
+offset_top = 732.0
+offset_right = 2114.1301
+offset_bottom = 812.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Log" unique_id=857214288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Log/Margin3" unique_id=71099797]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("32_ntylc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Log/Margin3" unique_id=970126520]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("32_ntylc")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Log" unique_id=834793567]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Phone" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=974569774]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 1921.0
+offset_top = 836.0
+offset_right = 2014.1302
+offset_bottom = 916.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Phone" unique_id=504407429]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Phone/Margin3" unique_id=844824046]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("33_ve4yb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Phone/Margin3" unique_id=16798090]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("33_ve4yb")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Phone" unique_id=1907708139]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Settings" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=1967742520]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 2021.0
+offset_top = 836.0
+offset_right = 2114.1301
+offset_bottom = 916.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Settings" unique_id=1082662280]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Settings/Margin3" unique_id=856038869]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("34_xxfi7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Settings/Margin3" unique_id=89249587]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("34_xxfi7")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Settings" unique_id=1915740533]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Quick Save" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=454746831]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 1921.0
+offset_top = 940.0
+offset_right = 2014.1302
+offset_bottom = 1020.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Save" unique_id=430886157]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Save/Margin3" unique_id=1103301128]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("35_hb04x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Save/Margin3" unique_id=914487002]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("35_hb04x")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Save" unique_id=503890470]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Quick Load" type="Button" parent="Anchor/AnimationParent/Sizer/Quick Menu" unique_id=1217144256]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 2021.0
+offset_top = 940.0
+offset_right = 2114.1301
+offset_bottom = 1020.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("21_d627h")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("22_4al1f")
+theme_override_styles/pressed = ExtResource("22_4al1f")
+theme_override_styles/hover = ExtResource("23_d5lhv")
+theme_override_styles/disabled = ExtResource("22_4al1f")
+theme_override_styles/focus = ExtResource("22_4al1f")
+alignment = 2
+script = ExtResource("24_cgrtt")
+
+[node name="Margin3" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Load" unique_id=204509250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 7.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Load/Margin3" unique_id=1100064943]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(50.3351, 38.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("36_fih8q")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Load/Margin3" unique_id=94188418]
+position = Vector2(45.3351, 39.2708)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("36_fih8q")
+
+[node name="PanelContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/Quick Menu/Quick Load" unique_id=1065272810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.57764e-05
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("27_ti0c7")
+
+[node name="Primary Font Operator" type="Control" parent="." unique_id=1898287027 node_paths=PackedStringArray("nodes_with_bold_text", "nodes_with_all_text", "nodes_to_scale_text")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("37_dhy2e")
+nodes_with_bold_text = [NodePath("../Anchor/AnimationParent/Sizer/NameLabelHolder/NameLabelPanel/MarginContainer/DialogicNode_NameLabel")]
+nodes_with_all_text = [NodePath("../Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer/DialogicNode_DialogText")]
+nodes_to_scale_text = [NodePath("../Anchor/AnimationParent/Sizer/NameLabelHolder/NameLabelPanel/MarginContainer/DialogicNode_NameLabel"), NodePath("../Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer/DialogicNode_DialogText")]
+
+[connection signal="toggled" from="Anchor/AnimationParent/Sizer/Quick Menu Toggle" to="Anchor/AnimationParent/Sizer/Quick Menu Toggle/Margin3" method="_on_quick_menu_toggle_toggled"]
+[connection signal="toggled" from="Anchor/AnimationParent/Sizer/Quick Menu/Auto" to="Anchor/AnimationParent/Sizer/Quick Menu Toggle/Margin3" method="_on_auto_button_up"]
+[connection signal="toggled" from="Anchor/AnimationParent/Sizer/Quick Menu/Skip" to="Anchor/AnimationParent/Sizer/Quick Menu Toggle/Margin3" method="_on_skip_toggled"]
+[connection signal="button_up" from="Anchor/AnimationParent/Sizer/Quick Menu/Log" to="Anchor/AnimationParent/Sizer/Quick Menu Toggle/Margin3" method="_on_log_button_up"]
+[connection signal="pressed" from="Anchor/AnimationParent/Sizer/Quick Menu/Settings" to="Anchor/AnimationParent/Sizer/Quick Menu Toggle/Margin3" method="_on_settings_button_up"]

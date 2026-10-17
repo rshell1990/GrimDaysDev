@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://ve0r268nejfp"]
+
+[ext_resource type="Script" uid="uid://3fiug3grsi30" path="res://GrimDays/imported/Menus/loading_screen.gd" id="1_nyegf"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/1.png" id="2_0hfum"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/2.png" id="3_0rqfq"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/3.png" id="4_p4nvg"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/4.png" id="5_5xhw3"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/5.png" id="6_ie2mp"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/6.png" id="7_migjo"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/7.png" id="8_ka7h5"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/8.png" id="9_82elv"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/9.png" id="10_4cwow"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/10.png" id="11_qad5t"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/11.png" id="12_0fbhx"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/12.png" id="13_u8fnn"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/13.png" id="14_vwum3"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/14.png" id="15_n5ro3"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/15.png" id="16_v358n"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/16.png" id="17_k381i"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/17.png" id="18_4eopt"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/18.png" id="19_yvp4g"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/19.png" id="20_r2ero"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/20.png" id="21_7fuvq"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/21.png" id="22_jvdcf"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/22.png" id="23_ocg0n"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/23.png" id="24_ysupl"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/24.png" id="25_e3k3r"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/25.png" id="26_c44b3"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/26.png" id="27_scy6i"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/27.png" id="28_icadn"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/28.png" id="29_lfwgx"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/29.png" id="30_syn5k"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/30.png" id="31_0mnc1"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/31.png" id="32_66ojb"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/32.png" id="33_oue05"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/33.png" id="34_gak86"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/34.png" id="35_673s4"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/35.png" id="36_bhnqb"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/36.png" id="37_le4fl"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/37.png" id="38_t413n"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/38.png" id="39_dqlne"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/39.png" id="40_70vgv"]
+[ext_resource type="Texture2D" path="res://GrimDays/assets/gui/loader/40.png" id="41_4obxl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6nf1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0hfum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0rqfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p4nvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5xhw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ie2mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_migjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ka7h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_82elv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4cwow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qad5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0fbhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u8fnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vwum3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_n5ro3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v358n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_k381i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4eopt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_yvp4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_r2ero")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7fuvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jvdcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ocg0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ysupl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_e3k3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c44b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_scy6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_icadn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_lfwgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_syn5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0mnc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_66ojb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_oue05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_gak86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_673s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_bhnqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_le4fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_t413n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_dqlne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_70vgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4obxl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="LoadingScreen" type="CanvasLayer" node_paths=PackedStringArray("background")]
+layer = 122
+script = ExtResource("1_nyegf")
+background = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1920.0
+grow_vertical = 2
+color = Color(0.07, 0.07, 0.07, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -700.0
+offset_top = -1050.0
+offset_right = 700.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -700.0
+offset_top = -1080.0
+offset_right = 700.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Progress Container" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/MarginContainer/HBoxContainer/Progress Container"]
+position = Vector2(858, -83)
+sprite_frames = SubResource("SpriteFrames_6nf1j")
+autoplay = "default"
+frame_progress = 0.798904

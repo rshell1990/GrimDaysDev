@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EffectResourceChangeTemplate" format=3 uid="uid://devunuvfbtcp0"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_3llpp"]
+[ext_resource type="Script" uid="uid://dmeovq5uuuuy5" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_resource.gd" id="10_restore"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_change_resource.tscn" id="11_restore_scene"]
+
+[resource]
+script = ExtResource("10_restore")
+amount = 0.5
+amount_mode = 2
+stat = 240
+kind = 200
+description = "Restore x% of maximum Lucidity."
+template_scene = ExtResource("11_restore_scene")
+id = &"frenzy_restore_lucidity"

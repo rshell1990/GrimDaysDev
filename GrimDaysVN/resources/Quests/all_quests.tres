@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameQuests" format=3 uid="uid://bdaykuf4hxjm4"]
+
+[ext_resource type="Script" uid="uid://ck4t8m2ic03yp" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Quest/gamequest.gd" id="1_47kbo"]
+[ext_resource type="Script" uid="uid://ttbfk8fbc5cl" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Quest/gamequeststep.gd" id="2_dv6is"]
+[ext_resource type="Script" uid="uid://cwqvbii8msnfs" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Quest/gamequests.gd" id="2_xna44"]
+
+[sub_resource type="Resource" id="Resource_0oayb"]
+script = ExtResource("1_47kbo")
+metadata/_custom_type_script = "uid://ck4t8m2ic03yp"
+
+[resource]
+script = ExtResource("2_xna44")
+all = Array[ExtResource("1_47kbo")]([SubResource("Resource_0oayb")])
+metadata/_custom_type_script = "uid://cwqvbii8msnfs"

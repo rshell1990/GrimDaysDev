@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b3edtqpvuxn11"]
+
+[ext_resource type="Script" uid="uid://bgbkq2ucl0vgk" path="res://editor_only_debug/scripts/debug/navigation_testing.gd" id="1_g1mse"]
+[ext_resource type="PackedScene" uid="uid://ro8kmxmqtcfh" path="res://GrimDaysVN/scenes/root/navigation_location.tscn" id="2_ad2nx"]
+
+[node name="NavigationTesting" type="Node3D" unique_id=1982860466]
+script = ExtResource("1_g1mse")
+current_location = "NovarasOrphanageOffice"
+
+[node name="Navigation" parent="." unique_id=2000696128 instance=ExtResource("2_ad2nx")]

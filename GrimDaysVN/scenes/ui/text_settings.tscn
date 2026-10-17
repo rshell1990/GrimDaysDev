@@ -1,0 +1,430 @@
+[gd_scene format=3 uid="uid://b86mvrtefl1l7"]
+
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://GrimDaysVN/resources/fonts/elanor_bold.tres" id="1_ek6s5"]
+[ext_resource type="Script" uid="uid://buuchn42myh4m" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/text_settings_operator.gd" id="1_q275h"]
+[ext_resource type="FontVariation" uid="uid://chteovppxif7j" path="res://GrimDaysVN/resources/fonts/elanor_.tres" id="2_1r5bw"]
+[ext_resource type="Resource" uid="uid://lidhrn1tm3bd" path="res://GrimDaysVN/resources/fonts/all_fonts.tres" id="2_i78l7"]
+[ext_resource type="Script" uid="uid://h6rfq00lbj5s" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/line_color.gd" id="2_th00h"]
+[ext_resource type="Texture2D" uid="uid://dle8auao1jyxd" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_iconframe_circle_01_nb.png" id="3_vv881"]
+[ext_resource type="Texture2D" uid="uid://vm44wbt56kcb" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_iconframe_circle_01_nc.png" id="4_mscvt"]
+[ext_resource type="StyleBox" uid="uid://b06m4eqi07xk6" path="res://GrimDays/imported/Menus/slider.tres" id="5_rbmkh"]
+[ext_resource type="Script" uid="uid://b7dl7b16mcta3" path="res://GrimDaysVN/scripts/ui/scriplets/Tootip/tooltip_trigger.gd" id="5_rjdh8"]
+[ext_resource type="StyleBox" uid="uid://sdj1yhp0lljx" path="res://GrimDays/imported/Menus/grabber.tres" id="6_c65bp"]
+[ext_resource type="StyleBox" uid="uid://dcqwpqmikitwl" path="res://GrimDays/imported/Menus/grabber_highlight.tres" id="7_gleff"]
+[ext_resource type="Script" uid="uid://c5e8ablvqubpj" path="res://GrimDaysVN/scripts/ui/tiertiary_font_operator.gd" id="9_mm35m"]
+[ext_resource type="Script" uid="uid://cbcvca34nsfk" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/font_scale_label.gd" id="10_oy77e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ott7t"]
+border_width_top = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nru2"]
+bg_color = Color(0.703808, 0.703808, 0.703808, 1)
+border_width_top = 1
+border_width_bottom = 1
+
+[node name="VBoxContainer" type="VBoxContainer" node_paths=PackedStringArray("primary_dropdown", "secondary_dropdown", "tertiary_dropdown", "font_scale_slider", "display_speed_slider", "auto_mode_speed_slider", "skip_unread_option")]
+custom_minimum_size = Vector2(0, 900)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -700.0
+offset_top = -450.0
+offset_right = 700.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 2
+alignment = 1
+script = ExtResource("1_q275h")
+fonts_resource = ExtResource("2_i78l7")
+primary_dropdown = NodePath("Font Options/Fonts Dropdown")
+secondary_dropdown = NodePath("Font Options/Fonts Dropdown2")
+tertiary_dropdown = NodePath("Font Options/Fonts Dropdown3")
+font_scale_slider = NodePath("Font Options/HSlider")
+display_speed_slider = NodePath("Speed Options/HSlider2")
+auto_mode_speed_slider = NodePath("Speed Options/HSlider")
+skip_unread_option = NodePath("GridContainer3/CheckButton")
+
+[node name="Header" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ek6s5")
+theme_override_font_sizes/font_size = 96
+text = "Text Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Top Line" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ott7t")
+script = ExtResource("2_th00h")
+
+[node name="Font2" type="Label" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ek6s5")
+theme_override_font_sizes/font_size = 50
+text = "Font Selection"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Font Options" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="Primary" type="Label" parent="Font Options"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "Primary "
+
+[node name="Tooltip Trigger" type="Control" parent="Font Options/Primary" node_paths=PackedStringArray("timer", "triggered_by")]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 1400.0
+offset_top = 1.0
+offset_right = 1700.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_rjdh8")
+timer = NodePath("Timer")
+tooltip_id = "primary_font"
+triggered_by = NodePath("..")
+
+[node name="Timer" type="Timer" parent="Font Options/Primary/Tooltip Trigger"]
+wait_time = 0.2
+
+[node name="Fonts Dropdown" type="OptionButton" parent="Font Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+alignment = 2
+
+[node name="Primary2" type="Label" parent="Font Options"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "Secondary"
+
+[node name="Tooltip Trigger" type="Control" parent="Font Options/Primary2" node_paths=PackedStringArray("timer", "triggered_by")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_rjdh8")
+timer = NodePath("Timer")
+tooltip_id = "secondary_font"
+triggered_by = NodePath("..")
+
+[node name="Timer" type="Timer" parent="Font Options/Primary2/Tooltip Trigger"]
+wait_time = 0.2
+
+[node name="Fonts Dropdown2" type="OptionButton" parent="Font Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+alignment = 2
+
+[node name="Primary3" type="Label" parent="Font Options"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "Tertiary"
+
+[node name="Tooltip Trigger" type="Control" parent="Font Options/Primary3" node_paths=PackedStringArray("timer", "triggered_by")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_rjdh8")
+timer = NodePath("Timer")
+tooltip_id = "tertiary_font"
+triggered_by = NodePath("..")
+
+[node name="Timer" type="Timer" parent="Font Options/Primary3/Tooltip Trigger"]
+wait_time = 0.2
+
+[node name="Fonts Dropdown3" type="OptionButton" parent="Font Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+alignment = 2
+
+[node name="Size" type="Label" parent="Font Options"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "Scale"
+
+[node name="Tooltip Trigger" type="Control" parent="Font Options/Size" node_paths=PackedStringArray("timer", "triggered_by")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_rjdh8")
+timer = NodePath("Timer")
+tooltip_id = "scale_font"
+triggered_by = NodePath("..")
+
+[node name="Timer" type="Timer" parent="Font Options/Size/Tooltip Trigger"]
+wait_time = 0.2
+
+[node name="HSlider" type="HSlider" parent="Font Options"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = ExtResource("3_vv881")
+theme_override_icons/grabber_highlight = ExtResource("4_mscvt")
+theme_override_styles/slider = ExtResource("5_rbmkh")
+theme_override_styles/grabber_area = ExtResource("6_c65bp")
+theme_override_styles/grabber_area_highlight = ExtResource("7_gleff")
+min_value = 0.5
+max_value = 1.5
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Font Options/HSlider"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ek6s5")
+theme_override_font_sizes/font_size = 48
+text = "100%"
+horizontal_alignment = 1
+script = ExtResource("10_oy77e")
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(1400, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4nru2")
+script = ExtResource("2_th00h")
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Font3" type="Label" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ek6s5")
+theme_override_font_sizes/font_size = 50
+text = "Text Speed"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Speed Options" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="Display Speed" type="Label" parent="Speed Options"]
+process_mode = 4
+modulate = Color(0.263224, 0.263224, 0.263224, 1)
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "Display Multiplier"
+
+[node name="HSlider2" type="HSlider" parent="Speed Options"]
+process_mode = 4
+modulate = Color(0.263224, 0.263224, 0.263224, 1)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = ExtResource("3_vv881")
+theme_override_icons/grabber_highlight = ExtResource("4_mscvt")
+theme_override_styles/slider = ExtResource("5_rbmkh")
+theme_override_styles/grabber_area = ExtResource("6_c65bp")
+theme_override_styles/grabber_area_highlight = ExtResource("7_gleff")
+min_value = 0.5
+max_value = 1.5
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Speed Options/HSlider2"]
+process_mode = 4
+modulate = Color(0.263224, 0.263224, 0.263224, 1)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ek6s5")
+theme_override_font_sizes/font_size = 45
+text = "0.01 seconds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Auto" type="Label" parent="Speed Options"]
+process_mode = 4
+modulate = Color(0.263224, 0.263224, 0.263224, 1)
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "Auto Mode Multiplier"
+
+[node name="HSlider" type="HSlider" parent="Speed Options"]
+process_mode = 4
+modulate = Color(0.263224, 0.263224, 0.263224, 1)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = ExtResource("3_vv881")
+theme_override_icons/grabber_highlight = ExtResource("4_mscvt")
+theme_override_styles/slider = ExtResource("5_rbmkh")
+theme_override_styles/grabber_area = ExtResource("6_c65bp")
+theme_override_styles/grabber_area_highlight = ExtResource("7_gleff")
+min_value = 0.5
+max_value = 1.5
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Speed Options/HSlider"]
+process_mode = 4
+modulate = Color(0.263224, 0.263224, 0.263224, 1)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ek6s5")
+theme_override_font_sizes/font_size = 45
+text = "1 second and 0.1 seconds per character"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Panel4" type="Panel" parent="."]
+custom_minimum_size = Vector2(1400, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4nru2")
+script = ExtResource("2_th00h")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Font4" type="Label" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ek6s5")
+theme_override_font_sizes/font_size = 50
+text = "Skipping"
+horizontal_alignment = 1
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="GridContainer3" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="Unseen Text" type="Label" parent="GridContainer3"]
+process_mode = 4
+modulate = Color(0.211154, 0.211154, 0.211154, 1)
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "Unseen"
+
+[node name="CheckButton" type="CheckButton" parent="GridContainer3"]
+process_mode = 4
+modulate = Color(0.211154, 0.211154, 0.211154, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="After Choices" type="Label" parent="GridContainer3"]
+process_mode = 4
+modulate = Color(0.211154, 0.211154, 0.211154, 1)
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1r5bw")
+theme_override_font_sizes/font_size = 36
+text = "After Choices"
+
+[node name="CheckButton2" type="CheckButton" parent="GridContainer3"]
+process_mode = 4
+modulate = Color(0.211154, 0.211154, 0.211154, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TertiaryFontOperator" type="Control" parent="." node_paths=PackedStringArray("nodes_with_normal_text", "nodes_with_bold_text", "nodes_with_italic_text", "nodes_to_scale_text")]
+layout_mode = 2
+script = ExtResource("9_mm35m")
+nodes_with_normal_text = [NodePath("../GridContainer3/After Choices"), NodePath("../GridContainer3/Unseen Text"), NodePath("../Speed Options/Display Speed"), NodePath("../Speed Options/Auto"), NodePath("../Font Options/Primary"), NodePath("../Font Options/Primary2"), NodePath("../Font Options/Primary3"), NodePath("../Font Options/Size")]
+nodes_with_bold_text = [NodePath("../Font2"), NodePath("../Font3"), NodePath("../Font4"), NodePath("../Speed Options/HSlider2/Label"), NodePath("../Speed Options/HSlider/Label"), NodePath("../Font Options/HSlider/Label")]
+nodes_with_italic_text = [NodePath("../Font Options/Fonts Dropdown"), NodePath("../Font Options/Fonts Dropdown2"), NodePath("../Font Options/Fonts Dropdown3")]
+nodes_to_scale_text = [NodePath("../GridContainer3/After Choices"), NodePath("../GridContainer3/Unseen Text"), NodePath("../Font4"), NodePath("../Speed Options/Auto"), NodePath("../Speed Options/Display Speed"), NodePath("../Font3"), NodePath("../Font Options/Size"), NodePath("../Font Options/Primary3"), NodePath("../Font Options/Primary2"), NodePath("../Font Options/Primary"), NodePath("../Font2"), NodePath("../Font Options/Fonts Dropdown3"), NodePath("../Font Options/Fonts Dropdown2"), NodePath("../Font Options/Fonts Dropdown"), NodePath("../Font Options/HSlider/Label"), NodePath("../Speed Options/HSlider2/Label"), NodePath("../Speed Options/HSlider/Label")]
+
+[connection signal="value_changed" from="Font Options/HSlider" to="Font Options/HSlider/Label" method="_on_h_slider_value_changed"]

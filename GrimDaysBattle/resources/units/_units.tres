@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ResourceTemplates" format=3 uid="uid://c6c54t24daryh"]
+
+[ext_resource type="Script" uid="uid://bup0bvcxl7pfq" path="res://GrimDaysBattle/scripts/_Global/_resource_template.gd" id="1_oto70"]
+[ext_resource type="Resource" uid="uid://cid0bfnxi5k1d" path="res://GrimDaysBattle/resources/units/celine_teen/celine_battle_unit_template.tres" id="2_45idb"]
+[ext_resource type="Script" uid="uid://ccmloxy6cmr12" path="res://GrimDaysBattle/scripts/_Global/_resource_templates.gd" id="3_gngiq"]
+[ext_resource type="Resource" uid="uid://bmechhvsr0ky8" path="res://GrimDaysBattle/resources/units/harlok/harlok_battle_unit_template.tres" id="3_ucpc7"]
+[ext_resource type="Resource" uid="uid://bohshous8v2s3" path="res://GrimDaysBattle/resources/units/goon_a/goon_a_battle_unit_template.tres" id="4_v13wd"]
+[ext_resource type="Resource" uid="uid://bhilwci38js1s" path="res://GrimDaysBattle/resources/units/goon_b/goon_b_battle_unit_template.tres" id="5_p7yw7"]
+[ext_resource type="Resource" uid="uid://bxin2g5rvrwar" path="res://GrimDaysBattle/resources/units/sister_hara/sister_hara_battle_unit_template.tres" id="6_juwdh"]
+[ext_resource type="Resource" uid="uid://dbker08krwmue" path="res://GrimDaysBattle/resources/units/sister_katherine/sister_katherine_battle_unit_template.tres" id="7_rprgw"]
+[ext_resource type="Resource" uid="uid://cxn26cishs3cj" path="res://GrimDaysBattle/resources/units/sister_anastasia/sister_anastasia_battle_unit_template.tres" id="8_37hxt"]
+
+[resource]
+script = ExtResource("3_gngiq")
+all = Array[ExtResource("1_oto70")]([ExtResource("2_45idb"), ExtResource("3_ucpc7"), ExtResource("4_v13wd"), ExtResource("5_p7yw7"), ExtResource("6_juwdh"), ExtResource("7_rprgw"), ExtResource("8_37hxt")])
+metadata/_custom_type_script = "uid://ccmloxy6cmr12"

@@ -1,0 +1,40 @@
+Harlok sprite combat.png
+size:446,1422
+filter:Linear,Linear
+Body - copia
+bounds:2,814,256,326
+Cape - copia
+bounds:2,1142,324,278
+Head - copia
+bounds:2,2,157,195
+offsets:0,0,157,196
+L arm 2 - copia
+bounds:2,199,212,166
+offsets:0,0,217,166
+rotate:90
+L arm1 - copia
+bounds:331,572,89,201
+L feet - copia
+bounds:319,223,120,141
+offsets:0,0,120,243
+L leg - copia
+bounds:197,488,132,285
+L pants - copia
+bounds:2,413,193,399
+offsets:1,0,194,402
+Neck - copia
+bounds:319,151,70,102
+offsets:0,0,73,102
+rotate:90
+R  arm1 - copia
+bounds:331,366,84,204
+offsets:0,0,85,205
+R  feet - copia
+bounds:197,241,120,245
+R arm 2 - copia
+bounds:170,22,147,217
+offsets:0,6,154,223
+R leg - copia
+bounds:328,1115,106,305
+R pants - copia
+bounds:260,775,184,338

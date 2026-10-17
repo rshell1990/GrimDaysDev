@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://br8vqvvw0o7bb"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_4cd17"]
+
+[resource]
+script = ExtResource("1_4cd17")
+type = 10
+starting_amount = 8.0
+id = &"Strength"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

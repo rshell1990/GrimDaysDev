@@ -1,0 +1,6 @@
+The party descended into a great hall filled with undead warriors. They fought through the dead and faced the lich guarding the Ember Void blades.
+Lich: I once tried to destroy the armor. The gods condemned me to guard it.
+Renia: Then your watch is over.
+The lich warned that the armor would consume her. Renia refused to listen.
+do UIDirector.show_story_party_preparation()
+[end_timeline]

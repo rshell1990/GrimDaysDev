@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" format=3 uid="uid://ds277uyvu83el"]
+
+[ext_resource type="FontFile" path="res://GrimDays/fonts/Answer-Regular.ttf" id="1_f4sop"]
+
+[resource]
+base_font = ExtResource("1_f4sop")
+variation_embolden = 0.6
+spacing_glyph = 8
+spacing_space = 1
+spacing_top = 1
+spacing_bottom = 1

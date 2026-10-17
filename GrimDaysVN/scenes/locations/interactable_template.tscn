@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cekoabublx6mo"]
+
+[ext_resource type="Script" uid="uid://bqibkdgb5tcab" path="res://GrimDaysVN/scripts/navigation/location_interactable_transfer.gd" id="1_4mnmn"]
+[ext_resource type="Texture2D" uid="uid://dhrhjc7eo8ss8" path="res://GrimDays/assets/visuals/ui/vn_gui_library/Door.png" id="4_hs7ym"]
+[ext_resource type="Script" uid="uid://dq546xu31tikm" path="res://GrimDaysVN/scripts/navigation/interactable_mouse_interaction.gd" id="5_q1uim"]
+[ext_resource type="Script" uid="uid://clh3qf867ttlg" path="res://GrimDaysVN/scripts/navigation/interactable_texture_entered.gd" id="6_m0hqm"]
+[ext_resource type="Script" uid="uid://ctrxgg38mpeee" path="res://GrimDaysVN/scripts/navigation/interactable_texture_exited.gd" id="8_dkmb2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hs7ym"]
+size = Vector3(1, 1, 0.1)
+
+[node name="template" type="Sprite3D" unique_id=667614476 node_paths=PackedStringArray("area")]
+shaded = true
+script = ExtResource("1_4mnmn")
+area = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1552436807]
+script = ExtResource("5_q1uim")
+
+[node name="texture_entered" type="Node" parent="Area3D" unique_id=461126636]
+script = ExtResource("6_m0hqm")
+mouse_texture = ExtResource("4_hs7ym")
+
+[node name="texture_exited" type="Node" parent="Area3D" unique_id=527831050]
+script = ExtResource("8_dkmb2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=251568483]
+shape = SubResource("BoxShape3D_hs7ym")

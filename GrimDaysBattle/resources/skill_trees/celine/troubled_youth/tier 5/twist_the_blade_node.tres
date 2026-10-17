@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://bvgf8q861jvcm"]
+
+[ext_resource type="Resource" uid="uid://chbfyfb3xtv3n" path="res://GrimDaysBattle/resources/actions/celine/twist_the_blade_single_rank/twist_the_blade_single_rank.tres" id="1_4ady3"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="1_ex4uw"]
+[ext_resource type="Texture2D" uid="uid://cgk6nvumucqn" path="res://editor_only_debug/visuals/skill_icons/Assassinskill_23_nobg.png" id="1_f8mah"]
+
+[resource]
+script = ExtResource("1_ex4uw")
+action = ExtResource("1_4ady3")
+id = &"twist_the_blade_node"
+display_name = "Twist The Blade"
+icon = ExtResource("1_f8mah")
+description = "Slash and stab are now followed by an additional strike that deals more critical damage than normal."
+row = 3
+maximum_rank = 5
+previous_node = &"stab_node"
+composite = true
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

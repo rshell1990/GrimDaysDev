@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://cs34iepbrulj8"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_21twj"]
+
+[resource]
+script = ExtResource("1_21twj")
+type = 70
+starting_amount = 2.0
+id = &"Mysticism"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

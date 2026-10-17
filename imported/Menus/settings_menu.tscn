@@ -1,0 +1,1141 @@
+[gd_scene format=3 uid="uid://ds3g65fim75uk"]
+
+[ext_resource type="Script" uid="uid://cuylapka3o6xk" path="res://GrimDays/imported/Menus/settings_menu.gd" id="1_pkcrv"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="3_6ksej"]
+[ext_resource type="StyleBox" uid="uid://cfqu8tj7eb0qr" path="res://GrimDaysVN/resources/gui/grey_back.tres" id="3_ixbv4"]
+[ext_resource type="PackedScene" uid="uid://5v80phmew5t8" path="res://GrimDaysVN/scenes/ui/color_options.tscn" id="4_ffi5o"]
+[ext_resource type="StyleBox" uid="uid://c1l04gqf55rdi" path="res://GrimDaysVN/resources/gui/red_back.tres" id="4_jntna"]
+[ext_resource type="FontVariation" uid="uid://b1ymikdqcxbjb" path="res://GrimDays/fonts/answer_variant.tres" id="6_0uwqm"]
+[ext_resource type="Script" uid="uid://pevt0auern8u" path="res://GrimDaysVN/scripts/ui/scriplets/menu_buttons.gd" id="6_bixuy"]
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://GrimDaysVN/resources/fonts/elanor_bold.tres" id="6_mviff"]
+[ext_resource type="Script" uid="uid://cn04uwqpc617o" path="res://GrimDays/imported/Menus/title_button.gd" id="6_ogjkd"]
+[ext_resource type="Script" uid="uid://h6rfq00lbj5s" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/line_color.gd" id="7_b3k4x"]
+[ext_resource type="Script" uid="uid://b5ms6kqbx7r51" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/options_panel.gd" id="8_aoy7p"]
+[ext_resource type="PackedScene" uid="uid://bhsoq7qlornfs" path="res://GrimDaysVN/scenes/root/tooltip_trigger.tscn" id="10_5hpxl"]
+[ext_resource type="PackedScene" uid="uid://yx5rk7yu2nr5" path="res://GrimDaysVN/scenes/ui/settings_menu_options_sub_menu.tscn" id="10_7ygct"]
+[ext_resource type="FontVariation" uid="uid://chteovppxif7j" path="res://GrimDaysVN/resources/fonts/elanor_.tres" id="10_f2n5m"]
+[ext_resource type="Script" uid="uid://kafvmcp8eife" path="res://GrimDaysVN/scripts/ui/scriplets/Save/save_page_holder.gd" id="11_1s1vc"]
+[ext_resource type="Texture2D" uid="uid://dle8auao1jyxd" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_iconframe_circle_01_nb.png" id="11_asm1w"]
+[ext_resource type="Script" uid="uid://cu53o2uhgmqsa" path="res://GrimDaysVN/scripts/ui/scriplets/Save/save_tab_controls.gd" id="11_rgeba"]
+[ext_resource type="Texture2D" uid="uid://vm44wbt56kcb" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_iconframe_circle_01_nc.png" id="12_4yj5f"]
+[ext_resource type="PackedScene" uid="uid://b86mvrtefl1l7" path="res://GrimDaysVN/scenes/ui/text_settings.tscn" id="12_p8q4w"]
+[ext_resource type="PackedScene" uid="uid://dc5f1dnyv4tgd" path="res://GrimDaysVN/scenes/ui/save_slots.tscn" id="12_qi7r2"]
+[ext_resource type="StyleBox" uid="uid://b06m4eqi07xk6" path="res://GrimDays/imported/Menus/slider.tres" id="13_mnf4u"]
+[ext_resource type="StyleBox" uid="uid://sdj1yhp0lljx" path="res://GrimDays/imported/Menus/grabber.tres" id="14_35jc2"]
+[ext_resource type="StyleBox" uid="uid://dcqwpqmikitwl" path="res://GrimDays/imported/Menus/grabber_highlight.tres" id="15_7mbs7"]
+[ext_resource type="Script" uid="uid://c0sao2p367olt" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/settings_local_signal_bus.gd" id="15_8e3c5"]
+[ext_resource type="Script" uid="uid://c5e8ablvqubpj" path="res://GrimDaysVN/scripts/ui/tiertiary_font_operator.gd" id="24_0xtw8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ute6"]
+bg_color = Color(0, 0, 0, 0.835294)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyix4"]
+border_width_top = 2
+border_width_bottom = 2
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=1866781213]
+process_mode = 3
+layer = 80
+script = ExtResource("1_pkcrv")
+
+[node name="Dimming Panel" type="Panel" parent="." unique_id=1078368490]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = 1.0
+offset_right = -11.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ute6")
+
+[node name="Category Menu" type="HBoxContainer" parent="." unique_id=1854440328]
+custom_minimum_size = Vector2(1920, 65)
+offset_right = 604.0
+offset_bottom = 50.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Return" type="Button" parent="Category Menu" unique_id=816112038 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.47843137, 0, 0.2, 1)
+label = NodePath("Margin3/Return Label")
+
+[node name="Margin3" type="MarginContainer" parent="Category Menu/Return" unique_id=60646361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 20
+
+[node name="Return Label" type="Label" parent="Category Menu/Return/Margin3" unique_id=771534920]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0.00023387332, 1.4688339e-11, 3.978215e-05, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 36
+text = "Return"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save _ Load" type="Button" parent="Category Menu" unique_id=2120726550 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.47843137, 0, 0.2, 1)
+label = NodePath("Margin3/Save-Load Label")
+
+[node name="Margin3" type="MarginContainer" parent="Category Menu/Save _ Load" unique_id=2099728633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 20
+
+[node name="Save-Load Label" type="Label" parent="Category Menu/Save _ Load/Margin3" unique_id=1894838718]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0.00023387332, 1.4688339e-11, 3.978215e-05, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 36
+text = "Save/Load"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Button" parent="Category Menu" unique_id=1294756399 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.47843137, 0, 0.2, 1)
+label = NodePath("Margin3/Settings Label")
+
+[node name="Margin3" type="MarginContainer" parent="Category Menu/Options" unique_id=204692033]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 20
+
+[node name="Settings Label" type="Label" parent="Category Menu/Options/Margin3" unique_id=1860266616]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0.00023387332, 1.4688339e-11, 3.978215e-05, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 36
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Button" parent="Category Menu" unique_id=818357852 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.47843137, 0, 0.2, 1)
+label = NodePath("Margin3/Title Label")
+
+[node name="Margin3" type="MarginContainer" parent="Category Menu/Title" unique_id=376145119]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 20
+script = ExtResource("6_ogjkd")
+
+[node name="Title Label" type="Label" parent="Category Menu/Title/Margin3" unique_id=1219293396]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0.00023387332, 1.4688339e-11, 3.978215e-05, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 36
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="Category Menu" unique_id=236226632 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.47843137, 0, 0.2, 1)
+label = NodePath("Margin3/Quit Label")
+
+[node name="Margin3" type="MarginContainer" parent="Category Menu/Quit" unique_id=997012090]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 20
+
+[node name="Quit Label" type="Label" parent="Category Menu/Quit/Margin3" unique_id=1559459671]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0.00023387332, 1.4688339e-11, 3.978215e-05, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Top Line" type="Panel" parent="." unique_id=582612979]
+modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(0, 8)
+offset_top = 100.0
+offset_right = 1920.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nyix4")
+
+[node name="Categories" type="Control" parent="." unique_id=900887265]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Options" type="MarginContainer" parent="Categories" unique_id=1564380607 groups=["settings"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1900.0
+offset_top = -155.0
+offset_right = 11500.0
+offset_bottom = 1195.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_bottom = 200
+script = ExtResource("8_aoy7p")
+
+[node name="Option Panels" type="HBoxContainer" parent="Categories/Options" unique_id=1961908780]
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Gameplay" type="MarginContainer" parent="Categories/Options/Option Panels" unique_id=1486490700]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Categories/Options/Option Panels/Gameplay" unique_id=1123300782]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 2
+alignment = 1
+
+[node name="Gameplay Options Header" type="Label" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer" unique_id=835713551]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8117647)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 96
+text = "Gameplay Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Top Line" type="Panel" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer" unique_id=1286714160]
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nyix4")
+
+[node name="GridContainer" type="GridContainer" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer" unique_id=1455316614]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="Language" type="Label" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer" unique_id=936017272]
+process_mode = 4
+modulate = Color(0.280748, 0.280748, 0.280748, 1)
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+text = "Language"
+
+[node name="LanguageDropdown" type="OptionButton" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer" unique_id=1409411260]
+unique_name_in_owner = true
+process_mode = 4
+modulate = Color(0.280748, 0.280748, 0.280748, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Spanish (Latin America)"
+popup/item_1/id = 1
+
+[node name="Battle Difficulty" type="Label" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer" unique_id=1199009704]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_fonts/font = ExtResource("10_f2n5m")
+theme_override_font_sizes/font_size = 60
+text = "Battle Difficulty"
+
+[node name="Tooltip Trigger" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Battle Difficulty" unique_id=1769665923 node_paths=PackedStringArray("triggered_by") instance=ExtResource("10_5hpxl")]
+layout_mode = 1
+tooltip_id = "battle_difficulty"
+triggered_by = NodePath("..")
+
+[node name="Battle Difficulty Dropdown" type="OptionButton" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer" unique_id=1376082738]
+visible = false
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+alignment = 2
+selected = 1
+item_count = 3
+popup/item_0/text = "Story"
+popup/item_0/id = 0
+popup/item_1/text = "Standard"
+popup/item_1/id = 1
+popup/item_2/text = "Challenge"
+popup/item_2/id = 2
+
+[node name="Censoring" type="Label" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer" unique_id=1032542260]
+process_mode = 4
+visible = false
+modulate = Color(0.280748, 0.280748, 0.280748, 1)
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_f2n5m")
+theme_override_font_sizes/font_size = 60
+text = "Censoring"
+
+[node name="Censoring Dropdown" type="OptionButton" parent="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer" unique_id=1159779957]
+process_mode = 4
+visible = false
+modulate = Color(0.280748, 0.280748, 0.280748, 1)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+alignment = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Basic"
+popup/item_1/id = 1
+popup/item_2/text = "Some"
+popup/item_2/id = 2
+popup/item_3/text = "Complete"
+popup/item_3/id = 3
+
+[node name="Audio" type="MarginContainer" parent="Categories/Options/Option Panels" unique_id=1948488189]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Categories/Options/Option Panels/Audio" unique_id=1863515073]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 2
+alignment = 1
+
+[node name="Audio Options Header" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer" unique_id=1831266531]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8117647)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 96
+text = "Audio Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Top Line" type="Panel" parent="Categories/Options/Option Panels/Audio/VBoxContainer" unique_id=1207304098]
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nyix4")
+
+[node name="Settings" type="GridContainer" parent="Categories/Options/Option Panels/Audio/VBoxContainer" unique_id=1440467908]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="MusicVol2" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=993990716]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+text = "Master Volume"
+
+[node name="MasterSlider" type="HSlider" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=774445944]
+unique_name_in_owner = true
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/center_grabber = -1
+theme_override_icons/grabber = ExtResource("11_asm1w")
+theme_override_icons/grabber_highlight = ExtResource("12_4yj5f")
+theme_override_styles/slider = ExtResource("13_mnf4u")
+theme_override_styles/grabber_area = ExtResource("14_35jc2")
+theme_override_styles/grabber_area_highlight = ExtResource("15_7mbs7")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Master Volume Label" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MasterSlider" unique_id=1639746735]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 45
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVol" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=447896578]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=1265685478]
+unique_name_in_owner = true
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/center_grabber = -1
+theme_override_icons/grabber = ExtResource("11_asm1w")
+theme_override_icons/grabber_highlight = ExtResource("12_4yj5f")
+theme_override_styles/slider = ExtResource("13_mnf4u")
+theme_override_styles/grabber_area = ExtResource("14_35jc2")
+theme_override_styles/grabber_area_highlight = ExtResource("15_7mbs7")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MusicSlider" unique_id=179843370]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 45
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXVol" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=1280957385]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+text = "SFX Volume"
+
+[node name="SFXSlider" type="HSlider" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=141719503]
+unique_name_in_owner = true
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/center_grabber = -1
+theme_override_icons/grabber = ExtResource("11_asm1w")
+theme_override_icons/grabber_highlight = ExtResource("12_4yj5f")
+theme_override_styles/slider = ExtResource("13_mnf4u")
+theme_override_styles/grabber_area = ExtResource("14_35jc2")
+theme_override_styles/grabber_area_highlight = ExtResource("15_7mbs7")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/SFXSlider" unique_id=711240972]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 45
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmbientVol" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=531636715]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+text = "Ambient Volume"
+
+[node name="AmbientSlider" type="HSlider" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=1672832837]
+unique_name_in_owner = true
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/center_grabber = -1
+theme_override_icons/grabber = ExtResource("11_asm1w")
+theme_override_icons/grabber_highlight = ExtResource("12_4yj5f")
+theme_override_styles/slider = ExtResource("13_mnf4u")
+theme_override_styles/grabber_area = ExtResource("14_35jc2")
+theme_override_styles/grabber_area_highlight = ExtResource("15_7mbs7")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/AmbientSlider" unique_id=625095979]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 45
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DynamicMusicVol" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=668962639]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+text = "Dynamic Song Volume"
+
+[node name="DynamicSlider" type="HSlider" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings" unique_id=1327404824]
+unique_name_in_owner = true
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/center_grabber = -1
+theme_override_icons/grabber = ExtResource("11_asm1w")
+theme_override_icons/grabber_highlight = ExtResource("12_4yj5f")
+theme_override_styles/slider = ExtResource("13_mnf4u")
+theme_override_styles/grabber_area = ExtResource("14_35jc2")
+theme_override_styles/grabber_area_highlight = ExtResource("15_7mbs7")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/DynamicSlider" unique_id=669137431]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.70980394, 0.70980394, 0.70980394, 0.29411766)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 45
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Display" type="MarginContainer" parent="Categories/Options/Option Panels" unique_id=2133840685]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Categories/Options/Option Panels/Display" unique_id=1718306854]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 2
+alignment = 1
+
+[node name="Display Options Header" type="Label" parent="Categories/Options/Option Panels/Display/VBoxContainer" unique_id=430249337]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8117647)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 96
+text = "Display Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Top Line" type="Panel" parent="Categories/Options/Option Panels/Display/VBoxContainer" unique_id=1635873972]
+self_modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nyix4")
+
+[node name="Settings" type="GridContainer" parent="Categories/Options/Option Panels/Display/VBoxContainer" unique_id=987564039]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="WindowMode" type="Label" parent="Categories/Options/Option Panels/Display/VBoxContainer/Settings" unique_id=1535514911]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 48
+text = "Window Mode
+"
+vertical_alignment = 1
+
+[node name="WindowModeDropdown" type="OptionButton" parent="Categories/Options/Option Panels/Display/VBoxContainer/Settings" unique_id=719949402]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 48
+alignment = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Full Screen"
+popup/item_1/id = 1
+popup/item_2/text = "Borderless Window"
+popup/item_2/id = 2
+
+[node name="WindowResolution" type="Label" parent="Categories/Options/Option Panels/Display/VBoxContainer/Settings" unique_id=1870744397]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 48
+text = "Window Resolution"
+
+[node name="WindowResolutionDropdown" type="OptionButton" parent="Categories/Options/Option Panels/Display/VBoxContainer/Settings" unique_id=558695410]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("10_f2n5m")
+theme_override_font_sizes/font_size = 48
+alignment = 2
+
+[node name="Monitor" type="Label" parent="Categories/Options/Option Panels/Display/VBoxContainer/Settings" unique_id=2023348501]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 48
+text = "Monitor
+"
+
+[node name="MonitorDropdown" type="OptionButton" parent="Categories/Options/Option Panels/Display/VBoxContainer/Settings" unique_id=1860349799]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("10_f2n5m")
+theme_override_font_sizes/font_size = 48
+alignment = 2
+
+[node name="Colors" type="MarginContainer" parent="Categories/Options/Option Panels" unique_id=1141004960]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Categories/Options/Option Panels/Colors" unique_id=300658488]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 2
+alignment = 1
+
+[node name="Color Options Header" type="Label" parent="Categories/Options/Option Panels/Colors/VBoxContainer" unique_id=2037700567]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 60
+text = "Color Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Top Line" type="Panel" parent="Categories/Options/Option Panels/Colors/VBoxContainer" unique_id=72469707]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nyix4")
+script = ExtResource("7_b3k4x")
+
+[node name="Settings" parent="Categories/Options/Option Panels/Colors/VBoxContainer" unique_id=1105440455 instance=ExtResource("4_ffi5o")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/v_separation = 25
+
+[node name="Text Scrolling Container" type="ScrollContainer" parent="Categories/Options/Option Panels" unique_id=646968260]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 4
+
+[node name="Text" type="MarginContainer" parent="Categories/Options/Option Panels/Text Scrolling Container" unique_id=1692531751]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 25
+
+[node name="Settings" parent="Categories/Options/Option Panels/Text Scrolling Container/Text" unique_id=1408151219 instance=ExtResource("12_p8q4w")]
+layout_mode = 2
+
+[node name="Save Page Holder" type="Control" parent="Categories" unique_id=53428474 groups=["save_load"]]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_1s1vc")
+
+[node name="Bottom Line" type="Panel" parent="." unique_id=1269979684]
+modulate = Color(0.7882353, 0.09411765, 0.50980395, 1)
+custom_minimum_size = Vector2(0, 8)
+offset_top = 980.0
+offset_right = 1920.0
+offset_bottom = 988.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nyix4")
+
+[node name="Category Tabs" type="Control" parent="." unique_id=1367904145]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Options Tab Controls" parent="Category Tabs" unique_id=1880507040 node_paths=PackedStringArray("gameplay_panel", "audio_panel", "display_panel", "colors_panel", "text_panel", "options_panels_container") instance=ExtResource("10_7ygct")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 1900.0
+offset_top = 970.0
+offset_right = 4300.27
+offset_bottom = 1020.0
+gameplay_panel = NodePath("../../Categories/Options/Option Panels/Gameplay")
+audio_panel = NodePath("../../Categories/Options/Option Panels/Audio")
+display_panel = NodePath("../../Categories/Options/Option Panels/Display")
+colors_panel = NodePath("../../Categories/Options/Option Panels/Colors")
+text_panel = NodePath("../../Categories/Options/Option Panels/Text Scrolling Container")
+options_panels_container = NodePath("../../Categories/Options")
+
+[node name="Save Tab Controls" type="HBoxContainer" parent="Category Tabs" unique_id=1506298195 node_paths=PackedStringArray("current_page_label", "root") groups=["save_load"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2400.27, 0)
+layout_mode = 0
+offset_left = 1920.0
+offset_top = 1200.0
+offset_right = 4320.27
+offset_bottom = 1250.0
+scale = Vector2(0.8, 0.8)
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("11_rgeba")
+current_page_label = NodePath("Page Selection/Margin3/Page Display")
+save_page_template = ExtResource("12_qi7r2")
+root = NodePath("../../Categories/Save Page Holder")
+
+[node name="Decrease Page Number" type="Button" parent="Category Tabs/Save Tab Controls" unique_id=1231666358 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.4117647, 0, 0.105882354, 1)
+label = NodePath("Margin3/Label")
+
+[node name="Margin3" type="MarginContainer" parent="Category Tabs/Save Tab Controls/Decrease Page Number" unique_id=1680412082]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="Category Tabs/Save Tab Controls/Decrease Page Number/Margin3" unique_id=931955087]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47843137, 0, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_mviff")
+theme_override_font_sizes/font_size = 48
+text = "<"
+vertical_alignment = 1
+
+[node name="Page Selection" type="Button" parent="Category Tabs/Save Tab Controls" unique_id=1265854766 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(1200, 50)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.4117647, 0, 0.105882354, 1)
+label = NodePath("Margin3/Page Display")
+
+[node name="Margin3" type="MarginContainer" parent="Category Tabs/Save Tab Controls/Page Selection" unique_id=379679995]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 30
+
+[node name="Page Display" type="Label" parent="Category Tabs/Save Tab Controls/Page Selection/Margin3" unique_id=1965262766]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47843137, 0, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_0uwqm")
+theme_override_font_sizes/font_size = 36
+text = "Page Number: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase Page Number" type="Button" parent="Category Tabs/Save Tab Controls" unique_id=1110501671 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_6ksej")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("3_ixbv4")
+theme_override_styles/pressed = ExtResource("3_ixbv4")
+theme_override_styles/hover = ExtResource("4_jntna")
+theme_override_styles/disabled = ExtResource("3_ixbv4")
+theme_override_styles/focus = ExtResource("3_ixbv4")
+alignment = 2
+script = ExtResource("6_bixuy")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.4117647, 0, 0.105882354, 1)
+label = NodePath("Margin3/Label")
+
+[node name="Margin3" type="MarginContainer" parent="Category Tabs/Save Tab Controls/Increase Page Number" unique_id=1187431497]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="Category Tabs/Save Tab Controls/Increase Page Number/Margin3" unique_id=1103465533]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47843137, 0, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_mviff")
+theme_override_font_sizes/font_size = 48
+text = ">"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="LocalSignalBus" type="Node" parent="." unique_id=1614695555]
+unique_name_in_owner = true
+script = ExtResource("15_8e3c5")
+
+[node name="TertiaryFontOperator" type="Control" parent="." unique_id=1221399611 node_paths=PackedStringArray("nodes_to_scale_text")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("24_0xtw8")
+nodes_to_scale_text = [NodePath("../Category Menu/Title/Margin3/Title Label"), NodePath("../Category Menu/Options/Margin3/Settings Label"), NodePath("../Category Menu/Save _ Load/Margin3/Save-Load Label"), NodePath("../Category Menu/Return/Margin3/Return Label"), NodePath("../Category Menu/Quit/Margin3/Quit Label"), NodePath("../Category Tabs/Save Tab Controls/Increase Page Number/Margin3/Label"), NodePath("../Category Tabs/Save Tab Controls/Page Selection/Margin3/Page Display"), NodePath("../Category Tabs/Save Tab Controls/Decrease Page Number/Margin3/Label"), NodePath("../Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Language"), NodePath("../Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/LanguageDropdown"), NodePath("../Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Battle Difficulty"), NodePath("../Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Battle Difficulty Dropdown"), NodePath("../Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Censoring"), NodePath("../Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Censoring Dropdown"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/DynamicSlider/Label"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/DynamicMusicVol"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/AmbientSlider/Label"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/AmbientVol"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/SFXSlider/Label"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/SFXVol"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MusicSlider/Label"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MusicVol"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MasterSlider/Master Volume Label"), NodePath("../Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MusicVol2"), NodePath("../Categories/Options/Option Panels/Display/VBoxContainer/Settings/WindowMode"), NodePath("../Categories/Options/Option Panels/Display/VBoxContainer/Settings/WindowModeDropdown"), NodePath("../Categories/Options/Option Panels/Display/VBoxContainer/Settings/WindowResolution"), NodePath("../Categories/Options/Option Panels/Display/VBoxContainer/Settings/WindowResolutionDropdown"), NodePath("../Categories/Options/Option Panels/Display/VBoxContainer/Settings/Monitor"), NodePath("../Categories/Options/Option Panels/Display/VBoxContainer/Settings/MonitorDropdown")]
+
+[connection signal="pressed" from="Category Menu/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Category Menu/Save _ Load" to="." method="_on_save___load_pressed"]
+[connection signal="pressed" from="Category Menu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Category Menu/Title" to="." method="_on_title_pressed"]
+[connection signal="pressed" from="Category Menu/Quit" to="." method="_on_quit_pressed"]
+[connection signal="item_selected" from="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/LanguageDropdown" to="." method="_on_language_dropdown_item_selected"]
+[connection signal="item_selected" from="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Battle Difficulty Dropdown" to="." method="_on_battle_difficulty_dropdown_item_selected"]
+[connection signal="item_selected" from="Categories/Options/Option Panels/Gameplay/VBoxContainer/GridContainer/Censoring Dropdown" to="." method="_on_censoring_dropdown_item_selected"]
+[connection signal="value_changed" from="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/AmbientSlider" to="." method="_on_ambient_slider_value_changed"]
+[connection signal="value_changed" from="Categories/Options/Option Panels/Audio/VBoxContainer/Settings/DynamicSlider" to="." method="_on_dynamic_slider_value_changed"]
+[connection signal="item_selected" from="Categories/Options/Option Panels/Display/VBoxContainer/Settings/WindowModeDropdown" to="." method="_on_window_mode_option_selected"]
+[connection signal="item_selected" from="Categories/Options/Option Panels/Display/VBoxContainer/Settings/WindowResolutionDropdown" to="." method="_on_window_resolution_option_selected"]
+[connection signal="item_selected" from="Categories/Options/Option Panels/Display/VBoxContainer/Settings/MonitorDropdown" to="." method="_on_monitor_option_selected"]
+[connection signal="pressed" from="Category Tabs/Save Tab Controls/Decrease Page Number" to="Category Tabs/Save Tab Controls" method="_on_decrease_page_number_pressed"]
+[connection signal="pressed" from="Category Tabs/Save Tab Controls/Page Selection" to="Category Tabs/Save Tab Controls" method="_on_page_selection_pressed"]
+[connection signal="pressed" from="Category Tabs/Save Tab Controls/Increase Page Number" to="Category Tabs/Save Tab Controls" method="_on_increase_page_number_pressed"]

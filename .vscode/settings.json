@@ -1,0 +1,11 @@
+{
+    "godotTools.editorPath.godot4": "C:\\Users\\Fitz\\Downloads\\Godot_v4.7.2-stable_win64\\Godot_v4.7.2-stable_win64.exe",
+    "files.exclude": {
+        "**/*.rpyc": true,
+        "**/*.rpa": true,
+        "**/*.rpymc": true,
+        "**/cache/": true
+    },
+    "neoGodotTools.editorPath.godot4": "d:\\Fitz\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+    "git.ignoreLimitWarning": true
+}

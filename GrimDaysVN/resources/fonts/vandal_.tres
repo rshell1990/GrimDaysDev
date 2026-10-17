@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cktgaxml3vrr7"]
+
+[ext_resource type="FontFile" uid="uid://d1y2wojompt33" path="res://GrimDays/fonts/Vandal-4735418/Vandal.ttf" id="1_3klxl"]
+
+[resource]
+base_font = ExtResource("1_3klxl")
+baseline_offset = 0.075

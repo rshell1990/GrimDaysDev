@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://dlddgrm1qkgw0"]
+
+[ext_resource type="Texture2D" uid="uid://ce0i2gnkpmtpv" path="res://editor_only_debug/visuals/skill_icons/skill_61_noBG.png" id="1_1p7po"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="1_khlp6"]
+[ext_resource type="Resource" uid="uid://ddl13ejytn3k3" path="res://GrimDaysBattle/resources/actions/celine/frenzy_single_rank/frenzy_single_rank.tres" id="3_frenzy"]
+
+[resource]
+script = ExtResource("1_khlp6")
+action = ExtResource("3_frenzy")
+id = &"frenzy_node"
+display_name = "Frenzy"
+icon = ExtResource("1_1p7po")
+description = "For a short time, you lose control and go on a rampage. Instead you will automatically choose to attack furiously. Having a chance to deal multiple strikes with each attack.
+
+For a few rounds after using this ability your mind will remain clear."
+maximum_rank = 5
+previous_node = &"dark_urges_node"
+composite = true
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

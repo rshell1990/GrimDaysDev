@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" format=3 uid="uid://h1x0mfuvikuu"]
+
+[ext_resource type="FontFile" uid="uid://ciw1iwfqlhpft" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Fonts/BOD_R.TTF" id="1_mds73"]
+
+[resource]
+base_font = ExtResource("1_mds73")
+variation_embolden = 0.66
+spacing_glyph = 2
+spacing_top = 4
+spacing_bottom = 4
+baseline_offset = 0.05

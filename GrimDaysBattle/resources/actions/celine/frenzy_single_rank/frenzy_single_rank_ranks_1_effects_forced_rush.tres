@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EffectForceActionTemplate" format=3 uid="uid://dp4pahovpyyu5"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="5_effect"]
+[ext_resource type="Script" uid="uid://dxid37r1j5fsy" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_force_action.gd" id="6_force"]
+[ext_resource type="Resource" uid="uid://bk6bnvui0o3qc" path="res://GrimDaysBattle/resources/actions/celine/frenzied_rush_single_rank/frenzied_rush_single_rank.tres" id="8_rush"]
+[ext_resource type="Resource" uid="uid://bpf1xy3x8cv8" path="res://GrimDaysBattle/resources/actions/celine/frenzy_single_rank/frenzy_single_rank_ranks_1_effects_forced_rush_clear_mind.tres" id="external_ClearMind"]
+[ext_resource type="Resource" uid="uid://devunuvfbtcp0" path="res://GrimDaysBattle/resources/actions/celine/frenzy_single_rank/frenzy_single_rank_ranks_1_effects_forced_rush_restore_lucidity.tres" id="external_RestoreLucidity"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_force_action.tscn" id="runtime_scene"]
+
+[resource]
+script = ExtResource("6_force")
+action = ExtResource("8_rush")
+action_rank_by_rank = PackedInt32Array(1, 2, 3, 4, 5)
+duration = 3
+effects_on_expiry = Array[ExtResource("5_effect")]([ExtResource("external_RestoreLucidity"), ExtResource("external_ClearMind")])
+lifetime = 1
+trigger = 300
+template_scene = ExtResource("runtime_scene")
+duration_by_rank = PackedInt32Array(3, 3, 4, 4, 5)
+id = &"frenzy_forced_rush"

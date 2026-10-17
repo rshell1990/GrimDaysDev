@@ -1,0 +1,5 @@
+The road was marked by Delia's murdered guards. The wagon remained, but the Demorai returned in force.
+Moka: Stay close! They are trying to split us apart.
+Karak spent one of Grim's costly gifts to protect the others. They survived, shaken by how little they had worked as a team.
+do UIDirector.show_story_party_preparation()
+[end_timeline]

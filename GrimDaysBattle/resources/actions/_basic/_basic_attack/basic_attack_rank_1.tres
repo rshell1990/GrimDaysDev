@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RankTemplate" format=3 uid="uid://bb0eka6nwnjdd"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_rank"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/_basic/_basic_attack/basic_attack_rank_1_effects.tres" id="2_effects"]
+
+[resource]
+script = ExtResource("1_rank")
+level = 1
+effects = ExtResource("2_effects")
+id = &"basic_attack_rank_1"

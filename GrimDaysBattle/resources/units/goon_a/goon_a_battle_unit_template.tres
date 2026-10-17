@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="BattleUnitTemplate" format=3 uid="uid://bohshous8v2s3"]
+
+[ext_resource type="Resource" uid="uid://s0sv4urabrmo" path="res://GrimDaysBattle/resources/actions/street_bullies/spine_animated_basic_attack.tres" id="1_n38tb"]
+[ext_resource type="PackedScene" uid="uid://b7ygxnegjqnwh" path="res://GrimDaysBattle/scenes/battle/units/goon_a_spine_animation.tscn" id="2_t4mdp"]
+[ext_resource type="Script" uid="uid://cb7akesf5u8d3" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template.gd" id="3_r5rfy"]
+[ext_resource type="Script" uid="uid://drwr8dgs5cpum" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template_collection.gd" id="4_a84nh"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="5_ir82y"]
+[ext_resource type="Resource" uid="uid://c1h4qq6na002a" path="res://GrimDaysBattle/resources/units/goon_a/goon_a_leveling_tiers.tres" id="6_c5sq2"]
+[ext_resource type="Resource" uid="uid://47v2e20vx7av" path="res://GrimDaysBattle/resources/effects/harlok_model/play_animation_when_damaged.tres" id="6_n38tb"]
+[ext_resource type="Resource" uid="uid://inw5hu387vt6" path="res://GrimDaysBattle/resources/effects/harlok_model/play_animation_when_defeated.tres" id="7_01krm"]
+[ext_resource type="Texture2D" uid="uid://dvfjgl4smai21" path="res://GrimDaysBattle/assets/visuals/battle_portraits/goon_a_portrait.png" id="7_4nm31"]
+[ext_resource type="Resource" uid="uid://dj0tspsauybug" path="res://GrimDaysBattle/resources/effects/play_male_scream_on_defeat.tres" id="7_cms0s"]
+[ext_resource type="Script" uid="uid://bjm8hu372yam1" path="res://GrimDaysBattle/scripts/Unit/Resources/unit_template.gd" id="8_lgpbq"]
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="10_q72se"]
+[ext_resource type="Resource" uid="uid://rmbnoriassmf" path="res://GrimDaysBattle/resources/units/goon_a/stats/calculated/level.tres" id="11_qlivy"]
+[ext_resource type="Resource" uid="uid://buh5cei7qh8p8" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/experience.tres" id="12_8p5dv"]
+[ext_resource type="Resource" uid="uid://qx136ytinuto" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/weight.tres" id="13_1otl0"]
+[ext_resource type="Resource" uid="uid://j7mg5teed88g" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/damage_modifier.tres" id="14_n38tb"]
+[ext_resource type="Resource" uid="uid://dgvkyxnetsv4a" path="res://GrimDaysBattle/resources/units/goon_a/stats/calculated/energy.tres" id="15_01krm"]
+[ext_resource type="Resource" uid="uid://ccd3v5nkr8my7" path="res://GrimDaysBattle/resources/units/goon_a/stats/calculated/health.tres" id="16_cms0s"]
+[ext_resource type="Resource" uid="uid://bcqwd217o7vbe" path="res://GrimDaysBattle/resources/units/goon_a/stats/calculated/magical_damage.tres" id="17_i17hr"]
+[ext_resource type="Resource" uid="uid://debmuxan3xw32" path="res://GrimDaysBattle/resources/units/goon_a/stats/scaling/magic_resistance.tres" id="18_vbnau"]
+[ext_resource type="Resource" uid="uid://dlp3n77mrwtn1" path="res://GrimDaysBattle/resources/units/goon_a/stats/calculated/physical_damage.tres" id="19_4eo8a"]
+[ext_resource type="Resource" uid="uid://c75e2a7bm4kc1" path="res://GrimDaysBattle/resources/units/goon_a/stats/scaling/physical_resistance.tres" id="20_qthm6"]
+[ext_resource type="Resource" uid="uid://con0fv4obafww" path="res://GrimDaysBattle/resources/units/goon_a/stats/scaling/accuracy.tres" id="21_papob"]
+[ext_resource type="Resource" uid="uid://dl8xl5wsgigeo" path="res://GrimDaysBattle/resources/units/goon_a/stats/scaling/critical_strike.tres" id="22_p3k7t"]
+[ext_resource type="Resource" uid="uid://nmh46athyaf3" path="res://GrimDaysBattle/resources/units/goon_a/stats/scaling/evasion.tres" id="23_el5ne"]
+[ext_resource type="Resource" uid="uid://b2dl4rp5mb1cp" path="res://GrimDaysBattle/resources/units/goon_a/stats/scaling/lucky_evasion.tres" id="24_l47m6"]
+[ext_resource type="Resource" uid="uid://dncdduaap5d3x" path="res://GrimDaysBattle/resources/units/goon_a/stats/calculated/swiftness.tres" id="25_1vuna"]
+[ext_resource type="Resource" uid="uid://ckyp7jvwfp6wi" path="res://GrimDaysBattle/resources/units/goon_a/stats/calculated/weight_limit.tres" id="26_r3mad"]
+[ext_resource type="Resource" uid="uid://cm38vpk6fl4ag" path="res://GrimDaysBattle/resources/units/goon_a/stats/special/encumberance.tres" id="27_uwrt1"]
+[ext_resource type="Resource" uid="uid://cplr1ryf3kwef" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/endurance.tres" id="28_f8x1p"]
+[ext_resource type="Resource" uid="uid://bk6mnylgo4fsd" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/finesse.tres" id="29_o3lr8"]
+[ext_resource type="Resource" uid="uid://dcg1mwrj532tw" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/luck.tres" id="30_iyowf"]
+[ext_resource type="Resource" uid="uid://bb32stdb0y38s" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/mysticism.tres" id="31_iv8xa"]
+[ext_resource type="Resource" uid="uid://bnhfrnh6bt4cn" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/perception.tres" id="32_ch1tx"]
+[ext_resource type="Resource" uid="uid://br8vqvvw0o7bb" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/strength.tres" id="33_hwplh"]
+[ext_resource type="Resource" uid="uid://cww3h6jyx0f2w" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/vitality.tres" id="34_mujes"]
+[ext_resource type="Resource" uid="uid://fuw4xql4nyc" path="res://GrimDaysBattle/resources/units/goon_a/stats/flat/willpower.tres" id="35_223gm"]
+[ext_resource type="Script" uid="uid://dxag8jqccajir" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_collection.gd" id="36_fbh0s"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/goon_a_collection.tres" id="90_collection"]
+
+[sub_resource type="Resource" id="Resource_jh8xl"]
+script = ExtResource("4_a84nh")
+metadata/_custom_type_script = "uid://drwr8dgs5cpum"
+
+[sub_resource type="Resource" id="Resource_1j7my"]
+script = ExtResource("36_fbh0s")
+all = Array[ExtResource("10_q72se")]([ExtResource("11_qlivy"), ExtResource("12_8p5dv"), ExtResource("13_1otl0"), ExtResource("14_n38tb"), ExtResource("15_01krm"), ExtResource("16_cms0s"), ExtResource("17_i17hr"), ExtResource("18_vbnau"), ExtResource("19_4eo8a"), ExtResource("20_qthm6"), ExtResource("21_papob"), ExtResource("22_p3k7t"), ExtResource("23_el5ne"), ExtResource("24_l47m6"), ExtResource("25_1vuna"), ExtResource("26_r3mad"), ExtResource("27_uwrt1"), ExtResource("28_f8x1p"), ExtResource("29_o3lr8"), ExtResource("30_iyowf"), ExtResource("31_iv8xa"), ExtResource("32_ch1tx"), ExtResource("33_hwplh"), ExtResource("34_mujes"), ExtResource("35_223gm")])
+metadata/_custom_type_script = "uid://dxag8jqccajir"
+
+[resource]
+script = ExtResource("8_lgpbq")
+display_name = "Goon A"
+unit_archetype = "Warrior"
+level = 2.0
+portrait = ExtResource("7_4nm31")
+battle_sprite = ExtResource("2_t4mdp")
+basic_action_template = ExtResource("1_n38tb")
+experience_reward = 600
+skill_collection = ExtResource("90_collection")
+leveling_tiers = ExtResource("6_c5sq2")
+stats = SubResource("Resource_1j7my")
+starting_attribute_points_spent = {
+"combat": 9,
+"non_combat": 0
+}
+intrinsic_effects = Array[ExtResource("5_ir82y")]([ExtResource("6_n38tb"), ExtResource("7_cms0s"), ExtResource("7_01krm")])
+equipment = SubResource("Resource_jh8xl")
+id = &"GoonATeen"
+metadata/_custom_type_script = "uid://bjm8hu372yam1"

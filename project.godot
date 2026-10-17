@@ -1,0 +1,314 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GrimDays"
+config/version="0.01"
+run/main_scene="uid://d1hdxe6miih2u"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://cfjtc5oxg8n75"
+
+[autoload]
+
+SM_Globals="*uid://ckb6uii70ciok"
+Dialogic="*uid://ds2q0uclmolvu"
+GameManager="*uid://b8k88oafa8hrw"
+Repositories="*uid://dqq31tcad4368"
+BattleRepository="*uid://s0dqr8k63066"
+BattleController="*uid://d0f6by3budwvi"
+VNSignalBus="*uid://b6ao8esnum7c2"
+SignalBus="*uid://dhyml37vcxp86"
+SceneManager="*uid://bixdwgbijmufo"
+SoundManager="*uid://cs4kqdpbpsb5c"
+SaveAndLoadSystemManager="*uid://b88qp8wpnqntl"
+DDInputHandler="*uid://dhpha7vckt63y"
+DDTextInput="*uid://dq4rj5dyhn1k7"
+InputHelper="*uid://ety27eg2cgkp"
+UIDirector="*uid://bmqf6sl83ghb0"
+SystemAdministrators="*uid://0sjmgojb7u7p"
+SystemHeadquarters="*uid://cmcartj7nu75o"
+SystemHelpers="*uid://tg1syjj5x6eg"
+ConfirmationModal="*uid://r6ul4ft3vkai"
+CameraCommonOperations="*uid://bms58lw25ngft"
+PhantomCameraManager="*uid://duq6jhf6unyis"
+DialogicRelay="*uid://defha4p4o57rj"
+ScreenShaker="*uid://djgqg4mn6b1e7"
+ReplayRecorder="*uid://bpfoa18rk1bqv"
+Profily="*uid://qmnu1ehm866e"
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+
+[debug]
+
+settings/stdout/verbose_stdout=true
+gdscript/warnings/unassigned_variable=0
+gdscript/warnings/unassigned_variable_op_assign=0
+gdscript/warnings/unused_variable=0
+gdscript/warnings/unused_local_constant=0
+gdscript/warnings/unused_private_class_variable=0
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
+gdscript/warnings/incompatible_ternary=0
+gdscript/warnings/integer_division=0
+gdscript/warnings/narrowing_conversion=0
+
+[dialogic]
+
+directories/dch_directory={
+"Boris": "res://GrimDaysVN/dialogic/characters/Boris.dch",
+"Brad": "res://GrimDaysVN/dialogic/characters/Brad.dch",
+"Celine": "res://GrimDaysVN/dialogic/characters/Celine.dch",
+"CelineTeen": "res://GrimDaysVN/dialogic/characters/CelineTeen.dch",
+"Danny": "res://GrimDaysVN/dialogic/characters/Danny.dch",
+"Father": "res://GrimDaysVN/dialogic/characters/Father.dch",
+"Guard": "res://GrimDaysVN/dialogic/characters/Guard.dch",
+"Hara": "res://GrimDaysVN/dialogic/characters/Hara.dch",
+"Harlok": "res://GrimDaysVN/dialogic/characters/Harlok.dch",
+"Kayanna": "res://GrimDaysVN/dialogic/characters/Kayanna.dch",
+"Knight": "res://GrimDaysVN/dialogic/characters/Knight.dch",
+"Madison": "res://GrimDaysVN/dialogic/characters/Madison.dch",
+"Mother": "res://GrimDaysVN/dialogic/characters/Mother.dch",
+"Nashar": "res://GrimDaysVN/dialogic/characters/Nashar.dch",
+"Unknown": "res://GrimDaysVN/dialogic/characters/Unknown.dch",
+"UnknownNunA": "res://GrimDaysVN/dialogic/characters/UnknownNunA.dch",
+"UnknownNunB": "res://GrimDaysVN/dialogic/characters/UnknownNunB.dch",
+"Ursula": "res://GrimDaysVN/dialogic/characters/Ursula.dch",
+"fullscreen": "res://GrimDaysVN/dialogic/characters/fullscreen.dch"
+}
+directories/dtl_directory={
+"1_0000_arrival_in_gerano": "res://GrimDaysVN/dialogic/scripts/1_0000_arrival_in_gerano.dtl",
+"1_0010_renia_shows_karak_his_room": "res://GrimDaysVN/dialogic/scripts/1_0010_renia_shows_karak_his_room.dtl",
+"1_0020_karak_proposes_to_vera": "res://GrimDaysVN/dialogic/scripts/1_0020_karak_proposes_to_vera.dtl",
+"1_0020_renia_finds_karak": "res://GrimDaysVN/dialogic/scripts/1_0020_renia_finds_karak.dtl",
+"1_0025_karak_rises_after_training_fall": "res://GrimDaysVN/dialogic/scripts/1_0025_karak_rises_after_training_fall.dtl",
+"1_0030_tyran_teaches_karak_judgment": "res://GrimDaysVN/dialogic/scripts/1_0030_tyran_teaches_karak_judgment.dtl",
+"1_0040_renia_invites_karak_to_masquerade": "res://GrimDaysVN/dialogic/scripts/1_0040_renia_invites_karak_to_masquerade.dtl",
+"1_0050_tyran_warns_karak_of_war": "res://GrimDaysVN/dialogic/scripts/1_0050_tyran_warns_karak_of_war.dtl",
+"1_0060_renia_rejects_karaks_warning": "res://GrimDaysVN/dialogic/scripts/1_0060_renia_rejects_karaks_warning.dtl",
+"1_0070_vera_urges_renia_to_heed_warning": "res://GrimDaysVN/dialogic/scripts/1_0070_vera_urges_renia_to_heed_warning.dtl",
+"1_0080_gerano_under_siege": "res://GrimDaysVN/dialogic/scripts/1_0080_gerano_under_siege.dtl",
+"1_0085_tyran_sends_renia_and_karak_through_portal": "res://GrimDaysVN/dialogic/scripts/1_0085_tyran_sends_renia_and_karak_through_portal.dtl",
+"1_0088_renia_vows_to_reclaim_gerano": "res://GrimDaysVN/dialogic/scripts/1_0088_renia_vows_to_reclaim_gerano.dtl",
+"1_0090_hanlar_reveals_tyrans_refusal": "res://GrimDaysVN/dialogic/scripts/1_0090_hanlar_reveals_tyrans_refusal.dtl",
+"1_0095_renia_prepares_to_reclaim_gerano": "res://GrimDaysVN/dialogic/scripts/1_0095_renia_prepares_to_reclaim_gerano.dtl",
+"1_0100_renia_shows_karak_reclamation_plan": "res://GrimDaysVN/dialogic/scripts/1_0100_renia_shows_karak_reclamation_plan.dtl",
+"2_0000_ember_void_armor_history": "res://GrimDaysVN/dialogic/scripts/2_0000_ember_void_armor_history.dtl",
+"2_0010_karak_seeks_scout_training": "res://GrimDaysVN/dialogic/scripts/2_0010_karak_seeks_scout_training.dtl",
+"2_0015_party_recruits_one_last_member": "res://GrimDaysVN/dialogic/scripts/2_0015_party_recruits_one_last_member.dtl",
+"2_0020_party_finds_delia_at_wagon_wreck": "res://GrimDaysVN/dialogic/scripts/2_0020_party_finds_delia_at_wagon_wreck.dtl",
+"2_0025_demorai_return_to_attack_party": "res://GrimDaysVN/dialogic/scripts/2_0025_demorai_return_to_attack_party.dtl",
+"2_0030_vera_asks_karak_about_life_after_revenge": "res://GrimDaysVN/dialogic/scripts/2_0030_vera_asks_karak_about_life_after_revenge.dtl",
+"2_0032_party_fights_raiders_and_cave_troll": "res://GrimDaysVN/dialogic/scripts/2_0032_party_fights_raiders_and_cave_troll.dtl",
+"2_0035_villagers_reward_party_for_rescue": "res://GrimDaysVN/dialogic/scripts/2_0035_villagers_reward_party_for_rescue.dtl",
+"2_0040_storm_drives_party_into_dark_mage_tower": "res://GrimDaysVN/dialogic/scripts/2_0040_storm_drives_party_into_dark_mage_tower.dtl",
+"2_0050_party_defeats_spectral_mage": "res://GrimDaysVN/dialogic/scripts/2_0050_party_defeats_spectral_mage.dtl",
+"2_0060_moka_and_vera_visit_bathhouse": "res://GrimDaysVN/dialogic/scripts/2_0060_moka_and_vera_visit_bathhouse.dtl",
+"2_0070_krill_tells_tall_tales": "res://GrimDaysVN/dialogic/scripts/2_0070_krill_tells_tall_tales.dtl",
+"2_0080_grim_translates_temple_inscription": "res://GrimDaysVN/dialogic/scripts/2_0080_grim_translates_temple_inscription.dtl",
+"2_0090_party_shares_their_motives": "res://GrimDaysVN/dialogic/scripts/2_0090_party_shares_their_motives.dtl",
+"2_0095_party_fights_lich_for_ember_void_blades": "res://GrimDaysVN/dialogic/scripts/2_0095_party_fights_lich_for_ember_void_blades.dtl",
+"2_0100_renia_claims_blades_as_assassins_attack": "res://GrimDaysVN/dialogic/scripts/2_0100_renia_claims_blades_as_assassins_attack.dtl",
+"3_0000_party_meets_temple_tree_guardian": "res://GrimDaysVN/dialogic/scripts/3_0000_party_meets_temple_tree_guardian.dtl",
+"3_0010_renia_moves_with_the_boots": "res://GrimDaysVN/dialogic/scripts/3_0010_renia_moves_with_the_boots.dtl",
+"3_0020_moka_enters_hamun_arena_tournament": "res://GrimDaysVN/dialogic/scripts/3_0020_moka_enters_hamun_arena_tournament.dtl",
+"3_0030_krill_uncovers_missing_women_ledger": "res://GrimDaysVN/dialogic/scripts/3_0030_krill_uncovers_missing_women_ledger.dtl",
+"3_0040_khalgan_reveals_he_is_mokas_father": "res://GrimDaysVN/dialogic/scripts/3_0040_khalgan_reveals_he_is_mokas_father.dtl",
+"3_0050_moka_finds_krill_at_khalgans_house": "res://GrimDaysVN/dialogic/scripts/3_0050_moka_finds_krill_at_khalgans_house.dtl",
+"3_0060_moka_confronts_khalgan_in_arena": "res://GrimDaysVN/dialogic/scripts/3_0060_moka_confronts_khalgan_in_arena.dtl",
+"3_0070_moka_grieves_with_krill": "res://GrimDaysVN/dialogic/scripts/3_0070_moka_grieves_with_krill.dtl",
+"3_0080_wei_katai_spies_on_karak": "res://GrimDaysVN/dialogic/scripts/3_0080_wei_katai_spies_on_karak.dtl",
+"3_0090_krill_steals_renias_boots_and_leaves": "res://GrimDaysVN/dialogic/scripts/3_0090_krill_steals_renias_boots_and_leaves.dtl",
+"3_0100_krill_returns_boots_renia_refuses_help": "res://GrimDaysVN/dialogic/scripts/3_0100_krill_returns_boots_renia_refuses_help.dtl",
+"3_0110_krill_explains_her_missing_sister": "res://GrimDaysVN/dialogic/scripts/3_0110_krill_explains_her_missing_sister.dtl",
+"3_0120_krill_begins_sister_summoning_ritual": "res://GrimDaysVN/dialogic/scripts/3_0120_krill_begins_sister_summoning_ritual.dtl",
+"3_0130_novaras_falls_under_siege": "res://GrimDaysVN/dialogic/scripts/3_0130_novaras_falls_under_siege.dtl",
+"4_0000_ghouls_attack_novaras_during_siege": "res://GrimDaysVN/dialogic/scripts/4_0000_ghouls_attack_novaras_during_siege.dtl",
+"basement_story_playtest": "res://editor_only_debug/scenes/battle/basement_story_playtest.dtl"
+}
+layout/style_directory={
+"": "res://GrimDaysVN/dialogic/styles/default.tres",
+"default": "res://GrimDaysVN/dialogic/styles/default.tres",
+"fullscreen": "res://GrimDaysVN/dialogic/styles/fullscreen.tres"
+}
+variables={
+"lines_read": 0,
+"prefix": "",
+"version_major": "0.05",
+"version_minor": "08-31-26",
+"version_patch": "Prototype_Four"
+}
+layout/style_list=["res://GrimDaysVN/dialogic/styles/default.tres", "res://GrimDaysVN/dialogic/styles/fullscreen.tres"]
+layout/default_style="res://GrimDaysVN/dialogic/styles/default.tres"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+glossary/default_case_sensitive=true
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="GrimDays"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/godot_ai/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/profily/plugin.cfg", "res://addons/replay_recorder/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://GrimDays/": "purple",
+"res://GrimDays/imported/": "pink",
+"res://GrimDaysBattle/": "red",
+"res://GrimDaysBattle/assets/": "blue",
+"res://GrimDaysBattle/resources/": "red",
+"res://GrimDaysBattle/scenes/": "pink",
+"res://GrimDaysVN/": "blue",
+"res://GrimDaysVN/audio/": "orange",
+"res://GrimDaysVN/dialogic/": "yellow",
+"res://GrimDaysVN/resources/": "red",
+"res://GrimDaysVN/resources/audio/": "orange",
+"res://GrimDaysVN/scenes/": "pink",
+"res://GrimDaysVN/scripts/": "green",
+"res://GrimDaysVN/visuals/": "blue",
+"res://addons/": "yellow",
+"res://editor_only_debug/": "green",
+"res://editor_only_debug/editor/": "purple"
+}
+
+[gdscript_ast]
+
+scan/include=PackedStringArray("res://")
+scan/exclude=PackedStringArray()
+scan/enabled=true
+scan/scenes=true
+scan/resources=true
+
+[global_group]
+
+VNAdministrators=""
+
+[importer_defaults]
+
+texture={
+"compress/channel_pack": 0,
+"compress/hdr_compression": 1,
+"compress/high_quality": true,
+"compress/lossy_quality": 0.7,
+"compress/mode": 2,
+"compress/normal_map": 0,
+"compress/rdo_quality_loss": 0.0,
+"compress/uastc_level": 0,
+"detect_3d/compress_to": 0,
+"mipmaps/generate": true,
+"mipmaps/limit": -1,
+"process/channel_remap/alpha": 3,
+"process/channel_remap/blue": 2,
+"process/channel_remap/green": 1,
+"process/channel_remap/red": 0,
+"process/fix_alpha_border": true,
+"process/hdr_as_srgb": false,
+"process/hdr_clamp_exposure": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"process/size_limit": 0,
+"roughness/mode": 0,
+"roughness/src_normal": ""
+}
+
+[input]
+
+accept={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(334.58594, 19.664063),"global_position":Vector2(346.58594, 79.66406),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+back={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(299.71875, 9.6015625),"global_position":Vector2(311.71875, 69.60156),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+toggle_menu={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(199, 20),"global_position":Vector2(213, 93),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+debug_toggle={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194332,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+toggle_menu_alt={
+"deadzone": 0.2,
+"events": []
+}
+hide_textbox={
+"deadzone": 0.2,
+"events": []
+}
+dialogue_rollback={
+"deadzone": 0.2,
+"events": []
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

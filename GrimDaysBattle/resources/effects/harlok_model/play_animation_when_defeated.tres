@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EffectTemplateTriggerAnimation" format=3 uid="uid://inw5hu387vt6"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_7cuwx"]
+[ext_resource type="Script" uid="uid://dwdkrx5hot1c3" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_animation.gd" id="2_2ecy2"]
+[ext_resource type="PackedScene" uid="uid://b1bb63b8d7ofn" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_animation.tscn" id="3_6r4ci"]
+
+[resource]
+script = ExtResource("2_2ecy2")
+animation_id = &"death_right"
+lifetime = 3
+kind = 200
+tag = 80
+trigger = 500
+always_hits = true
+template_scene = ExtResource("3_6r4ci")
+id = &"harlok_animation_when_defeated"
+metadata/_custom_type_script = "uid://dwdkrx5hot1c3"

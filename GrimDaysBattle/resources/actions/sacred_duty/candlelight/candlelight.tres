@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://b3ucyg3x73tt3"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_blp1k"]
+[ext_resource type="Resource" uid="uid://ce61g4wc1dr1e" path="res://GrimDaysBattle/resources/actions/sacred_duty/candlelight/candlelight_ranks.tres" id="2_dks4k"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="3_mc7pw"]
+
+[resource]
+script = ExtResource("3_mc7pw")
+display_name = "Candlelight"
+description = "A small flare of sacred light; cannot critically strike."
+attack_animation = &"basic_attack"
+target = 3
+target_amount = 1
+type = 5
+ranks = ExtResource("2_dks4k")
+id = &"sacred_duty_candlelight"

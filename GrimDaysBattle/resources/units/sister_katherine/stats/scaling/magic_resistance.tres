@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://bhor46r3gojuc"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_umbk0"]
+[ext_resource type="Curve" path="res://GrimDaysBattle/resources/stats/scaling/magic_resistance_threshold_level_1_to_9.tres" id="2_v40oi"]
+
+[resource]
+script = ExtResource("1_umbk0")
+influenced_by = 60
+to_stat_maximum_curve = ExtResource("2_v40oi")
+maximum = 20.0
+type = 335
+id = &"MagicResistance"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

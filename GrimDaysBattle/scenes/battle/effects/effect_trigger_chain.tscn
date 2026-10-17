@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://maqemp7xiac3" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_trigger_chain.gd" id="1_chain"]
+
+[node name="EffectTriggerChain" type="Node"]
+script = ExtResource("1_chain")

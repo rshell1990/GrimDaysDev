@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EffectResourceChangeTemplate" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_resource.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_change_resource.tscn" id="scene"]
+
+[resource]
+script = ExtResource("script")
+id = &"bomb_burn"
+template_scene = ExtResource("scene")
+target = 13
+kind = 400
+tag = 30
+trigger = 800
+lifetime = 1
+duration = 2
+stacking = 1
+stacking_across_sources = true
+stat = 210
+amount = -4.0
+damage_type = 200
+always_hits = true
+description = "Burn: 4 magic damage at each of the next two round ends. Reapplication refreshes duration."

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://clnql3rrh271v"]
+
+[ext_resource type="Script" uid="uid://dfoqbeh1kpgy4" path="res://GrimDaysVN/scripts/base/spine_2d_override.gd" id="2_tl4en"]
+
+[node name="Node2D" type="Node2D" unique_id=216967889]
+position = Vector2(977, 1049)
+
+[node name="SpineSpriteOverride" type="SpineSprite" parent="." unique_id=295406857]
+script = ExtResource("2_tl4en")
+metadata/_custom_type_script = "uid://dfoqbeh1kpgy4"

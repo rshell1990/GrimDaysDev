@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EffectScalingCombatStatChangeTemplate" format=3 uid="uid://p8d6e8qyvg2l"]
+
+[ext_resource type="Script" uid="uid://cqciwrhufos0l" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="1_rlfwj"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="2_sp8j8"]
+
+[resource]
+script = ExtResource("1_rlfwj")
+scales_from_sender = true
+scales_with_damage = true
+scales_with = 310
+scales_by = -1.2
+stat = 210
+target = 3
+kind = 300
+damage_type = 100
+trigger = 200
+description = "Deals physical damage based on the attacker's Physical Damage and Damage Modifier."
+template_scene = ExtResource("2_sp8j8")
+id = &"straight_punch_rank_4_damage"

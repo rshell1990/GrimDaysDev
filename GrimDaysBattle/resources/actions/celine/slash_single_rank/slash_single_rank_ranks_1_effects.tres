@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3 uid="uid://lmrucep0u5dp"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_aa0ua"]
+[ext_resource type="Resource" uid="uid://3p33f25r8m6s" path="res://GrimDaysBattle/resources/actions/celine/slash_single_rank/slash_single_rank_ranks_1_effects_damage.tres" id="2_1xgck"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="2_6i1ga"]
+
+[resource]
+script = ExtResource("2_6i1ga")
+all = Array[ExtResource("1_aa0ua")]([ExtResource("2_1xgck")])
+id = &"slash_single_rank_ranks_1_effects"
+metadata/_custom_type_script = "uid://dw0pgj3kb31c6"

@@ -1,0 +1,1089 @@
+[gd_scene format=3 uid="uid://dv8e6fp6pe8nw"]
+
+[ext_resource type="Curve" uid="uid://c20r0ymokdnm6" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/health_gained_per_vitality.tres" id="1_hp5w7"]
+[ext_resource type="FontFile" uid="uid://dvi3afjvuf2lg" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Font/Berry Rotunda.ttf" id="1_hp082"]
+[ext_resource type="Texture2D" uid="uid://ccjf5jce4p4uf" path="res://GrimDays/assets/visuals/at-icons/control/arrow_up.svg" id="2_5fd74"]
+[ext_resource type="Curve" uid="uid://bbpuo71i7egoh" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/energy_gained_per_vitality.tres" id="2_v4fgj"]
+[ext_resource type="Curve" uid="uid://dsjcr1j6u2s26" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/mana_gained_per_mysticsm.tres" id="3_0xip5"]
+[ext_resource type="Texture2D" uid="uid://b2jnigpbea6jm" path="res://GrimDays/assets/visuals/at-icons/control/arrow_down.svg" id="3_hp5w7"]
+[ext_resource type="Curve" uid="uid://bnfje2ynj5p1w" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/physical_damage_per_point_in_strength.tres" id="4_ek7rl"]
+[ext_resource type="Texture2D" uid="uid://cmcyj8abp6to2" path="res://GrimDays/assets/visuals/at-icons/node3d/arrow_down.svg" id="4_v4fgj"]
+[ext_resource type="Curve" uid="uid://8vbxknvcyjum" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/magical_damage_per_point_of_mysticism.tres" id="5_fn21e"]
+[ext_resource type="FontFile" uid="uid://be50pmjq50byi" path="res://GrimDays/fonts/PERTILI.TTF" id="5_rmyhi"]
+[ext_resource type="FontFile" uid="uid://dve7mgsjik4dg" path="res://addons/phantom_camera/fonts/Nunito-Regular.ttf" id="9_j5eq6"]
+
+[sub_resource type="GDScript" id="GDScript_0xip5"]
+resource_name = "curve_tester"
+script/source = "extends Control
+@export var health_curve:Curve
+@export var energy_curve:Curve
+@export var mana_curve:Curve
+@export var physical_damage_curve:Curve
+@export var magical_damage_curve:Curve
+
+
+@export var health_label:Label
+
+@export var energy_label:Label
+@export var mana_label:Label
+@export var physical_damage_label:Label
+@export var magical_damage_label:Label
+
+@export var vitality_spinbox:SpinBox
+
+@export var strength_spinbox:SpinBox
+@export var finesse_spinbox:SpinBox
+@export var perception_spinbox:SpinBox
+@export var endurance_spinbox:SpinBox
+@export var willpower_spinbox:SpinBox
+@export var mysticism_spinbox:SpinBox
+@export var luck_spinbox:SpinBox
+
+func _ready() -> void:
+	vitality_spinbox.value_changed.connect(on_vitality_spinbox_changed)
+	strength_spinbox.value_changed.connect(on_strength_spinbox_changed)
+	finesse_spinbox.value_changed.connect(on_vitality_spinbox_changed)
+	perception_spinbox.value_changed.connect(on_vitality_spinbox_changed)
+	endurance_spinbox.value_changed.connect(on_vitality_spinbox_changed)
+	willpower_spinbox.value_changed.connect(on_vitality_spinbox_changed)
+	mysticism_spinbox.value_changed.connect(on_vitality_spinbox_changed)
+	luck_spinbox.value_changed.connect(on_vitality_spinbox_changed)
+	
+	on_vitality_spinbox_changed(vitality_spinbox.value)
+	on_strength_spinbox_changed(strength_spinbox.value)
+	
+func on_strength_spinbox_changed(new_value:float) -> void:
+	var new_physical_damage:float = 0
+	
+	for x in range(1,new_value+1):
+		new_physical_damage += physical_damage_curve.sample(x)
+		
+	new_physical_damage = roundi(new_physical_damage)
+	physical_damage_label.text = str(int(new_physical_damage))
+	
+func on_finesse_spinbox_changed(new_value:float) -> void:
+	pass
+	
+func on_perception_spinbox_changed(new_value:float) -> void:
+	pass
+	
+func on_endurance_spinbox_changed(new_value:float) -> void:
+	pass
+	
+func on_willpower_spinbox_changed(new_value:float) -> void:
+	pass
+	
+func on_mysticism_spinbox_changed(new_value:float) -> void:
+	pass
+
+func on_luck_spinbox_changed(new_value:float) -> void:
+	pass	
+	
+	
+func on_vitality_spinbox_changed(new_value:float) -> void:
+	var new_health:float = 0
+	var new_energy:float = 0
+	
+	for x in range(1,new_value+1):
+		new_health += health_curve.sample(x)
+		new_energy += energy_curve.sample(x)
+	new_health = roundi(new_health)
+	new_energy = roundi(new_energy)
+	health_label.text = str(new_health)
+	energy_label.text = str(new_energy)
+"
+
+[sub_resource type="FontVariation" id="FontVariation_ek7rl"]
+base_font = ExtResource("1_hp082")
+variation_embolden = 0.54
+
+[sub_resource type="FontVariation" id="FontVariation_fn21e"]
+base_font = ExtResource("5_rmyhi")
+variation_embolden = 0.54
+
+[sub_resource type="FontVariation" id="FontVariation_8ynfs"]
+base_font = ExtResource("9_j5eq6")
+variation_embolden = 0.54
+
+[node name="Combat Attribute Analyzer" type="Control" unique_id=649196317 node_paths=PackedStringArray("health_label", "energy_label", "mana_label", "physical_damage_label", "magical_damage_label", "vitality_spinbox", "strength_spinbox", "finesse_spinbox", "perception_spinbox", "endurance_spinbox", "willpower_spinbox", "mysticism_spinbox", "luck_spinbox")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_0xip5")
+health_curve = ExtResource("1_hp5w7")
+energy_curve = ExtResource("2_v4fgj")
+mana_curve = ExtResource("3_0xip5")
+physical_damage_curve = ExtResource("4_ek7rl")
+magical_damage_curve = ExtResource("5_fn21e")
+health_label = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Health/Health Amount Label")
+energy_label = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Energy/Energy Amount Label")
+mana_label = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Mana/Mana Amount Label")
+physical_damage_label = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Physical Damage/Physical Damage Base Amount Label")
+magical_damage_label = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Magical Damage/Magical Damage Base Amount Label")
+vitality_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Vitality/Vitality SpinBox")
+strength_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Strength/Strength SpinBox")
+finesse_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Finesse/Finesse SpinBox")
+perception_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Perception/Perception SpinBox")
+endurance_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Endurance/Endurance SpinBox")
+willpower_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Willpower/Willpower SpinBox")
+mysticism_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Mysticism/Mysticism SpinBox")
+luck_spinbox = NodePath("ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Luck/Luck SpinBox")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1807816488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.096204735, 0.09620475, 0.096204735, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=558647061]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer" unique_id=732779634]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=356273278]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Points Invested" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=31513091]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_ek7rl")
+theme_override_font_sizes/font_size = 80
+text = "Points Invested"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1904717942]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="Strength" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1300675346]
+layout_mode = 2
+
+[node name="Strength Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Strength" unique_id=435102865]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Strength"
+vertical_alignment = 1
+
+[node name="Strength Label2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Strength" unique_id=1279093064]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(PHYSICAL DAMAGE + WEIGHT LIMIT)"
+vertical_alignment = 1
+
+[node name="Strength SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Strength" unique_id=1523607432]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Vitality" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1737163787]
+layout_mode = 2
+
+[node name="Vitality" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Vitality" unique_id=1306967679]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Vitality"
+vertical_alignment = 1
+
+[node name="Vitality2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Vitality" unique_id=1491368610]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(Health + Energy + WEIGHT LIMIT)"
+vertical_alignment = 1
+
+[node name="Vitality SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Vitality" unique_id=2119253447]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Finesse" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1865558837]
+layout_mode = 2
+
+[node name="Finesse Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Finesse" unique_id=233361509]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Finesse"
+vertical_alignment = 1
+
+[node name="Finesse Label2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Finesse" unique_id=229179844]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(Swiftness + Evasion)"
+vertical_alignment = 1
+
+[node name="Finesse SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Finesse" unique_id=43853018]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Perception" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1757049877]
+layout_mode = 2
+
+[node name="Perception Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Perception" unique_id=1719127705]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Perception"
+vertical_alignment = 1
+
+[node name="Perception Label2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Perception" unique_id=1724242070]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(ACCURACY)"
+vertical_alignment = 1
+
+[node name="Perception SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Perception" unique_id=1322157177]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Endurance" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1911647099]
+layout_mode = 2
+
+[node name="Endurance Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Endurance" unique_id=1038727361]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Endurance"
+vertical_alignment = 1
+
+[node name="Endurance Label2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Endurance" unique_id=687118941]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(PHYSICAL RESISTANCE + WEIGHT LIMIT)"
+vertical_alignment = 1
+
+[node name="Endurance SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Endurance" unique_id=1306274531]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Willpower" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=848198533]
+layout_mode = 2
+
+[node name="Willpower Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Willpower" unique_id=914542377]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Willpower"
+vertical_alignment = 1
+
+[node name="Willpower Label2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Willpower" unique_id=1085297656]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(MAGIC RESISTANCE)"
+vertical_alignment = 1
+
+[node name="Willpower SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Willpower" unique_id=1887740788]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Mysticism" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=560094598]
+layout_mode = 2
+
+[node name="Mysticism Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Mysticism" unique_id=1537568724]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Mysticism"
+vertical_alignment = 1
+
+[node name="Mysticism Label2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Mysticism" unique_id=676305459]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(MAGIC DAMAGE + MANA)"
+vertical_alignment = 1
+
+[node name="Mysticism SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Mysticism" unique_id=68754830]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Luck" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=2004868239]
+layout_mode = 2
+
+[node name="Luck Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Luck" unique_id=2044331408]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Luck"
+vertical_alignment = 1
+
+[node name="Luck Label2" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Luck" unique_id=1650969210]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "(CRITICAL CHANCE + LUCKY EVASION)"
+vertical_alignment = 1
+
+[node name="Luck SpinBox" type="SpinBox" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Luck" unique_id=1247418163]
+layout_mode = 2
+theme_override_icons/up = ExtResource("2_5fd74")
+theme_override_icons/down = ExtResource("3_hp5w7")
+theme_override_icons/down_disabled = ExtResource("4_v4fgj")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer" unique_id=912199168]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Stats" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=41598082]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_ek7rl")
+theme_override_font_sizes/font_size = 80
+text = "Stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1672193198]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Level Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Level" unique_id=1326602388]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Level"
+vertical_alignment = 1
+
+[node name="Level Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Level" unique_id=1465056999]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Health" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=416455295]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Health Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Health" unique_id=992077473]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Health"
+vertical_alignment = 1
+
+[node name="Health Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Health" unique_id=1206255097]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Energy" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2118468067]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Energy Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Energy" unique_id=358427363]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Energy"
+vertical_alignment = 1
+
+[node name="Energy Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Energy" unique_id=1470844208]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Mana" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=409223598]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Mana Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Mana" unique_id=1036900714]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Mana"
+vertical_alignment = 1
+
+[node name="Mana Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Mana" unique_id=2071310137]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Physical Damage" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2142363103]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Physical Damage Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Physical Damage" unique_id=336011384]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Physical Damage"
+vertical_alignment = 1
+
+[node name="Physical Damage Base Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Physical Damage" unique_id=225981910]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Magical Damage" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=66663674]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Magical Damage Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Magical Damage" unique_id=533945582]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Magic Damage"
+vertical_alignment = 1
+
+[node name="Magical Damage Base Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Magical Damage" unique_id=171248994]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Physical Armor" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=588776169]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Armor Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Physical Armor" unique_id=409434669]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Physical Resistance"
+vertical_alignment = 1
+
+[node name="Armor Base Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Physical Armor" unique_id=1916587181]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "10%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Magic Armor" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=195756932]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Armor Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Magic Armor" unique_id=536469624]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Magic Resistance"
+vertical_alignment = 1
+
+[node name="Armor Base Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Magic Armor" unique_id=518792435]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "5%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Swiftness" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=969467545]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Swiftness Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Swiftness" unique_id=1350350407]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Swiftness"
+vertical_alignment = 1
+
+[node name="Swiftness Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Swiftness" unique_id=1996073034]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Speed3" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1770526709]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Speed Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed3" unique_id=1913635228]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "WEIGHT LIMIT"
+vertical_alignment = 1
+
+[node name="Speed Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed3" unique_id=708855253]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Speed4" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1027022775]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Speed Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed4" unique_id=182252684]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Combat SPEED"
+vertical_alignment = 1
+
+[node name="Speed Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed4" unique_id=630002828]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "95"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Accuracy" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=940813857]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Accuracy Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Accuracy" unique_id=1219512950]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Accuracy"
+vertical_alignment = 1
+
+[node name="Accuracy Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Accuracy" unique_id=1276914826]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "90%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Evasion" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=252857199]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Evasion Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Evasion" unique_id=1913561126]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "EVASION"
+vertical_alignment = 1
+
+[node name="Evasion Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Evasion" unique_id=1033219276]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "5%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Lucky Evasion" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1489376634]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Lucky Evasion Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Lucky Evasion" unique_id=984920987]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Lucky Evasion"
+vertical_alignment = 1
+
+[node name="Lucky Evasion Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Lucky Evasion" unique_id=1674742923]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "1%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Critical Chance" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=823477077]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Critical Chance Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Critical Chance" unique_id=549247687]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Critical Chance"
+vertical_alignment = 1
+
+[node name="Critical Chance Base Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Critical Chance" unique_id=1078393038]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "5%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Speed2" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1040102485]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Speed Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed2" unique_id=409396599]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Encumberance"
+vertical_alignment = 1
+
+[node name="Speed Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed2" unique_id=1824117602]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "10%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Speed5" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1230669551]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Speed Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed5" unique_id=1113532200]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_fn21e")
+theme_override_font_sizes/font_size = 24
+text = "Damage Modifier"
+vertical_alignment = 1
+
+[node name="Speed Amount Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/Speed5" unique_id=407175155]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_8ynfs")
+theme_override_font_sizes/font_size = 24
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1

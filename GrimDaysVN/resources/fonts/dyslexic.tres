@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFont" format=3 uid="uid://chvclpg73j0x1"]
+
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="1_4325n"]
+[ext_resource type="FontVariation" uid="uid://bywh8vk7bmel3" path="res://GrimDaysVN/resources/fonts/dyslexic_bold.tres" id="1_i744i"]
+[ext_resource type="FontVariation" uid="uid://d2b3emc5uhv1t" path="res://GrimDaysVN/resources/fonts/dyslexic_bold_italics.tres" id="2_76lji"]
+[ext_resource type="FontVariation" uid="uid://dqm2ynvt553if" path="res://GrimDaysVN/resources/fonts/dyslexic_italics.tres" id="3_jk0bh"]
+[ext_resource type="FontVariation" uid="uid://duv1c4jyedksy" path="res://GrimDaysVN/resources/fonts/dyslexic_.tres" id="4_htplv"]
+
+[resource]
+script = ExtResource("1_4325n")
+id = "dyslexic"
+normal = ExtResource("4_htplv")
+italics = ExtResource("3_jk0bh")
+bold = ExtResource("1_i744i")
+combo = ExtResource("2_76lji")

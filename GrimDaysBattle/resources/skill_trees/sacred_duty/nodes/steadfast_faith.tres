@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BattleSkillPassiveNode" format=3 uid="uid://b22fvjfqu3rmu"]
+
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="1_tswav"]
+[ext_resource type="Script" uid="uid://ygxnnt43nuim" path="res://GrimDaysBattle/scripts/Actions/Resources/battle_skill_tree_stat_grant.gd" id="grant"]
+[ext_resource type="Script" uid="uid://bg6i5n4cca4t6" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_passive_node.gd" id="script"]
+
+[sub_resource type="Resource" id="Grant"]
+script = ExtResource("grant")
+modifier_id = &"sacred_duty_steadfast_faith"
+stat = 335
+operation = 1
+amounts_by_rank = PackedFloat32Array(0.05, 0.075, 0.1, 0.125, 0.15)
+
+[resource]
+script = ExtResource("script")
+passive_stat_modifiers = Array[ExtResource("grant")]([SubResource("Grant")])
+id = &"steadfast_faith"
+display_name = "Steadfast Faith"
+row = 4
+maximum_rank = 5

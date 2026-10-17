@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://ba4voj17y8ng7"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_lbwrt"]
+
+[resource]
+script = ExtResource("1_lbwrt")
+type = 10
+id = &"Strength"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

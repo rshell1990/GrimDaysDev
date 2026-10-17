@@ -1,0 +1,748 @@
+[gd_scene format=3 uid="uid://tavrui7slwua"]
+
+[ext_resource type="Script" uid="uid://0sdq0vy6idr4" path="res://GrimDaysBattle/scripts/Unit/Runtime/unit_2d_party.gd" id="2_fi4ug"]
+[ext_resource type="PackedScene" uid="uid://5s0fmr7bbqxu" path="res://GrimDaysBattle/scenes/battle/unit_template.tscn" id="3_72uiv"]
+[ext_resource type="Script" uid="uid://6kb5h1f4j8s1" path="res://GrimDaysBattle/scripts/UI/ui_controller.gd" id="4_7udst"]
+[ext_resource type="FontFile" uid="uid://xd5lqydtvq0g" path="res://GrimDays/assets/visuals/ui/gui/fonts/ru/Gabriela-Regular.ttf" id="6_8epcw"]
+[ext_resource type="PackedScene" uid="uid://bvv3687gndefq" path="res://GrimDaysBattle/scenes/ui/battle/turn_order_display.tscn" id="6_336ve"]
+[ext_resource type="PackedScene" uid="uid://c8a7dpo4o4lj3" path="res://GrimDaysBattle/scenes/ui/battle/active_ally_display.tscn" id="7_nobm6"]
+[ext_resource type="PackedScene" uid="uid://bm8x7saes0nvh" path="res://GrimDaysBattle/scenes/ui/battle/party_status_display.tscn" id="8_gegr3"]
+[ext_resource type="FontFile" uid="uid://fa3cdvpk7238" path="res://GrimDays/assets/visuals/ui/Font/Berry Rotunda.ttf" id="17_itxe4"]
+[ext_resource type="PackedScene" uid="uid://b3flo7sa8wbw7" path="res://GrimDaysBattle/scenes/ui/battle/round_start_display.tscn" id="19_ndpls"]
+[ext_resource type="Texture2D" uid="uid://f60m2yaaoakb" path="res://GrimDays/assets/visuals/ui/classic rpg gui/mid_button_off.png" id="21_j1qt6"]
+[ext_resource type="Texture2D" uid="uid://dvpfjp6v3lokh" path="res://GrimDays/assets/visuals/ui/classic rpg gui/mid_button_on.png" id="22_f1das"]
+[ext_resource type="Texture2D" uid="uid://c3c1pfy2gpm8w" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/attack.webp" id="23_fi4ug"]
+[ext_resource type="Texture2D" uid="uid://dk6d1e8sqc08q" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/armor.webp" id="24_72uiv"]
+[ext_resource type="Texture2D" uid="uid://ccw4uyom0rxyq" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/energy.webp" id="25_itxe4"]
+[ext_resource type="Texture2D" uid="uid://eaj34hrxuglu" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/dodge.webp" id="26_dawey"]
+[ext_resource type="Texture2D" uid="uid://cl2wkfj37sprq" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/mana.webp" id="27_gh3yb"]
+[ext_resource type="Texture2D" uid="uid://bw7tj6p5o72di" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Icons_nobg/Hand2_eq_icon_nb.png" id="30_jpusj"]
+[ext_resource type="Script" uid="uid://ccepnal62ngs2" path="res://GrimDaysBattle/scripts/UI/basic_action_selction.gd" id="30_n8xja"]
+[ext_resource type="Texture2D" uid="uid://cv16up1xcjsfe" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/Frame_tiny_top.png" id="36_40v08"]
+[ext_resource type="Script" uid="uid://cesefu0uo37pd" path="res://GrimDaysBattle/scripts/UI/debug_unit_selection.gd" id="36_m5s2c"]
+[ext_resource type="Texture2D" uid="uid://0mjqup5gvgh8" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/spellbook_bg.png" id="36_n8xja"]
+[ext_resource type="FontFile" uid="uid://dve7mgsjik4dg" path="res://addons/phantom_camera/fonts/Nunito-Regular.ttf" id="37_n8xja"]
+[ext_resource type="Texture2D" uid="uid://bcts8dml2082b" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/Frame_tiny_mid.png" id="38_k5a58"]
+[ext_resource type="PackedScene" uid="uid://x6703tbmeti2" path="res://GrimDaysBattle/scenes/battle/selectable_unit.tscn" id="38_tfc6q"]
+[ext_resource type="Resource" uid="uid://c6c54t24daryh" path="res://GrimDaysBattle/resources/units/_units.tres" id="39_ys5f6"]
+[ext_resource type="Texture2D" uid="uid://cc7j28w13ol88" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_B_Mid_aimed.png" id="40_bq07a"]
+[ext_resource type="PackedScene" uid="uid://cx5huve5ucftr" path="res://GrimDaysBattle/scenes/battle/unit_selected.tscn" id="40_g4svj"]
+[ext_resource type="Texture2D" uid="uid://cssngaeog3kke" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_B_Long_activeLL.png" id="41_g4svj"]
+[ext_resource type="FontFile" uid="uid://ciw1iwfqlhpft" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Fonts/BOD_R.TTF" id="42_jfy6q"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="53_hogr4"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="56_m5s2c"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="57_su25p"]
+[ext_resource type="Script" uid="uid://c4s46to5q7jpw" path="res://GrimDaysBattle/scripts/Presentation/battle_visual_presentation_registration.gd" id="58_presentation"]
+
+[sub_resource type="FontVariation" id="FontVariation_peunv"]
+base_font = ExtResource("6_8epcw")
+variation_embolden = 0.5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbic"]
+texture = ExtResource("21_j1qt6")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m31qm"]
+texture = ExtResource("21_j1qt6")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cx0oy"]
+texture = ExtResource("21_j1qt6")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28hln"]
+texture = ExtResource("21_j1qt6")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2844o"]
+texture = ExtResource("22_f1das")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2j3hm"]
+texture = ExtResource("22_f1das")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s6o6"]
+texture = ExtResource("22_f1das")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gl3yt"]
+texture = ExtResource("22_f1das")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_el21t"]
+texture = ExtResource("22_f1das")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oib3t"]
+texture = ExtResource("22_f1das")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4sc44"]
+texture = ExtResource("21_j1qt6")
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="FontVariation" id="FontVariation_wbtwp"]
+base_font = ExtResource("17_itxe4")
+baseline_offset = 0.125
+
+[sub_resource type="FontVariation" id="FontVariation_g4svj"]
+base_font = ExtResource("37_n8xja")
+variation_embolden = 0.5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfy6q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hktd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5hktd"]
+texture = ExtResource("40_bq07a")
+texture_margin_left = 156.0
+texture_margin_top = 40.0
+texture_margin_right = 156.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h4aw4"]
+texture = ExtResource("41_g4svj")
+texture_margin_left = 156.0
+texture_margin_top = 40.0
+texture_margin_right = 156.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ys5f6"]
+texture = ExtResource("41_g4svj")
+texture_margin_left = 156.0
+texture_margin_top = 40.0
+texture_margin_right = 156.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tfc6q"]
+texture = ExtResource("41_g4svj")
+texture_margin_left = 156.0
+texture_margin_top = 40.0
+texture_margin_right = 156.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a3tj0"]
+texture = ExtResource("41_g4svj")
+texture_margin_left = 156.0
+texture_margin_top = 40.0
+texture_margin_right = 156.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4svj"]
+texture = ExtResource("40_bq07a")
+texture_margin_left = 156.0
+texture_margin_top = 40.0
+texture_margin_right = 156.0
+texture_margin_bottom = 40.0
+modulate_color = Color(0.193632, 0.193632, 0.193632, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5s2c"]
+
+[sub_resource type="FontVariation" id="FontVariation_01mru"]
+base_font = ExtResource("42_jfy6q")
+
+[sub_resource type="Resource" id="Resource_tfc6q"]
+script = ExtResource("57_su25p")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5s2c"]
+size = Vector2(1920, 1080)
+
+[node name="BattleDisplay" type="Sprite2D" unique_id=91985175]
+script = ExtResource("58_presentation")
+metadata/_edit_horizontal_guides_ = [13.0]
+
+[node name="Battlefield" type="Sprite2D" parent="." unique_id=1144714946]
+
+[node name="Background" type="Sprite2D" parent="Battlefield" unique_id=1444417055]
+texture = ExtResource("1_45r75")
+centered = false
+
+[node name="Allies" type="Node2D" parent="Battlefield" unique_id=600361110]
+y_sort_enabled = true
+position = Vector2(450, 450)
+script = ExtResource("2_fi4ug")
+unit_display_template = ExtResource("3_72uiv")
+face_right = true
+
+[node name="Foes" type="Node2D" parent="Battlefield" unique_id=418348452]
+position = Vector2(1470, 450)
+script = ExtResource("2_fi4ug")
+unit_display_template = ExtResource("3_72uiv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1044556023]
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=1606810170]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("4_7udst")
+
+[node name="Turn Order" parent="CanvasLayer/UI" unique_id=632793488 instance=ExtResource("6_336ve")]
+layout_mode = 1
+
+[node name="Active Ally" parent="CanvasLayer/UI" unique_id=418077560 instance=ExtResource("7_nobm6")]
+layout_mode = 1
+
+[node name="Party Status" parent="CanvasLayer/UI" unique_id=1910660066 instance=ExtResource("8_gegr3")]
+layout_mode = 1
+
+[node name="Action Selection" type="Control" parent="CanvasLayer/UI" unique_id=2078724967 node_paths=PackedStringArray("turn_order_displayer")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchor_left = 0.621
+anchor_top = 0.778
+anchor_right = 0.621
+anchor_bottom = 0.778
+offset_left = 2.68005
+offset_top = 34.76
+offset_right = 2.68005
+offset_bottom = 34.76
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("30_n8xja")
+turn_order_displayer = NodePath("")
+targeting_cursor = ExtResource("30_jpusj")
+
+[node name="Control" type="Control" parent="CanvasLayer/UI/Action Selection" unique_id=196806059]
+custom_minimum_size = Vector2(900, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -37.5
+offset_right = 450.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/Action Selection/Control" unique_id=361114734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Attack" type="Button" parent="CanvasLayer/UI/Action Selection/Control/HBoxContainer" unique_id=1472700217]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_peunv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbic")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_m31qm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cx0oy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_28hln")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2844o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2j3hm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_6s6o6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_gl3yt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_el21t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_oib3t")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4sc44")
+text = "Attack"
+icon = ExtResource("23_fi4ug")
+
+[node name="Defend" type="Button" parent="CanvasLayer/UI/Action Selection/Control/HBoxContainer" unique_id=477393326]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_peunv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbic")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_m31qm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cx0oy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_28hln")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2844o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2j3hm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_6s6o6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_gl3yt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_el21t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_oib3t")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4sc44")
+text = "Defend"
+icon = ExtResource("24_72uiv")
+
+[node name="Skills" type="Button" parent="CanvasLayer/UI/Action Selection/Control/HBoxContainer" unique_id=1345562571]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_peunv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbic")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_m31qm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cx0oy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_28hln")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2844o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2j3hm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_6s6o6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_gl3yt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_el21t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_oib3t")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4sc44")
+text = "Skills"
+icon = ExtResource("25_itxe4")
+
+[node name="Items" type="Button" parent="CanvasLayer/UI/Action Selection/Control/HBoxContainer" unique_id=424719457]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_peunv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbic")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_m31qm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cx0oy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_28hln")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2844o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2j3hm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_6s6o6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_gl3yt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_el21t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_oib3t")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4sc44")
+text = "Items"
+icon = ExtResource("26_dawey")
+
+[node name="Special" type="Button" parent="CanvasLayer/UI/Action Selection/Control/HBoxContainer" unique_id=1229681171]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_peunv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbic")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_m31qm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cx0oy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_28hln")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2844o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2j3hm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_6s6o6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_gl3yt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_el21t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_oib3t")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4sc44")
+text = "Special"
+icon = ExtResource("27_gh3yb")
+
+[node name="Round Display" parent="CanvasLayer/UI" unique_id=1988390489 instance=ExtResource("19_ndpls")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="Select" type="Control" parent="CanvasLayer" unique_id=162953081 node_paths=PackedStringArray("selected_allies_display", "selectable_allies_display", "selected_foes_display", "selectable_foes_display", "start_button")]
+visible = false
+z_index = 50
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("36_m5s2c")
+selected_allies_display = NodePath("Background/Main Container/Split Selected Units/Allies/Main Container/Ally Slot Container")
+selectable_allies_display = NodePath("Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots")
+selected_foes_display = NodePath("Background/Main Container/Split Selected Units/Foes/Main Container/Foe Slot Container")
+selectable_foes_display = NodePath("Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot")
+selected_unit_display_template = ExtResource("40_g4svj")
+selectable_unit_display_template = ExtResource("38_tfc6q")
+available_templates = ExtResource("39_ys5f6")
+start_button = NodePath("Background/Main Container/Start Button")
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/Select" unique_id=2008753934]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("36_n8xja")
+expand_mode = 1
+
+[node name="Main Container" type="VBoxContainer" parent="CanvasLayer/Select/Background" unique_id=1480497805]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Header Shadow" type="Label" parent="CanvasLayer/Select/Background/Main Container" unique_id=1684742275]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_wbtwp")
+theme_override_font_sizes/font_size = 60
+text = "Battle Setup"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Header Foreground" type="Label" parent="CanvasLayer/Select/Background/Main Container/Header Shadow" unique_id=1563223616]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -964.0
+offset_top = -32.5
+offset_right = 956.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_wbtwp")
+theme_override_font_sizes/font_size = 60
+text = "Battle Setup"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fancy Divider" type="TextureRect" parent="CanvasLayer/Select/Background/Main Container" unique_id=750369603]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture = ExtResource("36_40v08")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Split Selected Units" type="HSplitContainer" parent="CanvasLayer/Select/Background/Main Container" unique_id=1034861459]
+layout_mode = 2
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="Allies" type="MarginContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units" unique_id=1905217066]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+
+[node name="Main Container" type="VBoxContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies" unique_id=8597831]
+layout_mode = 2
+
+[node name="Allies Header Shadow" type="Label" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container" unique_id=1111092209]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_g4svj")
+theme_override_font_sizes/font_size = 32
+text = "Allies"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Allies Header Foreground" type="Label" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container/Allies Header Shadow" unique_id=111616353]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -467.0
+offset_top = -23.5
+offset_right = 463.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_g4svj")
+theme_override_font_sizes/font_size = 32
+text = "Allies"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plain Divider" type="TextureRect" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container" unique_id=1184167632]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+texture = ExtResource("38_k5a58")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Ally Slot Container" type="VBoxContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container" unique_id=1951125654]
+custom_minimum_size = Vector2(930, 0)
+layout_mode = 2
+
+[node name="Slot 1" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container/Ally Slot Container" unique_id=1217080212]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jfy6q")
+
+[node name="Slot 2" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container/Ally Slot Container" unique_id=433281530]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jfy6q")
+
+[node name="Slot 3" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container/Ally Slot Container" unique_id=11257546]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jfy6q")
+
+[node name="Slot 4" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Allies/Main Container/Ally Slot Container" unique_id=1013624737]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jfy6q")
+
+[node name="Foes" type="MarginContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units" unique_id=68765998]
+layout_mode = 2
+theme_override_constants/margin_right = 25
+
+[node name="Main Container" type="VBoxContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes" unique_id=1070930687]
+layout_mode = 2
+
+[node name="Foes Header Shadow" type="Label" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container" unique_id=1570215859]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_g4svj")
+theme_override_font_sizes/font_size = 32
+text = "Foes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Foes Header Foreground" type="Label" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container/Foes Header Shadow" unique_id=1322493146]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -478.5
+offset_top = -23.5
+offset_right = 474.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_g4svj")
+theme_override_font_sizes/font_size = 32
+text = "Foes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plain Dividier" type="TextureRect" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container" unique_id=1920023810]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+texture = ExtResource("38_k5a58")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Foe Slot Container" type="VBoxContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container" unique_id=1213120986]
+custom_minimum_size = Vector2(930, 0)
+layout_mode = 2
+
+[node name="Slot 1" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container/Foe Slot Container" unique_id=685984223]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5hktd")
+
+[node name="Slot 2" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container/Foe Slot Container" unique_id=701635477]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5hktd")
+
+[node name="Slot 3" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container/Foe Slot Container" unique_id=1454928358]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5hktd")
+
+[node name="Slot 4" type="Panel" parent="CanvasLayer/Select/Background/Main Container/Split Selected Units/Foes/Main Container/Foe Slot Container" unique_id=459028568]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5hktd")
+
+[node name="Plain Divider" type="TextureRect" parent="CanvasLayer/Select/Background/Main Container" unique_id=400262172]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = ExtResource("38_k5a58")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Split Selectable Units" type="HSplitContainer" parent="CanvasLayer/Select/Background/Main Container" unique_id=1604375724]
+layout_mode = 2
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selectable Units" unique_id=315821108]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+
+[node name="Scrollable Ally Selection" type="ScrollContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer" unique_id=1232016994]
+custom_minimum_size = Vector2(960, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+horizontal_scroll_mode = 4
+vertical_scroll_mode = 0
+
+[node name="Selectable Ally Slots" type="HBoxContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection" unique_id=664251399]
+custom_minimum_size = Vector2(880, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 72
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selectable Units" unique_id=534667301]
+layout_mode = 2
+theme_override_constants/margin_right = 30
+
+[node name="Scrollable Foe Selection" type="ScrollContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2" unique_id=839090857]
+layout_mode = 2
+horizontal_scroll_mode = 4
+vertical_scroll_mode = 0
+
+[node name="Selectable Foes Slot" type="HBoxContainer" parent="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection" unique_id=2120185201]
+custom_minimum_size = Vector2(880, 64)
+layout_mode = 2
+theme_override_constants/separation = 72
+alignment = 1
+
+[node name="Plain Divider 2" type="TextureRect" parent="CanvasLayer/Select/Background/Main Container" unique_id=2060802388]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = ExtResource("38_k5a58")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Start Button" type="Button" parent="CanvasLayer/Select/Background/Main Container" unique_id=943715995]
+z_index = 8
+custom_minimum_size = Vector2(865.971, 113.756)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_5hktd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_5hktd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5hktd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_5hktd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h4aw4")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_ys5f6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_tfc6q")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_a3tj0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_g4svj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_m5s2c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5hktd")
+disabled = true
+
+[node name="Start Shadow" type="Label" parent="CanvasLayer/Select/Background/Main Container/Start Button" unique_id=822965495]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.776471)
+theme_override_fonts/font = SubResource("FontVariation_01mru")
+theme_override_font_sizes/font_size = 54
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start Foreground" type="Label" parent="CanvasLayer/Select/Background/Main Container/Start Button/Start Shadow" unique_id=583161154]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = -3.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_01mru")
+theme_override_font_sizes/font_size = 54
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main" type="Node2D" parent="." unique_id=1688064550 node_paths=PackedStringArray("follow_target")]
+unique_name_in_owner = true
+top_level = true
+position = Vector2(960, 540)
+script = ExtResource("56_m5s2c")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Battlefield/Background")
+tween_resource = SubResource("Resource_tfc6q")
+follow_offset = Vector2(960, 540)
+limit_target = NodePath("../Camera Bounds/Camera Bounding Shape")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=626964082]
+top_level = true
+position = Vector2(960, 540)
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1691284329]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("53_hogr4")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="Camera Bounds" type="Area2D" parent="." unique_id=368026664]
+position = Vector2(960, 540)
+
+[node name="Camera Bounding Shape" type="CollisionShape2D" parent="Camera Bounds" unique_id=1768372850]
+shape = SubResource("RectangleShape2D_m5s2c")
+debug_color = Color(0, 0.595, 0.7, 0.0509804)
+
+[connection signal="pressed" from="CanvasLayer/UI/Action Selection/Control/HBoxContainer/Attack" to="CanvasLayer/UI/Action Selection" method="_on_attack_pressed"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63387/CelineTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63387/CelineTeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63387/CelineTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63387/CelineTeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63387/CelineTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63387/CelineTeen" method="_on_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63389/HarlokTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63389/HarlokTeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63389/HarlokTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63389/HarlokTeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63389/HarlokTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63389/HarlokTeen" method="_on_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63391/GoonATeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63391/GoonATeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63391/GoonATeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63391/GoonATeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63391/GoonATeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63391/GoonATeen" method="_on_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63393/GoonBTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63393/GoonBTeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63393/GoonBTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63393/GoonBTeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63393/GoonBTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer/Scrollable Ally Selection/Selectable Ally Slots/@Panel@63393/GoonBTeen" method="_on_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63388/CelineTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63388/CelineTeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63388/CelineTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63388/CelineTeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63388/CelineTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63388/CelineTeen" method="_on_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63390/HarlokTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63390/HarlokTeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63390/HarlokTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63390/HarlokTeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63390/HarlokTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63390/HarlokTeen" method="_on_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63392/GoonATeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63392/GoonATeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63392/GoonATeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63392/GoonATeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63392/GoonATeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63392/GoonATeen" method="_on_mouse_exited"]
+[connection signal="button_up" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63394/GoonBTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63394/GoonBTeen" method="_on_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63394/GoonBTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63394/GoonBTeen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63394/GoonBTeen" to="CanvasLayer/Select/Background/Main Container/Split Selectable Units/MarginContainer2/Scrollable Foe Selection/Selectable Foes Slot/@Panel@63394/GoonBTeen" method="_on_mouse_exited"]
+[connection signal="became_active" from="Main" to="CanvasLayer/UI" method="_on_phantom_camera_2d_became_active"]
+[connection signal="became_inactive" from="Main" to="CanvasLayer/UI" method="_on_phantom_camera_2d_became_inactive"]

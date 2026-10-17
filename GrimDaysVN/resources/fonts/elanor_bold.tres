@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" format=3 uid="uid://ckuhjjft87b0j"]
+
+[ext_resource type="FontFile" uid="uid://dtkqm2raivlit" path="res://GrimDays/fonts/Elanor Regular.ttf" id="1_5amyy"]
+
+[resource]
+base_font = ExtResource("1_5amyy")
+variation_embolden = 0.66
+spacing_glyph = 2
+spacing_top = 3
+spacing_bottom = 3
+baseline_offset = 0.125

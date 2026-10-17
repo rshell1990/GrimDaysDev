@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://dtcttjtkeyqoy"
+path="res://.godot/imported/Harlok sprite combat.atlas-67627b65cff5c153c8c08e737cf79db7.spatlas"
+
+[deps]
+
+source_file="res://GrimDaysBattle/assets/spine/harlok/Harlok sprite combat.atlas"
+dest_files=["res://.godot/imported/Harlok sprite combat.atlas-67627b65cff5c153c8c08e737cf79db7.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

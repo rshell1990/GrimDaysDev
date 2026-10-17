@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFont" format=3 uid="uid://cq4ag8br3dg58"]
+
+[ext_resource type="FontVariation" uid="uid://stfv5o7qaeim" path="res://GrimDaysVN/resources/fonts/nordams_bold.tres" id="1_is86b"]
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="1_l4ga3"]
+[ext_resource type="FontVariation" uid="uid://dijtymfw3aswy" path="res://GrimDaysVN/resources/fonts/nordams_bold_italics.tres" id="2_2mdyq"]
+[ext_resource type="FontVariation" uid="uid://c4jfvuymwrgj5" path="res://GrimDaysVN/resources/fonts/nordams_italics.tres" id="3_bfe4e"]
+[ext_resource type="FontVariation" uid="uid://cvlbsx642gx6o" path="res://GrimDaysVN/resources/fonts/nordams_.tres" id="4_yenvy"]
+
+[resource]
+script = ExtResource("1_l4ga3")
+id = "thorce"
+normal = ExtResource("4_yenvy")
+italics = ExtResource("3_bfe4e")
+bold = ExtResource("1_is86b")
+combo = ExtResource("2_2mdyq")

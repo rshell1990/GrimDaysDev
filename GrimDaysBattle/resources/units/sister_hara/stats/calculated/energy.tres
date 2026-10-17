@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://bh22wmjlxbnw2"]
+
+[ext_resource type="Curve" uid="uid://7n4slm63k3jy" path="res://GrimDaysBattle/resources/units/sister_hara/stats/calculated/energy_gained_per_vitality.tres" id="1_kra1i"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_m7w4t"]
+
+[resource]
+script = ExtResource("2_m7w4t")
+influenced_by = 20
+growth_curve = ExtResource("1_kra1i")
+type = 220
+id = &"Energy"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

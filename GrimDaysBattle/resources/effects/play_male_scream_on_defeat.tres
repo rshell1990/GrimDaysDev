@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EffectTriggerSoundTemplate" format=3 uid="uid://dj0tspsauybug"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_pbuyf"]
+[ext_resource type="Script" uid="uid://b8djqckcdfhlu" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_sound.gd" id="2_gxpw6"]
+[ext_resource type="AudioStream" uid="uid://c3doki8ux8ppg" path="res://GrimDaysVN/audio/sfx/Male screams 10.wav" id="3_8t5x4"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_sound.tscn" id="4_gxpw6"]
+
+[resource]
+script = ExtResource("2_gxpw6")
+sound = ExtResource("3_8t5x4")
+lifetime = 3
+kind = 300
+tag = 90
+trigger = 500
+always_hits = true
+template_scene = ExtResource("4_gxpw6")
+id = &"male_scream_death_sound"
+metadata/_custom_type_script = "uid://b8djqckcdfhlu"

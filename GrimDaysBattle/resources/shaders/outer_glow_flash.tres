@@ -1,0 +1,49 @@
+[gd_resource type="VisualShader" format=3 uid="uid://be6h0guya2gy5"]
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_nwdu2"]
+constant = 0.954
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_u8fii"]
+default_input_values = [0, 1.0, 1, 0.5]
+initialized = true
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_1dj86"]
+input_name = "texture"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_1831t"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_l7tng"]
+output_port_for_preview = 0
+default_input_values = [2, -1.0, 3, 1.0, 4, 1.0, 5, Vector3(1, 1, 1), 6, 1.334]
+initialized = true
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_lnne0"]
+constant = Color(0.95, 0.95, 0.95, 1)
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_qgf72"]
+constant = -1.0
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_n7iq5"]
+constant = 1.346
+
+[resource]
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(780, 220)
+nodes/fragment/3/node = SubResource("VisualShaderNodeInput_1dj86")
+nodes/fragment/3/position = Vector2(-660, 0)
+nodes/fragment/4/node = SubResource("VisualShaderNodeInput_1831t")
+nodes/fragment/4/position = Vector2(-540, 220)
+nodes/fragment/6/node = SubResource("VisualShaderNodeCustom_l7tng")
+nodes/fragment/6/position = Vector2(280, 280)
+nodes/fragment/7/node = SubResource("VisualShaderNodeColorConstant_lnne0")
+nodes/fragment/7/position = Vector2(-220, 900)
+nodes/fragment/8/node = SubResource("VisualShaderNodeFloatConstant_qgf72")
+nodes/fragment/8/position = Vector2(-220, 380)
+nodes/fragment/9/node = SubResource("VisualShaderNodeFloatConstant_n7iq5")
+nodes/fragment/9/position = Vector2(-480, 740)
+nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_nwdu2")
+nodes/fragment/10/position = Vector2(-220, 580)
+nodes/fragment/11/node = SubResource("VisualShaderNodeCustom_u8fii")
+nodes/fragment/11/position = Vector2(-100, 660)

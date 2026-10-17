@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EffectTriggerSoundTemplate" format=3 uid="uid://hqqin1xkv5h2"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_ld172"]
+[ext_resource type="Script" uid="uid://b8djqckcdfhlu" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_sound.gd" id="2_uinuf"]
+[ext_resource type="AudioStream" uid="uid://rr1tkrnujtqc" path="res://GrimDaysVN/audio/sfx/Female taking damage 3.wav" id="3_2j6gn"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_sound.tscn" id="4_uinuf"]
+
+[resource]
+script = ExtResource("2_uinuf")
+sound = ExtResource("3_2j6gn")
+lifetime = 3
+kind = 300
+tag = 90
+trigger = 500
+always_hits = true
+template_scene = ExtResource("4_uinuf")
+id = &"female_scream_death_sound"
+metadata/_custom_type_script = "uid://b8djqckcdfhlu"

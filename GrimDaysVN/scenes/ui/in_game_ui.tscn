@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c0urx0pjyv4uy"]
+
+[ext_resource type="Script" uid="uid://kh3korrub83m" path="res://GrimDaysVN/scripts/ui/scriplets/in_game_ui.gd" id="1_8m33q"]
+[ext_resource type="PackedScene" uid="uid://ds3g65fim75uk" path="res://GrimDays/imported/Menus/settings_menu.tscn" id="2_77ukb"]
+
+[node name="In-Game UI" type="Control" unique_id=1708606121 node_paths=PackedStringArray("hiding_rect")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8m33q")
+hiding_rect = NodePath("ColorRect")
+settings_menu = ExtResource("2_77ukb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1639122928]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

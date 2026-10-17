@@ -1,0 +1,57 @@
+Harlock.png
+size:567,2097
+filter:Linear,Linear
+ARM UP L - copia 2
+bounds:414,1443,146,276
+offsets:0,1,146,277
+BODY - copia 2
+bounds:2,1515,314,410
+rotate:90
+DOWN LEG L
+bounds:2,556,245,340
+offsets:0,0,246,341
+rotate:90
+DOWN LEG R
+bounds:403,1139,161,302
+offsets:0,1,161,304
+FEET L
+bounds:390,832,175,305
+offsets:0,2,175,307
+FEET R
+bounds:2,350,204,309
+rotate:90
+HAND R KNIFF - copia
+bounds:2,1831,264,456
+offsets:1,0,265,456
+rotate:90
+HAND R UP - copia 2
+bounds:390,549,116,281
+offsets:1,0,117,281
+MINI CAPE - copia 2
+bounds:2,1016,386,272
+offsets:0,0,386,273
+UP LEG L
+bounds:2,1290,223,399
+offsets:0,1,224,400
+rotate:90
+UP LEG R
+bounds:2,803,211,386
+offsets:1,1,212,387
+rotate:90
+arm down L
+bounds:460,1721,103,374
+offsets:1,0,104,375
+bags
+bounds:2,2,110,204
+offsets:1,0,111,204
+rotate:90
+head
+bounds:313,267,247,280
+offsets:0,1,247,281
+head - copia
+bounds:2,114,234,268
+offsets:0,1,234,270
+rotate:90
+head - copia 2
+bounds:272,49,216,266
+rotate:90

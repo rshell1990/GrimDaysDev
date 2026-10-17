@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" format=3 uid="uid://chteovppxif7j"]
+
+[ext_resource type="FontFile" uid="uid://dvi3afjvuf2lg" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Font/Berry Rotunda.ttf" id="1_bxqeg"]
+
+[resource]
+base_font = ExtResource("1_bxqeg")
+spacing_top = 2
+spacing_bottom = 2
+baseline_offset = 0.125

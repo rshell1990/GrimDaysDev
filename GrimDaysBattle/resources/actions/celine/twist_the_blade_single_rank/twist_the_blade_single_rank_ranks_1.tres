@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RankTemplate" format=3 uid="uid://beqxjq4taohry"]
+
+[ext_resource type="Resource" uid="uid://cbmhs0t7l03t2" path="res://GrimDaysBattle/resources/actions/celine/twist_the_blade_single_rank/twist_the_blade_single_rank_ranks_1_effects.tres" id="1_d5xd5"]
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="2_gl13g"]
+
+[resource]
+script = ExtResource("2_gl13g")
+level = 1
+cost = Dictionary[int, int]({
+220: 5
+})
+effects = ExtResource("1_d5xd5")
+id = &"twist_the_blade_single_rank_ranks_1"
+metadata/_custom_type_script = "uid://o71l6u31qrs2"

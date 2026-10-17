@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TooltipResources" format=3 uid="uid://deqe50wt5u0dx"]
+
+[ext_resource type="Script" uid="uid://dnryhcu06ql5e" path="res://GrimDaysVN/scripts/ui/resources/tooltip.gd" id="1_8ps6x"]
+[ext_resource type="Script" uid="uid://j6e1oneo6avi" path="res://GrimDaysVN/scripts/ui/resources/tooltips.gd" id="2_1sybt"]
+
+[resource]
+script = ExtResource("2_1sybt")
+metadata/_custom_type_script = "uid://j6e1oneo6avi"

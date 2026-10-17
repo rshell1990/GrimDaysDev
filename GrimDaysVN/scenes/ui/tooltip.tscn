@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://120l3m68wr4s"]
+
+[ext_resource type="Script" uid="uid://drhkqnn5eapog" path="res://GrimDaysVN/scripts/ui/scriplets/Tootip/tooltip_operator.gd" id="1_2nngf"]
+[ext_resource type="StyleBox" uid="uid://cfqu8tj7eb0qr" path="res://GrimDaysVN/resources/gui/grey_back.tres" id="2_6xlp5"]
+[ext_resource type="FontFile" uid="uid://wmvcier3ntd" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Fonts/PERTILI.TTF" id="3_44lwl"]
+[ext_resource type="Texture2D" uid="uid://dgg7fk2lbhgk2" path="res://GrimDays/assets/visuals/ui/vn_gui_library/tooltip_line.png" id="3_r0ewv"]
+[ext_resource type="FontFile" uid="uid://dve7mgsjik4dg" path="res://addons/phantom_camera/fonts/Nunito-Regular.ttf" id="5_6xlp5"]
+
+[sub_resource type="FontVariation" id="FontVariation_byg5a"]
+base_font = ExtResource("3_44lwl")
+variation_embolden = 1.09
+spacing_glyph = 7
+
+[sub_resource type="FontVariation" id="FontVariation_44lwl"]
+base_font = ExtResource("5_6xlp5")
+variation_embolden = 0.5
+
+[node name="Tooltip Layer" type="CanvasLayer" unique_id=792975540 node_paths=PackedStringArray("background", "frame", "header", "description")]
+layer = 128
+visible = false
+script = ExtResource("1_2nngf")
+background = NodePath("Background")
+frame = NodePath("")
+header = NodePath("Background/Margin/Vbox/Header")
+description = NodePath("Background/Margin/Vbox/Tooltip Description")
+
+[node name="Background" type="PanelContainer" parent="." unique_id=723237112]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(750, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -150.0
+offset_right = 375.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(350, 150)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_6xlp5")
+
+[node name="Margin" type="MarginContainer" parent="Background" unique_id=1642468422]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 40
+
+[node name="Vbox" type="VBoxContainer" parent="Background/Margin" unique_id=1911071159]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Header" type="Label" parent="Background/Margin/Vbox" unique_id=754480820]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5176471, 0, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.74509805)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_byg5a")
+theme_override_font_sizes/font_size = 52
+text = "Header"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line" type="TextureRect" parent="Background/Margin/Vbox" unique_id=265242822]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_r0ewv")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Background/Margin/Vbox/Line" unique_id=992118742]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_r0ewv")
+expand_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Background/Margin/Vbox/Line" unique_id=1650898223]
+self_modulate = Color(0.5176471, 0, 0.21960784, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_r0ewv")
+expand_mode = 5
+
+[node name="Spacer" type="Panel" parent="Background/Margin/Vbox" unique_id=88165143]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Tooltip Description" type="Label" parent="Background/Margin/Vbox" unique_id=1322312342]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = SubResource("FontVariation_44lwl")
+theme_override_font_sizes/font_size = 32
+text = "The description for the hovered item, it is dynamically changed based upon what the player hovers over."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EffectPercentageChangeStatTemplate" format=3 uid="uid://cf327j4mot6vm"]
+
+[ext_resource type="Texture2D" uid="uid://c51clq0bprs20" path="res://editor_only_debug/visuals/skill_icons/Engineerskill_39_nobg.png" id="1_hvnlx"]
+[ext_resource type="Script" uid="uid://6toavrn10iqx" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_percentage_combat_stat.gd" id="2_41wt2"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_stat_change.tscn" id="3_vnwko"]
+
+[resource]
+script = ExtResource("2_41wt2")
+percentage = 0.05
+percentage_by_rank = PackedFloat64Array(0.05, 0.1, 0.125, 0.15, 0.2)
+stat = 400
+duration = 2
+lifetime = 1
+tag = 70
+trigger = 300
+icon = ExtResource("1_hvnlx")
+description = "All damage increased by x%."
+template_scene = ExtResource("3_vnwko")
+duration_by_rank = PackedInt32Array(2, 2, 2, 3, 3)
+id = &"dark_urges_single_rank_damage_bonus"
+metadata/_custom_type_script = "uid://6toavrn10iqx"

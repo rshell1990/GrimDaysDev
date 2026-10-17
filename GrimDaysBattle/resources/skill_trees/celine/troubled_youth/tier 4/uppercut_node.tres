@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://laxp0y8l12pi"]
+
+[ext_resource type="Texture2D" uid="uid://cvi4i4xqe1vmj" path="res://editor_only_debug/visuals/skill_icons/Warriorskill_48_nobg.png" id="1_5w30f"]
+[ext_resource type="Resource" uid="uid://dsl6c8qteimjf" path="res://GrimDaysBattle/resources/actions/celine/uppercut_single_rank/uppercut_single_rank.tres" id="1_pulhh"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="2_pulhh"]
+
+[resource]
+script = ExtResource("2_pulhh")
+action = ExtResource("1_pulhh")
+id = &"uppercut_node"
+display_name = "Uppercut"
+icon = ExtResource("1_5w30f")
+description = "Extend your combination of unarmed strikes further by adding an uppercut into the mix that has an increased chance to critically strike.  If a critical strike occurs the target is stunned until the next round."
+row = 2
+maximum_rank = 5
+previous_node = &"heavy_blows_node"
+composite = true
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://wa8xuwd7fdtc"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_i11y5"]
+
+[resource]
+script = ExtResource("1_i11y5")
+type = 400
+starting_amount = 1.0
+id = &"DamageModifier"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

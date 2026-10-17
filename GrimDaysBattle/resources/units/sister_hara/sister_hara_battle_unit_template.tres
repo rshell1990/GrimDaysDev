@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="BattleUnitTemplate" format=3 uid="uid://bxin2g5rvrwar"]
+
+[ext_resource type="Resource" uid="uid://fi7kn60ebif" path="res://GrimDaysBattle/resources/actions/_basic/_basic_attack/basic_attack.tres" id="1_5l1je"]
+[ext_resource type="PackedScene" uid="uid://wkosfrmo12fh" path="res://GrimDaysBattle/scenes/battle/units/sister_hara.tscn" id="2_48sw0"]
+[ext_resource type="Script" uid="uid://cb7akesf5u8d3" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template.gd" id="3_mmu4l"]
+[ext_resource type="Script" uid="uid://drwr8dgs5cpum" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template_collection.gd" id="4_hlglm"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="5_i8usf"]
+[ext_resource type="Resource" uid="uid://blg1oe3lvxm8v" path="res://GrimDaysBattle/resources/units/sister_hara/sister_hara_leveling_tiers.tres" id="6_nn4px"]
+[ext_resource type="Texture2D" uid="uid://bmyw6umh8llee" path="res://GrimDaysBattle/assets/visuals/battle_portraits/sister_hara_portrait.png" id="7_48sw0"]
+[ext_resource type="Resource" uid="uid://hqqin1xkv5h2" path="res://GrimDaysBattle/resources/effects/play_female_scream_on_defeat.tres" id="7_a0ddo"]
+[ext_resource type="Script" uid="uid://bjm8hu372yam1" path="res://GrimDaysBattle/scripts/Unit/Resources/unit_template.gd" id="8_n3qwi"]
+[ext_resource type="Resource" uid="uid://dkmuypcra0wsx" path="res://GrimDaysBattle/resources/units/sister_hara/sister_hara_stats.tres" id="12_6ungh"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/sacred_duty/hara_collection.tres" id="90_skills"]
+[ext_resource type="Resource" uid="uid://dd0eb0m3tg55a" path="res://GrimDaysBattle/resources/items/weapons/one_handed/ritual_knife.tres" id="91_knife"]
+
+[sub_resource type="Resource" id="Resource_jh8xl"]
+script = ExtResource("4_hlglm")
+all = Array[ExtResource("3_mmu4l")]([ExtResource("91_knife")])
+metadata/_custom_type_script = "uid://drwr8dgs5cpum"
+
+[resource]
+script = ExtResource("8_n3qwi")
+display_name = "Sister Hara"
+unit_archetype = "Hybrid"
+level = 5.0
+portrait = ExtResource("7_48sw0")
+battle_sprite = ExtResource("2_48sw0")
+basic_action_template = ExtResource("1_5l1je")
+experience_reward = 600
+skill_collection = ExtResource("90_skills")
+leveling_tiers = ExtResource("6_nn4px")
+stats = ExtResource("12_6ungh")
+starting_attribute_points_spent = {
+"combat": 20,
+"non_combat": 8
+}
+intrinsic_effects = Array[ExtResource("5_i8usf")]([ExtResource("7_a0ddo")])
+equipment = SubResource("Resource_jh8xl")
+id = &"SisterHara"
+metadata/_custom_type_script = "uid://bjm8hu372yam1"

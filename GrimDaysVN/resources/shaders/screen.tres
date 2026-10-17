@@ -1,0 +1,38 @@
+[gd_resource type="VisualShader" load_steps=5 format=3 uid="uid://bwwki4wfbypdu"]
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_t7rvj"]
+function = 0
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_qvnc4"]
+input_name = "fragcoord"
+
+[sub_resource type="VisualShaderNodeMultiplyAdd" id="VisualShaderNodeMultiplyAdd_pu6u4"]
+output_port_for_preview = 0
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1), 2, Vector3(0, 0, 0)]
+op_type = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_1yd8u"]
+output_port_for_preview = 0
+expanded_output_ports = [0]
+parameter_name = "ColorParameter"
+default_value_enabled = true
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(600, 160)
+nodes/fragment/4/node = SubResource("VisualShaderNodeFloatFunc_t7rvj")
+nodes/fragment/4/position = Vector2(-20, 380)
+nodes/fragment/5/node = SubResource("VisualShaderNodeInput_qvnc4")
+nodes/fragment/5/position = Vector2(-360, 160)
+nodes/fragment/6/node = SubResource("VisualShaderNodeMultiplyAdd_pu6u4")
+nodes/fragment/6/position = Vector2(260, 500)
+nodes/fragment/7/node = SubResource("VisualShaderNodeColorParameter_1yd8u")
+nodes/fragment/7/position = Vector2(-680, 80)
+nodes/fragment/connections = PackedInt32Array(5, 0, 4, 0, 4, 0, 6, 0)

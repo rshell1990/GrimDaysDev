@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EffectScalingCombatStatChangeTemplate" format=3 uid="uid://cjx5mu4jalf18"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_r7vpw"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="scene"]
+[ext_resource type="Script" uid="uid://cqciwrhufos0l" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+scales_from_sender = true
+scales_with_damage = true
+can_critical = false
+scales_with = 320
+scales_by = -0.35
+scales_by_by_rank = PackedFloat64Array(-0.35, -0.4, -0.45, -0.5, -0.55)
+stat = 210
+target = 3
+kind = 300
+damage_type = 200
+trigger = 200
+description = "Deals x% Magical Damage."
+template_scene = ExtResource("scene")
+id = &"sacred_duty_candlelight_damage"

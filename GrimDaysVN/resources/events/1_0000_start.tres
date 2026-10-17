@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="GameEventSequence" format=3 uid="uid://cyiglpegoyx8s"]
+
+[ext_resource type="Script" uid="uid://csgy6f372s12y" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/action.gd" id="1_r6j3b"]
+[ext_resource type="Script" uid="uid://congnpucqmki5" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/trigger_event.gd" id="2_xj6wc"]
+[ext_resource type="Resource" uid="uid://d4gtq4dvrlmbw" path="res://GrimDaysVN/dialogic/scripts/1_0000_arrival_in_gerano.dtl" id="3_wutjk"]
+[ext_resource type="Script" uid="uid://dmclip8e16yhs" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Requirements/requirement.gd" id="4_yf4n4"]
+[ext_resource type="Script" uid="uid://c5gl6fnf4qdyb" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="5_fpiw2"]
+[ext_resource type="PackedScene" uid="uid://d36mut3nelugu" path="res://GrimDaysVN/scenes/story_sequence/1_0000_start.tscn" id="6_jfgal"]
+
+[sub_resource type="Resource" id="Resource_ice6b"]
+script = ExtResource("2_xj6wc")
+event_id = "1_0010_livingroom"
+metadata/_custom_type_script = "uid://congnpucqmki5"
+
+[resource]
+script = ExtResource("5_fpiw2")
+starting_scene = ExtResource("6_jfgal")
+id = &"1_0000_start"
+scenario_type = 2
+times = Array[int]([0])
+finishing_timeline = ExtResource("3_wutjk")
+finishing_actions = Array[ExtResource("1_r6j3b")]([SubResource("Resource_ice6b")])
+metadata/_custom_type_script = "uid://c5gl6fnf4qdyb"

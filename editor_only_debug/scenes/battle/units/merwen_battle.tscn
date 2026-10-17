@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b05id7hiiq5yj"]
+
+[ext_resource type="Texture2D" uid="uid://ywpw1c6sdtrx" path="res://editor_only_debug/visuals/placeholder/merwen-placeholder-battle-skin.png" id="1_lwc58"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="2_63y22"]
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/_scripts/battle/unit/unit_2d_sprite.gd" id="2_p73c0"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="3_p73c0"]
+
+[node name="merwen_battle" type="Sprite2D" node_paths=PackedStringArray("collision_area", "raycaster")]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_lwc58")
+script = ExtResource("2_p73c0")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+
+[node name="8_way_raycasts" parent="." instance=ExtResource("2_63y22")]
+position = Vector2(0, -100)
+
+[node name="Appearance Area" parent="." instance=ExtResource("3_p73c0")]
+position = Vector2(0, -113.333)

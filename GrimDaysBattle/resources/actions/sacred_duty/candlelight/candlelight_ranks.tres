@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RanksTemplate" format=3 uid="uid://ce61g4wc1dr1e"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_rha8i"]
+[ext_resource type="Resource" uid="uid://c2im7rrtuwnfh" path="res://GrimDaysBattle/resources/actions/sacred_duty/candlelight/candlelight_ranks_1.tres" id="2_qcfb8"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="5_x3wso"]
+
+[resource]
+script = ExtResource("5_x3wso")
+generated = true
+rank_count = 5
+base_rank = ExtResource("2_qcfb8")
+cost_increase_per_rank = Dictionary[int, int]({
+230: 2
+})
+id = &"candlelight_ranks"

@@ -1,0 +1,12 @@
+[gd_resource type="FontVariation" format=3 uid="uid://u8jiv2c76whl"]
+
+[ext_resource type="FontFile" uid="uid://cwrf3lb0fgor3" path="res://GrimDays/fonts/JosefinSans-Bold.ttf" id="1_88bp7"]
+
+[resource]
+base_font = ExtResource("1_88bp7")
+variation_embolden = 0.66
+variation_transform = Transform2D(1, 0.33, 0, 1, 0, 0)
+spacing_glyph = 3
+spacing_top = 4
+spacing_bottom = 4
+baseline_offset = 0.15

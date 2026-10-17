@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipmentWeaponTemplate" format=3 uid="uid://dd0eb0m3tg55a"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_b816a"]
+[ext_resource type="Resource" uid="uid://crnr8ub3rg3i6" path="res://GrimDaysBattle/resources/effects/dagger_critical_strike_buff.tres" id="2_xmrnm"]
+[ext_resource type="Script" uid="uid://cxj3ypxrtivpa" path="res://GrimDaysBattle/scripts/Items/Resources/weapon_template.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+weapon_tags = Array[StringName]([&"bladed"])
+equips_to = Array[int]([0])
+on_equip_effects = Array[ExtResource("1_b816a")]([ExtResource("2_xmrnm")])
+display_name = "Ritual Knife"
+item_class = 4
+description = "A plain ceremonial blade."
+id = &"ritual_knife"

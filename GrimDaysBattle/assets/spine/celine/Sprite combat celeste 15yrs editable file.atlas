@@ -1,0 +1,38 @@
+Sprite combat celeste 15yrs editable file.png
+size:1055,604
+filter:Linear,Linear
+BODY
+bounds:2,96,225,506
+HEAD
+bounds:408,225,161,377
+offsets:2,0,165,378
+L ARM
+bounds:954,389,84,213
+offsets:1,0,85,213
+L ARM - copia
+bounds:858,377,94,225
+offsets:15,0,109,225
+L ARM - copia 2
+bounds:845,65,98,227
+L feet
+bounds:583,10,112,125
+R DOWN ARM KNIF
+bounds:571,294,285,308
+R UP ARM
+bounds:945,156,108,219
+R feet
+bounds:945,42,112,108
+rotate:90
+hair don back
+bounds:229,134,177,468
+ld leg
+bounds:2,6,88,281
+rotate:90
+ll leg
+bounds:697,2,146,290
+rd leg
+bounds:408,137,86,282
+rotate:90
+rr leg
+bounds:285,4,128,296
+rotate:90

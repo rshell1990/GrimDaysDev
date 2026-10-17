@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://dsl6c8qteimjf"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_l84ah"]
+[ext_resource type="Texture2D" uid="uid://cvi4i4xqe1vmj" path="res://editor_only_debug/visuals/skill_icons/Warriorskill_48_nobg.png" id="2_7gxsr"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="2_jwh87"]
+[ext_resource type="Resource" uid="uid://ogxrf8rlrvda" path="res://GrimDaysBattle/resources/actions/celine/uppercut_single_rank/uppercut_single_rank_ranks.tres" id="3_fppfu"]
+
+[resource]
+script = ExtResource("2_jwh87")
+display_name = "Uppercut"
+description = "Extend your combination of unarmed strikes further by adding an uppercut into the mix that has an increased chance to critically strike.  If a critical strike occurs the target is stunned until the next round."
+icon = ExtResource("2_7gxsr")
+attack_animation = &"Attacking (Basic) NO WEAPON"
+use_spine = true
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("3_fppfu")
+id = &"uppercut_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

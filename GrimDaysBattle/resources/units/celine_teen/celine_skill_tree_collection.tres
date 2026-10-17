@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BattleSkillTreeCollection" format=3 uid="uid://cuhint0jjfpyx"]
+
+[ext_resource type="Script" uid="uid://dlldxe2cfmk5a" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tree_collection.gd" id="1_2ptit"]
+[ext_resource type="Script" uid="uid://r3a04ufm0lfk" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tree_definition.gd" id="2_8xunf"]
+[ext_resource type="Resource" uid="uid://cqidbia56wbo6" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/celine_troubled_youth.tres" id="3_8xunf"]
+
+[resource]
+script = ExtResource("1_2ptit")
+trees = Array[ExtResource("2_8xunf")]([ExtResource("3_8xunf")])
+metadata/_custom_type_script = "uid://dlldxe2cfmk5a"

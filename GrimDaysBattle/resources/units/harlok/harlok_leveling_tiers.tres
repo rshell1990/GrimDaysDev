@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelingTierDefinitionCollection" format=3 uid="uid://bgi7h8602bmga"]
+
+[ext_resource type="Script" uid="uid://cmldk6gn0vowq" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers.gd" id="1_vcsm4"]
+[ext_resource type="Resource" uid="uid://c5et80jp0ejwe" path="res://GrimDaysBattle/resources/units/harlok/tier_1_to_9.tres" id="2_p1yxh"]
+[ext_resource type="Script" uid="uid://de34ja1bnjdse" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers_collection.gd" id="3_7f26e"]
+
+[resource]
+script = ExtResource("3_7f26e")
+all = Array[ExtResource("1_vcsm4")]([ExtResource("2_p1yxh")])
+id = &"HarlokLevelingTiers"
+metadata/_custom_type_script = "uid://de34ja1bnjdse"

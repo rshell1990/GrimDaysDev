@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://75hcgw5swp2b"]
+
+[ext_resource type="Script" uid="uid://cft0gsbsf4n6n" path="res://content/scripts/camera/camera_effect_vpunch.gd" id="1_r2yk8"]
+
+[node name="Camera Vpunch" type="Node"]
+script = ExtResource("1_r2yk8")

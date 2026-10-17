@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EquipmentArmorTemplate" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/_Global/_resource_template.gd" id="1_base"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/item_template.gd" id="2_item"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/armor_template.gd" id="3_armor"]
+
+[resource]
+script = ExtResource("3_armor")
+id = &"reinf_desert_robes"
+display_name = "Reinforced desert robes"
+description = "Reinforced desert robes. Grants 5 Physical Resistance while equipped."
+item_class = 1
+stack_size = 1
+value = 250
+lootable = true
+weight = 2
+equips_to = Array[int]([4])
+stat_bonuses = Dictionary[int, float]({330: 5.0})
+base_defense = 5

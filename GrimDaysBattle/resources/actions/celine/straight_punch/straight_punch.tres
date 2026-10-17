@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://k71gidtn7rnw"]
+
+[ext_resource type="Resource" uid="uid://cyp60x4b68pfc" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/straight_punch_ranks.tres" id="1_2bhr4"]
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_y7edf"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="2_ydmon"]
+
+[sub_resource type="Resource" id="Resource_fcduj"]
+script = ExtResource("1_y7edf")
+weapon_tag = &""
+metadata/_custom_type_script = "uid://bunfovvhflayl"
+
+[resource]
+script = ExtResource("2_ydmon")
+display_name = "Straight Punch"
+attack_animation = &"Attacking (Basic) NO WEAPON"
+use_spine = true
+equipment_requirements = Array[ExtResource("1_y7edf")]([SubResource("Resource_fcduj")])
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("1_2bhr4")
+id = &"straight_punch"

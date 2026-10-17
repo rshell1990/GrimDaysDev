@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b6ldqh8kuah6j"]
+
+[ext_resource type="Script" uid="uid://d4e3m6g0ttv0f" path="res://GrimDaysVN/scripts/navigation/location_background.gd" id="2_733cg"]
+
+[node name="Location Name" type="Node3D" unique_id=572381565]
+
+[node name="Sprite Background" type="Sprite3D" parent="." unique_id=1612432648]
+transform = Transform3D(600, 0, 0, 0, 600, 0, 0, 0, 600, 0, 0, -102)
+script = ExtResource("2_733cg")

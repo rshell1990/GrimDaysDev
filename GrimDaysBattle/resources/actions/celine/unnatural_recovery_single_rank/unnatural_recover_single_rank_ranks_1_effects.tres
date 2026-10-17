@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3 uid="uid://bpwdbwn0lqar4"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_tg6cg"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="2_hj6fy"]
+[ext_resource type="Resource" uid="uid://bg7evdirfwod" path="res://GrimDaysBattle/resources/actions/celine/unnatural_recovery_single_rank/unnatural_recover_single_rank_ranks_1_effects_healing.tres" id="2_qt4hg"]
+
+[resource]
+script = ExtResource("2_hj6fy")
+all = Array[ExtResource("1_tg6cg")]([ExtResource("2_qt4hg")])
+id = &"unnatural_recover_single_rank_ranks_1_effects"
+metadata/_custom_type_script = "uid://dw0pgj3kb31c6"

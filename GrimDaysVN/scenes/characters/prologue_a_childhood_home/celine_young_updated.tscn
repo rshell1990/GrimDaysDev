@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://qk8pyp8pfgee"]
+
+[ext_resource type="Script" uid="uid://bsh5mg3guqgvc" path="res://GrimDaysVN/scripts/layered_characters/layered_character_operator.gd" id="1_nt6up"]
+[ext_resource type="Texture2D" uid="uid://cjie6jqipxhfj" path="res://GrimDaysVN/visuals/characters/updated_sprites/celeste_10yrs/celeste_10_base.png" id="2_32san"]
+[ext_resource type="Script" uid="uid://b11pxbt1vlwyu" path="res://GrimDaysVN/scripts/system_vram_management/sprite_2d_load_on_demand.gd" id="2_57c5k"]
+[ext_resource type="Texture2D" uid="uid://f3q15jda3o33" path="res://GrimDaysVN/visuals/characters/updated_sprites/celeste_10yrs/celeste_10_angry.png" id="4_jt1cn"]
+[ext_resource type="Script" uid="uid://b1jub2t5ubsme" path="res://GrimDaysVN/scripts/utilities/randomized_speed_animation_player.gd" id="4_w657n"]
+
+[sub_resource type="Animation" id="Animation_qfarr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_452hx"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 25), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.98), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3hdg"]
+_data = {
+&"RESET": SubResource("Animation_qfarr"),
+&"idle": SubResource("Animation_452hx")
+}
+
+[node name="Celine Young" type="CanvasGroup" unique_id=1671884028 node_paths=PackedStringArray("groups")]
+script = ExtResource("1_nt6up")
+default_layers = Dictionary[StringName, StringName]({
+&"Base": &"Neutral"
+})
+groups = {
+&"Base": NodePath("Base"),
+&"Normal": NodePath("Normal"),
+&"Psycho": NodePath("Psycho")
+}
+
+[node name="Base" type="Node2D" parent="." unique_id=393095816]
+position = Vector2(410.5, 704)
+
+[node name="Neutral" type="Sprite2D" parent="Base" unique_id=2010833481]
+texture = ExtResource("2_32san")
+script = ExtResource("2_57c5k")
+path = "uid://83i0w04pnhdn"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="WithBaby" type="Sprite2D" parent="Base" unique_id=1105106637]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(144, -110)
+script = ExtResource("2_57c5k")
+path = "uid://c2wm31bs02t7d"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Normal" type="Node2D" parent="." unique_id=50392537]
+z_index = 10
+z_as_relative = false
+position = Vector2(410.5, 704)
+
+[node name="Angry" type="Sprite2D" parent="Normal" unique_id=412046985]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("4_jt1cn")
+script = ExtResource("2_57c5k")
+path = "uid://d0pgounrcbvx7"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Crying" type="Sprite2D" parent="Normal" unique_id=1782891750]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://brq385fbhp4tl"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Happy" type="Sprite2D" parent="Normal" unique_id=1002749106]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://b58nmelkn0wjg"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Sad" type="Sprite2D" parent="Normal" unique_id=1826970488]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://cf56j6vb7xpj"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Shocked" type="Sprite2D" parent="Normal" unique_id=1065867655]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://v0i3r42a241m"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Neutral" type="Sprite2D" parent="Normal" unique_id=525754794]
+
+[node name="Psycho" type="Node2D" parent="." unique_id=1649940893]
+z_index = 10
+z_as_relative = false
+position = Vector2(410.5, 704)
+
+[node name="Angry" type="Sprite2D" parent="Psycho" unique_id=1300629783]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://dfarybeyxy1sh"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Crying" type="Sprite2D" parent="Psycho" unique_id=1896777049]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://daeap5027ovej"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Happy" type="Sprite2D" parent="Psycho" unique_id=150596006]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://b5qw7ayf535ms"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Sad" type="Sprite2D" parent="Psycho" unique_id=1662836432]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://be6hso6jadflp"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Shocked" type="Sprite2D" parent="Psycho" unique_id=1758880799]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_57c5k")
+path = "uid://c6e6y2g2a421"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Neutral" type="Sprite2D" parent="Psycho" unique_id=1368919960]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1988157960]
+libraries/ = SubResource("AnimationLibrary_e3hdg")
+autoplay = &"idle"
+script = ExtResource("4_w657n")

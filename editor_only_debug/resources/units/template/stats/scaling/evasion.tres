@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://42upmxfc77sq"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_7wqnr"]
+
+[resource]
+script = ExtResource("1_7wqnr")
+influenced_by = 100
+type = 500
+id = &"BuyingPower"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

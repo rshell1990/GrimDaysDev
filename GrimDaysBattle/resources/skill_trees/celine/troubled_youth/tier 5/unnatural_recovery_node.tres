@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://dm2tytx811437"]
+
+[ext_resource type="Texture2D" uid="uid://gb4ecxx3eixe" path="res://editor_only_debug/visuals/skill_icons/Warlock_30_nobg.png" id="1_dppkh"]
+[ext_resource type="Resource" uid="uid://c2sfcicck6p0r" path="res://GrimDaysBattle/resources/actions/celine/unnatural_recovery_single_rank/unnatural_recovery_single_rank.tres" id="1_omt85"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="1_uqp7w"]
+
+[resource]
+script = ExtResource("1_uqp7w")
+action = ExtResource("1_omt85")
+id = &"unnatural_recovery_node"
+display_name = "Unnatural Recovery"
+icon = ExtResource("1_dppkh")
+description = "You harness the mana in your body to slowly recover a percentage of your health for a short time."
+row = 1
+maximum_rank = 5
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

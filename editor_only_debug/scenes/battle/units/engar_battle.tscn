@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dgoe4wrp5p38b"]
+
+[ext_resource type="Texture2D" uid="uid://c4le4i3ys3ohj" path="res://editor_only_debug/visuals/placeholder/engar-battle-skin-placeholder.png" id="1_wv5ei"]
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/_scripts/battle/unit/unit_2d_sprite.gd" id="2_fvk5d"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="2_vechh"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="3_fvk5d"]
+
+[node name="engar_battle" type="Sprite2D" node_paths=PackedStringArray("collision_area", "raycaster")]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("1_wv5ei")
+script = ExtResource("2_fvk5d")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+
+[node name="Appearance Area" parent="." instance=ExtResource("2_vechh")]
+position = Vector2(-14.2857, -157.143)
+
+[node name="8_way_raycasts" parent="." instance=ExtResource("3_fvk5d")]

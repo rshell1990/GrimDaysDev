@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://x1cyuf00yr8b"]
+
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_61iot"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="2_axkm1"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_hpa17"]
+[ext_resource type="PackedScene" uid="uid://bc5x4d6iykwad" path="res://GrimDaysVN/scenes/ui/fullscreen_text.tscn" id="3_axkm1"]
+
+[sub_resource type="Resource" id="Resource_axkm1"]
+script = ExtResource("1_61iot")
+
+[sub_resource type="Resource" id="Resource_4axf6"]
+script = ExtResource("1_61iot")
+scene = ExtResource("2_axkm1")
+
+[sub_resource type="Resource" id="Resource_dodby"]
+script = ExtResource("1_61iot")
+scene = ExtResource("3_axkm1")
+overrides = {
+"text_alignment": "1"
+}
+
+[resource]
+script = ExtResource("2_hpa17")
+name = "fullscreen"
+layer_list = Array[String](["10", "11"])
+layer_info = {
+"": SubResource("Resource_axkm1"),
+"10": SubResource("Resource_4axf6"),
+"11": SubResource("Resource_dodby")
+}
+metadata/_latest_layer = "11"

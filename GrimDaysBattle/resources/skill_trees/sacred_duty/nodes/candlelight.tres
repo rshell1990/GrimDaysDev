@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="script"]
+[ext_resource type="Resource" uid="uid://b3ucyg3x73tt3" path="res://GrimDaysBattle/resources/actions/sacred_duty/candlelight/candlelight.tres" id="action"]
+
+[resource]
+script = ExtResource("script")
+id = &"candlelight"
+display_name = "Candlelight"
+row = 0
+maximum_rank = 5
+action = ExtResource("action")
+

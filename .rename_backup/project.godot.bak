@@ -1,0 +1,313 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Dreams of Celeste - Prototype (GPT)"
+run/main_scene="uid://d1hdxe6miih2u"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://cfjtc5oxg8n75"
+
+[autoload]
+
+SM_Globals="*uid://ckb6uii70ciok"
+Dialogic="*uid://ds2q0uclmolvu"
+GameManager="*uid://b8k88oafa8hrw"
+Repositories="*uid://dqq31tcad4368"
+BattleRepository="*uid://s0dqr8k63066"
+BattleController="*uid://d0f6by3budwvi"
+VNSignalBus="*uid://b6ao8esnum7c2"
+SignalBus="*uid://dhyml37vcxp86"
+SceneManager="*uid://bixdwgbijmufo"
+SoundManager="*uid://cs4kqdpbpsb5c"
+SaveAndLoadSystemManager="*uid://b88qp8wpnqntl"
+DDInputHandler="*uid://dhpha7vckt63y"
+DDTextInput="*uid://dq4rj5dyhn1k7"
+InputHelper="*uid://ety27eg2cgkp"
+UIDirector="*uid://bmqf6sl83ghb0"
+SystemAdministrators="*uid://0sjmgojb7u7p"
+SystemHeadquarters="*uid://cmcartj7nu75o"
+SystemHelpers="*uid://tg1syjj5x6eg"
+ConfirmationModal="*uid://r6ul4ft3vkai"
+CameraCommonOperations="*uid://bms58lw25ngft"
+PhantomCameraManager="*uid://duq6jhf6unyis"
+DialogicRelay="*uid://defha4p4o57rj"
+ScreenShaker="*uid://djgqg4mn6b1e7"
+ReplayRecorder="*uid://bpfoa18rk1bqv"
+Profily="*uid://qmnu1ehm866e"
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+
+[debug]
+
+settings/stdout/verbose_stdout=true
+gdscript/warnings/unassigned_variable=0
+gdscript/warnings/unassigned_variable_op_assign=0
+gdscript/warnings/unused_variable=0
+gdscript/warnings/unused_local_constant=0
+gdscript/warnings/unused_private_class_variable=0
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
+gdscript/warnings/incompatible_ternary=0
+gdscript/warnings/integer_division=0
+gdscript/warnings/narrowing_conversion=0
+
+[dialogic]
+
+directories/dch_directory={
+"Boris": "res://dreams_of_celeste_vn/dialogic/characters/Boris.dch",
+"Brad": "res://dreams_of_celeste_vn/dialogic/characters/Brad.dch",
+"Celine": "res://dreams_of_celeste_vn/dialogic/characters/Celine.dch",
+"CelineTeen": "res://dreams_of_celeste_vn/dialogic/characters/CelineTeen.dch",
+"Danny": "res://dreams_of_celeste_vn/dialogic/characters/Danny.dch",
+"Father": "res://dreams_of_celeste_vn/dialogic/characters/Father.dch",
+"Guard": "res://dreams_of_celeste_vn/dialogic/characters/Guard.dch",
+"Hara": "res://dreams_of_celeste_vn/dialogic/characters/Hara.dch",
+"Harlok": "res://dreams_of_celeste_vn/dialogic/characters/Harlok.dch",
+"Kayanna": "res://dreams_of_celeste_vn/dialogic/characters/Kayanna.dch",
+"Knight": "res://dreams_of_celeste_vn/dialogic/characters/Knight.dch",
+"Madison": "res://dreams_of_celeste_vn/dialogic/characters/Madison.dch",
+"Mother": "res://dreams_of_celeste_vn/dialogic/characters/Mother.dch",
+"Nashar": "res://dreams_of_celeste_vn/dialogic/characters/Nashar.dch",
+"Unknown": "res://dreams_of_celeste_vn/dialogic/characters/Unknown.dch",
+"UnknownNunA": "res://dreams_of_celeste_vn/dialogic/characters/UnknownNunA.dch",
+"UnknownNunB": "res://dreams_of_celeste_vn/dialogic/characters/UnknownNunB.dch",
+"Ursula": "res://dreams_of_celeste_vn/dialogic/characters/Ursula.dch",
+"fullscreen": "res://dreams_of_celeste_vn/dialogic/characters/fullscreen.dch"
+}
+directories/dtl_directory={
+"1_0000_start": "res://dreams_of_celeste_vn/dialogic/scripts/1_0000_start.dtl",
+"1_0010_livingroom": "res://dreams_of_celeste_vn/dialogic/scripts/1_0010_livingroom.dtl",
+"1_0020_investigate_nashar": "res://dreams_of_celeste_vn/dialogic/scripts/1_0020_investigate_nashar.dtl",
+"1_0020_investigate_scythe": "res://dreams_of_celeste_vn/dialogic/scripts/1_0020_investigate_scythe.dtl",
+"1_0025_pickup_scythe": "res://dreams_of_celeste_vn/dialogic/scripts/1_0025_pickup_scythe.dtl",
+"1_0030_help_nashar": "res://dreams_of_celeste_vn/dialogic/scripts/1_0030_help_nashar.dtl",
+"1_0040_meet_boris_at_lake": "res://dreams_of_celeste_vn/dialogic/scripts/1_0040_meet_boris_at_lake.dtl",
+"1_0050_returning_home": "res://dreams_of_celeste_vn/dialogic/scripts/1_0050_returning_home.dtl",
+"1_0060_nashars_decision": "res://dreams_of_celeste_vn/dialogic/scripts/1_0060_nashars_decision.dtl",
+"1_0070_kayanna_arrives": "res://dreams_of_celeste_vn/dialogic/scripts/1_0070_kayanna_arrives.dtl",
+"1_0080_funeral": "res://dreams_of_celeste_vn/dialogic/scripts/1_0080_funeral.dtl",
+"1_0085_knight_arrives": "res://dreams_of_celeste_vn/dialogic/scripts/1_0085_knight_arrives.dtl",
+"1_0088_meeting_boris": "res://dreams_of_celeste_vn/dialogic/scripts/1_0088_meeting_boris.dtl",
+"1_0090_truth": "res://dreams_of_celeste_vn/dialogic/scripts/1_0090_truth.dtl",
+"1_0095_return_home": "res://dreams_of_celeste_vn/dialogic/scripts/1_0095_return_home.dtl",
+"1_0100_and_punishment": "res://dreams_of_celeste_vn/dialogic/scripts/1_0100_and_punishment.dtl",
+"2_0000_arrive_at_orphanage": "res://dreams_of_celeste_vn/dialogic/scripts/2_0000_arrive_at_orphanage.dtl",
+"2_0010_five_years_later": "res://dreams_of_celeste_vn/dialogic/scripts/2_0010_five_years_later.dtl",
+"2_0015_courtyard": "res://dreams_of_celeste_vn/dialogic/scripts/2_0015_courtyard.dtl",
+"2_0020_madison": "res://dreams_of_celeste_vn/dialogic/scripts/2_0020_madison.dtl",
+"2_0025_chores_question": "res://dreams_of_celeste_vn/dialogic/scripts/2_0025_chores_question.dtl",
+"2_0030_attempt_chores": "res://dreams_of_celeste_vn/dialogic/scripts/2_0030_attempt_chores.dtl",
+"2_0032_fight_harlok_and_goons": "res://dreams_of_celeste_vn/dialogic/scripts/2_0032_fight_harlok_and_goons.dtl",
+"2_0035_fight_harlok_alone": "res://dreams_of_celeste_vn/dialogic/scripts/2_0035_fight_harlok_alone.dtl",
+"2_0040_fight_aftermath": "res://dreams_of_celeste_vn/dialogic/scripts/2_0040_fight_aftermath.dtl",
+"2_0050_disciplined": "res://dreams_of_celeste_vn/dialogic/scripts/2_0050_disciplined.dtl",
+"2_0060_return_to_dorm": "res://dreams_of_celeste_vn/dialogic/scripts/2_0060_return_to_dorm.dtl",
+"2_0070_awakened": "res://dreams_of_celeste_vn/dialogic/scripts/2_0070_awakened.dtl",
+"2_0080_led_to_basement": "res://dreams_of_celeste_vn/dialogic/scripts/2_0080_led_to_basement.dtl",
+"2_0090_in_the_basement_before_battle": "res://dreams_of_celeste_vn/dialogic/scripts/2_0090_in_the_basement_before_battle.dtl",
+"2_0095_battle_with_nuns": "res://dreams_of_celeste_vn/dialogic/scripts/2_0095_battle_with_nuns.dtl",
+"2_0100_basement_after_battle": "res://dreams_of_celeste_vn/dialogic/scripts/2_0100_basement_after_battle.dtl",
+"3_0000_on_the_way_to_the_inquisitors": "res://dreams_of_celeste_vn/dialogic/scripts/3_0000_on_the_way_to_the_inquisitors.dtl",
+"3_0010_arrival_at_tower": "res://dreams_of_celeste_vn/dialogic/scripts/3_0010_arrival_at_tower.dtl",
+"3_0020_inside_tower": "res://dreams_of_celeste_vn/dialogic/scripts/3_0020_inside_tower.dtl",
+"3_0030_led_to_the_interrogation_chamber": "res://dreams_of_celeste_vn/dialogic/scripts/3_0030_led_to_the_interrogation_chamber.dtl",
+"3_0040_the_interrogation_starts": "res://dreams_of_celeste_vn/dialogic/scripts/3_0040_the_interrogation_starts.dtl",
+"3_0050_interrogation_question_two": "res://dreams_of_celeste_vn/dialogic/scripts/3_0050_interrogation_question_two.dtl",
+"3_0060_interrogation_question_three": "res://dreams_of_celeste_vn/dialogic/scripts/3_0060_interrogation_question_three.dtl",
+"3_0070_interrogation_question_four": "res://dreams_of_celeste_vn/dialogic/scripts/3_0070_interrogation_question_four.dtl",
+"3_0080_interrogation_awakening_the_source_of_darkness": "res://dreams_of_celeste_vn/dialogic/scripts/3_0080_interrogation_awakening_the_source_of_darkness.dtl",
+"3_0090_interrogation_draegor_dies": "res://dreams_of_celeste_vn/dialogic/scripts/3_0090_interrogation_draegor_dies.dtl",
+"3_0100_the_escape_begins": "res://dreams_of_celeste_vn/dialogic/scripts/3_0100_the_escape_begins.dtl",
+"3_0110_the_escape_ends": "res://dreams_of_celeste_vn/dialogic/scripts/3_0110_the_escape_ends.dtl",
+"3_0120_on_the_run": "res://dreams_of_celeste_vn/dialogic/scripts/3_0120_on_the_run.dtl",
+"3_0130_kayanna_appears": "res://dreams_of_celeste_vn/dialogic/scripts/3_0130_kayanna_appears.dtl",
+"4_0000_meeting_draken": "res://dreams_of_celeste_vn/dialogic/scripts/4_0000_meeting_draken.dtl",
+"basement_story_playtest": "res://editor_only_debug/scenes/battle/basement_story_playtest.dtl"
+}
+layout/style_directory={
+"": "res://dreams_of_celeste_vn/dialogic/styles/default.tres",
+"default": "res://dreams_of_celeste_vn/dialogic/styles/default.tres",
+"fullscreen": "res://dreams_of_celeste_vn/dialogic/styles/fullscreen.tres"
+}
+variables={
+"lines_read": 0,
+"prefix": "",
+"version_major": "0.05",
+"version_minor": "08-31-26",
+"version_patch": "Prototype_Four"
+}
+layout/style_list=["res://dreams_of_celeste_vn/dialogic/styles/default.tres", "res://dreams_of_celeste_vn/dialogic/styles/fullscreen.tres"]
+layout/default_style="res://dreams_of_celeste_vn/dialogic/styles/default.tres"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+glossary/default_case_sensitive=true
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Dreams of Celeste - Prototype (GPT)"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/godot_ai/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/profily/plugin.cfg", "res://addons/replay_recorder/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "yellow",
+"res://dreams_of_celeste/": "purple",
+"res://dreams_of_celeste/imported/": "pink",
+"res://dreams_of_celeste_battle/": "red",
+"res://dreams_of_celeste_battle/assets/": "blue",
+"res://dreams_of_celeste_battle/resources/": "red",
+"res://dreams_of_celeste_battle/scenes/": "pink",
+"res://dreams_of_celeste_vn/": "blue",
+"res://dreams_of_celeste_vn/audio/": "orange",
+"res://dreams_of_celeste_vn/dialogic/": "yellow",
+"res://dreams_of_celeste_vn/resources/": "red",
+"res://dreams_of_celeste_vn/resources/audio/": "orange",
+"res://dreams_of_celeste_vn/scenes/": "pink",
+"res://dreams_of_celeste_vn/scripts/": "green",
+"res://dreams_of_celeste_vn/visuals/": "blue",
+"res://editor_only_debug/": "green",
+"res://editor_only_debug/editor/": "purple"
+}
+
+[gdscript_ast]
+
+scan/include=PackedStringArray("res://")
+scan/exclude=PackedStringArray()
+scan/enabled=true
+scan/scenes=true
+scan/resources=true
+
+[global_group]
+
+VNAdministrators=""
+
+[importer_defaults]
+
+texture={
+"compress/channel_pack": 0,
+"compress/hdr_compression": 1,
+"compress/high_quality": true,
+"compress/lossy_quality": 0.7,
+"compress/mode": 2,
+"compress/normal_map": 0,
+"compress/rdo_quality_loss": 0.0,
+"compress/uastc_level": 0,
+"detect_3d/compress_to": 0,
+"mipmaps/generate": true,
+"mipmaps/limit": -1,
+"process/channel_remap/alpha": 3,
+"process/channel_remap/blue": 2,
+"process/channel_remap/green": 1,
+"process/channel_remap/red": 0,
+"process/fix_alpha_border": true,
+"process/hdr_as_srgb": false,
+"process/hdr_clamp_exposure": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"process/size_limit": 0,
+"roughness/mode": 0,
+"roughness/src_normal": ""
+}
+
+[input]
+
+accept={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(334.58594, 19.664063),"global_position":Vector2(346.58594, 79.66406),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+back={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(299.71875, 9.6015625),"global_position":Vector2(311.71875, 69.60156),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+toggle_menu={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(199, 20),"global_position":Vector2(213, 93),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+debug_toggle={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194332,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+toggle_menu_alt={
+"deadzone": 0.2,
+"events": []
+}
+hide_textbox={
+"deadzone": 0.2,
+"events": []
+}
+dialogue_rollback={
+"deadzone": 0.2,
+"events": []
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

@@ -1,0 +1,262 @@
+[gd_scene format=3 uid="uid://c38w3xoulcle7"]
+
+[ext_resource type="Script" uid="uid://d0hxrm0fd5vhm" path="res://GrimDaysVN/scripts/ui/main_menu_controller.gd" id="1_controller"]
+[ext_resource type="Resource" uid="uid://cyiglpegoyx8s" path="res://GrimDaysVN/resources/events/1_0000_start.tres" id="2_starting_event"]
+[ext_resource type="PackedScene" uid="uid://c9t4vbn2mk6wr" path="res://GrimDaysVN/scenes/ui/menu_button.tscn" id="3_menu_button"]
+[ext_resource type="Script" uid="uid://bnk2hgab27rqy" path="res://GrimDaysVN/scripts/system_vram_management/loadable_directional_light.gd" id="4_directional_light"]
+[ext_resource type="Script" uid="uid://bev085rgp0wxo" path="res://GrimDaysVN/scripts/system_vram_management/loadable_world_environment.gd" id="5_world_environment"]
+[ext_resource type="Script" uid="uid://m5rjykhbinqb" path="res://GrimDaysVN/scripts/system_vram_management/loadable_canvas_layer.gd" id="6_canvas_layer"]
+[ext_resource type="Script" uid="uid://bf6ayx7s0tcud" path="res://GrimDaysVN/scripts/system_vram_management/load_on_demand.gd" id="7_load_on_demand"]
+[ext_resource type="Script" uid="uid://dmu40sx37ycym" path="res://GrimDaysVN/scripts/system_vram_management/loadable_generic_audio_stream_player.gd" id="8_audio_player"]
+[ext_resource type="AudioStream" uid="uid://b17f0o7l1iuy4" path="res://GrimDaysVN/audio/music/Main menu_theme (GrimDays).mp3" id="9_menu_theme"]
+
+[sub_resource type="Environment" id="Environment_background"]
+background_mode = 1
+background_color = Color(0.010090301, 0.010090301, 0.010090301, 1)
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_dof"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 0.01
+dof_blur_far_transition = 45.77
+dof_blur_amount = 0.6
+
+[sub_resource type="Animation" id="Animation_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2D UI/Menu Margin:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [70.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:attributes:dof_blur_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.6]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LoadableGenericAudioPlayer:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-40.0]
+}
+
+[sub_resource type="Animation" id="Animation_start"]
+resource_name = "start"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2D UI/Menu Margin:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [70.0, 106.5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:attributes:dof_blur_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.6, 0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LoadableGenericAudioPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LoadableGenericAudioPlayer:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.31, 3),
+"transitions": PackedFloat32Array(2.549125, 2.549125),
+"update": 0,
+"values": [-40.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main_menu"]
+_data = {
+&"RESET": SubResource("Animation_reset"),
+&"start": SubResource("Animation_start")
+}
+
+[node name="Main Menu" type="Node3D" node_paths=PackedStringArray("anim_player")]
+script = ExtResource("1_controller")
+anim_player = NodePath("AnimationPlayer")
+starting_event = ExtResource("2_starting_event")
+
+[node name="LoadableDirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.18566664, 0.9826128, 0, -0.9826128, 0.18566664, 0, 0, 0)
+light_color = Color(0.41674668, 0.38301402, 0.38181993, 1)
+light_energy = 9.648
+light_indirect_energy = 0.135
+light_volumetric_fog_energy = 0.0
+script = ExtResource("4_directional_light")
+metadata/_custom_type_script = "uid://bnk2hgab27rqy"
+
+[node name="LoadableWorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_background")
+script = ExtResource("5_world_environment")
+metadata/_custom_type_script = "uid://bev085rgp0wxo"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, 0, 5)
+attributes = SubResource("CameraAttributesPractical_dof")
+current = true
+fov = 70.0
+near = 0.077
+far = 235.38
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="LoadableSprite3D" type="Sprite3D" parent="Background"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, -5)
+script = ExtResource("7_load_on_demand")
+path = "uid://byrnry4jgq2fx"
+metadata/_custom_type_script = "uid://bf6ayx7s0tcud"
+
+[node name="2D UI" type="CanvasLayer" parent="."]
+script = ExtResource("6_canvas_layer")
+metadata/_custom_type_script = "uid://m5rjykhbinqb"
+
+[node name="Menu Margin" type="MarginContainer" parent="2D UI"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -244.0
+offset_right = 212.5
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 50
+
+[node name="Menu Vbox" type="VBoxContainer" parent="2D UI/Menu Margin"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Test Battles Margin" type="MarginContainer" parent="2D UI/Menu Margin/Menu Vbox"]
+layout_mode = 2
+
+[node name="Test Battles Button" parent="2D UI/Menu Margin/Menu Vbox/Test Battles Margin" instance=ExtResource("3_menu_button")]
+layout_mode = 2
+label_text = "Battle Test"
+
+[node name="New Game Margin" type="MarginContainer" parent="2D UI/Menu Margin/Menu Vbox"]
+layout_mode = 2
+
+[node name="New Game" parent="2D UI/Menu Margin/Menu Vbox/New Game Margin" instance=ExtResource("3_menu_button")]
+layout_mode = 2
+label_text = "New Game"
+
+[node name="Load Game Margin" type="MarginContainer" parent="2D UI/Menu Margin/Menu Vbox"]
+layout_mode = 2
+
+[node name="Load Game" parent="2D UI/Menu Margin/Menu Vbox/Load Game Margin" instance=ExtResource("3_menu_button")]
+layout_mode = 2
+label_text = "Load Game"
+
+[node name="Options Margin" type="MarginContainer" parent="2D UI/Menu Margin/Menu Vbox"]
+layout_mode = 2
+
+[node name="Options" parent="2D UI/Menu Margin/Menu Vbox/Options Margin" instance=ExtResource("3_menu_button")]
+layout_mode = 2
+label_text = "Options"
+
+[node name="Extras Margin" type="MarginContainer" parent="2D UI/Menu Margin/Menu Vbox"]
+layout_mode = 2
+
+[node name="Extras" parent="2D UI/Menu Margin/Menu Vbox/Extras Margin" instance=ExtResource("3_menu_button")]
+layout_mode = 2
+label_text = "Extras"
+
+[node name="Quit Margin" type="MarginContainer" parent="2D UI/Menu Margin/Menu Vbox"]
+layout_mode = 2
+
+[node name="Quit" parent="2D UI/Menu Margin/Menu Vbox/Quit Margin" instance=ExtResource("3_menu_button")]
+layout_mode = 2
+label_text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_main_menu")
+autoplay = &"start"
+
+[node name="LoadableGenericAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_menu_theme")
+volume_db = -40.0
+bus = &"Music"
+script = ExtResource("8_audio_player")
+metadata/_custom_type_script = "uid://dmu40sx37ycym"
+
+[connection signal="button_up" from="2D UI/Menu Margin/Menu Vbox/Test Battles Margin/Test Battles Button" to="." method="_on_test_battles_button_up"]
+[connection signal="button_up" from="2D UI/Menu Margin/Menu Vbox/New Game Margin/New Game" to="." method="_on_new_game_button_up"]
+[connection signal="button_up" from="2D UI/Menu Margin/Menu Vbox/Load Game Margin/Load Game" to="." method="_on_load_game_button_up"]
+[connection signal="button_up" from="2D UI/Menu Margin/Menu Vbox/Options Margin/Options" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="2D UI/Menu Margin/Menu Vbox/Extras Margin/Extras" to="." method="_on_extras_button_up"]
+[connection signal="button_up" from="2D UI/Menu Margin/Menu Vbox/Quit Margin/Quit" to="." method="_on_quit_button_up"]

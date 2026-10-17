@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b67k23nd7iy6t"]
+
+[ext_resource type="Script" uid="uid://bxb4ixkh6vx1q" path="res://editor_only_debug/scripts/debug/battle_stat_model_smoke_test.gd" id="1_test"]
+
+[node name="BattleStatModelSmokeTest" type="Node" unique_id=2107128439]
+script = ExtResource("1_test")

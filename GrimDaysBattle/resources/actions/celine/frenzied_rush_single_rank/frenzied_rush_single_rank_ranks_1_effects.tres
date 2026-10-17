@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3]
+
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="4_effects"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="5_effect"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/celine/frenzied_rush_single_rank/frenzied_rush_single_rank_ranks_1_effects_strikes.tres" id="external_Strikes"]
+
+[resource]
+script = ExtResource("4_effects")
+all = Array[ExtResource("5_effect")]([ExtResource("external_Strikes")])
+id = &"frenzied_rush_effects"

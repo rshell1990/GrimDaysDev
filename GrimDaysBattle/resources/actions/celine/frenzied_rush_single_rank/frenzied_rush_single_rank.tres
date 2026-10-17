@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://bk6bnvui0o3qc"]
+
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="1_action"]
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_w4shw"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/celine/frenzied_rush_single_rank/frenzied_rush_single_rank_ranks.tres" id="external_Ranks"]
+
+[resource]
+script = ExtResource("1_action")
+display_name = "Frenzied Rush"
+description = "Attack furiously, striking the target repeatedly."
+attack_animation = &"Attacking (Basic) NO WEAPON"
+use_spine = true
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("external_Ranks")
+id = &"frenzied_rush_single_rank"

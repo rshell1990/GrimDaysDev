@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelingTierDefinitionCollection" format=3 uid="uid://c60ql6luls8jn"]
+
+[ext_resource type="Script" uid="uid://cmldk6gn0vowq" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers.gd" id="1_0g8lk"]
+[ext_resource type="Resource" uid="uid://byut52fpfb7rb" path="res://GrimDaysBattle/resources/units/sister_katherine/tier_1_to_9.tres" id="2_c5jyb"]
+[ext_resource type="Script" uid="uid://de34ja1bnjdse" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers_collection.gd" id="3_q6dh2"]
+
+[resource]
+script = ExtResource("3_q6dh2")
+all = Array[ExtResource("1_0g8lk")]([ExtResource("2_c5jyb")])
+id = &"SisterKatherineLevelingTiers"
+metadata/_custom_type_script = "uid://de34ja1bnjdse"

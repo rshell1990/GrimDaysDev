@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://bl4jpjgrp8j7j"]
+
+[ext_resource type="Curve" uid="uid://cxey6yb3huyxx" path="res://GrimDaysBattle/resources/units/sister_anastasia/stats/calculated/magical_damage_per_point_of_mysticism.tres" id="1_6yv3s"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_3an0a"]
+
+[resource]
+script = ExtResource("2_3an0a")
+influenced_by = 70
+growth_curve = ExtResource("1_6yv3s")
+type = 320
+id = &"MagicDamage"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

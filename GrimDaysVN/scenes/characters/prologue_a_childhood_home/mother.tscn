@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://dr4cgdka5orxx"]
+
+[ext_resource type="Script" uid="uid://bsh5mg3guqgvc" path="res://GrimDaysVN/scripts/layered_characters/layered_character_operator.gd" id="1_g64h8"]
+[ext_resource type="Script" uid="uid://b11pxbt1vlwyu" path="res://GrimDaysVN/scripts/system_vram_management/sprite_2d_load_on_demand.gd" id="2_6pnh6"]
+[ext_resource type="Script" uid="uid://b1jub2t5ubsme" path="res://GrimDaysVN/scripts/utilities/randomized_speed_animation_player.gd" id="3_l5w4g"]
+
+[sub_resource type="Animation" id="Animation_qfarr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_452hx"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 25), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.98), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3hdg"]
+_data = {
+&"RESET": SubResource("Animation_qfarr"),
+&"idle": SubResource("Animation_452hx")
+}
+
+[node name="Mother" type="CanvasGroup" unique_id=1671884028 node_paths=PackedStringArray("groups")]
+script = ExtResource("1_g64h8")
+default_layers = Dictionary[StringName, StringName]({
+&"Base": &"Neutral"
+})
+groups = {
+&"Base": NodePath("Base"),
+&"BlackEyed": NodePath("BlackEyed"),
+&"Normal": NodePath("Normal")
+}
+
+[node name="Base" type="Node2D" parent="." unique_id=393095816]
+position = Vector2(410.5, 704)
+
+[node name="Neutral" type="Sprite2D" parent="Base" unique_id=2010833481]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://tvc1470bsdj"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="BlackEye" type="Sprite2D" parent="Base" unique_id=1857512685]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://cvfofqeci5q5x"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="HoldingChild" type="Sprite2D" parent="Base" unique_id=1836365505]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://cr2g3bkfor1js"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Normal" type="Node2D" parent="." unique_id=50392537]
+z_index = 10
+
+[node name="Angry" type="Sprite2D" parent="Normal" unique_id=412046985]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://c7i7wpdmc6d2"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Crying" type="Sprite2D" parent="Normal" unique_id=1782891750]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://dn330kiab5vl4"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Happy" type="Sprite2D" parent="Normal" unique_id=1002749106]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://ba88h25bqyknh"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Sad" type="Sprite2D" parent="Normal" unique_id=1826970488]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://t3o7j7sk76cd"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Scared" type="Sprite2D" parent="Normal" unique_id=1065867655]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://dcur5rut7h2sn"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Neutral" type="Sprite2D" parent="Normal" unique_id=2027737348]
+
+[node name="BlackEyed" type="Node2D" parent="." unique_id=1441347282]
+z_index = 10
+
+[node name="Angry" type="Sprite2D" parent="BlackEyed" unique_id=1054897407]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://duc7e056lt0vf"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Crying" type="Sprite2D" parent="BlackEyed" unique_id=932790436]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://dxtun20gtf35b"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Happy" type="Sprite2D" parent="BlackEyed" unique_id=1854866927]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://fkbq4iku2vbv"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Sad" type="Sprite2D" parent="BlackEyed" unique_id=1801183079]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://baarjpskudsyn"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Scared" type="Sprite2D" parent="BlackEyed" unique_id=1790411861]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("2_6pnh6")
+path = "uid://em53jq4iws2p"
+metadata/_custom_type_script = "uid://b11pxbt1vlwyu"
+
+[node name="Neutral" type="Sprite2D" parent="BlackEyed" unique_id=1345567376]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1988157960]
+libraries/ = SubResource("AnimationLibrary_e3hdg")
+autoplay = &"idle"
+script = ExtResource("3_l5w4g")

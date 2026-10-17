@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EquipmentWeaponTemplate" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/_Global/_resource_template.gd" id="1_base"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/item_template.gd" id="2_item"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/weapon_template.gd" id="3_weapon"]
+
+[resource]
+script = ExtResource("3_weapon")
+id = &"syaxian_dagger"
+display_name = "Syaxian dagger"
+description = "Syaxian dagger. Grants 18 Physical Damage while equipped."
+item_class = 4
+stack_size = 1
+value = 1250
+lootable = true
+weight = 2
+equips_to = Array[int]([0, 2])
+stat_bonuses = Dictionary[int, float]({310: 18.0})
+weapon_tags = Array[StringName]([&"bladed"])
+base_attack = 18
+base_accuracy = 95

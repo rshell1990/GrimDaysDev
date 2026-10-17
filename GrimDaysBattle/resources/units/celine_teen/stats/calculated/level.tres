@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://crspnb74e7j4u"]
+
+[ext_resource type="Curve" uid="uid://ca06a0bo5hfpy" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/level_gained_by_experience_earned.tres" id="1_fo6ep"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="1_nb5dd"]
+
+[resource]
+script = ExtResource("1_nb5dd")
+influenced_by = 110
+growth_curve = ExtResource("1_fo6ep")
+type = 300
+id = &"Level"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

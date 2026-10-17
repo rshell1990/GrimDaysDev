@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://633rrihbe6if"]
+
+[ext_resource type="Script" uid="uid://b54on6g1n0lqc" path="res://GrimDaysBattle/scripts/Party/battle_preparation_panel.gd" id="1_panel"]
+[ext_resource type="PackedScene" uid="uid://ykkupcw61btt" path="res://GrimDaysBattle/scenes/ui/character_management.tscn" id="3_gjcl1"]
+[ext_resource type="Texture2D" uid="uid://c8dyawkap4n7y" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Textures/G_Textures_11.png" id="3_n08mm"]
+[ext_resource type="PackedScene" uid="uid://dftkcn8q2lalg" path="res://GrimDaysBattle/scenes/ui/inventory_management.tscn" id="4_wn0h7"]
+[ext_resource type="PackedScene" uid="uid://cqff0b0h70s86" path="res://GrimDaysBattle/scenes/ui/skill_tree/skill_panel.tscn" id="5_gjcl1"]
+[ext_resource type="Texture2D" uid="uid://c4y18n2gbss0e" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/puzzle_button_fr 1.png" id="6_gjcl1"]
+[ext_resource type="PackedScene" uid="uid://cs7puohw5f2wg" path="res://GrimDaysBattle/scenes/ui/character_pool_and_options.tscn" id="7_n08mm"]
+[ext_resource type="Texture2D" uid="uid://b0f80cnqwkohk" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/gold_bar.png" id="8_n08mm"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="9_0dgu5"]
+[ext_resource type="Texture2D" uid="uid://wbu4iy6w5qps" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_tiny_cancel_bl.png" id="10_n08mm"]
+[ext_resource type="Texture2D" uid="uid://bfyu18m4jqj1" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_tiny_cancel.png" id="11_0dgu5"]
+
+[sub_resource type="Gradient" id="Gradient_78aad"]
+offsets = PackedFloat32Array(0, 0.30645162, 0.72119814, 1)
+colors = PackedColorArray(0.01, 0.01, 0.01, 1, 0.025, 0.023, 0.023, 0.98, 0.035, 0.032, 0.032, 0.96, 0.04, 0.0352, 0.0352, 0.15686275)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t0t1d"]
+gradient = SubResource("Gradient_78aad")
+fill_from = Vector2(0.501162, 0.123451)
+fill_to = Vector2(0.491546, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_close_normal"]
+texture = ExtResource("10_n08mm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_close_pressed"]
+texture = ExtResource("11_0dgu5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_close_hover"]
+texture = ExtResource("11_0dgu5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_llu8l"]
+texture = ExtResource("10_n08mm")
+modulate_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+
+[node name="Party Management" type="Control" unique_id=1829602837]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_panel")
+
+[node name="Screen Cover" type="TextureRect" parent="." unique_id=1095469885]
+self_modulate = Color(1, 1, 1, 0.98)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_t0t1d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1668983714]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -914.5
+offset_top = 40.0
+offset_right = 914.5
+offset_bottom = 1094.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=333483351]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Character Pool and Options" parent="VBoxContainer/HBoxContainer" unique_id=1207436306 instance=ExtResource("7_n08mm")]
+layout_mode = 2
+
+[node name="Character and Skill Panels" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1492266986]
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 2
+
+[node name="Character Panel" type="NinePatchRect" parent="VBoxContainer/HBoxContainer/Character and Skill Panels" unique_id=1968105537]
+unique_name_in_owner = true
+self_modulate = Color(0.48, 0.057600003, 0.057600003, 1)
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -450.0
+offset_right = 800.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_n08mm")
+region_rect = Rect2(0, 0, 218.44792, 305)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Character Management" parent="VBoxContainer/HBoxContainer/Character and Skill Panels/Character Panel" unique_id=1771651521 instance=ExtResource("3_gjcl1")]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 20.0
+offset_right = 1570.0
+offset_bottom = 883.0
+
+[node name="Inventories" parent="VBoxContainer/HBoxContainer/Character and Skill Panels/Character Panel" unique_id=300636721 instance=ExtResource("4_wn0h7")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 662.0
+offset_bottom = 882.0
+
+[node name="Skill Panel" parent="VBoxContainer/HBoxContainer/Character and Skill Panels" unique_id=379040112 instance=ExtResource("5_gjcl1")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1600.0
+offset_bottom = 890.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Skill and Character Panel Frame" type="NinePatchRect" parent="VBoxContainer/HBoxContainer/Character and Skill Panels" unique_id=1054122372]
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -450.0
+offset_right = 800.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_gjcl1")
+draw_center = false
+patch_margin_left = 80
+patch_margin_top = 80
+patch_margin_right = 80
+patch_margin_bottom = 80
+
+[node name="Status Holder" type="NinePatchRect" parent="VBoxContainer" unique_id=344118370]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1600, 100)
+layout_mode = 2
+texture = ExtResource("8_n08mm")
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+
+[node name="Status" type="Label" parent="VBoxContainer/Status Holder" unique_id=892655118]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.581033, 0.58103293, 0.5810329, 0.44313726)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("9_0dgu5")
+theme_override_font_sizes/font_size = 20
+text = "Select an ally. Click inventory items to transfer or equip."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Close" type="Button" parent="." unique_id=949014296]
+z_index = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 1845.0
+offset_top = 20.0
+offset_right = 1909.0
+offset_bottom = 84.0
+tooltip_text = "Close party management"
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_close_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_close_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_close_hover")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_llu8l")

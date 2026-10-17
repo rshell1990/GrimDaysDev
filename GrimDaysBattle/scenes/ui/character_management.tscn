@@ -1,0 +1,1895 @@
+[gd_scene format=3 uid="uid://ykkupcw61btt"]
+
+[ext_resource type="Texture2D" uid="uid://d13jgrxahuflw" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_B_Mid_active_LL.png" id="1_pqtq1"]
+[ext_resource type="FontFile" uid="uid://fa3cdvpk7238" path="res://GrimDays/assets/visuals/ui/Font/Berry Rotunda.ttf" id="2_femnp"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="4_uuyfp"]
+[ext_resource type="Texture2D" uid="uid://fgve4qj8nmml" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/pop_up_window_B.png" id="5_d2vsn"]
+[ext_resource type="Texture2D" uid="uid://wxhvku6ogoai" path="res://GrimDaysVN/visuals/characters/celine_teen/celeste_15_yrs_neutral_face.png" id="7_8ket1"]
+[ext_resource type="Texture2D" uid="uid://3xtud7e0k45u" path="res://GrimDays/assets/visuals/ui/classic rpg gui/neck_background.png" id="8_pqtq1"]
+[ext_resource type="Texture2D" uid="uid://dqet0djl5c10w" path="res://GrimDays/assets/visuals/ui/classic rpg gui/ring_background.png" id="9_fb1da"]
+[ext_resource type="Texture2D" uid="uid://cjyqr8cxl34hr" path="res://GrimDays/assets/visuals/ui/classic rpg gui/chest_background.png" id="10_tckcn"]
+[ext_resource type="Texture2D" uid="uid://b5cjauxfta145" path="res://GrimDays/assets/visuals/ui/classic rpg gui/melee_background.png" id="11_abda5"]
+[ext_resource type="Texture2D" uid="uid://d3qu4xgki37uu" path="res://GrimDays/assets/visuals/ui/UI MMORPG Dark Templar/CharacterEnemy/ProgressBar/BqBar.png" id="12_1near"]
+[ext_resource type="Texture2D" uid="uid://bf8hqb5xhpfyi" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/HP_bar_mini_back.png" id="12_8ket1"]
+[ext_resource type="Texture2D" uid="uid://b1kto4hdfpxfh" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/hp_bar_frame_line.png" id="13_pqtq1"]
+[ext_resource type="FontVariation" uid="uid://cpuwe58bh1xx5" path="res://GrimDaysBattle/resources/fonts/junction.tres" id="14_cddxr"]
+[ext_resource type="Texture2D" uid="uid://goh5ckhkhidu" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/hp_line.png" id="14_fb1da"]
+[ext_resource type="Texture2D" uid="uid://dgkty7ytr1lwp" path="res://GrimDays/assets/visuals/ui/classic rpg gui/gloves_background.png" id="15_wnxgw"]
+[ext_resource type="FontFile" uid="uid://be50pmjq50byi" path="res://GrimDays/fonts/PERTILI.TTF" id="16_3wmwn"]
+[ext_resource type="Texture2D" uid="uid://ccjf5jce4p4uf" path="res://GrimDays/assets/visuals/at-icons/control/arrow_up.svg" id="17_4yx7p"]
+[ext_resource type="Texture2D" uid="uid://dms00ncrr0osx" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/Mp_line.png" id="17_tckcn"]
+[ext_resource type="Texture2D" uid="uid://cvl5dafvmyfcd" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_A_Lil_Ready.png" id="18_8ket1"]
+[ext_resource type="Texture2D" uid="uid://b2jnigpbea6jm" path="res://GrimDays/assets/visuals/at-icons/control/arrow_down.svg" id="18_xrvvp"]
+[ext_resource type="Texture2D" uid="uid://cmcyj8abp6to2" path="res://GrimDays/assets/visuals/at-icons/node3d/arrow_down.svg" id="19_4pt2x"]
+[ext_resource type="Texture2D" uid="uid://dd2yp213w60qo" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Icons_nobg/Player_eq_icon_nb.png" id="19_abda5"]
+[ext_resource type="Texture2D" uid="uid://dx6ypv3dn8if8" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_tiny_ready.png" id="19_pqtq1"]
+[ext_resource type="Texture2D" uid="uid://lt08rmayp5f7" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Icons_nobg/Save_eq_icon_nb.png" id="20_1near"]
+[ext_resource type="Texture2D" uid="uid://c0817jfw21vag" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_tiny_red.png" id="20_fb1da"]
+[ext_resource type="Texture2D" uid="uid://doow31xkd1ky4" path="res://GrimDays/assets/visuals/ui/UI MMORPG Dark Templar/Game Menu/Buttons/Button Normal.png" id="20_l52i0"]
+[ext_resource type="Texture2D" uid="uid://cf44dmwasjcph" path="res://GrimDays/assets/visuals/ui/UI MMORPG Dark Templar/Game Menu/Buttons/Button Hover.png" id="21_ejews"]
+[ext_resource type="FontFile" uid="uid://dve7mgsjik4dg" path="res://addons/phantom_camera/fonts/Nunito-Regular.ttf" id="22_yhuao"]
+[ext_resource type="Texture2D" uid="uid://bpkifborkk52t" path="res://GrimDays/assets/visuals/ui/UI MMORPG Dark Templar/Game Menu/Party Frame.png" id="23_6a5xg"]
+
+[sub_resource type="FontVariation" id="FontVariation_l7tng"]
+base_font = ExtResource("2_femnp")
+baseline_offset = 0.16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kh0q7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35mmh"]
+texture = ExtResource("19_pqtq1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glw3c"]
+texture = ExtResource("20_fb1da")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_femnp"]
+texture = ExtResource("20_fb1da")
+modulate_color = Color(0.82, 0.492, 0.492, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ueh8"]
+texture = ExtResource("19_pqtq1")
+modulate_color = Color(0.35906908, 0.35906908, 0.35906908, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuyfp"]
+texture = ExtResource("18_8ket1")
+
+[sub_resource type="FontVariation" id="FontVariation_o2iy2"]
+base_font = ExtResource("16_3wmwn")
+variation_embolden = 0.54
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apply_normal"]
+texture = ExtResource("20_l52i0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apply_hover"]
+texture = ExtResource("21_ejews")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ejews"]
+texture = ExtResource("20_l52i0")
+expand_margin_bottom = 6.0
+modulate_color = Color(0.4, 0.4, 0.4, 0.7)
+
+[sub_resource type="FontVariation" id="FontVariation_xrvvp"]
+base_font = ExtResource("16_3wmwn")
+variation_embolden = 0.54
+
+[sub_resource type="FontVariation" id="FontVariation_4pt2x"]
+base_font = ExtResource("22_yhuao")
+variation_embolden = 0.54
+
+[node name="Character Management" type="VBoxContainer" unique_id=1771651521]
+offset_left = 683.0
+offset_top = 33.0
+offset_right = 1568.0
+offset_bottom = 892.0
+
+[node name="Character Name" type="NinePatchRect" parent="." unique_id=968854969]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture = ExtResource("1_pqtq1")
+
+[node name="Character Name" type="Label" parent="Character Name" unique_id=1174280255]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.1148968, 0.11489681, 0.1148968, 0.3529412)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_l7tng")
+theme_override_font_sizes/font_size = 34
+text = "Celine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Equpment and Stats" type="NinePatchRect" parent="." unique_id=1750869019]
+custom_minimum_size = Vector2(0, 785)
+layout_mode = 2
+texture = ExtResource("5_d2vsn")
+patch_margin_left = 35
+patch_margin_top = 49
+patch_margin_right = 41
+patch_margin_bottom = 34
+
+[node name="Character Silouhette2" type="TextureRect" parent="Equpment and Stats" unique_id=1377414026]
+clip_children = 1
+layout_mode = 0
+offset_left = -102.0
+offset_top = 80.97
+offset_right = 2445.0
+offset_bottom = 3124.97
+scale = Vector2(0.181, 0.181)
+mouse_filter = 2
+texture = ExtResource("7_8ket1")
+stretch_mode = 5
+flip_h = true
+
+[node name="ColorRect" type="ColorRect" parent="Equpment and Stats/Character Silouhette2" unique_id=1724843663]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1148968, 0.11489681, 0.1148968, 1)
+
+[node name="Character Silouhette" type="TextureRect" parent="Equpment and Stats" unique_id=1048785753]
+layout_mode = 0
+offset_left = -102.0
+offset_top = 80.97
+offset_right = 2445.0
+offset_bottom = 3124.97
+scale = Vector2(0.181, 0.181)
+mouse_filter = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="Neck Slot" type="TextureRect" parent="Equpment and Stats/Character Silouhette" unique_id=1757425335]
+layout_mode = 0
+offset_left = 1165.75
+offset_top = 1276.2441
+offset_right = 1421.75
+offset_bottom = 1532.2441
+mouse_filter = 2
+texture = ExtResource("8_pqtq1")
+
+[node name="Frame" type="TextureRect" parent="Equpment and Stats/Character Silouhette/Neck Slot" unique_id=1657128098]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch_mode = 5
+
+[node name="Select" type="Button" parent="Equpment and Stats/Character Silouhette/Neck Slot" unique_id=2011779084]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Left Ring Slot" type="TextureRect" parent="Equpment and Stats/Character Silouhette" unique_id=589121481]
+layout_mode = 0
+offset_left = 1624.31
+offset_top = 1933.7041
+offset_right = 1880.31
+offset_bottom = 2189.704
+mouse_filter = 2
+texture = ExtResource("9_fb1da")
+
+[node name="Frame" type="TextureRect" parent="Equpment and Stats/Character Silouhette/Left Ring Slot" unique_id=921936533]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch_mode = 5
+
+[node name="Select" type="Button" parent="Equpment and Stats/Character Silouhette/Left Ring Slot" unique_id=1467994584]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Right Ring Slot" type="TextureRect" parent="Equpment and Stats/Character Silouhette" unique_id=662123398]
+layout_mode = 0
+offset_left = 740.3308
+offset_top = 1933.7041
+offset_right = 996.3308
+offset_bottom = 2189.704
+mouse_filter = 2
+texture = ExtResource("9_fb1da")
+
+[node name="Frame" type="TextureRect" parent="Equpment and Stats/Character Silouhette/Right Ring Slot" unique_id=910974686]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch_mode = 5
+
+[node name="Select" type="Button" parent="Equpment and Stats/Character Silouhette/Right Ring Slot" unique_id=645435723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Chest Slot" type="TextureRect" parent="Equpment and Stats/Character Silouhette" unique_id=1627559175]
+layout_mode = 0
+offset_left = 1077.3501
+offset_top = 1585.6343
+offset_right = 1333.3501
+offset_bottom = 1841.6343
+scale = Vector2(1.751, 1.751)
+mouse_filter = 2
+texture = ExtResource("10_tckcn")
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="Equpment and Stats/Character Silouhette/Chest Slot" unique_id=1340834639]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch_mode = 5
+
+[node name="Select" type="Button" parent="Equpment and Stats/Character Silouhette/Chest Slot" unique_id=441554098]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Right Hand Slot" type="TextureRect" parent="Equpment and Stats/Character Silouhette" unique_id=1633863555]
+layout_mode = 0
+offset_left = 679.5591
+offset_top = 2248.623
+offset_right = 935.5591
+offset_bottom = 2504.623
+scale = Vector2(1.751, 1.751)
+mouse_filter = 2
+texture = ExtResource("11_abda5")
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="Equpment and Stats/Character Silouhette/Right Hand Slot" unique_id=2078569990]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch_mode = 5
+
+[node name="Select" type="Button" parent="Equpment and Stats/Character Silouhette/Right Hand Slot" unique_id=812268333]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Left Hand Slot" type="TextureRect" parent="Equpment and Stats/Character Silouhette" unique_id=1846990456]
+layout_mode = 0
+offset_left = 1519.3301
+offset_top = 2248.623
+offset_right = 1775.3301
+offset_bottom = 2504.623
+scale = Vector2(1.751, 1.751)
+mouse_filter = 2
+texture = ExtResource("11_abda5")
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="Equpment and Stats/Character Silouhette/Left Hand Slot" unique_id=1403857458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch_mode = 5
+
+[node name="Select" type="Button" parent="Equpment and Stats/Character Silouhette/Left Hand Slot" unique_id=859667461]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Resource Displays" type="VBoxContainer" parent="Equpment and Stats/Character Silouhette" unique_id=1724761628]
+layout_mode = 0
+offset_left = 745.856
+offset_top = 2795.58
+offset_right = 1945.86
+offset_bottom = 3345.58
+theme_override_constants/separation = 50
+
+[node name="Health Display" type="TextureProgressBar" parent="Equpment and Stats/Character Silouhette/Resource Displays" unique_id=1945927672]
+custom_minimum_size = Vector2(1200, 150)
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 40
+stretch_margin_right = 40
+texture_under = ExtResource("12_8ket1")
+texture_over = ExtResource("13_pqtq1")
+texture_progress = ExtResource("14_fb1da")
+
+[node name="MarginContainer" type="MarginContainer" parent="Equpment and Stats/Character Silouhette/Resource Displays/Health Display" unique_id=1913638926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Equpment and Stats/Character Silouhette/Resource Displays/Health Display/MarginContainer" unique_id=104165984]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Health Label" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Health Display/MarginContainer/HBoxContainer" unique_id=1155572669]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "Health:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Current Health" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Health Display/MarginContainer/HBoxContainer" unique_id=1682992751]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health Seperator" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Health Display/MarginContainer/HBoxContainer" unique_id=233716671]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health Max" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Health Display/MarginContainer/HBoxContainer" unique_id=645208104]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mana Display" type="TextureProgressBar" parent="Equpment and Stats/Character Silouhette/Resource Displays" unique_id=821526915]
+custom_minimum_size = Vector2(1200, 150)
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 40
+stretch_margin_right = 40
+texture_under = ExtResource("12_1near")
+texture_over = ExtResource("13_pqtq1")
+texture_progress = ExtResource("17_tckcn")
+
+[node name="MarginContainer" type="MarginContainer" parent="Equpment and Stats/Character Silouhette/Resource Displays/Mana Display" unique_id=441131932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Equpment and Stats/Character Silouhette/Resource Displays/Mana Display/MarginContainer" unique_id=1631410540]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Mana Header" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Mana Display/MarginContainer/HBoxContainer" unique_id=2111220300]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "Mana:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Current Mana" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Mana Display/MarginContainer/HBoxContainer" unique_id=982102663]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mana Seperator" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Mana Display/MarginContainer/HBoxContainer" unique_id=1397372827]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Max Mana" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Mana Display/MarginContainer/HBoxContainer" unique_id=277314313]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Energy Display" type="TextureProgressBar" parent="Equpment and Stats/Character Silouhette/Resource Displays" unique_id=1721921154]
+custom_minimum_size = Vector2(1200, 150)
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 40
+stretch_margin_right = 40
+texture_under = ExtResource("12_1near")
+texture_over = ExtResource("13_pqtq1")
+texture_progress = ExtResource("17_tckcn")
+tint_progress = Color(0.36666667, 1, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Equpment and Stats/Character Silouhette/Resource Displays/Energy Display" unique_id=2060895683]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Equpment and Stats/Character Silouhette/Resource Displays/Energy Display/MarginContainer" unique_id=327793200]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Energy Header" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Energy Display/MarginContainer/HBoxContainer" unique_id=1905583195]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "Energy:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Current Energy" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Energy Display/MarginContainer/HBoxContainer" unique_id=2102766037]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Energy Seperator" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Energy Display/MarginContainer/HBoxContainer" unique_id=121264966]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Energy Max" type="Label" parent="Equpment and Stats/Character Silouhette/Resource Displays/Energy Display/MarginContainer/HBoxContainer" unique_id=1830832143]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.16565639, 0.16565642, 0.16565639, 0.654902)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("14_cddxr")
+theme_override_font_sizes/font_size = 65
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hands Slot" type="TextureRect" parent="Equpment and Stats/Character Silouhette" unique_id=959830629]
+layout_mode = 0
+offset_left = 1640.884
+offset_top = 1591.1603
+offset_right = 1896.884
+offset_bottom = 1847.1603
+mouse_filter = 2
+texture = ExtResource("15_wnxgw")
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="Equpment and Stats/Character Silouhette/Hands Slot" unique_id=1602574656]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Select" type="Button" parent="Equpment and Stats/Character Silouhette/Hands Slot" unique_id=697202958]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Attribute and Combat Stats Tab" type="TabContainer" parent="Equpment and Stats" unique_id=2024410454]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 70.77
+offset_right = 862.0
+offset_bottom = 726.97003
+theme_override_constants/tab_separation = 178
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kh0q7")
+theme_override_styles/tab_unselected = SubResource("StyleBoxTexture_35mmh")
+theme_override_styles/tab_hovered = SubResource("StyleBoxTexture_glw3c")
+theme_override_styles/tab_selected = SubResource("StyleBoxTexture_femnp")
+theme_override_styles/tab_disabled = SubResource("StyleBoxTexture_0ueh8")
+theme_override_styles/tab_focus = SubResource("StyleBoxTexture_uuyfp")
+tab_alignment = 1
+current_tab = 0
+tabs_position = 1
+tab_0/icon = ExtResource("19_abda5")
+tab_1/icon = ExtResource("20_1near")
+
+[node name="Attributes" type="MarginContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab" unique_id=85269260]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = ""
+
+[node name="Attributes" type="VBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes" unique_id=1459790535]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="Spacer3" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=634144765]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="Level Info" type="NinePatchRect" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=1435262991]
+clip_children = 1
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Level Progress" type="TextureProgressBar" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info" unique_id=831254710]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.5
+offset_top = -30.0
+offset_right = 442.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+nine_patch_stretch = true
+tint_progress = Color(0.9688429, 0, 0.45575982, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info/Level Progress" unique_id=486796837]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+
+[node name="Level Progress Labels" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info/Level Progress/MarginContainer" unique_id=483394640]
+layout_mode = 2
+alignment = 1
+
+[node name="Level Header" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info/Level Progress/MarginContainer/Level Progress Labels" unique_id=1849986112]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.06, 0.06, 0.06, 0.53333336)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_uuyfp")
+theme_override_font_sizes/font_size = 33
+text = "Level "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info/Level Progress/MarginContainer/Level Progress Labels" unique_id=2039606360]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.06, 0.06, 0.06, 0.53333336)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_uuyfp")
+theme_override_font_sizes/font_size = 33
+text = "3:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Current Amount" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info/Level Progress/MarginContainer/Level Progress Labels" unique_id=1482011090]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.06, 0.06, 0.06, 0.53333336)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_uuyfp")
+theme_override_font_sizes/font_size = 33
+text = " 0 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Divider" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info/Level Progress/MarginContainer/Level Progress Labels" unique_id=436422487]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.06, 0.06, 0.06, 0.53333336)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_uuyfp")
+theme_override_font_sizes/font_size = 33
+text = " / "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Amount Needed" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Level Info/Level Progress/MarginContainer/Level Progress Labels" unique_id=177460444]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.06, 0.06, 0.06, 0.53333336)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_uuyfp")
+theme_override_font_sizes/font_size = 33
+text = " 2,500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=624619324]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="Strength" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=191066996]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Strength Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Strength" unique_id=226125916]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Strength"
+vertical_alignment = 1
+
+[node name="Strength Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Strength" unique_id=1556825713]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(PHYSICAL DAMAGE + WEIGHT LIMIT)"
+vertical_alignment = 1
+
+[node name="Strength SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Strength" unique_id=80186146]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Vitality" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=1989973637]
+layout_mode = 2
+alignment = 1
+
+[node name="Vitality" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Vitality" unique_id=2098944148]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Vitality"
+vertical_alignment = 1
+
+[node name="Vitality2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Vitality" unique_id=1406031423]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(Health + Energy + WEIGHT LIMIT)"
+vertical_alignment = 1
+
+[node name="Vitality SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Vitality" unique_id=177938690]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Finesse" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=531605894]
+layout_mode = 2
+alignment = 1
+
+[node name="Finesse Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Finesse" unique_id=144076564]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Finesse"
+vertical_alignment = 1
+
+[node name="Finesse Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Finesse" unique_id=968282827]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(Swiftness + Evasion)"
+vertical_alignment = 1
+
+[node name="Finesse SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Finesse" unique_id=1555774689]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Perception" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=1368294997]
+layout_mode = 2
+alignment = 1
+
+[node name="Perception Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Perception" unique_id=1730652886]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Perception"
+vertical_alignment = 1
+
+[node name="Perception Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Perception" unique_id=749441490]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(ACCURACY)"
+vertical_alignment = 1
+
+[node name="Perception SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Perception" unique_id=1531037630]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Endurance" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=136061359]
+layout_mode = 2
+alignment = 1
+
+[node name="Endurance Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Endurance" unique_id=1873188689]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Endurance"
+vertical_alignment = 1
+
+[node name="Endurance Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Endurance" unique_id=1375539601]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(PHYSICAL RESISTANCE + WEIGHT LIMIT)"
+vertical_alignment = 1
+
+[node name="Endurance SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Endurance" unique_id=1200950348]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Willpower" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=1408086206]
+layout_mode = 2
+alignment = 1
+
+[node name="Willpower Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Willpower" unique_id=1073463234]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Willpower"
+vertical_alignment = 1
+
+[node name="Willpower Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Willpower" unique_id=2027816979]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(MAGIC RESISTANCE)"
+vertical_alignment = 1
+
+[node name="Willpower SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Willpower" unique_id=1596628324]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Mysticism" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=108027776]
+layout_mode = 2
+alignment = 1
+
+[node name="Mysticism Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Mysticism" unique_id=2027656006]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Mysticism"
+vertical_alignment = 1
+
+[node name="Mysticism Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Mysticism" unique_id=735760607]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(MAGIC DAMAGE + MANA)"
+vertical_alignment = 1
+
+[node name="Mysticism SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Mysticism" unique_id=1110171667]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Luck" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=351168798]
+layout_mode = 2
+alignment = 1
+
+[node name="Luck Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Luck" unique_id=1904007948]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Luck"
+vertical_alignment = 1
+
+[node name="Luck Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Luck" unique_id=154828987]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(CRITICAL CHANCE + LUCKY EVASION)"
+vertical_alignment = 1
+
+[node name="Luck SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Luck" unique_id=1843451945]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Charisma" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=1349820029]
+layout_mode = 2
+alignment = 1
+
+[node name="Charisma Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Charisma" unique_id=1564016905]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Charisma"
+vertical_alignment = 1
+
+[node name="Charisma Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Charisma" unique_id=260423979]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(CRITICAL CHANCE + LUCKY EVASION)"
+vertical_alignment = 1
+
+[node name="Charisma SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Charisma" unique_id=1640695218]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Barter" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=215408506]
+layout_mode = 2
+alignment = 1
+
+[node name="Barter Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Barter" unique_id=627785443]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Barter"
+vertical_alignment = 1
+
+[node name="Barter Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Barter" unique_id=1065539852]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(CRITICAL CHANCE + LUCKY EVASION)"
+vertical_alignment = 1
+
+[node name="Barter SpinBox" type="SpinBox" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Barter" unique_id=926245944]
+layout_mode = 2
+theme_override_icons/up = ExtResource("17_4yx7p")
+theme_override_icons/down = ExtResource("18_xrvvp")
+theme_override_icons/down_disabled = ExtResource("19_4pt2x")
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+alignment = 1
+
+[node name="Spacer2" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=1212547366]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Spacer2" unique_id=1039623643]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_bottom = 9
+
+[node name="Button" type="Button" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Spacer2/MarginContainer" unique_id=848254597]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_apply_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_apply_hover")
+theme_override_styles/hover = SubResource("StyleBoxTexture_apply_hover")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ejews")
+disabled = true
+
+[node name="Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Spacer2/MarginContainer/Button" unique_id=2070948569]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.73333335)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("4_uuyfp")
+theme_override_font_sizes/font_size = 29
+text = "Apply"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Luck2" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=309110599]
+layout_mode = 2
+alignment = 1
+
+[node name="Luck Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Luck2" unique_id=51210589]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Combat points"
+vertical_alignment = 1
+
+[node name="Luck Label3" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Luck2" unique_id=577825275]
+custom_minimum_size = Vector2(88, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Luck Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/Luck2" unique_id=851378810]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(CRITICAL CHANCE + LUCKY EVASION)"
+vertical_alignment = 1
+
+[node name="NonCombatPoints" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes" unique_id=1089490308]
+layout_mode = 2
+alignment = 1
+
+[node name="Luck Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/NonCombatPoints" unique_id=517649786]
+custom_minimum_size = Vector2(485, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "Non-combat points"
+vertical_alignment = 1
+
+[node name="Luck Label3" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/NonCombatPoints" unique_id=745199839]
+custom_minimum_size = Vector2(88, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Luck Label2" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Attributes/Attributes/NonCombatPoints" unique_id=270682917]
+visible = false
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_o2iy2")
+theme_override_font_sizes/font_size = 24
+text = "(CRITICAL CHANCE + LUCKY EVASION)"
+vertical_alignment = 1
+
+[node name="Combat Stats" type="MarginContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab" unique_id=1711209196]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = ""
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats" unique_id=837835502]
+custom_minimum_size = Vector2(0, 1.8)
+custom_maximum_size = Vector2(-1, 550)
+layout_mode = 2
+
+[node name="Combat Stats" type="VBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer" unique_id=1035279567]
+custom_minimum_size = Vector2(600, 644.455)
+layout_mode = 2
+
+[node name="Spacer" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=832154973]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Health" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1369933919]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Health Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Health" unique_id=199670862]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Health"
+vertical_alignment = 1
+
+[node name="Health Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Health" unique_id=1282281538]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Energy" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1371040013]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Energy Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Energy" unique_id=1124216910]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Energy"
+vertical_alignment = 1
+
+[node name="Energy Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Energy" unique_id=1010289898]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Mana" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1683084540]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Mana Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Mana" unique_id=852842803]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Mana"
+vertical_alignment = 1
+
+[node name="Mana Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Mana" unique_id=2009977062]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Lucidity" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1267824803]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Lucidity Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Lucidity" unique_id=258515807]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Lucidity"
+vertical_alignment = 1
+
+[node name="Lucidity Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Lucidity" unique_id=616238999]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Physical Damage" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1666236278]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Physical Damage Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Physical Damage" unique_id=736899095]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Physical Damage"
+vertical_alignment = 1
+
+[node name="Physical Damage Base Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Physical Damage" unique_id=1550577305]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Magical Damage" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1618189922]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Magical Damage Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Magical Damage" unique_id=1191261088]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Magic Damage"
+vertical_alignment = 1
+
+[node name="Magical Damage Base Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Magical Damage" unique_id=65704975]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Physical Armor" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1038155689]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Armor Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Physical Armor" unique_id=1281831360]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Physical Resistance"
+vertical_alignment = 1
+
+[node name="Armor Base Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Physical Armor" unique_id=2031346150]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "10%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Magic Armor" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=569666333]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Armor Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Magic Armor" unique_id=830521216]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Magic Resistance"
+vertical_alignment = 1
+
+[node name="Armor Base Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Magic Armor" unique_id=1504734806]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "5%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Swiftness" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1534765843]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Swiftness Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Swiftness" unique_id=673516947]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Swiftness"
+vertical_alignment = 1
+
+[node name="Swiftness Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Swiftness" unique_id=391546116]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Weight Limit" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=334772409]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Weight Limit Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Weight Limit" unique_id=321453869]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "WEIGHT LIMIT"
+vertical_alignment = 1
+
+[node name="Weight Limit Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Weight Limit" unique_id=69035474]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Speed" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=168925675]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Speed Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Speed" unique_id=63132498]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Speed"
+vertical_alignment = 1
+
+[node name="Speed Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Speed" unique_id=200605469]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "95"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Accuracy" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=606392016]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Accuracy Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Accuracy" unique_id=1623309191]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Accuracy"
+vertical_alignment = 1
+
+[node name="Accuracy Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Accuracy" unique_id=1777359005]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "90%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Evasion" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=1263564735]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Evasion Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Evasion" unique_id=1268555111]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "EVASION"
+vertical_alignment = 1
+
+[node name="Evasion Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Evasion" unique_id=1709833993]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "5%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Lucky Evasion" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=276894075]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Lucky Evasion Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Lucky Evasion" unique_id=893765763]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Lucky Evasion"
+vertical_alignment = 1
+
+[node name="Lucky Evasion Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Lucky Evasion" unique_id=1231928662]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "1%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Critical Chance" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=294973272]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Critical Chance Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Critical Chance" unique_id=1936398636]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Critical Chance"
+vertical_alignment = 1
+
+[node name="Critical Chance Base Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Critical Chance" unique_id=906287544]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "5%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Encumberance" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=858065483]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Encumberance Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Encumberance" unique_id=622996257]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Encumberance"
+vertical_alignment = 1
+
+[node name="Encumberance Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Encumberance" unique_id=1483271121]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "10%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Damage Modifier" type="HBoxContainer" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats" unique_id=486772624]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="Damage Modifier Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Damage Modifier" unique_id=761503663]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_xrvvp")
+theme_override_font_sizes/font_size = 24
+text = "Damage Modifier"
+vertical_alignment = 1
+
+[node name="Damage Modifier Amount Label" type="Label" parent="Equpment and Stats/Attribute and Combat Stats Tab/Combat Stats/ScrollContainer/Combat Stats/Damage Modifier" unique_id=1687301168]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.18717614, 0.18717614, 0.18717614, 0.45882353)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_4pt2x")
+theme_override_font_sizes/font_size = 24
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Frame" type="NinePatchRect" parent="Equpment and Stats" unique_id=1124969942]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_6a5xg")
+draw_center = false
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24

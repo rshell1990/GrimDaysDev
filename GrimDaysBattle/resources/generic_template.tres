@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ResourceTemplate" format=3 uid="uid://h5ay3upraljr"]
+
+[ext_resource type="Script" uid="uid://bup0bvcxl7pfq" path="res://GrimDaysBattle/scripts/_Global/_resource_template.gd" id="1_6r2dl"]
+
+[resource]
+script = ExtResource("1_6r2dl")
+id = &""
+metadata/_custom_type_script = "uid://bup0bvcxl7pfq"

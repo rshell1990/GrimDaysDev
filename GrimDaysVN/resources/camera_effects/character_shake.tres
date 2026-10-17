@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CameraFX" format=3 uid="uid://don41eqnikhfb"]
+
+[ext_resource type="PackedScene" uid="uid://ckk6gdfqbguq8" path="res://GrimDaysVN/scenes/camera/camera_character_shake.tscn" id="1_k88ah"]
+[ext_resource type="Script" uid="uid://2krb5cq0fhk1" path="res://GrimDaysVN/scripts/camera/resources/camera_effect.gd" id="2_pvm00"]
+
+[resource]
+script = ExtResource("2_pvm00")
+called = "CharacterShake"
+resource = ExtResource("1_k88ah")
+metadata/_custom_type_script = "uid://2krb5cq0fhk1"

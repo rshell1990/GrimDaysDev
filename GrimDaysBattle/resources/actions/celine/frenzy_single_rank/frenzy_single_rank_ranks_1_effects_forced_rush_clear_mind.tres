@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EffectFixStatTemplate" format=3 uid="uid://bpf1xy3x8cv8"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_8e8tq"]
+[ext_resource type="Script" uid="uid://2wimkhgegknu" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_fix_stat.gd" id="7_lock"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_fix_stat.tscn" id="runtime_scene"]
+
+[resource]
+script = ExtResource("7_lock")
+capture_current = true
+stat = 240
+duration = 2
+lifetime = 1
+description = "Lucidity remains fixed at x."
+template_scene = ExtResource("runtime_scene")
+duration_by_rank = PackedInt32Array(2, 2, 3, 3, 4)
+id = &"frenzy_clear_mind"

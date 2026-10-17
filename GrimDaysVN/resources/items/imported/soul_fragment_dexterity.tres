@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VNItemTemplate" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/crafting/resources/item_template.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = &"soul_fragment_dexterity"
+display_name = "Soul Fragment of Dexterity"
+description = "Soul Fragment of Dexterity. Increases Finesse by 1 for three rounds."
+category = 4
+max_stack = 99
+cash_value = 100
+battle_stats = {}
+use_effects = Array[Dictionary]([{"kind": "buff", "stat": 30, "amount": 1, "target": 0}])

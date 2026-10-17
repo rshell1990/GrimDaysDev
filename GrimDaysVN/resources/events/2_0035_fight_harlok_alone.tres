@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GameEventBattle" format=3 uid="uid://80wr2iniofoi"]
+
+[ext_resource type="Script" uid="uid://cxh6j10sq05pt" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/battle_event.gd" id="1_event"]
+[ext_resource type="Script" uid="uid://csgy6f372s12y" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/action.gd" id="2_eyon0"]
+[ext_resource type="Script" uid="uid://bjm8hu372yam1" path="res://GrimDaysBattle/scripts/Unit/Resources/unit_template.gd" id="2_unit"]
+[ext_resource type="Resource" uid="uid://bmechhvsr0ky8" path="res://GrimDaysBattle/resources/units/harlok/harlok_battle_unit_template.tres" id="3_harlok"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/2_0030_attempt_chores.tres" id="4_aftermath"]
+[ext_resource type="Script" uid="uid://dmclip8e16yhs" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Requirements/requirement.gd" id="5_fokcq"]
+
+[resource]
+script = ExtResource("1_event")
+foes = Array[ExtResource("2_unit")]([ExtResource("3_harlok")])
+finished_event = ExtResource("4_aftermath")
+require_victory = true
+battle_seed = 2035
+id = &"2_0035_fight_harlok_alone"
+only_called = true
+times = Array[int]([0, 1, 2, 3, 4, 5])

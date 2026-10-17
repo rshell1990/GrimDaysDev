@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://c0vtxqf3jxqwr"]
+
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="1_i427f"]
+
+[resource]
+script = ExtResource("1_i427f")
+influenced_by = 110
+type = 300
+id = &"Level"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

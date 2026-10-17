@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EffectScalingCombatStatChangeTemplate" format=3 uid="uid://do2q8tss5ro2u"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_k7tvy"]
+[ext_resource type="Script" uid="uid://cqciwrhufos0l" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="2_mgjj8"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="3_mgjj8"]
+
+[resource]
+script = ExtResource("2_mgjj8")
+scales_from_sender = true
+scales_with_damage = true
+scales_with = 310
+scales_by = -0.7
+scales_by_by_rank = PackedFloat64Array(-0.7, -0.725, -0.75, -0.775, -0.8)
+stat = 210
+target = 3
+kind = 300
+damage_type = 100
+trigger = 200
+template_scene = ExtResource("3_mgjj8")
+id = &"quick_jab_single_rank_ranks_1_effects_damage"
+metadata/_custom_type_script = "uid://cqciwrhufos0l"

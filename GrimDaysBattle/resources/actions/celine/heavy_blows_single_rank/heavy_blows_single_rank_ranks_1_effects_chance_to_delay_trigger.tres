@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EffectTriggerAnotherEffect" format=3 uid="uid://cels53xag6jnr"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_rwonv"]
+[ext_resource type="Script" uid="uid://kt67j6wvubc8" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_another_effect.gd" id="2_5j2ps"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_chain.tscn" id="3_cxfha"]
+[ext_resource type="Resource" uid="uid://cvgdxai5fuvwa" path="res://GrimDaysBattle/resources/actions/celine/heavy_blows_single_rank/heavy_blows_single_rank_ranks_1_effects_chance_to_delay_trigger_delay_effect.tres" id="4_5j2ps"]
+
+[resource]
+script = ExtResource("2_5j2ps")
+chance = 20
+chance_by_rank = PackedInt32Array(20, 25, 30, 35, 40)
+triggers = Array[ExtResource("1_rwonv")]([ExtResource("4_5j2ps")])
+target = 3
+kind = 200
+tag = 0
+trigger = 200
+template_scene = ExtResource("3_cxfha")
+id = &"heavy_blows_single_rank_ranks_1_effects_chance_to_delay_trigger"
+metadata/_custom_type_script = "uid://kt67j6wvubc8"

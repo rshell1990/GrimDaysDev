@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UnitWeightLimitTemplate" format=3 uid="uid://dygv6uomlj2au"]
+
+[ext_resource type="Curve" uid="uid://ejt6wgpu1m53" path="res://GrimDaysBattle/resources/units/sister_katherine/stats/calculated/weight_limit_per_averaged_stat_point.tres" id="1_h1txg"]
+[ext_resource type="Script" uid="uid://dn88ehce7ab6k" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_weight_limit_template.gd" id="2_xjciq"]
+
+[resource]
+script = ExtResource("2_xjciq")
+influenced_by = Array[int]([10, 20, 50])
+growth_curve = ExtResource("1_h1txg")
+type = 372
+id = &"WeightLimit"

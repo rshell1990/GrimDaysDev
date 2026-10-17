@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c6c8eqox644kr"]
+
+[ext_resource type="Texture2D" uid="uid://c2rxnfxlfeiwx" path="res://editor_only_debug/visuals/placeholder/tyrus-battle-skin-placeholder.png" id="1_1cym6"]
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/_scripts/battle/unit/unit_2d_sprite.gd" id="2_dqdio"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="2_i27q7"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="3_dqdio"]
+
+[node name="tyrus_battle" type="Sprite2D" node_paths=PackedStringArray("collision_area", "raycaster")]
+position = Vector2(43, 41)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_1cym6")
+flip_h = true
+script = ExtResource("2_dqdio")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+
+[node name="8_way_raycasts" parent="." instance=ExtResource("2_i27q7")]
+position = Vector2(-136.667, -136.667)
+
+[node name="Appearance Area" parent="." instance=ExtResource("3_dqdio")]
+position = Vector2(-146.667, -156.667)

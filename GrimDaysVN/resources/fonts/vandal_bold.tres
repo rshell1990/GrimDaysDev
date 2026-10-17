@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://um62ob08oor8"]
+
+[ext_resource type="FontFile" uid="uid://d1y2wojompt33" path="res://GrimDays/fonts/Vandal-4735418/Vandal.ttf" id="1_yn338"]
+
+[resource]
+base_font = ExtResource("1_yn338")
+variation_embolden = 0.5
+baseline_offset = 0.075

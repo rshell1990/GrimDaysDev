@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://chbfyfb3xtv3n"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_sbdgw"]
+[ext_resource type="Texture2D" uid="uid://cgk6nvumucqn" path="res://editor_only_debug/visuals/skill_icons/Assassinskill_23_nobg.png" id="2_wajh4"]
+[ext_resource type="Resource" uid="uid://lhkd4scp8pyr" path="res://GrimDaysBattle/resources/actions/celine/twist_the_blade_single_rank/twist_the_blade_single_rank_ranks.tres" id="3_fjvvb"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="4_6h82c"]
+
+[resource]
+script = ExtResource("4_6h82c")
+display_name = "Twist the Blade"
+description = "Slash and stab are now followed by an additional strike that deals more critical damage than normal."
+icon = ExtResource("2_wajh4")
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("3_fjvvb")
+id = &"twist_the_blade_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

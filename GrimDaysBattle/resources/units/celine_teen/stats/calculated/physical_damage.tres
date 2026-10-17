@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://cbq1vs3iy5yb2"]
+
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="1_5xfud"]
+[ext_resource type="Curve" uid="uid://bnfje2ynj5p1w" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/physical_damage_per_point_in_strength.tres" id="1_ohqhm"]
+
+[resource]
+script = ExtResource("1_5xfud")
+influenced_by = 10
+growth_curve = ExtResource("1_ohqhm")
+type = 310
+id = &"PhysicalDamage"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

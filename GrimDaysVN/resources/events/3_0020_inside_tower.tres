@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameEventSequence" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
+[ext_resource type="Resource" path="res://GrimDaysVN/dialogic/scripts/3_0020_moka_enters_hamun_arena_tournament.dtl" id="2_timeline"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/3_0030_krill_uncovers_missing_women_ledger.tres" id="3_next"]
+
+[resource]
+script = ExtResource("1_sequence")
+id = &"3_0020_inside_tower"
+only_called = true
+blocks_swap = true
+timeline = ExtResource("2_timeline")
+finishing_timeline = ExtResource("2_timeline")
+finished_event = ExtResource("3_next")

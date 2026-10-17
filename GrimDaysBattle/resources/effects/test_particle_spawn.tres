@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EffectSpawnParticlesTemplate" format=3 uid="uid://doa04g3qgj1x7"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_f5diw"]
+[ext_resource type="Script" uid="uid://cggxpenktpuwf" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_spawn_particles.gd" id="2_bqns4"]
+
+[resource]
+script = ExtResource("2_bqns4")
+metadata/_custom_type_script = "uid://cggxpenktpuwf"

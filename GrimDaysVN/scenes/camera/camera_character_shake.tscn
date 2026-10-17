@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckk6gdfqbguq8"]
+
+[ext_resource type="Script" uid="uid://dr4tlownrwabf" path="res://GrimDaysVN/scripts/camera/camera_effect_character_shake.gd" id="1_31s36"]
+
+[node name="CameraCharacterShake" type="Node" unique_id=353208967]
+script = ExtResource("1_31s36")

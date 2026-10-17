@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://de4rs7uw7b4hi"]
+
+[ext_resource type="Resource" uid="uid://rqag3d563ijd" path="res://GrimDaysBattle/resources/actions/celine/quick_jab_single_rank/quick_jab_single_rank.tres" id="1_hllr7"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="1_ll078"]
+[ext_resource type="Texture2D" uid="uid://diek4ywdo6a66" path="res://editor_only_debug/visuals/skill_icons/Skill_MeleeFistHit_nb.png" id="1_sghds"]
+
+[resource]
+script = ExtResource("1_ll078")
+action = ExtResource("1_hllr7")
+id = &"quick_jab_node"
+display_name = "Quick Jab"
+icon = ExtResource("1_sghds")
+description = "Add a light jab to your straight punch, attacking an additional time."
+row = 2
+maximum_rank = 5
+previous_node = &"straight_punch_node"
+composite = true
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

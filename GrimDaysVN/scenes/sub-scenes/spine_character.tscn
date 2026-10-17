@@ -1,0 +1,281 @@
+[gd_scene format=3 uid="uid://b6j3i1vt5ckwh"]
+
+[ext_resource type="Script" uid="uid://dxg7ljdus8gry" path="res://GrimDaysVN/scripts/spine_characters/character_base_operator.gd" id="1_3ot15"]
+[ext_resource type="Script" uid="uid://5btu4jneopqq" path="res://GrimDaysVN/scripts/spine_characters/character_walk_to_point.gd" id="3_l2mfc"]
+[ext_resource type="Script" uid="uid://d1b6tpnye2i5d" path="res://GrimDaysVN/scripts/spine_characters/character_transfer_layers.gd" id="4_kgnib"]
+[ext_resource type="Script" uid="uid://dflpl35kr2d1e" path="res://GrimDaysVN/scripts/spine_characters/character_run_to_point.gd" id="4_l5ree"]
+[ext_resource type="Script" uid="uid://5id0ulnv0rt3" path="res://GrimDaysVN/scripts/spine_characters/character_place_on_screen.gd" id="5_2w3bl"]
+[ext_resource type="Script" uid="uid://b0atgv71qatv6" path="res://GrimDaysVN/scripts/spine_characters/character_operator_collisions.gd" id="7_av0tn"]
+
+[sub_resource type="Animation" id="Animation_1exu4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material_override:shader_parameter/alpha_visiblility")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material_override:next_pass:shader_parameter/line_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:material_override:shader_parameter/line_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wom8y"]
+resource_name = "flip_back"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.2, 0.3),
+"transitions": PackedFloat32Array(0.210224, 0.99999946, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_frdlr"]
+resource_name = "flip_back_old"
+length = 0.15
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.09, 0.13, 0.15),
+"transitions": PackedFloat32Array(0.210224, 1.8025, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 2.31932, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 0.07, 0.1, 0.12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_radql"]
+resource_name = "flip_forward"
+length = 0.4
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.085, 0.27, 0.4),
+"transitions": PackedFloat32Array(0.210224, 0.210224, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material_override:shader_parameter/alpha_visiblility")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.085, 0.13, 0.211834, 0.23845, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material_override:next_pass:shader_parameter/line_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.085, 0.13, 0.207844, 0.23),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material_override:shader_parameter/line_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.085, 0.13, 0.207844, 0.23),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b0o7o"]
+_data = {
+&"RESET": SubResource("Animation_1exu4"),
+&"flip_back": SubResource("Animation_wom8y"),
+&"flip_back_old": SubResource("Animation_frdlr"),
+&"flip_forward": SubResource("Animation_radql")
+}
+
+[sub_resource type="GDScript" id="GDScript_t4wwe"]
+resource_name = "character_sprite_kneel"
+script/source = "extends Node
+signal moving()
+signal stopped()
+var character:CharacterOperator
+
+func _ready():
+	character = get_parent().get_parent()
+	character.listen_for(moving, character.set_moving)
+	character.listen_for(stopped, character.set_stopped)
+
+func execute(data:Dictionary) -> void:
+	moving.emit()
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	await tween.tween_property(character, \"position:y\", data.target_x * -1.0, AnimationTimes.LONG).finished
+	stopped.emit()
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n4qqy"]
+size = Vector3(250, 850, 10)
+
+[node name="Character" type="Sprite3D" unique_id=2131304916 node_paths=PackedStringArray("outer_view", "animation_player", "movement_holder", "collision_area")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+lod_bias = 0.001
+pixel_size = 0.7
+alpha_scissor_threshold = 0.207
+alpha_hash_scale = 0.95
+alpha_antialiasing_edge = 0.61
+texture_filter = 5
+script = ExtResource("1_3ot15")
+outer_view = NodePath("Outer view")
+animation_player = NodePath("Animator")
+movement_holder = NodePath("Movement Handlers")
+collision_area = NodePath("Collision Area")
+metadata/_custom_type_script = "uid://dxg7ljdus8gry"
+
+[node name="Outer view" type="SubViewport" parent="." unique_id=1289785791]
+transparent_bg = true
+size = Vector2i(821, 1408)
+
+[node name="Animator" type="AnimationPlayer" parent="." unique_id=1644575225]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_b0o7o")
+speed_scale = 0.33
+
+[node name="Movement Handlers" type="Node" parent="." unique_id=48872472]
+
+[node name="Walk" type="Node" parent="Movement Handlers" unique_id=1824540344]
+unique_name_in_owner = true
+script = ExtResource("3_l2mfc")
+
+[node name="Run" type="Node" parent="Movement Handlers" unique_id=641081979]
+unique_name_in_owner = true
+script = ExtResource("4_l5ree")
+
+[node name="Transfer" type="Node" parent="Movement Handlers" unique_id=438939908]
+unique_name_in_owner = true
+script = ExtResource("4_kgnib")
+
+[node name="Place" type="Node" parent="Movement Handlers" unique_id=81948864]
+unique_name_in_owner = true
+script = ExtResource("5_2w3bl")
+
+[node name="Kneel" type="Node" parent="Movement Handlers" unique_id=1670250082]
+unique_name_in_owner = true
+script = SubResource("GDScript_t4wwe")
+
+[node name="Collision Area" type="Area3D" parent="." unique_id=1699875391]
+script = ExtResource("7_av0tn")
+
+[node name="Shape" type="CollisionShape3D" parent="Collision Area" unique_id=531575732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.486954, 0, 5)
+shape = SubResource("BoxShape3D_n4qqy")
+
+[connection signal="area_entered" from="Collision Area" to="Collision Area" method="_on_collision_entered"]
+[connection signal="area_exited" from="Collision Area" to="Collision Area" method="_on_collision_exited"]

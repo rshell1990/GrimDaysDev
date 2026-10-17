@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://d3caa6p42wl0y"]
+
+[ext_resource type="Texture2D" uid="uid://bq03etvax2kbo" path="res://editor_only_debug/visuals/placeholder/visna-placeholder-battle-skin.png" id="1_2pd3r"]
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/_scripts/battle/unit/unit_2d_sprite.gd" id="2_fo8ua"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="2_y5s16"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="3_fo8ua"]
+[ext_resource type="Texture2D" uid="uid://rtxx5mduyeu" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_1.png" id="5_fj00i"]
+[ext_resource type="Texture2D" uid="uid://diknf3sf1drym" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_2.png" id="6_duwwh"]
+[ext_resource type="Texture2D" uid="uid://7q1bohu16nmf" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_3.png" id="7_q2mtt"]
+[ext_resource type="Texture2D" uid="uid://dscaiuthtnm7" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_4.png" id="8_jpdvo"]
+[ext_resource type="Texture2D" uid="uid://s2ifftxlregm" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_5.png" id="9_0dcbb"]
+[ext_resource type="Texture2D" uid="uid://canvr3bkmd52a" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_6.png" id="10_j1jin"]
+[ext_resource type="Texture2D" uid="uid://c2jpefoqx8tt7" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_7.png" id="11_vtkgs"]
+[ext_resource type="Texture2D" uid="uid://cufk0qtuydvjn" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_8.png" id="12_7ftb7"]
+[ext_resource type="Texture2D" uid="uid://bhos5v7puhuyd" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_9.png" id="13_h43t1"]
+[ext_resource type="Texture2D" uid="uid://tlgnpyx04638" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_10.png" id="14_asbjr"]
+[ext_resource type="Texture2D" uid="uid://dbs22dmem7h5r" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_11.png" id="15_nrwpk"]
+[ext_resource type="Texture2D" uid="uid://yvetkwnm1c4c" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_12.png" id="16_lw3pa"]
+[ext_resource type="Texture2D" uid="uid://beg102ha36j5c" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_13.png" id="17_s30m4"]
+[ext_resource type="Texture2D" uid="uid://bloxdj6cfr3rn" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_14.png" id="18_hd1xy"]
+[ext_resource type="Texture2D" uid="uid://dbh0b0llun0rc" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_15.png" id="19_kxtdw"]
+[ext_resource type="Texture2D" uid="uid://jv5q7l00ay1b" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_16.png" id="20_00kck"]
+[ext_resource type="Texture2D" uid="uid://byr8t6sp5ekwi" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_17.png" id="21_86lta"]
+[ext_resource type="Texture2D" uid="uid://bkqhbrwbd28rj" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_18.png" id="22_e5p51"]
+[ext_resource type="Texture2D" uid="uid://cuaqomuop6l1r" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect4/effect4_19.png" id="23_pmo60"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1imvl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fj00i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_duwwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q2mtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jpdvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0dcbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j1jin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vtkgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7ftb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h43t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_asbjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nrwpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lw3pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s30m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hd1xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kxtdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_00kck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_86lta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_e5p51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pmo60")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="visna_battle" type="Sprite2D" node_paths=PackedStringArray("collision_area", "raycaster", "attack_particle")]
+position = Vector2(1, 17)
+scale = Vector2(0.241802, 0.250871)
+texture = ExtResource("1_2pd3r")
+script = ExtResource("2_fo8ua")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+attack_particle = NodePath("AttackAnimation")
+
+[node name="Appearance Area" parent="." instance=ExtResource("2_y5s16")]
+position = Vector2(0, -157.447)
+
+[node name="8_way_raycasts" parent="." instance=ExtResource("3_fo8ua")]
+position = Vector2(12.766, -123.404)
+
+[node name="AttackAnimation" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(1920, -50)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_1imvl")
+frame = 20
+frame_progress = 1.0

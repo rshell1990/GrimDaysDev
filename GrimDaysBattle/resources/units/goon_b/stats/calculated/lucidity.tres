@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://cq8pwq3q8esmn"]
+
+[ext_resource type="Curve" uid="uid://cis1mcb4s3hm" path="res://GrimDaysBattle/resources/units/goon_b/stats/calculated/lucidity_per_willpower.tres" id="1_7lbq7"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_8gg6r"]
+
+[resource]
+script = ExtResource("2_8gg6r")
+influenced_by = 60
+growth_curve = ExtResource("1_7lbq7")
+type = 240
+id = &"Lucidity"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

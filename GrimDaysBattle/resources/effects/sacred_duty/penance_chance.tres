@@ -1,0 +1,18 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_another_effect.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_chain.tscn" id="scene"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="effect"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/effects/sacred_duty/penance_bleed.tres" id="bleed"]
+
+[resource]
+script = ExtResource("script")
+id = &"sacred_duty_penance_chance"
+template_scene = ExtResource("scene")
+chance = 15
+chance_by_rank = PackedInt32Array(15, 18, 20, 23, 25)
+target = 3
+kind = 200
+trigger = 200
+triggers = Array[ExtResource("effect")]([ExtResource("bleed")])
+

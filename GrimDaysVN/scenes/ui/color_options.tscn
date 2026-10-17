@@ -1,0 +1,290 @@
+[gd_scene format=3 uid="uid://5v80phmew5t8"]
+
+[ext_resource type="Script" uid="uid://bf6c8wc4xkew7" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/color_settings.gd" id="1_pmtyp"]
+[ext_resource type="PackedScene" uid="uid://c2qks1lm6cvns" path="res://GrimDaysVN/scenes/sub-scenes/swatch_button.tscn" id="2_4gdw2"]
+[ext_resource type="FontVariation" uid="uid://chteovppxif7j" path="res://GrimDaysVN/resources/fonts/elanor_.tres" id="3_x57bo"]
+[ext_resource type="Script" uid="uid://h6rfq00lbj5s" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/line_color.gd" id="4_0fdnm"]
+[ext_resource type="Texture2D" uid="uid://dle8auao1jyxd" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_iconframe_circle_01_nb.png" id="5_btbhr"]
+[ext_resource type="Texture2D" uid="uid://vm44wbt56kcb" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_iconframe_circle_01_nc.png" id="6_hvwm8"]
+[ext_resource type="StyleBox" uid="uid://b06m4eqi07xk6" path="res://GrimDays/imported/Menus/slider.tres" id="7_4uacn"]
+[ext_resource type="StyleBox" uid="uid://sdj1yhp0lljx" path="res://GrimDays/imported/Menus/grabber.tres" id="8_b6rnq"]
+[ext_resource type="StyleBox" uid="uid://dcqwpqmikitwl" path="res://GrimDays/imported/Menus/grabber_highlight.tres" id="9_1a2lk"]
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://GrimDaysVN/resources/fonts/elanor_bold.tres" id="10_fa7lj"]
+[ext_resource type="Script" uid="uid://b5wei88k6odbs" path="res://GrimDaysVN/scripts/ui/scriplets/slider_label.gd" id="11_upug4"]
+[ext_resource type="Script" uid="uid://c5e8ablvqubpj" path="res://GrimDaysVN/scripts/ui/tiertiary_font_operator.gd" id="12_j1w40"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_weqp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o34bi"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.909804, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agyep"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v4me"]
+bg_color = Color(0.703808, 0.703808, 0.703808, 1)
+border_width_top = 1
+border_width_bottom = 1
+
+[node name="GridContainer" type="GridContainer" node_paths=PackedStringArray("normal_accent_preset_container", "normal_text_preset_container", "normal_outline_preset_container", "dark_accent_preset_container", "dark_text_preset_container", "dark_outline_preset_container", "normal_accent_color_picker", "normal_text_color_picker", "normal_outline_color_picker", "dark_accent_color_picker", "dark_text_color_picker", "dark_outline_color_picker", "background_opacity_slider")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -531.0
+offset_top = -252.5
+offset_right = 531.0
+offset_bottom = 252.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/h_separation = 45
+theme_override_constants/v_separation = 10
+script = ExtResource("1_pmtyp")
+normal_accent_preset_container = NodePath("TabContainer/Prime Dimension Colors/Normal Accent Swatches")
+normal_text_preset_container = NodePath("TabContainer/Prime Dimension Colors/Normal Text Swatches")
+normal_outline_preset_container = NodePath("TabContainer/Prime Dimension Colors/Noramal Outline Swatches")
+dark_accent_preset_container = NodePath("TabContainer/Dark Dimension Colors/Dark Accent Swatches")
+dark_text_preset_container = NodePath("TabContainer/Dark Dimension Colors/Dark Text Swatches")
+dark_outline_preset_container = NodePath("TabContainer/Dark Dimension Colors/Dark Outline Swatches")
+normal_accent_color_picker = NodePath("TabContainer/Prime Dimension Colors/Normal Accent Picker")
+normal_text_color_picker = NodePath("TabContainer/Prime Dimension Colors/Normal Text Picker")
+normal_outline_color_picker = NodePath("TabContainer/Prime Dimension Colors/Normal Outline Picker")
+dark_accent_color_picker = NodePath("TabContainer/Dark Dimension Colors/Dark Accent Picker")
+dark_text_color_picker = NodePath("TabContainer/Dark Dimension Colors/Dark Text Picker")
+dark_outline_color_picker = NodePath("TabContainer/Dark Dimension Colors/Dark Outline Picker")
+background_opacity_slider = NodePath("GridContainer/Background Opacity Slider")
+swatch_template = ExtResource("2_4gdw2")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fa7lj")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/panel = SubResource("StyleBoxEmpty_weqp3")
+current_tab = 0
+
+[node name="Prime Dimension Colors" type="GridContainer" parent="TabContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 45
+theme_override_constants/v_separation = 25
+columns = 2
+metadata/_tab_index = 0
+
+[node name="Normal Accent" type="Label" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Accent Color"
+
+[node name="Normal Accent Picker" type="ColorPickerButton" parent="TabContainer/Prime Dimension Colors"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_o34bi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_agyep")
+
+[node name="Normal Accent Presets" type="Label" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Accent Presets"
+
+[node name="Normal Accent Swatches" type="HBoxContainer" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Normal Text" type="Label" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Text Color"
+
+[node name="Normal Text Picker" type="ColorPickerButton" parent="TabContainer/Prime Dimension Colors"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_o34bi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_agyep")
+
+[node name="Normal Text Presets" type="Label" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Text Color Presets"
+
+[node name="Normal Text Swatches" type="HBoxContainer" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Normal Outline" type="Label" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Outline Color"
+
+[node name="Normal Outline Picker" type="ColorPickerButton" parent="TabContainer/Prime Dimension Colors"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_o34bi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_agyep")
+
+[node name="Normal Outline Presets" type="Label" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Outline Color Presets"
+
+[node name="Noramal Outline Swatches" type="HBoxContainer" parent="TabContainer/Prime Dimension Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Dark Dimension Colors" type="GridContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 45
+theme_override_constants/v_separation = 25
+columns = 2
+metadata/_tab_index = 1
+
+[node name="Dark Accent" type="Label" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Accent Color"
+
+[node name="Dark Accent Picker" type="ColorPickerButton" parent="TabContainer/Dark Dimension Colors"]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_o34bi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_agyep")
+
+[node name="Dark Accent Presets" type="Label" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Accent Presets"
+
+[node name="Dark Accent Swatches" type="HBoxContainer" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Dark Text" type="Label" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Text Color"
+
+[node name="Dark Text Picker" type="ColorPickerButton" parent="TabContainer/Dark Dimension Colors"]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_o34bi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_agyep")
+
+[node name="Dark Text Presets" type="Label" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Text Color Presets"
+
+[node name="Dark Text Swatches" type="HBoxContainer" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Dark Outline" type="Label" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Outline Color"
+
+[node name="Dark Outline Picker" type="ColorPickerButton" parent="TabContainer/Dark Dimension Colors"]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_o34bi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_agyep")
+
+[node name="Dark Outline Presets" type="Label" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Outline Color Presets"
+
+[node name="Dark Outline Swatches" type="HBoxContainer" parent="TabContainer/Dark Dimension Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(400, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5v4me")
+script = ExtResource("4_0fdnm")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+theme_override_constants/h_separation = 45
+columns = 2
+
+[node name="Background Opacity" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x57bo")
+theme_override_font_sizes/font_size = 50
+text = "Background Opacity"
+
+[node name="Background Opacity Slider" type="HSlider" parent="GridContainer"]
+custom_minimum_size = Vector2(1024, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_icons/grabber = ExtResource("5_btbhr")
+theme_override_icons/grabber_highlight = ExtResource("6_hvwm8")
+theme_override_styles/slider = ExtResource("7_4uacn")
+theme_override_styles/grabber_area = ExtResource("8_b6rnq")
+theme_override_styles/grabber_area_highlight = ExtResource("9_1a2lk")
+max_value = 1.0
+step = 0.05
+value = 0.85
+
+[node name="Label" type="Label" parent="GridContainer/Background Opacity Slider"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -28.6667
+offset_bottom = 28.6667
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_fa7lj")
+theme_override_font_sizes/font_size = 45
+text = "85%"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_upug4")
+
+[node name="TertiaryFontOperator" type="Control" parent="." node_paths=PackedStringArray("nodes_with_normal_text", "nodes_with_bold_text", "nodes_to_scale_text")]
+layout_mode = 2
+script = ExtResource("12_j1w40")
+nodes_with_normal_text = [NodePath("../TabContainer/Prime Dimension Colors/Normal Accent"), NodePath("../TabContainer/Prime Dimension Colors/Normal Accent Presets"), NodePath("../TabContainer/Prime Dimension Colors/Normal Text"), NodePath("../TabContainer/Prime Dimension Colors/Normal Text Presets"), NodePath("../TabContainer/Prime Dimension Colors/Normal Outline"), NodePath("../TabContainer/Prime Dimension Colors/Normal Outline Presets"), NodePath("../TabContainer/Dark Dimension Colors/Dark Accent"), NodePath("../TabContainer/Dark Dimension Colors/Dark Accent Presets"), NodePath("../TabContainer/Dark Dimension Colors/Dark Text"), NodePath("../TabContainer/Dark Dimension Colors/Dark Text Presets"), NodePath("../TabContainer/Dark Dimension Colors/Dark Outline"), NodePath("../TabContainer/Dark Dimension Colors/Dark Outline Presets"), NodePath("../GridContainer/Background Opacity"), NodePath("../GridContainer/Background Opacity Slider/Label")]
+nodes_with_bold_text = [NodePath("../TabContainer")]
+nodes_to_scale_text = [NodePath("../GridContainer/Background Opacity Slider/Label"), NodePath("../GridContainer/Background Opacity"), NodePath("../TabContainer/Dark Dimension Colors/Dark Outline Presets"), NodePath("../TabContainer/Dark Dimension Colors/Dark Outline"), NodePath("../TabContainer/Dark Dimension Colors/Dark Text Presets"), NodePath("../TabContainer/Dark Dimension Colors/Dark Text"), NodePath("../TabContainer/Dark Dimension Colors/Dark Accent Presets"), NodePath("../TabContainer/Dark Dimension Colors/Dark Accent"), NodePath("../TabContainer/Prime Dimension Colors/Normal Outline Presets"), NodePath("../TabContainer/Prime Dimension Colors/Normal Outline"), NodePath("../TabContainer/Prime Dimension Colors/Normal Text Presets"), NodePath("../TabContainer/Prime Dimension Colors/Normal Text"), NodePath("../TabContainer/Prime Dimension Colors/Normal Accent Presets"), NodePath("../TabContainer/Prime Dimension Colors/Normal Accent"), NodePath("../TabContainer")]
+
+[connection signal="color_changed" from="TabContainer/Prime Dimension Colors/Normal Accent Picker" to="." method="_on_normal_accent_picker_color_changed"]
+[connection signal="color_changed" from="TabContainer/Prime Dimension Colors/Normal Text Picker" to="." method="_on_normal_text_picker_color_changed"]
+[connection signal="color_changed" from="TabContainer/Prime Dimension Colors/Normal Outline Picker" to="." method="_on_normal_outline_picker_color_changed"]
+[connection signal="color_changed" from="TabContainer/Dark Dimension Colors/Dark Accent Picker" to="." method="_on_dark_accent_picker_color_changed"]
+[connection signal="color_changed" from="TabContainer/Dark Dimension Colors/Dark Text Picker" to="." method="_on_dark_text_picker_color_changed"]
+[connection signal="color_changed" from="TabContainer/Dark Dimension Colors/Dark Outline Picker" to="." method="_on_dark_outline_picker_color_changed"]
+[connection signal="drag_ended" from="GridContainer/Background Opacity Slider" to="." method="_on_background_opacity_slider_drag_ended"]

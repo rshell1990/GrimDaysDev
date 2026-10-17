@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" format=3 uid="uid://dwjp3qrqv7o8v"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://b0vvg4c1ohhc6" path="res://GrimDaysBattle/assets/spine/celine/Sprite combat celeste 15yrs editable file.atlas" id="1_wjb7e"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://bupc0cjksme45" path="res://GrimDaysBattle/assets/spine/celine/Sprite combat celeste 15yrs editable file.skel" id="2_apb2b"]
+
+[resource]
+atlas_res = ExtResource("1_wjb7e")
+skeleton_file_res = ExtResource("2_apb2b")

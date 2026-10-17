@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dpcheg56e6j7n"]
+
+[ext_resource type="FontFile" uid="uid://vrrmdx83skor" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Regular.ttf" id="1_jbra2"]
+
+[resource]
+base_font = ExtResource("1_jbra2")
+variation_embolden = 0.2
+spacing_top = 2
+spacing_bottom = 2

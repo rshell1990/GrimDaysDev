@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3 uid="uid://b6tkdv0mysm6t"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_eja1k"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="2_umb62"]
+[ext_resource type="Resource" uid="uid://cf327j4mot6vm" path="res://GrimDaysBattle/resources/actions/celine/dark_urges_single_rank/dark_urges_single_rank_ranks_1_effects_damage_bonus.tres" id="2_xu83o"]
+[ext_resource type="Resource" uid="uid://dtfqf8uxixx7y" path="res://GrimDaysBattle/resources/actions/celine/dark_urges_single_rank/dark_urges_single_rank_ranks_1_effects_lucidity_dot.tres" id="3_uf283"]
+
+[resource]
+script = ExtResource("2_umb62")
+all = Array[ExtResource("1_eja1k")]([ExtResource("2_xu83o"), ExtResource("3_uf283")])
+id = &"dark_urges_single_rank_rank_1_effects"
+metadata/_custom_type_script = "uid://dw0pgj3kb31c6"

@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://dr7acm0cmg4aq"]
+
+[ext_resource type="Script" uid="uid://kx5ktayujw0m" path="res://GrimDaysVN/scripts/ui/history_item.gd" id="1_v5uge"]
+[ext_resource type="Script" uid="uid://b5yq8ak513ovb" path="res://GrimDaysVN/scripts/ui/scriplets/automatically_color_panel.gd" id="2_30kp8"]
+[ext_resource type="Script" uid="uid://crgy1necaxu3u" path="res://GrimDaysVN/scripts/ui/history_item_icon.gd" id="4_eqiri"]
+[ext_resource type="Texture2D" uid="uid://4swoc16msbv7" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_foreground_greyscaled.png" id="4_smo1q"]
+[ext_resource type="FontVariation" uid="uid://bc5ju4sx6055t" path="res://GrimDaysVN/resources/fonts/cassius_.tres" id="5_ab5kf"]
+[ext_resource type="Script" uid="uid://dimobped82n2s" path="res://GrimDaysVN/scripts/ui/primary_font_operator.gd" id="6_gcatn"]
+[ext_resource type="FontFile" uid="uid://q2obmirqjwy1" path="res://GrimDays/fonts/Cassius.ttf" id="7_ss6g1"]
+
+[ext_resource type="Texture2D" uid="uid://dxvxlgiib2oyk" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_background_greyscaled.png" id="migrated_frame_background"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0so27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlq17"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d4rpk"]
+texture = ExtResource("migrated_frame_background")
+texture_margin_left = 46.5651
+texture_margin_top = 47.0
+texture_margin_right = 46.5651
+texture_margin_bottom = 47.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 110, 109.184)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5t5lp"]
+texture = ExtResource("migrated_frame_background")
+texture_margin_left = 46.5651
+texture_margin_top = 47.0
+texture_margin_right = 46.5651
+texture_margin_bottom = 47.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 110, 109.184)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfe6p"]
+texture = ExtResource("4_smo1q")
+texture_margin_left = 50.0
+texture_margin_top = 50.0
+texture_margin_right = 50.0
+texture_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bksd0"]
+texture = ExtResource("migrated_frame_background")
+texture_margin_left = 46.5651
+texture_margin_top = 47.0
+texture_margin_right = 46.5651
+texture_margin_bottom = 47.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 110, 109.184)
+
+[node name="HistoryItem" type="PanelContainer"]
+custom_minimum_size = Vector2(1600, 315)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -121.0
+offset_right = 859.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0so27")
+script = ExtResource("1_v5uge")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rlq17")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 1642.0
+offset_bottom = 292.0
+theme_override_constants/separation = 50
+
+[node name="Panel" type="Panel" parent="Panel/HBoxContainer" node_paths=PackedStringArray("background", "frame")]
+clip_children = 2
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_d4rpk")
+script = ExtResource("2_30kp8")
+background = NodePath(".")
+frame = NodePath("../../Panel")
+
+[node name="Icon" type="TextureRect" parent="Panel/HBoxContainer/Panel"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -269.0
+offset_right = 106.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Icon2" type="TextureRect" parent="Panel/HBoxContainer/Panel" node_paths=PackedStringArray("root")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+offset_left = -219.0
+offset_top = -156.0
+offset_right = 374.0
+offset_bottom = 356.0
+stretch_mode = 5
+script = ExtResource("4_eqiri")
+root = NodePath("../../../..")
+
+[node name="Panel2" type="Panel" parent="Panel/HBoxContainer" node_paths=PackedStringArray("background", "frame")]
+custom_minimum_size = Vector2(1400, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_5t5lp")
+script = ExtResource("2_30kp8")
+background = NodePath(".")
+frame = NodePath("../../Panel4")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextBox" type="RichTextLabel" parent="Panel/HBoxContainer/Panel2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.588235)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_fonts/normal_font = ExtResource("5_ab5kf")
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "Some text, that John Doe said to somebody else.  This is the right action for this box, to determine if there will be problems in the future. "
+fit_content = true
+
+[node name="Panel4" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 84.0
+offset_right = 1653.0
+offset_bottom = 297.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bfe6p")
+
+[node name="Panel2" type="Panel" parent="Panel" node_paths=PackedStringArray("background", "frame")]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 7.0
+offset_right = 862.0
+offset_bottom = 75.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bksd0")
+script = ExtResource("2_30kp8")
+background = NodePath(".")
+frame = NodePath("../Panel3")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="NameLabel" type="Label" parent="Panel/Panel2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.835294)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_ss6g1")
+theme_override_font_sizes/font_size = 45
+text = "John Doe:"
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 11.0
+offset_right = 199.0
+offset_bottom = 301.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bfe6p")
+
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = -1.0
+offset_right = 872.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bfe6p")
+
+[node name="PrimaryFontOperator" type="Control" parent="." node_paths=PackedStringArray("nodes_with_bold_text", "nodes_with_all_text")]
+layout_mode = 2
+script = ExtResource("6_gcatn")
+nodes_with_bold_text = [NodePath("../Panel/Panel2/MarginContainer/NameLabel")]
+nodes_with_all_text = [NodePath("../Panel/HBoxContainer/Panel2/MarginContainer/TextBox")]

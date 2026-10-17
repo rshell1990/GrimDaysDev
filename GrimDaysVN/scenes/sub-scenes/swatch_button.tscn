@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2qks1lm6cvns"]
+
+[ext_resource type="Script" uid="uid://ca34uv5uadgr0" path="res://content/scripts/ui/scriplets/Settings/swatch_button.gd" id="1_opghl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6crwk"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txd5t"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="Swatch" type="Button"]
+custom_minimum_size = Vector2(28, 28)
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6crwk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_txd5t")
+script = ExtResource("1_opghl")

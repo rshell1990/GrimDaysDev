@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EffectDelayTurnTemplate" format=3 uid="uid://cvgdxai5fuvwa"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_srm5l"]
+[ext_resource type="Script" uid="uid://7bmqtnqipb7p" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_delay_turn.gd" id="2_yn0f1"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_delay_turn.tscn" id="3_delay"]
+
+[resource]
+script = ExtResource("2_yn0f1")
+target = 3
+kind = 200
+tag = 0
+always_hits = true
+template_scene = ExtResource("3_delay")
+id = &"heavy_blows_single_rank_ranks_1_effects_chance_to_delay_trigger_delay_effect"
+metadata/_custom_type_script = "uid://7bmqtnqipb7p"

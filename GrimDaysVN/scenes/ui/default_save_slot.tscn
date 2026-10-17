@@ -1,0 +1,319 @@
+[gd_scene format=3 uid="uid://cprkjafaqmelm"]
+
+[ext_resource type="Script" uid="uid://c1xuqnmnjinav" path="res://GrimDaysVN/scripts/ui/scriplets/Save/save_slot.gd" id="1_u4ukl"]
+[ext_resource type="PackedScene" uid="uid://bhsoq7qlornfs" path="res://GrimDaysVN/scenes/root/tooltip_trigger.tscn" id="2_xs8a2"]
+[ext_resource type="Texture2D" uid="uid://cl0sgg0p8uhjt" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Mini Message/Panel.png" id="3_tfq7q"]
+[ext_resource type="Texture2D" uid="uid://bnuo1bbsuulnu" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Game Menu & Pause/Mask Img.png" id="4_m5e7a"]
+[ext_resource type="FontFile" uid="uid://vlu6kitg7y57" path="res://GrimDays/assets/visuals/ui/gui/fonts/gentium.ttf" id="5_tga48"]
+[ext_resource type="StyleBox" uid="uid://cfqu8tj7eb0qr" path="res://GrimDaysVN/resources/gui/grey_back.tres" id="7_jkc3e"]
+[ext_resource type="StyleBox" uid="uid://c1l04gqf55rdi" path="res://GrimDaysVN/resources/gui/red_back.tres" id="8_hlwqe"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="8_turnv"]
+[ext_resource type="Script" uid="uid://pevt0auern8u" path="res://GrimDaysVN/scripts/ui/scriplets/menu_buttons.gd" id="10_vodeb"]
+[ext_resource type="Script" uid="uid://cu24lo1yfy3dx" path="res://GrimDaysVN/scripts/ui/secondary_font_operator.gd" id="14_yq85v"]
+[ext_resource type="Script" uid="uid://c5e8ablvqubpj" path="res://GrimDaysVN/scripts/ui/tiertiary_font_operator.gd" id="15_thnq6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lyp2x"]
+texture = ExtResource("3_tfq7q")
+expand_margin_left = 7.0
+expand_margin_top = 21.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxil4"]
+texture = ExtResource("4_m5e7a")
+
+[node name="Default Save Slot" type="Control" unique_id=516732236 node_paths=PackedStringArray("screenshot_texture", "date_label", "save_name_label", "save_stats_label", "save_button", "load_button", "delete_button", "bg_panel")]
+custom_minimum_size = Vector2(1600, 160)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -80.0
+offset_right = 800.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u4ukl")
+screenshot_texture = NodePath("Background Panel/Save Slot Margins/Save Horizontal Layout/Screenshot Column/MarginContainer/Screenshot Mask/Screenshot")
+date_label = NodePath("Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Date")
+save_name_label = NodePath("Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Name")
+save_stats_label = NodePath("Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Stats")
+save_button = NodePath("Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Save")
+load_button = NodePath("Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Load")
+delete_button = NodePath("Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Delete")
+bg_panel = NodePath("Background Panel")
+
+[node name="Tooltip Trigger" parent="." unique_id=997808032 node_paths=PackedStringArray("triggered_by", "tooltip_info_holder") instance=ExtResource("2_xs8a2")]
+layout_mode = 1
+mouse_filter = 2
+triggered_by = NodePath("../Background Panel")
+tooltip_info_holder = NodePath("..")
+
+[node name="Background Panel" type="Panel" parent="." unique_id=33853331]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 160.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lyp2x")
+
+[node name="Save Slot Margins" type="MarginContainer" parent="Background Panel" unique_id=578098335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 51
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 25
+
+[node name="Save Horizontal Layout" type="HBoxContainer" parent="Background Panel/Save Slot Margins" unique_id=669358251]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="Screenshot Column" type="Control" parent="Background Panel/Save Slot Margins/Save Horizontal Layout" unique_id=324628433]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/Screenshot Column" unique_id=1532548126]
+custom_minimum_size = Vector2(250, 125)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = -50
+theme_override_constants/margin_bottom = 0
+
+[node name="Screenshot Mask" type="Panel" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/Screenshot Column/MarginContainer" unique_id=402504248]
+self_modulate = Color(0, 0, 0, 0.760784)
+clip_children = 2
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_oxil4")
+
+[node name="Screenshot" type="TextureRect" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/Screenshot Column/MarginContainer/Screenshot Mask" unique_id=494241621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Background Panel/Save Slot Margins/Save Horizontal Layout" unique_id=768467958]
+layout_mode = 2
+theme_override_constants/margin_bottom = 27
+
+[node name="Save Information Column" type="VBoxContainer" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer" unique_id=1888486199]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Name" type="Label" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column" unique_id=582651577]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_tga48")
+theme_override_font_sizes/font_size = 26
+text = "Save Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Date" type="Label" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column" unique_id=1491827728]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_tga48")
+theme_override_font_sizes/font_size = 26
+text = "Wednesday, June 18 2024, 2:38 PM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save and Load Button Column" type="HBoxContainer" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column" unique_id=256341688]
+layout_mode = 2
+mouse_filter = 0
+theme_override_constants/separation = 73
+alignment = 1
+
+[node name="Save" type="Button" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column" unique_id=1282320712 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(125, 35)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("8_turnv")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_jkc3e")
+theme_override_styles/pressed = ExtResource("7_jkc3e")
+theme_override_styles/hover = ExtResource("8_hlwqe")
+theme_override_styles/disabled = ExtResource("7_jkc3e")
+theme_override_styles/focus = ExtResource("7_jkc3e")
+alignment = 2
+script = ExtResource("10_vodeb")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.4117647, 0, 0.105882354, 1)
+label = NodePath("Save Button Margins/Save Label")
+
+[node name="Save Button Margins" type="MarginContainer" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Save" unique_id=627173741]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -58.5
+offset_right = 30.0
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+
+[node name="Save Label" type="Label" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Save/Save Button Margins" unique_id=1591743963]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.032967977, 0.032967992, 0.03296798, 0.49803922)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("5_tga48")
+theme_override_font_sizes/font_size = 25
+text = "Save"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Load" type="Button" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column" unique_id=1194167311 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(125, 35)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("8_turnv")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_jkc3e")
+theme_override_styles/pressed = ExtResource("7_jkc3e")
+theme_override_styles/hover = ExtResource("8_hlwqe")
+theme_override_styles/disabled = ExtResource("7_jkc3e")
+theme_override_styles/focus = ExtResource("7_jkc3e")
+alignment = 2
+script = ExtResource("10_vodeb")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.4117647, 0, 0.105882354, 1)
+label = NodePath("Load Button Margins/Load Label")
+
+[node name="Load Button Margins" type="MarginContainer" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Load" unique_id=798020282]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -46.0
+offset_right = 30.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+
+[node name="Load Label" type="Label" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Load/Load Button Margins" unique_id=1989047012]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.032967977, 0.032967992, 0.03296798, 0.49803922)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("5_tga48")
+theme_override_font_sizes/font_size = 25
+text = "Load"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Delete" type="Button" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column" unique_id=1359249811 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(125, 36)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("8_turnv")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_jkc3e")
+theme_override_styles/pressed = ExtResource("7_jkc3e")
+theme_override_styles/hover = ExtResource("8_hlwqe")
+theme_override_styles/disabled = ExtResource("7_jkc3e")
+theme_override_styles/focus = ExtResource("7_jkc3e")
+alignment = 2
+script = ExtResource("10_vodeb")
+accent_color = Color(1, 1, 1, 1)
+default_color = Color(0.4117647, 0, 0.105882354, 1)
+label = NodePath("Delete Button Margins/Delete Label")
+
+[node name="Delete Button Margins" type="MarginContainer" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Delete" unique_id=1451456841]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -58.5
+offset_right = 30.0
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+
+[node name="Delete Label" type="Label" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Delete/Delete Button Margins" unique_id=672014100]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.032967977, 0.032967992, 0.03296798, 0.49803922)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("5_tga48")
+theme_override_font_sizes/font_size = 28
+text = "Delete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="Label" parent="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column" unique_id=1254679348]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_tga48")
+theme_override_font_sizes/font_size = 26
+text = "Player Health | Location: Somewhere | $0.00 | Day: Monday | Week: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SecondaryFontOperator" type="Control" parent="." unique_id=1109547250]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("14_yq85v")
+
+[node name="TertiaryFontOperator" type="Control" parent="SecondaryFontOperator" unique_id=652561273]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("15_thnq6")
+
+[connection signal="pressed" from="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Background Panel/Save Slot Margins/Save Horizontal Layout/MarginContainer/Save Information Column/Save and Load Button Column/Delete" to="." method="_on_delete_pressed"]

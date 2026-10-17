@@ -1,0 +1,734 @@
+[gd_scene format=3 uid="uid://br3qtroog5620"]
+
+[ext_resource type="Texture2D" uid="uid://crk5a0ou2fevo" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Background_r_grey.png" id="1_pgew1"]
+[ext_resource type="Texture2D" uid="uid://c3c1pfy2gpm8w" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/attack.webp" id="2_3np40"]
+[ext_resource type="Texture2D" uid="uid://4glt4csdgfm2" path="res://editor_only_debug/visuals/ui/classic rpg gui/Background_r_red.png" id="2_6c2fa"]
+[ext_resource type="Texture2D" uid="uid://c6slesypttir" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Background_r_purple.png" id="2_d5dj4"]
+[ext_resource type="Texture2D" uid="uid://ccw4uyom0rxyq" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/energy.webp" id="4_gyyra"]
+[ext_resource type="Texture2D" uid="uid://c4rricnnylmat" path="res://GrimDays/assets/visuals/ui/Demonic_UI/joystick_icons/joystick_frame_v.png" id="6_8paex"]
+[ext_resource type="Texture2D" uid="uid://dk6d1e8sqc08q" path="res://GrimDays/assets/visuals/ui/gui/stat_icons/armor.webp" id="6_tfij5"]
+[ext_resource type="Texture2D" uid="uid://csnyc5bnofqnh" path="res://GrimDays/assets/visuals/class_icons/empty-hourglass.svg" id="7_npnt6"]
+[ext_resource type="Texture2D" uid="uid://dea4o2yseu57k" path="res://editor_only_debug/visuals/ui/vn_gui_library/Demonic_UI/Icons_nobg/Eye_eq_icon_nb.png" id="9_vkdyx"]
+[ext_resource type="Texture2D" uid="uid://b353i8ff5k0qh" path="res://editor_only_debug/visuals/ui/PNG/Potion_R.png" id="9_wtrkn"]
+[ext_resource type="Texture2D" uid="uid://dawhk8hj04log" path="res://editor_only_debug/visuals/skill_icons/Skill_Punch_nb.png" id="11_058ri"]
+[ext_resource type="Texture2D" uid="uid://bkd5o6fngnhe3" path="res://GrimDays/assets/visuals/ui/Demonic_UI/joystick_icons/joystick_button2.png" id="11_km2dq"]
+[ext_resource type="FontFile" uid="uid://dve7mgsjik4dg" path="res://addons/phantom_camera/fonts/Nunito-Regular.ttf" id="12_wtrkn"]
+[ext_resource type="Texture2D" uid="uid://r35e1mc3i675" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/spellbook.png" id="13_km2dq"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="14_05xs7"]
+[ext_resource type="Script" uid="uid://cj2hajx80ii3c" path="res://GrimDaysBattle/scripts/UI/battle_action_wheel.gd" id="100_wheel"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kh0q7"]
+texture = ExtResource("2_6c2fa")
+modulate_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5mtb"]
+texture = ExtResource("2_d5dj4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_godmr"]
+texture = ExtResource("2_d5dj4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2vk1a"]
+texture = ExtResource("1_pgew1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wae8j"]
+texture = ExtResource("2_d5dj4")
+modulate_color = Color(0.9376122, 0.19408998, 0.5232611, 1)
+
+[sub_resource type="Animation" id="Animation_433ta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Attack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 256)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Wait:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 256)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Defend:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 256)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skills:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 256)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Special:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Items:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 256)]
+}
+
+[sub_resource type="Animation" id="Animation_d5dj4"]
+resource_name = "appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skills:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 256), Vector2(433.7331, 198.25116)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Defend:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 256), Vector2(140.1358, 415.47314)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Wait:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 256), Vector2(78.266525, 198.25116)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Attack:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 256), Vector2(256, 69.119995)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Special:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Items:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 256), Vector2(371.8642, 415.47314)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gyyra"]
+_data = {
+&"RESET": SubResource("Animation_433ta"),
+&"appear": SubResource("Animation_d5dj4")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pe5hr"]
+texture = ExtResource("13_km2dq")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dksfx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr5ep"]
+draw_center = false
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovklt"]
+bg_color = Color(0.57, 0.1083, 0.1083, 0.75686276)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooxkd"]
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[node name="Action Wheel" type="Control" unique_id=136281054]
+custom_minimum_size = Vector2(640, 640)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("100_wheel")
+
+[node name="Skills" type="Button" parent="." unique_id=1896625168]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -64.0
+offset_right = -255.99957
+offset_bottom = 64.00006
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+tooltip_text = "Skills"
+theme_override_styles/normal = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5mtb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_godmr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2vk1a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wae8j")
+icon_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Skills" unique_id=685829027]
+clip_children = 1
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_gyyra")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="Skills/Icon" unique_id=173583335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Decorative Overlay2" type="TextureRect" parent="Skills" unique_id=1421980136]
+self_modulate = Color(1, 1, 1, 0.8235294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_8paex")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Defend" type="Button" parent="." unique_id=581220803]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -384.0
+offset_right = 64.00003
+offset_bottom = -255.99963
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+tooltip_text = "Attack"
+theme_override_styles/normal = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5mtb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_godmr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2vk1a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wae8j")
+icon_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Defend" unique_id=2031020301]
+clip_children = 1
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_tfij5")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="Defend/Icon" unique_id=1517641789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Decorative Overlay2" type="TextureRect" parent="Defend" unique_id=1997381368]
+self_modulate = Color(1, 1, 1, 0.8235294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_8paex")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Wait" type="Button" parent="." unique_id=1993300282]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 256.0
+offset_top = -64.0
+offset_right = 384.00018
+offset_bottom = 64.00006
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+tooltip_text = "Attack"
+theme_override_styles/normal = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5mtb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_godmr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2vk1a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wae8j")
+icon_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Wait" unique_id=394958855]
+clip_children = 1
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_npnt6")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="Wait/Icon" unique_id=800631247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Decorative Overlay2" type="TextureRect" parent="Wait" unique_id=2109283291]
+self_modulate = Color(1, 1, 1, 0.8235294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_8paex")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Attack" type="Button" parent="." unique_id=1732870699]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 256.0
+offset_right = 64.0
+offset_bottom = 384.0003
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+tooltip_text = "Attack"
+theme_override_styles/normal = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5mtb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_godmr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2vk1a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wae8j")
+icon_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Attack" unique_id=677264633]
+clip_children = 1
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_3np40")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="Attack/Icon" unique_id=559608755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Decorative Overlay2" type="TextureRect" parent="Attack" unique_id=1123871502]
+self_modulate = Color(1, 1, 1, 0.8235294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_8paex")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Items" type="Button" parent="." unique_id=732906713]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 256.0
+offset_right = 64.0
+offset_bottom = 384.0005
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+tooltip_text = "Attack"
+theme_override_styles/normal = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5mtb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_godmr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2vk1a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wae8j")
+icon_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Items" unique_id=1344626884]
+clip_children = 1
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_wtrkn")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="Items/Icon" unique_id=1559811056]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Decorative Overlay2" type="TextureRect" parent="Items" unique_id=1882357122]
+self_modulate = Color(1, 1, 1, 0.8235294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_8paex")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Wheel Center Texture" type="TextureRect" parent="." unique_id=1133399924]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_km2dq")
+
+[node name="Special" type="Button" parent="." unique_id=2084737086]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+tooltip_text = "Attack"
+theme_override_styles/normal = SubResource("StyleBoxTexture_kh0q7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5mtb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_godmr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2vk1a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wae8j")
+icon_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Special" unique_id=1922808059]
+clip_children = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_vkdyx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="Special/Icon" unique_id=273944622]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Decorative Overlay2" type="TextureRect" parent="Special" unique_id=1419531785]
+self_modulate = Color(1, 1, 1, 0.8235294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_8paex")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=702852402]
+libraries/ = SubResource("AnimationLibrary_gyyra")
+speed_scale = 8.0
+
+[node name="Skill Selection Panel" type="Panel" parent="." unique_id=1181701391]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(450, 600)
+layout_mode = 0
+offset_left = 592.0
+offset_right = 992.0
+offset_bottom = 600.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_pe5hr")
+
+[node name="Label" type="Label" parent="Skill Selection Panel" unique_id=1501252988]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.17, 0.17, 0.17, 0.67058825)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("14_05xs7")
+theme_override_font_sizes/font_size = 27
+text = "Skills"
+
+[node name="MarginContainer" type="MarginContainer" parent="Skill Selection Panel" unique_id=306272401]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 72
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 66
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Skill Selection Panel/MarginContainer" unique_id=1680338819]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Skill Selection Panel/MarginContainer/ScrollContainer" unique_id=1997711361]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Skill Button Template" type="Button" parent="Skill Selection Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=392332384]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dksfx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xr5ep")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ovklt")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ooxkd")
+
+[node name="Skill Information Holder" type="HBoxContainer" parent="Skill Selection Panel/MarginContainer/ScrollContainer/VBoxContainer/Skill Button Template" unique_id=632484175]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="Skill Icon" type="TextureRect" parent="Skill Selection Panel/MarginContainer/ScrollContainer/VBoxContainer/Skill Button Template/Skill Information Holder" unique_id=1073009052]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+texture = ExtResource("11_058ri")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Skill Name" type="Label" parent="Skill Selection Panel/MarginContainer/ScrollContainer/VBoxContainer/Skill Button Template/Skill Information Holder" unique_id=766534507]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("12_wtrkn")
+theme_override_font_sizes/font_size = 22
+text = "Skill Name Goes Here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Skill Cost" type="Label" parent="Skill Selection Panel/MarginContainer/ScrollContainer/VBoxContainer/Skill Button Template/Skill Information Holder" unique_id=1600468525]
+custom_minimum_size = Vector2(35, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("12_wtrkn")
+theme_override_font_sizes/font_size = 22
+text = "XX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cost Type Icon" type="TextureRect" parent="Skill Selection Panel/MarginContainer/ScrollContainer/VBoxContainer/Skill Button Template/Skill Information Holder" unique_id=1125117193]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+texture = ExtResource("4_gyyra")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Item Grid" type="GridContainer" parent="Skill Selection Panel/MarginContainer" unique_id=369293018]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+columns = 3

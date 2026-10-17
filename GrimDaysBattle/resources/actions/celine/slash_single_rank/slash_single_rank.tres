@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://m88n81yt0g43"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_3782g"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="2_esquh"]
+[ext_resource type="Texture2D" uid="uid://d2a0q8eim7e0m" path="res://editor_only_debug/visuals/skill_icons/Warriorskill_07_nobg.png" id="2_kye27"]
+[ext_resource type="Resource" uid="uid://bvw5ot8i4erak" path="res://GrimDaysBattle/resources/actions/celine/slash_single_rank/slash_single_rank_ranks.tres" id="3_te8ts"]
+
+[sub_resource type="Resource" id="Resource_vbyb3"]
+script = ExtResource("1_3782g")
+mode = 2
+metadata/_custom_type_script = "uid://bunfovvhflayl"
+
+[resource]
+script = ExtResource("2_esquh")
+display_name = "Slash"
+description = "When armed with a bladed weapon, you make an attack that has a good chance to cause bleeding on your target."
+icon = ExtResource("2_kye27")
+equipment_requirements = Array[ExtResource("1_3782g")]([SubResource("Resource_vbyb3")])
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("3_te8ts")
+id = &"slash_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

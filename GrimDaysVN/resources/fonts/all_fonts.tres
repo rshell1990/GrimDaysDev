@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFonts" format=3 uid="uid://lidhrn1tm3bd"]
+
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="1_n7ekm"]
+[ext_resource type="Resource" uid="uid://dcwmooqxfeniy" path="res://GrimDaysVN/resources/fonts/cassius.tres" id="2_jumjo"]
+[ext_resource type="Resource" uid="uid://chvclpg73j0x1" path="res://GrimDaysVN/resources/fonts/dyslexic.tres" id="3_kgtl5"]
+[ext_resource type="Resource" uid="uid://dmgbitb7xruli" path="res://GrimDaysVN/resources/fonts/josefin.tres" id="4_8p1lp"]
+[ext_resource type="Resource" uid="uid://cq4ag8br3dg58" path="res://GrimDaysVN/resources/fonts/nordams.tres" id="5_ne6wy"]
+[ext_resource type="Resource" uid="uid://bembm7mud71ll" path="res://GrimDaysVN/resources/fonts/roboto.tres" id="6_spw46"]
+[ext_resource type="Resource" uid="uid://2b27eq5fs7j1" path="res://GrimDaysVN/resources/fonts/elanor.tres" id="7_7h0ny"]
+[ext_resource type="Resource" uid="uid://c7sinad63245v" path="res://GrimDaysVN/resources/fonts/vandal.tres" id="8_7dahs"]
+[ext_resource type="Script" uid="uid://c5o6v7m337b50" path="res://GrimDaysVN/scripts/ui/resources/fonts.gd" id="9_nfjeo"]
+
+[resource]
+script = ExtResource("9_nfjeo")
+all = Array[ExtResource("1_n7ekm")]([ExtResource("2_jumjo"), ExtResource("3_kgtl5"), ExtResource("4_8p1lp"), ExtResource("5_ne6wy"), ExtResource("6_spw46"), ExtResource("7_7h0ny"), ExtResource("8_7dahs")])

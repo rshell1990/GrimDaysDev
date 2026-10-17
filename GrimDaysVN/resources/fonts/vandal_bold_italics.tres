@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cr7wtnsoovqhn"]
+
+[ext_resource type="FontFile" uid="uid://d1y2wojompt33" path="res://GrimDays/fonts/Vandal-4735418/Vandal.ttf" id="1_najpf"]
+
+[resource]
+base_font = ExtResource("1_najpf")
+variation_embolden = 0.5
+variation_transform = Transform2D(1, 0.33, 0, 1, 0, 0)
+baseline_offset = 0.075

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://rwt0fmkb2qcq"]
+
+[ext_resource type="Script" uid="uid://gcyusjjcekiq" path="res://GrimDaysBattle/scripts/Unit/Runtime/inventory.gd" id="1_e4ghd"]
+
+[node name="Administrators" type="Node" unique_id=1541985798]
+
+[node name="Party" type="Node" parent="." unique_id=1654408058]
+
+[node name="Director" type="Node" parent="Party" unique_id=1922812270]
+
+[node name="Inventory" type="Node" parent="Party" unique_id=320860837]
+script = ExtResource("1_e4ghd")
+size = 64
+
+[node name="Units" type="Node" parent="." unique_id=556939208]
+
+[node name="Director" type="Node" parent="Units" unique_id=5855508]

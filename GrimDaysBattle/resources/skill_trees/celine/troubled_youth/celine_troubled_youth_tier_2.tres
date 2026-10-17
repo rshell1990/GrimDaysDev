@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BattleSkillTier" format=3 uid="uid://dkgsu2lrlwfvw"]
+
+[ext_resource type="Script" uid="uid://dcwo3oopfs7ky" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_node_definition.gd" id="1_apxd0"]
+[ext_resource type="Resource" uid="uid://de4rs7uw7b4hi" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/tier 2/quick_jab_node.tres" id="2_pu3o6"]
+[ext_resource type="Resource" uid="uid://ds6logfac6eo" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/tier 2/slash_node.tres" id="3_frl61"]
+[ext_resource type="Script" uid="uid://djbq0oeujnwoq" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tier_definition.gd" id="4_n0bqk"]
+
+[resource]
+script = ExtResource("4_n0bqk")
+column = 1
+nodes = Array[ExtResource("1_apxd0")]([ExtResource("2_pu3o6"), ExtResource("3_frl61")])
+minimum_stats = Dictionary[int, float]({
+300: 2.0
+})
+metadata/_custom_type_script = "uid://djbq0oeujnwoq"

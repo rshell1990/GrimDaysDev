@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RankTemplate" format=3 uid="uid://brn7d56mnj4wi"]
+
+[ext_resource type="Resource" uid="uid://clsqs52iumcak" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/rank_5/straight_punch_rank_5_effects.tres" id="1_dm0sy"]
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="2_c0rsv"]
+
+[resource]
+script = ExtResource("2_c0rsv")
+level = 5
+cost = Dictionary[int, int]({
+220: 20
+})
+effects = ExtResource("1_dm0sy")
+id = &"straight_punch_rank_5"
+metadata/_custom_type_script = "uid://o71l6u31qrs2"

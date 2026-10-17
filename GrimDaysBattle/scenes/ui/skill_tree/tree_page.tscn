@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/UI/skill_tree_page.gd" id="1_page"]
+
+[node name="Tree Page" type="Control"]
+custom_minimum_size = Vector2(1252, 800)
+layout_mode = 3
+script = ExtResource("1_page")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(1252, 800)
+layout_mode = 0
+offset_right = 1252.0
+offset_bottom = 800.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(1252, 760)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Node Container" type="Control" parent="MarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1900, 760)
+layout_mode = 2
+size_flags_horizontal = 3

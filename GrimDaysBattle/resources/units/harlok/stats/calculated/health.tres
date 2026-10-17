@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://dut3pu32j3uqh"]
+
+[ext_resource type="Curve" uid="uid://cdm44a27fyr5g" path="res://GrimDaysBattle/resources/units/harlok/stats/calculated/health_gained_per_vitality.tres" id="1_1q4qc"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_g8lp8"]
+
+[resource]
+script = ExtResource("2_g8lp8")
+influenced_by = 20
+growth_curve = ExtResource("1_1q4qc")
+type = 210
+id = &"Health"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

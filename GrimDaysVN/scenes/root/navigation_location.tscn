@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://ro8kmxmqtcfh"]
+
+[ext_resource type="Script" uid="uid://qlhr6g4rtemi" path="res://GrimDaysVN/scripts/navigation/navigation_operator.gd" id="1_cl2qe"]
+[ext_resource type="Script" uid="uid://dps3tuacxx6a2" path="res://GrimDaysVN/scripts/navigation/interactables.gd" id="2_3haee"]
+[ext_resource type="Script" uid="uid://d4gu30o5h0hhe" path="res://GrimDaysVN/scripts/camera/main_camera_operator.gd" id="3_qb6on"]
+[ext_resource type="Script" uid="uid://cpukc8u4rc1uk" path="res://GrimDaysVN/scripts/camera/camera_move_to_preset.gd" id="4_0yudj"]
+[ext_resource type="Script" uid="uid://biglwdp5ucpsq" path="res://GrimDaysVN/scripts/camera/camera_move_to_point.gd" id="5_6qoj5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yx4cn"]
+
+[sub_resource type="Sky" id="Sky_xc44c"]
+sky_material = SubResource("ProceduralSkyMaterial_yx4cn")
+
+[sub_resource type="Environment" id="Environment_3haee"]
+background_mode = 1
+sky = SubResource("Sky_xc44c")
+sky_custom_fov = 97.9
+glow_enabled = true
+glow_levels/3 = 3.77
+glow_levels/4 = 3.35
+glow_levels/5 = 1.93
+glow_levels/6 = 3.31
+glow_strength = 0.35
+glow_mix = 0.188
+glow_bloom = 0.18
+glow_blend_mode = 0
+glow_hdr_threshold = 0.35
+glow_hdr_scale = 1.96
+glow_hdr_luminance_cap = 5.93
+glow_map_strength = 0.0
+fog_mode = 1
+fog_light_color = Color(0.409513, 0.2014, 0.53, 1)
+fog_light_energy = 0.81
+fog_density = 0.5362
+adjustment_enabled = true
+adjustment_brightness = 0.95
+adjustment_contrast = 1.05
+
+[sub_resource type="GDScript" id="GDScript_te1cq"]
+resource_name = "inputcatcher"
+script/source = "extends ColorRect
+func _ready() -> void:
+	Dialogic.timeline_started.connect(on_timeline_start)
+	Dialogic.timeline_ended.connect(on_timeline_end)
+	
+func on_timeline_start() -> void:
+	#visible = false
+	mouse_filter = Control.MOUSE_FILTER_STOP
+	
+func on_timeline_end() -> void:
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+"
+
+[node name="Navigation" type="Node3D" unique_id=2000696128 node_paths=PackedStringArray("background_holder", "interactable_holder")]
+script = ExtResource("1_cl2qe")
+background_holder = NodePath("Background")
+interactable_holder = NodePath("Interactables")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=16868146]
+environment = SubResource("Environment_3haee")
+
+[node name="Background" type="Node3D" parent="." unique_id=1492622713]
+transform = Transform3D(120, 0, 0, 0, 120, 0, 0, 0, 120, 0, 0, 0)
+
+[node name="Interactables" type="Node3D" parent="." unique_id=1490231536]
+script = ExtResource("2_3haee")
+
+[node name="Main" type="Camera3D" parent="." unique_id=950931450 groups=["main_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.725)
+current = true
+fov = 107.5
+size = 415.0
+near = 0.029
+far = 1000.0
+script = ExtResource("3_qb6on")
+
+[node name="Move to Phantom" type="Node" parent="Main" unique_id=1766429126]
+script = ExtResource("4_0yudj")
+
+[node name="Move to Custom" type="Node" parent="Main" unique_id=1872214778]
+script = ExtResource("5_6qoj5")
+
+[node name="Phantom Cameras" type="Node" parent="." unique_id=2076116971]
+
+[node name="Far" type="Camera3D" parent="Phantom Cameras" unique_id=823780548 groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, -80)
+fov = 107.5
+size = 0.225
+near = 80.0
+far = 450.0
+
+[node name="Mid" type="Camera3D" parent="Phantom Cameras" unique_id=594832625 groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -20)
+fov = 107.5
+size = 0.225
+near = 40.0
+far = 450.0
+
+[node name="Close" type="Camera3D" parent="Phantom Cameras" unique_id=891021065 groups=["phantom_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.71)
+fov = 107.5
+size = 0.225
+near = 10.0
+far = 450.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1109387969]
+layer = 5
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=338254396]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+script = SubResource("GDScript_te1cq")

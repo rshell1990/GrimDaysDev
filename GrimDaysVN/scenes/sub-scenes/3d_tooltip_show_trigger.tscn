@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dup2a1idk7ony"]
+
+[ext_resource type="Script" uid="uid://ctbioykthocwm" path="res://content/scripts/navigation/3D_map/3d_tooltip_show_trigger.gd" id="1_3d3jl"]
+
+[node name="3D Tooltip Show Trigger" type="Node" node_paths=PackedStringArray("show_timer")]
+script = ExtResource("1_3d3jl")
+show_timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VNItemTemplate" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/crafting/resources/item_template.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = &"master_tome"
+display_name = "Master tome"
+description = "Master tome. Grants 21 Magic Damage while equipped."
+category = 2
+max_stack = 1
+cash_value = 1500
+battle_stats = {"320": 21.0}
+use_effects = []

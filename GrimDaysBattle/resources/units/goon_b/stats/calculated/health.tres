@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://6kxeqn74bxwb"]
+
+[ext_resource type="Curve" uid="uid://ch3jw6xjm1cyd" path="res://GrimDaysBattle/resources/units/goon_b/stats/calculated/health_gained_per_vitality.tres" id="1_vergx"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_60qk2"]
+
+[resource]
+script = ExtResource("2_60qk2")
+influenced_by = 20
+growth_curve = ExtResource("1_vergx")
+type = 210
+id = &"Health"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="GameEventSequence" format=3 uid="uid://qhvdynnbg6ut"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
+[ext_resource type="Resource" path="res://GrimDaysVN/dialogic/scripts/1_0088_renia_vows_to_reclaim_gerano.dtl" id="2_timeline"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/1_0090_truth.tres" id="3_next"]
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/action.gd" id="4_action"]
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/set_world_stage.gd" id="5_stage"]
+
+[sub_resource type="Resource" id="Resource_stage"]
+script = ExtResource("5_stage")
+new_stage = 90
+
+[resource]
+script = ExtResource("1_sequence")
+id = &"1_0088_meeting_borris"
+only_called = true
+blocks_swap = true
+timeline = ExtResource("2_timeline")
+finishing_timeline = ExtResource("2_timeline")
+finishing_actions = Array[ExtResource("4_action")]([SubResource("Resource_stage")])
+finished_event = ExtResource("3_next")

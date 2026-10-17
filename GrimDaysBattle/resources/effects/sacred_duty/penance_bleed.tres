@@ -1,0 +1,28 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="scene"]
+
+[resource]
+script = ExtResource("script")
+id = &"sacred_duty_penance_bleed"
+template_scene = ExtResource("scene")
+scales_from_sender = true
+scales_with_damage = true
+can_critical = false
+scales_with = 310
+scales_by = -0.02
+scales_by_by_rank = PackedFloat64Array(-0.02, -0.025, -0.03, -0.035, -0.04)
+stat = 210
+target = 3
+kind = 100
+damage_type = 100
+bypass_mitigation = true
+always_hits = true
+trigger = 800
+duration = 2
+lifetime = 1
+stacking = 4
+stacking_across_sources = true
+description = "Bleed for x% Physical Damage at each of two round ends."
+

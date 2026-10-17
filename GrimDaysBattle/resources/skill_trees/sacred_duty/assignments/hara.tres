@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_default_assignment.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+ranks = Dictionary[StringName, int]({&"ritual_cut": 2, &"candlelight": 1, &"prayer_of_shelter": 1, &"steadfast_faith": 3, &"righteous_censure": 2, &"intercession": 3, &"righteous_resolve": 2})

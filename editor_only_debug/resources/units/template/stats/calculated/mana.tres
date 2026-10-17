@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://c4c0qqvgiqg3k"]
+
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="1_s5m3v"]
+
+[resource]
+script = ExtResource("1_s5m3v")
+influenced_by = 70
+type = 230
+id = &"Mana"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

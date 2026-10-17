@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EquipmentTemplateCollection" format=3 uid="uid://df4ev3n2t4b6s"]
+
+[ext_resource type="Script" uid="uid://cb7akesf5u8d3" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template.gd" id="1_52ovw"]
+[ext_resource type="Script" uid="uid://drwr8dgs5cpum" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template_collection.gd" id="2_xhbkf"]
+
+[resource]
+script = ExtResource("2_xhbkf")
+metadata/_custom_type_script = "uid://drwr8dgs5cpum"

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="BattleUnitTemplate" format=3 uid="uid://dbker08krwmue"]
+
+[ext_resource type="Resource" uid="uid://fi7kn60ebif" path="res://GrimDaysBattle/resources/actions/_basic/_basic_attack/basic_attack.tres" id="1_tc1dx"]
+[ext_resource type="PackedScene" uid="uid://b8yrbgv2xbyyt" path="res://GrimDaysBattle/scenes/battle/units/sister_katherine.tscn" id="2_shlbm"]
+[ext_resource type="Script" uid="uid://cb7akesf5u8d3" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template.gd" id="3_2144i"]
+[ext_resource type="Script" uid="uid://drwr8dgs5cpum" path="res://GrimDaysBattle/scripts/Items/Resources/equipment_template_collection.gd" id="4_4rrg4"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="5_sp674"]
+[ext_resource type="Resource" uid="uid://c60ql6luls8jn" path="res://GrimDaysBattle/resources/units/sister_katherine/sister_katherine_leveling_tiers.tres" id="6_jnt1c"]
+[ext_resource type="Texture2D" uid="uid://dti3pcqeld0cq" path="res://GrimDaysBattle/assets/visuals/battle_portraits/sister_katherine_portrait.png" id="7_d5xrg"]
+[ext_resource type="Resource" uid="uid://hqqin1xkv5h2" path="res://GrimDaysBattle/resources/effects/play_female_scream_on_defeat.tres" id="7_ije0e"]
+[ext_resource type="Script" uid="uid://bjm8hu372yam1" path="res://GrimDaysBattle/scripts/Unit/Resources/unit_template.gd" id="8_ef4nq"]
+[ext_resource type="Resource" uid="uid://b0e84s0jc4f2h" path="res://GrimDaysBattle/resources/units/sister_katherine/sister_katherine_stats.tres" id="9_hfll5"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/sacred_duty/katherine_collection.tres" id="90_skills"]
+[ext_resource type="Resource" uid="uid://dd0eb0m3tg55a" path="res://GrimDaysBattle/resources/items/weapons/one_handed/ritual_knife.tres" id="91_knife"]
+
+[sub_resource type="Resource" id="Resource_jh8xl"]
+script = ExtResource("4_4rrg4")
+all = Array[ExtResource("3_2144i")]([ExtResource("91_knife")])
+metadata/_custom_type_script = "uid://drwr8dgs5cpum"
+
+[resource]
+script = ExtResource("8_ef4nq")
+display_name = "Sister Katherine"
+unit_archetype = "Hybrid"
+level = 5.0
+portrait = ExtResource("7_d5xrg")
+battle_sprite = ExtResource("2_shlbm")
+basic_action_template = ExtResource("1_tc1dx")
+experience_reward = 600
+skill_collection = ExtResource("90_skills")
+leveling_tiers = ExtResource("6_jnt1c")
+stats = ExtResource("9_hfll5")
+starting_attribute_points_spent = {
+"combat": 20,
+"non_combat": 8
+}
+intrinsic_effects = Array[ExtResource("5_sp674")]([ExtResource("7_ije0e")])
+equipment = SubResource("Resource_jh8xl")
+id = &"SisterKatherine"
+metadata/_custom_type_script = "uid://bjm8hu372yam1"

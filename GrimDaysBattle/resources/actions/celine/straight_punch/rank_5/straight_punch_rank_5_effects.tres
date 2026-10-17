@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3 uid="uid://clsqs52iumcak"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_ar3tg"]
+[ext_resource type="Resource" uid="uid://bajavji2w7wxq" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/rank_5/straight_punch_rank_5_effects_damage.tres" id="2_62pqj"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="3_o5qcu"]
+
+[resource]
+script = ExtResource("3_o5qcu")
+all = Array[ExtResource("1_ar3tg")]([ExtResource("2_62pqj")])
+id = &"straight_punch_rank_5_effects"
+metadata/_custom_type_script = "uid://dw0pgj3kb31c6"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://cc3odejxueiin"]
+
+[ext_resource type="Curve" uid="uid://bbpuo71i7egoh" path="res://GrimDaysBattle/resources/units/celine_teen/stats/calculated/energy_gained_per_vitality.tres" id="1_e1qnm"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="1_ra0rb"]
+
+[resource]
+script = ExtResource("1_ra0rb")
+influenced_by = 20
+growth_curve = ExtResource("1_e1qnm")
+type = 220
+id = &"Energy"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

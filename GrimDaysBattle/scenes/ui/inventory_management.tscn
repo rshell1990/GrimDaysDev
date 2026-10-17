@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://dftkcn8q2lalg"]
+
+[ext_resource type="Script" uid="uid://clmhpym5xpusu" path="res://GrimDaysBattle/scripts/Party/battle_preparation_inventory.gd" id="1_aa0rh"]
+[ext_resource type="Texture2D" uid="uid://cb28uog7fno0p" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/stats_bar2.png" id="2_bmmhh"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="3_bmmhh"]
+[ext_resource type="Texture2D" uid="uid://rynro1xs4myh" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Frame_blue.png" id="5_awxix"]
+[ext_resource type="Texture2D" uid="uid://j38bgh1w511o" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/bar_button_mid.png" id="5_nrvaj"]
+[ext_resource type="Texture2D" uid="uid://cewowovrb2rou" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/dialog_bar.png" id="6_nrvaj"]
+[ext_resource type="Texture2D" uid="uid://f1keu4rckl6q" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Frame_purple.png" id="7_w438i"]
+[ext_resource type="Texture2D" uid="uid://jas23gd57x7i" path="res://GrimDays/assets/visuals/ui/Demonic_UI/red_buttons/Button_A_Mid_Button.png" id="8_nrvaj"]
+[ext_resource type="Texture2D" uid="uid://bcgxdn6mxxlra" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Bar_icons/Loot_06.png" id="9_bmmhh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aa0rh"]
+texture = ExtResource("8_nrvaj")
+
+[node name="Inventories" type="VBoxContainer" unique_id=300636721]
+offset_left = 24.0
+offset_top = 33.0
+offset_right = 671.0
+offset_bottom = 868.0
+theme_override_constants/separation = 11
+script = ExtResource("1_aa0rh")
+
+[node name="Party Stash" type="NinePatchRect" parent="." unique_id=106844685]
+custom_minimum_size = Vector2(0, 650)
+layout_mode = 2
+texture = ExtResource("2_bmmhh")
+region_rect = Rect2(141.33353, 0, 594.35925, 850)
+patch_margin_top = 219
+patch_margin_bottom = 29
+
+[node name="Stash Outer Margin" type="MarginContainer" parent="Party Stash" unique_id=1814346187]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="Party Inventory Header" type="Label" parent="Party Stash/Stash Outer Margin" unique_id=833511273]
+layout_mode = 2
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 122.425)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_bmmhh")
+theme_override_font_sizes/font_size = 37
+text = "Party Stash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stash Inner Margin" type="MarginContainer" parent="Party Stash/Stash Outer Margin" unique_id=925515180]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 182
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 19
+
+[node name="Stash Scrolling Container" type="ScrollContainer" parent="Party Stash/Stash Outer Margin/Stash Inner Margin" unique_id=1081973488]
+layout_mode = 2
+
+[node name="Stash Slots" type="GridContainer" parent="Party Stash/Stash Outer Margin/Stash Inner Margin/Stash Scrolling Container" unique_id=215079151]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 9
+theme_override_constants/v_separation = 6
+columns = 8
+
+[node name="Party Inventory Frame" type="NinePatchRect" parent="Party Stash" unique_id=2080603072]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_awxix")
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 65
+patch_margin_bottom = 63
+
+[node name="Character\'s Inventory Header" type="NinePatchRect" parent="." unique_id=1348243877]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = ExtResource("5_nrvaj")
+
+[node name="Label" type="Label" parent="Character\'s Inventory Header" unique_id=109992732]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_bmmhh")
+theme_override_font_sizes/font_size = 28
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Character Inventory" type="NinePatchRect" parent="." unique_id=31720262]
+custom_minimum_size = Vector2(635, 80)
+custom_maximum_size = Vector2(635, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_nrvaj")
+patch_margin_left = 25
+patch_margin_top = 23
+patch_margin_right = 27
+patch_margin_bottom = 25
+
+[node name="MarginContainer" type="MarginContainer" parent="Character Inventory" unique_id=64341907]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 20
+
+[node name="PersonalSlots" type="HBoxContainer" parent="Character Inventory/MarginContainer" unique_id=947193900]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="Inventory Frame" type="NinePatchRect" parent="Character Inventory" unique_id=313376287]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_w438i")
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 65
+patch_margin_bottom = 63
+
+[node name="ItemActions" type="PopupMenu" parent="." unique_id=1783670040]
+unique_name_in_owner = true
+oversampling_override = 1.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_aa0rh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=730479417]
+custom_minimum_size = Vector2(635, 25)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=2144166535]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+texture = ExtResource("9_bmmhh")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="InventoryStatus" type="Label" parent="HBoxContainer" unique_id=1006793959]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Coins: #"
+vertical_alignment = 1
+autowrap_mode = 2

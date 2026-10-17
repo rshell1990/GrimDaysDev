@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EffectScalingCombatStatChangeTemplate" format=3 uid="uid://b3wl65vn3qffa"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_kpjg3"]
+[ext_resource type="Script" uid="uid://cqciwrhufos0l" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="2_sfltl"]
+[ext_resource type="Resource" uid="uid://dmqg0thkbsgi6" path="res://GrimDaysBattle/resources/actions/celine/uppercut_single_rank/uppercut_single_rank_ranks_1_effects_damage_stun.tres" id="2_u5ai3"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="3_u5ai3"]
+
+[resource]
+script = ExtResource("2_sfltl")
+scales_from_sender = true
+scales_with_damage = true
+critical_chance_bonus = 5.0
+critical_chance_bonus_by_rank = PackedFloat64Array(5, 7.5, 10, 12.5, 15)
+scales_with = 310
+scales_by = -1.5
+scales_by_by_rank = PackedFloat64Array(-1.5, -1.55, -1.625, -1.675, -1.725)
+stat = 210
+effects_on_critical = Array[ExtResource("1_kpjg3")]([ExtResource("2_u5ai3")])
+target = 3
+kind = 200
+damage_type = 100
+trigger = 200
+template_scene = ExtResource("3_u5ai3")
+id = &"uppercut_single_rank_ranks_1_effects_damage"
+metadata/_custom_type_script = "uid://cqciwrhufos0l"

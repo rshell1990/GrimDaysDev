@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://b21pbu2nh0ivi"]
+
+[ext_resource type="Script" uid="uid://gv8mqbjor5nu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd" id="1_dlraf"]
+[ext_resource type="PackedScene" uid="uid://dr7acm0cmg4aq" path="res://GrimDaysVN/scenes/ui/history_item.tscn" id="2_muvn1"]
+[ext_resource type="Texture2D" uid="uid://4swoc16msbv7" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_foreground_greyscaled.png" id="3_06t75"]
+[ext_resource type="Script" uid="uid://pevt0auern8u" path="res://GrimDaysVN/scripts/ui/scriplets/menu_buttons.gd" id="3_lkifp"]
+[ext_resource type="Script" uid="uid://4i3eke8cctnq" path="res://GrimDaysVN/scripts/ui/history_extra_functions.gd" id="3_o3jda"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="4_r57qm"]
+[ext_resource type="Script" uid="uid://h6rfq00lbj5s" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/line_color.gd" id="5_6opbj"]
+[ext_resource type="StyleBox" uid="uid://deraoib6rgva6" path="res://GrimDaysVN/resources/gui/default_UI.tres" id="5_i26au"]
+[ext_resource type="StyleBox" uid="uid://c1wyko7hlbp0c" path="res://GrimDaysVN/resources/gui/green_back.tres" id="6_s6g1w"]
+
+[ext_resource type="Texture2D" uid="uid://dxvxlgiib2oyk" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_background_greyscaled.png" id="migrated_frame_background"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vqgh0"]
+texture = ExtResource("migrated_frame_background")
+texture_margin_left = 46.5651
+texture_margin_top = 47.0
+texture_margin_right = 46.5651
+texture_margin_bottom = 47.0
+region_rect = Rect2(0, 0, 110, 109.184)
+modulate_color = Color(0.14796, 0.14796, 0.14796, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jqnms"]
+texture = ExtResource("3_06t75")
+texture_margin_left = 46.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 47.0
+
+[node name="ExampleHistoryScene" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_dlraf")
+show_all_choices = false
+show_join_and_leave = false
+HistoryItem = ExtResource("2_muvn1")
+
+[node name="Cover" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.823529)
+
+[node name="Panel" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(1800, 900)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -900.0
+offset_top = 40.0
+offset_right = 900.0
+offset_bottom = 940.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vqgh0")
+
+[node name="HistoryBox" type="ScrollContainer" parent="Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1700, 825)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -900.565
+offset_top = -400.0
+offset_right = 900.565
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_vqgh0")
+horizontal_scroll_mode = 0
+
+[node name="HistoryLog" type="VBoxContainer" parent="Panel/HistoryBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1700, 750)
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Frame" type="Panel" parent="Panel"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(1785, 885)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -901.0
+offset_top = -448.0
+offset_right = 898.0
+offset_bottom = 451.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jqnms")
+script = ExtResource("5_6opbj")
+
+[node name="Extra Functions" type="Node" parent="."]
+script = ExtResource("3_o3jda")
+
+[node name="ShowHistory" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 2907.0
+offset_top = 82.0
+offset_right = 2915.0
+offset_bottom = 90.0
+
+[node name="HideHistory" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1033.0
+offset_top = 975.0
+offset_right = -840.0
+offset_bottom = 1032.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = ExtResource("6_s6g1w")
+theme_override_styles/disabled = ExtResource("6_s6g1w")
+theme_override_styles/hover_pressed = ExtResource("6_s6g1w")
+theme_override_styles/hover = ExtResource("6_s6g1w")
+theme_override_styles/pressed = ExtResource("6_s6g1w")
+theme_override_styles/normal = ExtResource("6_s6g1w")
+script = ExtResource("3_lkifp")
+
+[node name="Margin3" type="MarginContainer" parent="HideHistory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 27
+theme_override_constants/margin_right = 15
+
+[node name="Label" type="Label" parent="HideHistory/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("4_r57qm")
+theme_override_font_sizes/font_size = 28
+text = "Close"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HideHistory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("5_i26au")
+
+[connection signal="pressed" from="HideHistory" to="." method="_on_hide_history_pressed"]

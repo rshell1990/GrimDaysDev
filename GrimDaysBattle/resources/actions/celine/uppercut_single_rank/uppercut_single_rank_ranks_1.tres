@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RankTemplate" format=3 uid="uid://dru7sfjubigvx"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_kbikl"]
+[ext_resource type="Resource" uid="uid://dylr4swck8v4" path="res://GrimDaysBattle/resources/actions/celine/uppercut_single_rank/uppercut_single_rank_ranks_1_effects.tres" id="1_rkrcc"]
+
+[resource]
+script = ExtResource("1_kbikl")
+level = 1
+cost = Dictionary[int, int]({
+220: 15
+})
+effects = ExtResource("1_rkrcc")
+id = &"uppercut_single_rank_ranks_1"
+metadata/_custom_type_script = "uid://o71l6u31qrs2"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://b0vvg4c1ohhc6"
+path="res://.godot/imported/Sprite combat celeste 15yrs editable file.atlas-5c5d46de46b6ce9bd60cee87a1264d43.spatlas"
+
+[deps]
+
+source_file="res://GrimDaysBattle/assets/spine/celine/Sprite combat celeste 15yrs editable file.atlas"
+dest_files=["res://.godot/imported/Sprite combat celeste 15yrs editable file.atlas-5c5d46de46b6ce9bd60cee87a1264d43.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

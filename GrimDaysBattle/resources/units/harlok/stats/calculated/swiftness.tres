@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://4d5x6v4edrlj"]
+
+[ext_resource type="Curve" uid="uid://b51105h5qqeik" path="res://GrimDaysBattle/resources/units/harlok/stats/calculated/swiftness_gained_per_finesse.tres" id="1_lxg5t"]
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="2_qqkrd"]
+
+[resource]
+script = ExtResource("2_qqkrd")
+influenced_by = 30
+growth_curve = ExtResource("1_lxg5t")
+type = 360
+id = &"Swiftness"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="script"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/street_bullies/get_em.tres" id="action"]
+
+[resource]
+script = ExtResource("script")
+id = &"get_em"
+display_name = "Get 'Em!"
+row = 0
+maximum_rank = 5
+action = ExtResource("action")
+previous_node = &"big_talk"
+composite = false
+

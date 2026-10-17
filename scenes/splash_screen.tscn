@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://d1hdxe6miih2u"]
+
+[ext_resource type="VideoStream" uid="uid://b7u1r14lpdeh5" path="res://GrimDays/assets/video/dev_logo.ogv" id="1_civo7"]
+
+[sub_resource type="GDScript" id="GDScript_civo7"]
+resource_name = "splash_screen_control"
+script/source = "extends Control
+@export var video_player:VideoStreamPlayer
+var skipping:bool = false
+func _ready() -> void:
+	video_player.finished.connect(on_video_finish)
+
+func on_video_finish() -> void:
+	if not skipping:
+		await get_tree().create_timer(AnimationTimes.LONG).timeout
+	fade_out()
+	if not skipping:
+		await get_tree().create_timer(AnimationTimes.STANDARD).timeout
+	SceneManager.swap_scenes(self, get_tree().current_scene,\"res://GrimDays/scenes/main_menu.tscn\")
+
+func _gui_input(event: InputEvent) -> void:
+	if event.is_action_pressed(\"accept\"):
+		CustomLogger.confirm(self,_gui_input, \"Detected mouse click!\",CustomLogger.LEVEL.MILD)
+		video_player.paused = true
+		skipping = true
+		fade_out()
+
+func fade_out():
+	var tween = create_tween()
+	await tween.tween_property(video_player, \"modulate:a\", 0.0, AnimationTimes.FAST).finished
+	on_video_finish()
+"
+
+[node name="splash_screen" type="Control" unique_id=318796933 node_paths=PackedStringArray("video_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_civo7")
+video_player = NodePath("VideoStreamPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1166685945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2085151052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stream = ExtResource("1_civo7")
+volume_db = 5.0
+autoplay = true

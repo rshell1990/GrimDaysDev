@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RanksTemplate" format=3 uid="uid://cyp60x4b68pfc"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_bmn4i"]
+[ext_resource type="Resource" uid="uid://0d15om54u4we" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/rank_1/straight_punch_rank_1.tres" id="2_fxc7v"]
+[ext_resource type="Resource" uid="uid://dm03k25qlevjj" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/rank_2/straight_punch_rank_2.tres" id="3_xrs7j"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="4_dxgyk"]
+[ext_resource type="Resource" uid="uid://4njmh2vu6db7" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/rank_3/straight_punch_rank_3.tres" id="4_fxc7v"]
+[ext_resource type="Resource" uid="uid://br4dtb4dq6qbj" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/rank_4/straight_punch_rank_4.tres" id="5_dxgyk"]
+[ext_resource type="Resource" uid="uid://brn7d56mnj4wi" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/rank_5/straight_punch_rank_5.tres" id="6_kab4o"]
+
+[resource]
+script = ExtResource("4_dxgyk")
+all = Array[ExtResource("1_bmn4i")]([ExtResource("2_fxc7v"), ExtResource("3_xrs7j"), ExtResource("4_fxc7v"), ExtResource("5_dxgyk"), ExtResource("6_kab4o")])
+id = &"straight_punch_ranks"
+metadata/_custom_type_script = "uid://cmooful7o2yxq"

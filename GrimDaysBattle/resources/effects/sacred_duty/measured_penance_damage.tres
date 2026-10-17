@@ -1,0 +1,24 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="scene"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="effect"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/effects/sacred_duty/penance_chance.tres" id="child0"]
+
+[resource]
+script = ExtResource("script")
+id = &"sacred_duty_measured_penance_damage"
+template_scene = ExtResource("scene")
+scales_from_sender = true
+scales_with_damage = true
+scales_with = 310
+scales_by = -1
+scales_by_by_rank = PackedFloat64Array(-1, -1.05, -1.1, -1.15, -1.2)
+stat = 210
+target = 3
+kind = 300
+damage_type = 100
+trigger = 200
+description = "Deals x% Physical Damage."
+effects_on_hit = Array[ExtResource("effect")]([ExtResource("child0")])
+

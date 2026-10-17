@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://cnfwlhwnwilch" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_change_resource.gd" id="1_resource"]
+
+[node name="EffectChangeResource" type="Node"]
+script = ExtResource("1_resource")

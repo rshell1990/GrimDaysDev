@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameEventSequence" format=3 uid="uid://c6q4oe5xy8cl0"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
+[ext_resource type="Resource" path="res://GrimDaysVN/dialogic/scripts/2_0100_renia_claims_blades_as_assassins_attack.dtl" id="2_timeline"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/3_0000_on_the_way_to_the_inquisitors.tres" id="3_next"]
+
+[resource]
+script = ExtResource("1_sequence")
+id = &"2_0100_basement_after_battle"
+only_called = true
+blocks_swap = false
+timeline = ExtResource("2_timeline")
+finishing_timeline = ExtResource("2_timeline")
+finished_event = ExtResource("3_next")

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dro134kqeexdk"]
+
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/production_encounter.tscn" id="1_encounter"]
+
+[node name="Battle" unique_id=1385967111 instance=ExtResource("1_encounter")]

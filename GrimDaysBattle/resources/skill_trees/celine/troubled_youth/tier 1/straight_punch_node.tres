@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://c82eibthn4fju"]
+
+[ext_resource type="Resource" uid="uid://k71gidtn7rnw" path="res://GrimDaysBattle/resources/actions/celine/straight_punch/straight_punch.tres" id="1_l4df6"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="2_st4d4"]
+
+[ext_resource type="Texture2D" uid="uid://dawhk8hj04log" path="res://editor_only_debug/visuals/skill_icons/Skill_Punch_nb.png" id="3_icon"]
+
+[resource]
+script = ExtResource("2_st4d4")
+icon = ExtResource("3_icon")
+action = ExtResource("1_l4df6")
+id = &"straight_punch_node"
+display_name = "Straight Punch"
+row = 2
+maximum_rank = 5
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

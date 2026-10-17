@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="EquipmentWeaponTemplate" format=3 uid="uid://c7bo45gopqwng"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_toh6u"]
+[ext_resource type="Script" uid="uid://cxj3ypxrtivpa" path="res://GrimDaysBattle/scripts/Items/Resources/weapon_template.gd" id="2_x7t4p"]
+[ext_resource type="Texture2D" uid="uid://b0q3bm6cwgsi4" path="res://GrimDays/assets/visuals/ui/Weapons/Swords_01_R.png" id="3_x7t4p"]
+
+[resource]
+script = ExtResource("2_x7t4p")
+base_attack = 5
+base_accuracy = 5
+weight = 5
+equips_to = Array[int]([0, 2])
+before_hit_effects = Array[ExtResource("1_toh6u")]([])
+before_hitting_effects = Array[ExtResource("1_toh6u")]([])
+after_hit_effects = Array[ExtResource("1_toh6u")]([])
+after_hitting_effects = Array[ExtResource("1_toh6u")]([])
+on_equip_effects = Array[ExtResource("1_toh6u")]([])
+on_defeated_effects = Array[ExtResource("1_toh6u")]([])
+on_killing_effects = Array[ExtResource("1_toh6u")]([])
+display_name = "Shabby Iron Sword"
+item_class = 4
+stack_size = 1
+icon = ExtResource("3_x7t4p")
+description = "This 'sword' would make most blacksmith's weep, but it's just sharp enough to tear flesh if you can hit with it."
+lootable = false
+value = 0
+id = &"shabby_iron_sword"
+metadata/_custom_type_script = "uid://cxj3ypxrtivpa"

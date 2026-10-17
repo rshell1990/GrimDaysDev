@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RanksTemplate" format=3 uid="uid://lhkd4scp8pyr"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_xout2"]
+[ext_resource type="Resource" uid="uid://beqxjq4taohry" path="res://GrimDaysBattle/resources/actions/celine/twist_the_blade_single_rank/twist_the_blade_single_rank_ranks_1.tres" id="2_hprfi"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="3_i1sc0"]
+
+[resource]
+script = ExtResource("3_i1sc0")
+generated = true
+rank_count = 5
+base_rank = ExtResource("2_hprfi")
+cost_increase_per_rank = Dictionary[int, int]({
+220: 2
+})
+id = &"twist_the_blade_single_rank_ranks"
+metadata/_custom_type_script = "uid://cmooful7o2yxq"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b17f0o7l1iuy4"
+path="res://.godot/imported/Main menu_theme (GrimDays).mp3-387365a42e03e0437d748ba22d5853ca.mp3str"
+
+[deps]
+
+source_file="res://GrimDaysVN/audio/music/Main menu_theme (GrimDays).mp3"
+dest_files=["res://.godot/imported/Main menu_theme (GrimDays).mp3-387365a42e03e0437d748ba22d5853ca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

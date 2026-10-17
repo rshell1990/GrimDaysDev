@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFont" format=3 uid="uid://dcwmooqxfeniy"]
+
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="1_mv2d4"]
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="1_vjhn6"]
+[ext_resource type="FontVariation" uid="uid://bc4xs6tbper4o" path="res://GrimDaysVN/resources/fonts/cassius_bold_italics.tres" id="2_37dma"]
+[ext_resource type="FontVariation" uid="uid://x7b7yodpctfk" path="res://GrimDaysVN/resources/fonts/cassius_italics.tres" id="3_ctrei"]
+[ext_resource type="FontVariation" uid="uid://bc5ju4sx6055t" path="res://GrimDaysVN/resources/fonts/cassius_.tres" id="4_pufon"]
+
+[resource]
+script = ExtResource("1_vjhn6")
+id = "cassius"
+normal = ExtResource("4_pufon")
+italics = ExtResource("3_ctrei")
+bold = ExtResource("1_mv2d4")
+combo = ExtResource("2_37dma")

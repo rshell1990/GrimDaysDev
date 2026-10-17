@@ -1,0 +1,1012 @@
+[gd_scene format=3 uid="uid://dwndo1lf6kekb"]
+
+[ext_resource type="Texture2D" uid="uid://dxvxlgiib2oyk" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_background_greyscaled.png" id="1_tja2x"]
+[ext_resource type="Script" uid="uid://b5yq8ak513ovb" path="res://GrimDaysVN/scripts/ui/scriplets/automatically_color_panel.gd" id="2_fijuw"]
+[ext_resource type="StyleBox" uid="uid://cem3yn4eoeklj" path="res://GrimDaysVN/resources/gui/frame.tres" id="3_nxx61"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="3_v2b1x"]
+[ext_resource type="StyleBox" uid="uid://c1wyko7hlbp0c" path="res://GrimDaysVN/resources/gui/green_back.tres" id="4_34rpx"]
+[ext_resource type="StyleBox" uid="uid://hto4ykwx0ngt" path="res://GrimDaysVN/resources/gui/green_back_hover.tres" id="5_y7b50"]
+[ext_resource type="Script" uid="uid://pevt0auern8u" path="res://GrimDaysVN/scripts/ui/scriplets/menu_buttons.gd" id="6_8ketu"]
+[ext_resource type="StyleBox" uid="uid://deraoib6rgva6" path="res://GrimDaysVN/resources/gui/default_UI.tres" id="7_aisjb"]
+[ext_resource type="Texture2D" path="res://content/assets/gui/DD_Construction.png" id="9_068il"]
+[ext_resource type="FontVariation" uid="uid://drilw8dmaf5pa" path="res://GrimDaysVN/resources/fonts/josefin_bold.tres" id="10_ypy74"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cv22"]
+texture = ExtResource("1_tja2x")
+texture_margin_left = 50.0
+texture_margin_top = 50.0
+texture_margin_right = 50.0
+texture_margin_bottom = 50.0
+region_rect = Rect2(8, 8, 94, 94)
+modulate_color = Color(0.38, 0.38, 0.38, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jp7k"]
+
+[sub_resource type="Gradient" id="Gradient_iestv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4q4hl"]
+gradient = SubResource("Gradient_iestv")
+fill_from = Vector2(0.500855, 0.757265)
+fill_to = Vector2(0.535043, 0)
+
+[node name="Extras" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cover" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0107246, 0.0107246, 0.0107246, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -942.0
+offset_top = -450.0
+offset_right = 942.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Background2" type="Panel" parent="HBoxContainer" node_paths=PackedStringArray("background", "frame")]
+custom_minimum_size = Vector2(280, 900)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4cv22")
+script = ExtResource("2_fijuw")
+background = NodePath(".")
+frame = NodePath("Frame")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Background2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Background2/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 850)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Main Menu" type="VBoxContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="Audio" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Audio"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Audio/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Audio
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Audio"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Gallery" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Gallery"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Gallery/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Gallery"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Gallery"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Battle" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Battle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Battle/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Battle"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Battle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Replay" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Replay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Replay/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Replay"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Replay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Back to Title" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Back to Title"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Back to Title/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Back"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Main Menu/Back to Title"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Battle Menu" type="VBoxContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="Tutorial" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Tutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Tutorial/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Tutorial
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Tutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Revive" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Revive"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Revive/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Revive
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Revive"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Restock" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Restock"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Restock/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Restock
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Restock"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Very Easy" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Very Easy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Very Easy/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 20
+text = "Very Easy"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Very Easy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Easy" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Easy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Easy/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Easy"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Easy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Normal" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Normal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Normal/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Normal"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Normal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Back to Extras" type="Button" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu"]
+custom_minimum_size = Vector2(235, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = ExtResource("4_34rpx")
+theme_override_styles/disabled = ExtResource("4_34rpx")
+theme_override_styles/hover = ExtResource("5_y7b50")
+theme_override_styles/pressed = ExtResource("4_34rpx")
+theme_override_styles/normal = ExtResource("4_34rpx")
+alignment = 2
+script = ExtResource("6_8ketu")
+
+[node name="Margin3" type="MarginContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Back to Extras"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Back to Extras/Margin3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_v2b1x")
+theme_override_font_sizes/font_size = 28
+text = "Back"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Background2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Battle Menu/Back to Extras"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_aisjb")
+
+[node name="Frame" type="Panel" parent="HBoxContainer/Background2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_nxx61")
+
+[node name="Background" type="Panel" parent="HBoxContainer" node_paths=PackedStringArray("background", "frame")]
+clip_children = 2
+custom_minimum_size = Vector2(1500, 900)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4cv22")
+script = ExtResource("2_fijuw")
+background = NodePath(".")
+frame = NodePath("../../Frame")
+
+[node name="Audio Main" type="MarginContainer" parent="HBoxContainer/Background"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Music" type="Panel" parent="HBoxContainer/Background/Audio Main"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5jp7k")
+
+[node name="DdConstruction" type="TextureRect" parent="HBoxContainer/Background/Audio Main/Music"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 221.0
+offset_top = 367.0
+offset_right = 509.0
+offset_bottom = 495.0
+texture = ExtResource("9_068il")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Background/Audio Main/Music/DdConstruction"]
+layout_mode = 2
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -64.0
+offset_right = 912.0
+offset_bottom = 107.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.513726)
+theme_override_colors/font_outline_color = Color(0.205405, 0.205405, 0.205405, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("10_ypy74")
+theme_override_font_sizes/font_size = 75
+text = "Under Construction"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Songs" type="Panel" parent="HBoxContainer/Background/Audio Main"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5jp7k")
+
+[node name="Ambience" type="Panel" parent="HBoxContainer/Background/Audio Main"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5jp7k")
+
+[node name="SFX" type="Panel" parent="HBoxContainer/Background/Audio Main"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5jp7k")
+
+[node name="Gallery Main" type="MarginContainer" parent="HBoxContainer/Background"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Pictures" type="Panel" parent="HBoxContainer/Background/Gallery Main"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5jp7k")
+
+[node name="DdConstruction" type="TextureRect" parent="HBoxContainer/Background/Gallery Main/Pictures"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 221.0
+offset_top = 367.0
+offset_right = 509.0
+offset_bottom = 495.0
+texture = ExtResource("9_068il")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Background/Gallery Main/Pictures/DdConstruction"]
+layout_mode = 2
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -64.0
+offset_right = 912.0
+offset_bottom = 107.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.513726)
+theme_override_colors/font_outline_color = Color(0.205405, 0.205405, 0.205405, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("10_ypy74")
+theme_override_font_sizes/font_size = 75
+text = "Under Construction"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Battle" type="MarginContainer" parent="HBoxContainer/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Background/Battle"]
+modulate = Color(1, 0.3, 0.3, 1)
+custom_minimum_size = Vector2(1500, 900)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_4q4hl")
+
+[node name="Replay" type="MarginContainer" parent="HBoxContainer/Background"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Replay Area" type="Panel" parent="HBoxContainer/Background/Replay"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5jp7k")
+
+[node name="DdConstruction" type="TextureRect" parent="HBoxContainer/Background/Replay/Replay Area"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 221.0
+offset_top = 367.0
+offset_right = 509.0
+offset_bottom = 495.0
+texture = ExtResource("9_068il")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Background/Replay/Replay Area/DdConstruction"]
+layout_mode = 2
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -64.0
+offset_right = 912.0
+offset_bottom = 107.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.513726)
+theme_override_colors/font_outline_color = Color(0.205405, 0.205405, 0.205405, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("10_ypy74")
+theme_override_font_sizes/font_size = 75
+text = "Under Construction"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Frame" type="Panel" parent="."]
+custom_minimum_size = Vector2(1487, 887)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -585.5
+offset_top = -448.5
+offset_right = 914.5
+offset_bottom = 451.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_nxx61")

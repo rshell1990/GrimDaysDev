@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameFont" format=3 uid="uid://bembm7mud71ll"]
+
+[ext_resource type="FontVariation" uid="uid://bxjrk4e7y41we" path="res://GrimDaysVN/resources/fonts/roboto_bold.tres" id="1_188ty"]
+[ext_resource type="Script" uid="uid://be0j11ndd1no6" path="res://GrimDaysVN/scripts/ui/resources/font.gd" id="1_cud8l"]
+[ext_resource type="FontVariation" uid="uid://ct86is4vfpq0f" path="res://GrimDaysVN/resources/fonts/roboto_bold_italics.tres" id="2_uwejf"]
+[ext_resource type="FontVariation" uid="uid://d2np3632nvtn3" path="res://GrimDaysVN/resources/fonts/roboto_italics.tres" id="3_llisq"]
+[ext_resource type="FontVariation" uid="uid://dpcheg56e6j7n" path="res://GrimDaysVN/resources/fonts/roboto_.tres" id="4_8fs34"]
+
+[resource]
+script = ExtResource("1_cud8l")
+id = "roboto"
+normal = ExtResource("4_8fs34")
+italics = ExtResource("3_llisq")
+bold = ExtResource("1_188ty")
+combo = ExtResource("2_uwejf")

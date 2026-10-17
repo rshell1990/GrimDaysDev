@@ -1,0 +1,1058 @@
+[gd_scene format=3 uid="uid://cqff0b0h70s86"]
+
+[ext_resource type="Texture2D" uid="uid://bc6gsslq8ia8i" path="res://GrimDays/assets/visuals/ui/classic rpg gui/big_bar_bg.png" id="1_3ebfy"]
+[ext_resource type="PackedScene" uid="uid://bnjhny40o2err" path="res://GrimDaysBattle/scenes/ui/skill_tree/node_base.tscn" id="2_0plw7"]
+[ext_resource type="Texture2D" uid="uid://l7ymvwfusbb3" path="res://editor_only_debug/visuals/ui/vn_gui_library/2000_Icons/fr_bg/A_Inventory_frame2_back_RED.png" id="2_tivue"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="3_6wccy"]
+[ext_resource type="Script" uid="uid://bef24f2p01ec2" path="res://GrimDaysBattle/scripts/UI/skill_tree_line_texture_control.gd" id="3_ceud6"]
+[ext_resource type="Texture2D" uid="uid://dawhk8hj04log" path="res://editor_only_debug/visuals/skill_icons/Skill_Punch_nb.png" id="4_6wccy"]
+[ext_resource type="FontFile" uid="uid://ciw1iwfqlhpft" path="res://GrimDays/assets/visuals/ui/Demonic_UI/Fonts/BOD_R.TTF" id="5_sore5"]
+[ext_resource type="Script" uid="uid://djuyd0mjkot0q" path="res://GrimDaysBattle/scripts/Skills/UI/skill_preparation_view.gd" id="10_controller"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pe5hr"]
+bg_color = Color(0.18, 0.025199998, 0.097440004, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.09239706, 0.09239709, 0.09239695, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh0q7"]
+bg_color = Color(0.41, 0.012299988, 0.21114999, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pe5hr"]
+texture = ExtResource("2_tivue")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sore5"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0plw7"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Skill Panel" type="NinePatchRect" unique_id=379040112]
+custom_minimum_size = Vector2(1600, 890)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3ebfy")
+script = ExtResource("10_controller")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1704033183]
+custom_maximum_size = Vector2(1600, 875)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 23
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1113967238]
+custom_minimum_size = Vector2(1252, 850)
+layout_mode = 2
+alignment = 2
+
+[node name="Skills" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1363597699]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1252, 890)
+custom_maximum_size = Vector2(1245, -1)
+layout_mode = 2
+
+[node name="spacer" type="ColorRect" parent="MarginContainer/HBoxContainer/Skills" unique_id=1616950642]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TreeTabs" type="TabContainer" parent="MarginContainer/HBoxContainer/Skills" unique_id=1645708152]
+custom_maximum_size = Vector2(-1, 800)
+layout_mode = 2
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+
+[node name="Template Tree" type="Control" parent="MarginContainer/HBoxContainer/Skills/TreeTabs" unique_id=176536547]
+custom_minimum_size = Vector2(1252, 800)
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree" unique_id=205196460]
+custom_minimum_size = Vector2(1252, 800)
+layout_mode = 0
+offset_right = 1252.0
+offset_bottom = 800.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer" unique_id=538209110]
+custom_minimum_size = Vector2(1252, 760)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Node Container Filled Example" type="Control" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer" unique_id=1241077318]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1900, 760)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Row 1 - Tier 1 to Tier 2" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=831560469]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 75.0
+offset_top = 75.0
+offset_right = 330.0
+offset_bottom = 109.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row 1 - Tier 2 to Tier 3" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1303652443]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 325.0
+offset_top = 75.0
+offset_right = 580.0
+offset_bottom = 109.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row 1 - Tier 3 to Tier 4" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=667946651]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 575.0
+offset_top = 75.0
+offset_right = 830.0
+offset_bottom = 109.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row 1 - Tier 4 to Tier 5" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1670807149]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 825.0
+offset_top = 75.0
+offset_right = 1080.0
+offset_bottom = 109.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row 1 - Tier 5 to Tier 6" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1265115455]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 75.0
+offset_right = 1330.0
+offset_bottom = 109.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row 1 - Tier 6 to Tier 7" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=171309484]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1325.0
+offset_top = 75.0
+offset_right = 1580.0
+offset_bottom = 109.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row 1 - Tier 7 to Tier 8" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1090423837]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1575.0
+offset_top = 75.0
+offset_right = 1830.0
+offset_bottom = 109.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row2 - Tier 1 to Tier 2" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=223852017]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 75.0
+offset_top = 225.0
+offset_right = 330.0
+offset_bottom = 259.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row2 - Tier 2 to Tier 3" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1944701733]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 325.0
+offset_top = 225.0
+offset_right = 580.0
+offset_bottom = 259.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row2 - Tier 3 to Tier 4" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=2009841367]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 575.0
+offset_top = 225.0
+offset_right = 830.0
+offset_bottom = 259.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row2 - Tier 4 to Tier 5" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=650603984]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 825.0
+offset_top = 225.0
+offset_right = 1080.0
+offset_bottom = 259.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row2 - Tier 5 to Tier 6" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1050762760]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 225.0
+offset_right = 1330.0
+offset_bottom = 259.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row2 - Tier 6 to Tier 7" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1575980017]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1325.0
+offset_top = 225.0
+offset_right = 1580.0
+offset_bottom = 259.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row2 - Tier 7 to Tier 8" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1802375279]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1575.0
+offset_top = 225.0
+offset_right = 1830.0
+offset_bottom = 259.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row3 - Tier 1 to Tier 2" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=441693559]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 75.0
+offset_top = 375.0
+offset_right = 330.0
+offset_bottom = 409.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row3 - Tier 2 to Tier 3" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1649503254]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 325.0
+offset_top = 375.0
+offset_right = 580.0
+offset_bottom = 409.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row3 - Tier 3 to Tier 4" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1711314839]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 575.0
+offset_top = 375.0
+offset_right = 830.0
+offset_bottom = 409.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row3 - Tier 4 to Tier 5" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=220292827]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 825.0
+offset_top = 375.0
+offset_right = 1080.0
+offset_bottom = 409.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row3 - Tier 5 to Tier 6" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=294431108]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 375.0
+offset_right = 1330.0
+offset_bottom = 409.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row3 - Tier 6 to Tier 7" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=116101247]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1325.0
+offset_top = 375.0
+offset_right = 1580.0
+offset_bottom = 409.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row3 - Tier 7 to Tier 8" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1671430525]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1575.0
+offset_top = 375.0
+offset_right = 1830.0
+offset_bottom = 409.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row4 - Tier 1 to Tier 2" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=2132659403]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 75.0
+offset_top = 525.0
+offset_right = 330.0
+offset_bottom = 559.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row4 - Tier 2 to Tier 3" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=96899358]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 325.0
+offset_top = 525.0
+offset_right = 580.0
+offset_bottom = 559.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row4 - Tier 3 to Tier 4" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1895715633]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 575.0
+offset_top = 525.0
+offset_right = 830.0
+offset_bottom = 559.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row4 - Tier 4 to Tier 5" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=2087761142]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 825.0
+offset_top = 525.0
+offset_right = 1080.0
+offset_bottom = 559.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row4 - Tier 5 to Tier 6" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1966800581]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 525.0
+offset_right = 1330.0
+offset_bottom = 559.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row4 - Tier 6 to Tier 7" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=880975876]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1325.0
+offset_top = 525.0
+offset_right = 1580.0
+offset_bottom = 559.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row4 - Tier 7 to Tier 8" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1639068088]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1575.0
+offset_top = 525.0
+offset_right = 1830.0
+offset_bottom = 559.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row5 - Tier 1 to Tier 2" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1911811857]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 75.0
+offset_top = 675.0
+offset_right = 330.0
+offset_bottom = 709.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row5 - Tier 2 to Tier 3" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=731929988]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 325.0
+offset_top = 675.0
+offset_right = 580.0
+offset_bottom = 709.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row5 - Tier 3 to Tier 4" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1969739576]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 575.0
+offset_top = 675.0
+offset_right = 830.0
+offset_bottom = 709.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row5 - Tier 4 to Tier 5" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1313025779]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 825.0
+offset_top = 675.0
+offset_right = 1080.0
+offset_bottom = 709.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row5 - Tier 5 to Tier 6" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1144684946]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 675.0
+offset_right = 1330.0
+offset_bottom = 709.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row5 - Tier 6 to Tier 7" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1226449047]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1325.0
+offset_top = 675.0
+offset_right = 1580.0
+offset_bottom = 709.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Row5 - Tier 7 to Tier 8" type="TextureRect" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=2081790626]
+custom_maximum_size = Vector2(255, -1)
+layout_mode = 0
+offset_left = 1575.0
+offset_top = 675.0
+offset_right = 1830.0
+offset_bottom = 709.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 1
+script = ExtResource("3_ceud6")
+
+[node name="Tier1 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=537154004 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 144.0
+
+[node name="Tier1 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=499842181 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 144.0
+offset_bottom = 294.0
+
+[node name="Tier1 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1934902407 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 144.0
+offset_bottom = 444.0
+
+[node name="Tier1 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1691466880 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_top = 450.0
+offset_right = 144.0
+offset_bottom = 594.0
+
+[node name="Tier1 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=767846038 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_top = 600.0
+offset_right = 144.0
+offset_bottom = 744.0
+
+[node name="Tier2 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=732135954 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 250.0
+offset_right = 394.0
+offset_bottom = 144.0
+
+[node name="Tier2 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1179184048 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 150.0
+offset_right = 394.0
+offset_bottom = 294.0
+
+[node name="Tier2 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1938400455 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 300.0
+offset_right = 394.0
+offset_bottom = 444.0
+
+[node name="Tier2 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1157170449 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 450.0
+offset_right = 394.0
+offset_bottom = 594.0
+
+[node name="Tier2 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1547154310 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 600.0
+offset_right = 394.0
+offset_bottom = 744.0
+
+[node name="Tier3 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=101582034 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 500.0
+offset_right = 644.0
+offset_bottom = 144.0
+
+[node name="Tier3 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=784886039 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 150.0
+offset_right = 644.0
+offset_bottom = 294.0
+
+[node name="Tier3 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=148268970 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 300.0
+offset_right = 644.0
+offset_bottom = 444.0
+
+[node name="Tier3 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1119960919 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 450.0
+offset_right = 644.0
+offset_bottom = 594.0
+
+[node name="Tier3 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1098839679 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 600.0
+offset_right = 644.0
+offset_bottom = 744.0
+
+[node name="Tier4 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=176401638 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 750.0
+offset_right = 894.0
+offset_bottom = 144.0
+
+[node name="Tier4 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1707949539 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 150.0
+offset_right = 894.0
+offset_bottom = 294.0
+
+[node name="Tier4 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1854822998 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 300.0
+offset_right = 894.0
+offset_bottom = 444.0
+
+[node name="Tier4 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1271426153 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 450.0
+offset_right = 894.0
+offset_bottom = 594.0
+
+[node name="Tier4 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=570270411 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 600.0
+offset_right = 894.0
+offset_bottom = 744.0
+
+[node name="Tier5 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=369338021 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1000.0
+offset_right = 1144.0
+offset_bottom = 144.0
+
+[node name="Tier5 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=19577652 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 150.0
+offset_right = 1144.0
+offset_bottom = 294.0
+
+[node name="Tier5 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1967644451 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 300.0
+offset_right = 1144.0
+offset_bottom = 444.0
+
+[node name="Tier5 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1051792566 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 450.0
+offset_right = 1144.0
+offset_bottom = 594.0
+
+[node name="Tier5 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=773803825 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 600.0
+offset_right = 1144.0
+offset_bottom = 744.0
+
+[node name="Tier6 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=2057166768 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1250.0
+offset_right = 1394.0
+offset_bottom = 144.0
+
+[node name="Tier6 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=169469746 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 150.0
+offset_right = 1394.0
+offset_bottom = 294.0
+
+[node name="Tier6 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=697369899 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 300.0
+offset_right = 1394.0
+offset_bottom = 444.0
+
+[node name="Tier6 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=317466822 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 450.0
+offset_right = 1394.0
+offset_bottom = 594.0
+
+[node name="Tier6 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=291344189 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 600.0
+offset_right = 1394.0
+offset_bottom = 744.0
+
+[node name="Tier7 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=2014211843 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1500.0
+offset_right = 1644.0
+offset_bottom = 144.0
+
+[node name="Tier7 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=2096003591 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 150.0
+offset_right = 1644.0
+offset_bottom = 294.0
+
+[node name="Tier7 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=366738325 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 300.0
+offset_right = 1644.0
+offset_bottom = 444.0
+
+[node name="Tier7 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=682254436 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 450.0
+offset_right = 1644.0
+offset_bottom = 594.0
+
+[node name="Tier7 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1413408389 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 600.0
+offset_right = 1644.0
+offset_bottom = 744.0
+
+[node name="Tier8 Node" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=937798298 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1750.0
+offset_right = 1894.0
+offset_bottom = 144.0
+
+[node name="Tier8 Node2" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=4989874 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1750.0
+offset_top = 150.0
+offset_right = 1894.0
+offset_bottom = 294.0
+
+[node name="Tier8 Node3" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=766082000 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1750.0
+offset_top = 300.0
+offset_right = 1894.0
+offset_bottom = 444.0
+
+[node name="Tier8 Node4" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=872059045 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1750.0
+offset_top = 450.0
+offset_right = 1894.0
+offset_bottom = 594.0
+
+[node name="Tier8 Node5" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer/Node Container Filled Example" unique_id=1298371139 instance=ExtResource("2_0plw7")]
+layout_mode = 0
+offset_left = 1750.0
+offset_top = 600.0
+offset_right = 1894.0
+offset_bottom = 744.0
+
+[node name="Node Container" type="Control" parent="MarginContainer/HBoxContainer/Skills/TreeTabs/Template Tree/MarginContainer/ScrollContainer" unique_id=793343362]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(1900, 760)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Skill Investment Controls" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Skills" unique_id=1045049971]
+custom_maximum_size = Vector2(-1, 55)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 250
+alignment = 1
+
+[node name="Discard Changes Button" type="Button" parent="MarginContainer/HBoxContainer/Skills/Skill Investment Controls" unique_id=1877085302]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(375, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pe5hr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kh0q7")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Skills/Skill Investment Controls/Discard Changes Button" unique_id=987328408]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.13, 0.13, 0.13, 0.5411765)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_6wccy")
+theme_override_font_sizes/font_size = 41
+text = "Discard Changes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Apply Changes Button" type="Button" parent="MarginContainer/HBoxContainer/Skills/Skill Investment Controls" unique_id=1383033534]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pe5hr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kh0q7")
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Skills/Skill Investment Controls/Apply Changes Button" unique_id=1223432056]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.13, 0.13, 0.13, 0.5411765)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_6wccy")
+theme_override_font_sizes/font_size = 41
+text = "Apply"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node Info Scroll" type="ScrollContainer" parent="MarginContainer/HBoxContainer" unique_id=750773681]
+custom_minimum_size = Vector2(300, 880)
+custom_maximum_size = Vector2(300, 880)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Selected Node Info" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Node Info Scroll" unique_id=398491073]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="spacer" type="ColorRect" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info" unique_id=291673879]
+custom_minimum_size = Vector2(0, 9.03)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Header" type="Panel" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info" unique_id=1199405545]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pe5hr")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info/Header" unique_id=1298352020]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.13, 0.13, 0.13, 0.5411765)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_6wccy")
+theme_override_font_sizes/font_size = 41
+text = "Node Info"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon Margin" type="MarginContainer" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info" unique_id=1392295091]
+visible = false
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 16
+
+[node name="Icon Background" type="Panel" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info/Icon Margin" unique_id=802087661]
+self_modulate = Color(0.15487596, 0.154876, 0.15487596, 1)
+clip_children = 2
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sore5")
+
+[node name="Node Icon" type="TextureRect" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info/Icon Margin/Icon Background" unique_id=1924762810]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_6wccy")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Icon Frame" type="Panel" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info/Icon Margin" unique_id=475002266]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0plw7")
+
+[node name="Node Name" type="Label" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info" unique_id=585382809]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.13, 0.13, 0.13, 0.5411765)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_6wccy")
+theme_override_font_sizes/font_size = 24
+text = "Node Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Node Description" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info" unique_id=139407263]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.20152658, 0.20152658, 0.20152658, 0.3372549)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("5_sore5")
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 18
+theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/italics_font_size = 18
+theme_override_font_sizes/mono_font_size = 18
+text = "Basic node description goes here."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node Final Effect" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info" unique_id=932756709]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.91, 0.86268, 0.6916, 1)
+theme_override_colors/font_shadow_color = Color(0.20152658, 0.20152658, 0.20152658, 0.3372549)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("5_sore5")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
+text = "The final current effects of the node go here, including the origin node(s)."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next Node Investment" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Node Info Scroll/Selected Node Info" unique_id=572032488]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.8332133, 0.6248, 0.88, 1)
+theme_override_colors/font_shadow_color = Color(0.20152658, 0.20152658, 0.20152658, 0.3372549)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("5_sore5")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
+text = "The effect that investing another point will have.
+Or if no next effect:
+\"(MAX RANK)\""
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

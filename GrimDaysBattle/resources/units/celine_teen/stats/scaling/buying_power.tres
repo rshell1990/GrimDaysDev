@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://cekc5khrahe5y"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_wmq3e"]
+[ext_resource type="Curve" uid="uid://b3mbojay0htly" path="res://GrimDaysBattle/resources/units/celine_teen/stats/scaling/buying_power-barter_needed_1-9_for_maximum.tres" id="2_t6h7i"]
+
+[resource]
+script = ExtResource("1_wmq3e")
+influenced_by = 100
+to_stat_maximum_curve = ExtResource("2_t6h7i")
+maximum = 100.0
+type = 500
+id = &"BuyingPower"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

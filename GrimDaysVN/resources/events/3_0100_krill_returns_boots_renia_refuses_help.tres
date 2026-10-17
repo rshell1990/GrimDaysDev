@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameEventSequence" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
+[ext_resource type="Resource" path="res://GrimDaysVN/dialogic/scripts/3_0100_krill_returns_boots_renia_refuses_help.dtl" id="2_timeline"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/3_0110_krill_explains_her_missing_sister.tres" id="3_next"]
+
+[resource]
+script = ExtResource("1_sequence")
+id = &"3_0100_krill_returns_boots_renia_refuses_help"
+only_called = true
+blocks_swap = true
+timeline = ExtResource("2_timeline")
+finishing_timeline = ExtResource("2_timeline")
+finished_event = ExtResource("3_next")

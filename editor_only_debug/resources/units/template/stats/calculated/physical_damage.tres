@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitCalculatedStatTemplate" format=3 uid="uid://ck5i5ehaf72xo"]
+
+[ext_resource type="Script" uid="uid://c8b5o4p81s507" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_calculated_template.gd" id="1_yd2u3"]
+
+[resource]
+script = ExtResource("1_yd2u3")
+influenced_by = 10
+type = 310
+id = &"PhysicalDamage"
+metadata/_custom_type_script = "uid://c8b5o4p81s507"

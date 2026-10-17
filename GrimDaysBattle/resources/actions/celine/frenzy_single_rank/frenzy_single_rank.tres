@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://ddl13ejytn3k3"]
+
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="1_action"]
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_ytrtl"]
+[ext_resource type="Texture2D" uid="uid://ce0i2gnkpmtpv" path="res://editor_only_debug/visuals/skill_icons/skill_61_noBG.png" id="9_icon"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/celine/frenzy_single_rank/frenzy_single_rank_ranks.tres" id="external_Ranks"]
+
+[resource]
+script = ExtResource("1_action")
+display_name = "Frenzy"
+description = "For a short time, you lose control and go on a rampage. Instead you will automatically choose to attack furiously. Having a chance to deal multiple strikes with each attack.
+
+For a few rounds after using this ability your mind will remain clear."
+icon = ExtResource("9_icon")
+target_amount = 1
+type = 9
+ranks = ExtResource("external_Ranks")
+id = &"frenzy_single_rank"

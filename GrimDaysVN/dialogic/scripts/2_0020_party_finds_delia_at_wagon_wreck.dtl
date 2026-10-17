@@ -1,0 +1,5 @@
+On the road, the party found Delia bloodied beside the wreckage of her merchant wagon. Demorai soldiers were closing in.
+Delia: Help me recover the wagon, and I will pay you and take you toward Hamun.
+The party fought together awkwardly but drove the soldiers back. Delia kept her promise.
+do BattleController.party_manager.ensure_minimum_level("CelineTeen", 3)
+[end_timeline]

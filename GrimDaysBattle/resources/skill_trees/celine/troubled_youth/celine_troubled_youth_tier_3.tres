@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BattleSkillTier" format=3 uid="uid://p2maysbetu5s"]
+
+[ext_resource type="Script" uid="uid://dcwo3oopfs7ky" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_node_definition.gd" id="1_lwk8a"]
+[ext_resource type="Resource" uid="uid://bp7odxqcle3og" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/tier 3/control_node.tres" id="2_4dx4u"]
+[ext_resource type="Resource" uid="uid://cu2ld6ckqg41g" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/tier 3/heavy_blows_node.tres" id="3_e22rd"]
+[ext_resource type="Resource" uid="uid://dlddgrm1qkgw0" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/tier 3/frenzy_node.tres" id="4_xgak5"]
+[ext_resource type="Script" uid="uid://djbq0oeujnwoq" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tier_definition.gd" id="5_1n4y0"]
+
+[resource]
+script = ExtResource("5_1n4y0")
+column = 2
+nodes = Array[ExtResource("1_lwk8a")]([ExtResource("2_4dx4u"), ExtResource("3_e22rd"), ExtResource("4_xgak5")])
+minimum_stats = Dictionary[int, float]({
+300: 3.0
+})
+metadata/_custom_type_script = "uid://djbq0oeujnwoq"

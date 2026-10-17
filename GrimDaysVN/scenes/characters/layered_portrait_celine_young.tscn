@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cymsuvwetjkpq"]
+
+[ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_uubi5"]
+
+[node name="Celine Young" type="CanvasGroup" unique_id=1008214772]
+script = ExtResource("1_uubi5")
+
+[node name="Layer1" type="Sprite2D" parent="." unique_id=111957889]
+
+[node name="Group1" type="Node2D" parent="." unique_id=106705206]
+
+[node name="Layer1" type="Sprite2D" parent="Group1" unique_id=1267396413]
+
+[node name="Layer2" type="Sprite2D" parent="Group1" unique_id=508669733]

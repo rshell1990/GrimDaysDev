@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="EffectScalingCombatStatChangeTemplate" format=3 uid="uid://dvirqfrvs52ov"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_nlydl"]
+[ext_resource type="Texture2D" uid="uid://bqw42ju8qj17m" path="res://editor_only_debug/visuals/skill_icons/Skill_Bleeding_nb.png" id="2_w81kt"]
+[ext_resource type="Script" uid="uid://cqciwrhufos0l" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="3_xudel"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="4_k5ofb"]
+
+[resource]
+script = ExtResource("3_xudel")
+scales_from_sender = true
+scales_with_damage = true
+can_critical = false
+scales_with = 310
+scales_by = -0.05
+scales_by_by_rank = PackedFloat64Array(-0.05, -0.06, -0.07, -0.085, -0.1)
+stat = 210
+duration = 2
+stacking = 3
+lifetime = 1
+target = 3
+kind = 100
+damage_type = 100
+bypass_mitigation = true
+tag = 30
+trigger = 800
+always_hits = true
+icon = ExtResource("2_w81kt")
+description = "Take x damage at the end of every round."
+template_scene = ExtResource("4_k5ofb")
+duration_by_rank = PackedInt32Array(2, 2, 3, 3, 4)
+id = &"stab_single_rank_ranks_1_effects_damage_chance_to_bleed_bleed_effect"
+metadata/_custom_type_script = "uid://cqciwrhufos0l"

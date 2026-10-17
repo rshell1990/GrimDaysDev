@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://bupc0cjksme45"
+path="res://.godot/imported/Sprite combat celeste 15yrs editable file.skel-f715d3c78f8ef82771aed93bdb438be6.spskel"
+
+[deps]
+
+source_file="res://GrimDaysBattle/assets/spine/celine/Sprite combat celeste 15yrs editable file.skel"
+dest_files=["res://.godot/imported/Sprite combat celeste 15yrs editable file.skel-f715d3c78f8ef82771aed93bdb438be6.spskel"]
+
+[params]
+

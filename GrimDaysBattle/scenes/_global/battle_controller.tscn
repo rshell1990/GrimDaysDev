@@ -1,0 +1,243 @@
+[gd_scene format=3 uid="uid://d0f6by3budwvi"]
+
+[ext_resource type="Script" uid="uid://jlhlvulngll4" path="res://GrimDaysBattle/scripts/Runtime/debug_battle_controller.gd" id="1_im4jw"]
+[ext_resource type="Script" uid="uid://cnwu4p1v1juse" path="res://GrimDaysBattle/scripts/Runtime/debug_turn_controller.gd" id="2_wd5s5"]
+[ext_resource type="Script" uid="uid://beovtrkijbxp8" path="res://GrimDaysBattle/scripts/Runtime/debug_battle_party.gd" id="3_vimdw"]
+[ext_resource type="Script" uid="uid://diiqqo2nkyml" path="res://GrimDaysBattle/scripts/Phases/phase_controller.gd" id="4_if28c"]
+[ext_resource type="Script" uid="uid://o03g7cslga51" path="res://GrimDaysBattle/scripts/Phases/phase_00000_select_participants.gd" id="5_l0bqh"]
+[ext_resource type="Script" uid="uid://blbq4cgdjt5mg" path="res://GrimDaysBattle/scripts/Phases/phase_00100_initialize_battlefield.gd" id="6_dn471"]
+[ext_resource type="Script" uid="uid://csxpjxoqy3gfr" path="res://GrimDaysBattle/scripts/Phases/phase_00200_initialize_turn_order.gd" id="7_ytdpw"]
+[ext_resource type="Script" uid="uid://b2u6cvlmy4r22" path="res://GrimDaysBattle/scripts/Phases/phase_00300_round_start.gd" id="8_ilvor"]
+[ext_resource type="Script" uid="uid://nwg1euujfuyu" path="res://GrimDaysBattle/scripts/Phases/phase_00400_get_active_unit.gd" id="9_lp4nc"]
+[ext_resource type="Script" uid="uid://cwrs66457lniq" path="res://GrimDaysBattle/scripts/Phases/phase_00500_give_player_control.gd" id="10_fpk6c"]
+[ext_resource type="Script" uid="uid://603xe7xqkj" path="res://GrimDaysBattle/scripts/Phases/phase_00600_give_ai_control.gd" id="11_i1in5"]
+[ext_resource type="Script" uid="uid://otculcwbdknn" path="res://GrimDaysBattle/scripts/Phases/phase_00700_get_action_from_player.gd" id="12_rc43j"]
+[ext_resource type="Script" uid="uid://j0a7jamqhlmj" path="res://GrimDaysBattle/scripts/Phases/phase_00800_get_action_from_ai.gd" id="13_406k3"]
+[ext_resource type="Script" uid="uid://ca3qclcplsou8" path="res://GrimDaysBattle/scripts/Phases/phase_00900_get_action_targets.gd" id="14_gu143"]
+[ext_resource type="Script" uid="uid://0kgvhchp06xt" path="res://GrimDaysBattle/scripts/Phases/phase_01000_set_action_targets.gd" id="15_ueuog"]
+[ext_resource type="Script" uid="uid://diy2am3bcoklq" path="res://GrimDaysBattle/scripts/Phases/phase_01100_process_active_before_hit.gd" id="16_1iniu"]
+[ext_resource type="Script" uid="uid://bfg3met3unlid" path="res://GrimDaysBattle/scripts/Phases/phase_01110_process_target_before_hit.gd" id="17_cdoc4"]
+[ext_resource type="Script" uid="uid://lqi0audn55va" path="res://GrimDaysBattle/scripts/Phases/phase_01115_process_target_change.gd" id="18_ul1uf"]
+[ext_resource type="Script" uid="uid://decpg4kfqs8r" path="res://GrimDaysBattle/scripts/Phases/phase_01120_process_check_if_target_hit.gd" id="19_kbihc"]
+[ext_resource type="Script" uid="uid://dnbrmg7hfhr" path="res://GrimDaysBattle/scripts/Phases/phase_01140_process_active_after_hit.gd" id="20_5acyi"]
+[ext_resource type="Script" uid="uid://csm534ruv7ykh" path="res://GrimDaysBattle/scripts/Phases/phase_01130_process_target_hit.gd" id="20_wd5s5"]
+[ext_resource type="Script" uid="uid://bswv2ll4a8j8x" path="res://GrimDaysBattle/scripts/Phases/phase_01150_process_target_after_hit.gd" id="21_73l3v"]
+[ext_resource type="Script" uid="uid://doy5b7o3hnn82" path="res://GrimDaysBattle/scripts/Phases/phase_02000_check_for_defeated.gd" id="22_gsbks"]
+[ext_resource type="Script" uid="uid://dpv1p0xb6e5k2" path="res://GrimDaysBattle/scripts/Phases/phase_02500_update_turn_order.gd" id="23_aluu5"]
+[ext_resource type="Script" uid="uid://dfmxf56deqr8o" path="res://GrimDaysBattle/scripts/Phases/phase_01160_process_target_defeat.gd" id="24_5es6y"]
+[ext_resource type="Script" uid="uid://dwdkrx5hot1c3" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_animation.gd" id="26_im4jw"]
+[ext_resource type="Script" uid="uid://dacyybk8k7jk1" path="res://GrimDaysBattle/scripts/Phases/phase_01190_process_active_kill.gd" id="27_uyiam"]
+[ext_resource type="PackedScene" uid="uid://b1bb63b8d7ofn" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_animation.tscn" id="27_wd5s5"]
+[ext_resource type="Script" uid="uid://bqqbno8dxlfv4" path="res://GrimDaysBattle/scripts/Phases/phase_01200_process_active_action_finished.gd" id="28_eanfh"]
+[ext_resource type="Script" uid="uid://bquot86b5ca4y" path="res://GrimDaysBattle/scripts/Phases/phase_03000_process_check_for_next_target.gd" id="29_i5whk"]
+[ext_resource type="Script" uid="uid://bt17i05fx3x5r" path="res://GrimDaysBattle/scripts/Phases/phase_05000_trigger_round_end_efects.gd" id="30_cg5od"]
+[ext_resource type="Script" uid="uid://twqnhdbeqowx" path="res://GrimDaysBattle/scripts/Phases/phase_05500_end_round.gd" id="31_mk3lq"]
+[ext_resource type="Script" uid="uid://bdnx8r57xl362" path="res://GrimDaysBattle/scripts/Phases/phase_10000_victory.gd" id="32_ie4dq"]
+[ext_resource type="Script" uid="uid://y332xkxg4jfa" path="res://GrimDaysBattle/scripts/Phases/phase_20000_defeat.gd" id="33_m63re"]
+[ext_resource type="Script" uid="uid://d1y2itex8pryl" path="res://GrimDaysBattle/scripts/Party/battle_party_manager.gd" id="34_party"]
+[ext_resource type="Script" uid="uid://003jfr4wq8yh" path="res://GrimDaysBattle/scripts/Phases/phase_01050_resolve_action.gd" id="35_resolve"]
+
+[sub_resource type="Resource" id="Resource_wd5s5"]
+script = ExtResource("26_im4jw")
+animation_id = &"death_"
+kind = 300
+tag = 80
+trigger = 500
+template_scene = ExtResource("27_wd5s5")
+id = &"death_animation_trigger"
+metadata/_custom_type_script = "uid://dwdkrx5hot1c3"
+
+[node name="Battle Controller" type="Node" node_paths=PackedStringArray("state_manager", "ally_unit_holder", "foe_unit_holder")]
+script = ExtResource("1_im4jw")
+state_manager = NodePath("Phase Controller")
+ally_unit_holder = NodePath("Allies")
+foe_unit_holder = NodePath("Foes")
+
+[node name="Turn Controller" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_wd5s5")
+metadata/_custom_type_script = "uid://cnwu4p1v1juse"
+
+[node name="Allies" type="Node" parent="."]
+script = ExtResource("3_vimdw")
+
+[node name="Foes" type="Node" parent="."]
+script = ExtResource("3_vimdw")
+
+[node name="Runtime Party" type="Node" parent="."]
+script = ExtResource("34_party")
+
+[node name="Phase Controller" type="Node" parent="."]
+script = ExtResource("4_if28c")
+metadata/_custom_type_script = "uid://diiqqo2nkyml"
+
+[node name="Select Participants" type="Node" parent="Phase Controller"]
+script = ExtResource("5_l0bqh")
+default_next_phase = 100
+metadata/_custom_type_script = "uid://o03g7cslga51"
+
+[node name="Initialize Battlefield" type="Node" parent="Phase Controller"]
+script = ExtResource("6_dn471")
+id = 100
+default_next_phase = 200
+metadata/_custom_type_script = "uid://blbq4cgdjt5mg"
+
+[node name="Initialize Turn Order" type="Node" parent="Phase Controller"]
+script = ExtResource("7_ytdpw")
+id = 200
+default_next_phase = 300
+metadata/_custom_type_script = "uid://csxpjxoqy3gfr"
+
+[node name="Round Start" type="Node" parent="Phase Controller"]
+script = ExtResource("8_ilvor")
+id = 300
+default_next_phase = 400
+metadata/_custom_type_script = "uid://b2u6cvlmy4r22"
+
+[node name="Get Active Unit" type="Node" parent="Phase Controller"]
+script = ExtResource("9_lp4nc")
+id = 400
+default_next_phase = 500
+metadata/_custom_type_script = "uid://nwg1euujfuyu"
+
+[node name="Give Player Control" type="Node" parent="Phase Controller"]
+script = ExtResource("10_fpk6c")
+id = 500
+default_next_phase = 700
+metadata/_custom_type_script = "uid://cwrs66457lniq"
+
+[node name="Give AI Control" type="Node" parent="Phase Controller"]
+script = ExtResource("11_i1in5")
+id = 600
+default_next_phase = 800
+metadata/_custom_type_script = "uid://603xe7xqkj"
+
+[node name="Get Action From Player" type="Node" parent="Phase Controller"]
+script = ExtResource("12_rc43j")
+id = 700
+default_next_phase = 900
+metadata/_custom_type_script = "uid://otculcwbdknn"
+
+[node name="Get Action From AI" type="Node" parent="Phase Controller"]
+script = ExtResource("13_406k3")
+id = 800
+default_next_phase = 900
+metadata/_custom_type_script = "uid://j0a7jamqhlmj"
+
+[node name="Get Action Targets" type="Node" parent="Phase Controller"]
+script = ExtResource("14_gu143")
+id = 900
+default_next_phase = 1000
+metadata/_custom_type_script = "uid://ca3qclcplsou8"
+
+[node name="Set Action Targets" type="Node" parent="Phase Controller"]
+script = ExtResource("15_ueuog")
+id = 1000
+default_next_phase = 1050
+metadata/_custom_type_script = "uid://0kgvhchp06xt"
+
+[node name="Resolve Action" type="Node" parent="Phase Controller"]
+script = ExtResource("35_resolve")
+id = 1050
+default_next_phase = 2000
+
+[node name="Process Active Before Hit" type="Node" parent="Phase Controller"]
+script = ExtResource("16_1iniu")
+id = 1100
+default_next_phase = 1110
+metadata/_custom_type_script = "uid://diy2am3bcoklq"
+
+[node name="Process Target Before Hit" type="Node" parent="Phase Controller"]
+script = ExtResource("17_cdoc4")
+id = 1110
+default_next_phase = 1115
+metadata/_custom_type_script = "uid://bfg3met3unlid"
+
+[node name="Process Target Change" type="Node" parent="Phase Controller"]
+script = ExtResource("18_ul1uf")
+id = 1115
+default_next_phase = 1120
+metadata/_custom_type_script = "uid://lqi0audn55va"
+
+[node name="Check If Target Hit" type="Node" parent="Phase Controller"]
+script = ExtResource("19_kbihc")
+id = 1120
+default_next_phase = 1130
+metadata/_custom_type_script = "uid://decpg4kfqs8r"
+
+[node name="Process Target Hit" type="Node" parent="Phase Controller"]
+script = ExtResource("20_wd5s5")
+id = 1130
+default_next_phase = 1140
+metadata/_custom_type_script = "uid://csm534ruv7ykh"
+
+[node name="Process Active After Hit" type="Node" parent="Phase Controller"]
+script = ExtResource("20_5acyi")
+id = 1140
+default_next_phase = 1150
+metadata/_custom_type_script = "uid://dnbrmg7hfhr"
+
+[node name="Process Target After Hit" type="Node" parent="Phase Controller"]
+script = ExtResource("21_73l3v")
+id = 1150
+default_next_phase = 2000
+metadata/_custom_type_script = "uid://bswv2ll4a8j8x"
+
+[node name="Check For Defeat" type="Node" parent="Phase Controller"]
+script = ExtResource("22_gsbks")
+id = 2000
+default_next_phase = 1200
+metadata/_custom_type_script = "uid://doy5b7o3hnn82"
+
+[node name="Update Turn Order" type="Node" parent="Phase Controller"]
+script = ExtResource("23_aluu5")
+id = 2500
+default_next_phase = 1160
+metadata/_custom_type_script = "uid://dpv1p0xb6e5k2"
+
+[node name="Process Defeat" type="Node" parent="Phase Controller"]
+script = ExtResource("24_5es6y")
+death_effect = SubResource("Resource_wd5s5")
+id = 1160
+default_next_phase = 1190
+metadata/_custom_type_script = "uid://dfmxf56deqr8o"
+
+[node name="Process Kill" type="Node" parent="Phase Controller"]
+script = ExtResource("27_uyiam")
+id = 1190
+default_next_phase = 2000
+metadata/_custom_type_script = "uid://dacyybk8k7jk1"
+
+[node name="Process Active Action Finished" type="Node" parent="Phase Controller"]
+script = ExtResource("28_eanfh")
+id = 1200
+default_next_phase = 3000
+metadata/_custom_type_script = "uid://bqqbno8dxlfv4"
+
+[node name="Process Check For Next Target" type="Node" parent="Phase Controller"]
+script = ExtResource("29_i5whk")
+id = 3000
+default_next_phase = 400
+metadata/_custom_type_script = "uid://bquot86b5ca4y"
+
+[node name="Trigger Round End Effects" type="Node" parent="Phase Controller"]
+script = ExtResource("30_cg5od")
+id = 5000
+default_next_phase = 2000
+metadata/_custom_type_script = "uid://bt17i05fx3x5r"
+
+[node name="End Round" type="Node" parent="Phase Controller"]
+script = ExtResource("31_mk3lq")
+id = 5500
+default_next_phase = 200
+metadata/_custom_type_script = "uid://twqnhdbeqowx"
+
+[node name="Victory" type="Node" parent="Phase Controller"]
+script = ExtResource("32_ie4dq")
+id = 10000
+metadata/_custom_type_script = "uid://bdnx8r57xl362"
+
+[node name="Defeat" type="Node" parent="Phase Controller"]
+script = ExtResource("33_m63re")
+id = 20000
+metadata/_custom_type_script = "uid://y332xkxg4jfa"

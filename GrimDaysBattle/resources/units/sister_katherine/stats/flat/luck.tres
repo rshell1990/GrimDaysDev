@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://8da3el1gergf"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_8lkyy"]
+
+[resource]
+script = ExtResource("1_8lkyy")
+type = 80
+starting_amount = 6.0
+id = &"Luck"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

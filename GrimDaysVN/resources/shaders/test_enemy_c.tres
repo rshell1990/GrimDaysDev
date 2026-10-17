@@ -1,0 +1,49 @@
+[gd_resource type="Shader" format=3 uid="uid://c1r2tughibs5n"]
+
+[resource]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+render_mode blend_mix;
+uniform float desaturation: hint_range(0.0, 1.0, 0.1);
+uniform float damage: hint_range(0.0, 1.0, 0.1);
+uniform float outline_width = 2.0;
+uniform vec4 outline_color : source_color;
+uniform sampler2D screen: source_color;
+void fragment() {
+	vec4 base = texture(screen, UV, 1.0);
+	//vec3 new_color = dot(base.rgb, vec3(brightness, brightness, brightness));
+
+	vec2 ps = vec2(0.0001,0.0001);
+	float a;
+	float maxa = base.a;
+	float mina = base.a;
+
+	a = texture(screen, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(screen, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(screen, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(screen, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+
+	vec4 other_color = mix(base, outline_color, maxa - mina);
+
+	vec3 greyscaled = mix(vec3((base.r + base.g + base.b) / 3.0),  vec3(0.299 * base.r + 0.587 * base.g + 0.114 * base.b), float(true));
+	COLOR.rgb = mix(other_color.rgb, greyscaled,desaturation);
+	vec3 red = vec3(0.45, 0.0, 0.0);
+	if (damage > 0.0)
+		COLOR.rgb = mix(other_color.rgb, red,damage);
+	COLOR.a = other_color.a;
+
+
+}
+"

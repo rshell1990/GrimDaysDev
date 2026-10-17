@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://dyqmbsi7xafte"]
+
+[ext_resource type="StyleBox" uid="uid://bm1kmkmyfp1pi" path="res://content/resources/squared_background.tres" id="1_khavo"]
+[ext_resource type="FontVariation" uid="uid://chteovppxif7j" path="res://content/resources/fonts/elanor_.tres" id="2_00mqr"]
+[ext_resource type="Script" uid="uid://my80uda07pb3" path="res://content/scripts/ui/scriplets/notification_operator.gd" id="2_vg82q"]
+[ext_resource type="FontVariation" uid="uid://nd76cgx2tgku" path="res://content/resources/fonts/elanor_italics.tres" id="3_p1pwc"]
+[ext_resource type="FontVariation" uid="uid://dnajvg2yjov1u" path="res://content/resources/fonts/elanor_bold_italics.tres" id="4_cmdl8"]
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://content/resources/fonts/elanor_bold.tres" id="5_da4eq"]
+[ext_resource type="StyleBox" uid="uid://cem3yn4eoeklj" path="res://content/resources/gui/frame.tres" id="6_hw6b3"]
+[ext_resource type="Script" uid="uid://b5yq8ak513ovb" path="res://content/scripts/ui/scriplets/automatically_color_panel.gd" id="7_dqmfj"]
+
+[sub_resource type="Animation" id="Animation_yqqvy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1108, -162)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/RichTextLabel:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sq4j0"]
+resource_name = "enter_screen"
+length = 2.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1108, -162), Vector2(1108, 12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/RichTextLabel:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.33, 0.66),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_as0uf"]
+resource_name = "exit_screen"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1108, 12), Vector2(1108, 1200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1wnmy"]
+_data = {
+&"RESET": SubResource("Animation_yqqvy"),
+&"enter_screen": SubResource("Animation_sq4j0"),
+&"exit_screen": SubResource("Animation_as0uf")
+}
+
+[node name="Notification Template" type="Panel" node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(800, 150)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -812.0
+offset_top = -162.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("1_khavo")
+script = ExtResource("2_vg82q")
+label = NodePath("MarginContainer/RichTextLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/normal_font = ExtResource("2_00mqr")
+theme_override_fonts/italics_font = ExtResource("3_p1pwc")
+theme_override_fonts/bold_italics_font = ExtResource("4_cmdl8")
+theme_override_fonts/bold_font = ExtResource("5_da4eq")
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[center]Sample Notification a test to see how this handles me adding more and more text to this stupid thing.  It's all I have to know if this works.
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Frame" type="Panel" parent="." node_paths=PackedStringArray("background", "frame")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("6_hw6b3")
+script = ExtResource("7_dqmfj")
+background = NodePath("..")
+frame = NodePath(".")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_1wnmy")
+}

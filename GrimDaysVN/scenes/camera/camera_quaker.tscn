@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpwe3sx6nmy2w"]
+
+[ext_resource type="Script" uid="uid://bp7qg33ryd3g2" path="res://content/scripts/camera/camera_effect_quake.gd" id="1_c0dy6"]
+
+[node name="Camera Quaker" type="Node"]
+script = ExtResource("1_c0dy6")

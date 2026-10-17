@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0kk88oxl0xij"]
+
+[ext_resource type="Script" uid="uid://bxk0kvntjwnu8" path="res://content/scripts/spine_characters/character_portrait_operator.gd" id="2_qyp6r"]
+[ext_resource type="Script" uid="uid://ccqlm741rmikc" path="res://content/scripts/spine_characters/blink_timer.gd" id="6_ly4wu"]
+
+[node name="Model" type="SpineSprite"]
+position = Vector2(750, 3550)
+script = ExtResource("2_qyp6r")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+script = ExtResource("6_ly4wu")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

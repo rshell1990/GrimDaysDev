@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://b8yrbgv2xbyyt"]
+
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/scripts/Unit/Runtime/unit_2d_sprite.gd" id="1_4nh8e"]
+[ext_resource type="Texture2D" uid="uid://bg32il1oufvw" path="res://GrimDaysVN/visuals/characters/nuns/v2.png" id="2_4nh8e"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="3_0pvgs"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="4_rmj6u"]
+[ext_resource type="Texture2D" uid="uid://5qlr2yebapf3" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_1.png" id="5_jy4vq"]
+[ext_resource type="Texture2D" uid="uid://ci8675en50eis" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_2.png" id="6_x6f0h"]
+[ext_resource type="Texture2D" uid="uid://ch3aconym11n" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_3.png" id="7_x6pqb"]
+[ext_resource type="Texture2D" uid="uid://qll6h8rsqb7l" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_4.png" id="8_ij8wc"]
+[ext_resource type="Texture2D" uid="uid://drprs0h7kocc5" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_5.png" id="9_6y7lv"]
+[ext_resource type="Texture2D" uid="uid://7kx7p3q5hfln" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_6.png" id="10_5tkfn"]
+[ext_resource type="Texture2D" uid="uid://dmmm6353tcpbp" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_7.png" id="11_u2ha7"]
+[ext_resource type="Texture2D" uid="uid://njgwbxsh6sgc" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_8.png" id="12_hhwad"]
+[ext_resource type="Texture2D" uid="uid://byv3qkcwo6sqk" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_9.png" id="13_b3ih1"]
+[ext_resource type="Texture2D" uid="uid://db6psbyy8i1dk" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_10.png" id="14_udsm0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qe4go"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jy4vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x6f0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x6pqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ij8wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6y7lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5tkfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u2ha7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hhwad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b3ih1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_udsm0")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Sister Katerine" type="Sprite2D" unique_id=1808425687 node_paths=PackedStringArray("collision_area", "raycaster", "attack_particle")]
+centered = false
+script = ExtResource("1_4nh8e")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+attack_particle = NodePath("AttackAnimation")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1404045191]
+position = Vector2(0, 100)
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("2_4nh8e")
+offset = Vector2(0, -350)
+
+[node name="Appearance Area" parent="." unique_id=554828278 instance=ExtResource("3_0pvgs")]
+show_behind_parent = true
+scale = Vector2(0.5, 0.5)
+
+[node name="8_way_raycasts" parent="." unique_id=1026974889 instance=ExtResource("4_rmj6u")]
+process_mode = 4
+show_behind_parent = true
+scale = Vector2(0.5, 0.5)
+
+[node name="AttackAnimation" type="AnimatedSprite2D" parent="." unique_id=1119568963]
+visible = false
+z_index = 5
+position = Vector2(800, 50)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_qe4go")

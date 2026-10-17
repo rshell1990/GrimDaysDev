@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://rqag3d563ijd"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_l28vu"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="2_jiaor"]
+[ext_resource type="Resource" uid="uid://w1r1nxptht43" path="res://GrimDaysBattle/resources/actions/celine/quick_jab_single_rank/quick_jab_single_rank_ranks.tres" id="2_rqa2j"]
+[ext_resource type="Texture2D" uid="uid://diek4ywdo6a66" path="res://editor_only_debug/visuals/skill_icons/Skill_MeleeFistHit_nb.png" id="2_rvjvh"]
+
+[resource]
+script = ExtResource("2_jiaor")
+display_name = "Quick Jab"
+description = "Add a light jab to your straight punch, attacking an additional time."
+icon = ExtResource("2_rvjvh")
+attack_animation = &"Attacking (Basic) NO WEAPON"
+use_spine = true
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("2_rqa2j")
+id = &"quick_jab_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

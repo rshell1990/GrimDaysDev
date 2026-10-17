@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="script"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/sacred_duty/measured_penance.tres" id="action"]
+
+[resource]
+script = ExtResource("script")
+id = &"measured_penance"
+display_name = "Measured Penance"
+row = 2
+maximum_rank = 5
+action = ExtResource("action")
+previous_node = &"ritual_cut"
+

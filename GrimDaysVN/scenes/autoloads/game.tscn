@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://b8k88oafa8hrw"]
+
+[ext_resource type="Script" uid="uid://cmduntj7ckib2" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_manager.gd" id="1_12i1y"]
+[ext_resource type="Script" uid="uid://dst2fnoq4ro1p" path="res://GrimDaysVN/scripts/rollback/rollback_administrator.gd" id="1_g1yv1"]
+[ext_resource type="Script" uid="uid://bv4y4eaxcm871" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_states.gd" id="2_qi7q5"]
+[ext_resource type="Script" uid="uid://dpukr67va4inq" path="res://GrimDaysVN/scripts/rollback/rollback_checkpoint_operator.gd" id="3_3p5v6"]
+[ext_resource type="Script" uid="uid://l66ksqvm8vie" path="res://GrimDaysVN/scripts/rollback/rollback_director.gd" id="3_500se"]
+[ext_resource type="Script" uid="uid://cwql8abfkfcsr" path="res://GrimDaysVN/scripts/camera/camera_administrator.gd" id="3_mwmq7"]
+[ext_resource type="Script" uid="uid://thc62tfiuckx" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_text_input.gd" id="4_2gjn3"]
+[ext_resource type="Script" uid="uid://chys51tcysxtd" path="res://GrimDaysVN/scripts/spine_characters/character_administrator.gd" id="4_70671"]
+[ext_resource type="Script" uid="uid://ck1wihq6dpt8j" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_loading.gd" id="4_cduhb"]
+[ext_resource type="Script" uid="uid://d4cm1xgmfxn3o" path="res://GrimDaysVN/scripts/camera/camera_director.gd" id="4_wrpxt"]
+[ext_resource type="Script" uid="uid://dwgee48kk0r1e" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_paused.gd" id="5_8di37"]
+[ext_resource type="Script" uid="uid://bqu0n0mjrimyb" path="res://GrimDaysVN/scripts/spine_characters/character_sprite_director.gd" id="6_4abao"]
+[ext_resource type="Script" uid="uid://bsan8hwdi2a8t" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_navigation.gd" id="6_lshws"]
+[ext_resource type="Script" uid="uid://cgvirk2tctjq" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_change_time.gd" id="8_b3tsf"]
+[ext_resource type="Script" uid="uid://dab51o0ptkymp" path="res://GrimDaysVN/scripts/dialogic/dialogic_administrator.gd" id="8_ykemk"]
+[ext_resource type="Script" uid="uid://dm1badjf1b1je" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_scenario.gd" id="9_7npdt"]
+[ext_resource type="Script" uid="uid://bgepe26dnnhjg" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_computer_open.gd" id="9_o4ah8"]
+[ext_resource type="Script" uid="uid://c34h86ync0sb2" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_scenario_sequence.gd" id="10_copw1"]
+[ext_resource type="Script" uid="uid://8vcsvxfil7d2" path="res://GrimDaysVN/scripts/sound/ovani_songs_administrator.gd" id="10_o4s6w"]
+[ext_resource type="Script" uid="uid://bjksjd4nlet0x" path="res://GrimDaysVN/scripts/sound/ovani_songs_director.gd" id="11_7h0tm"]
+[ext_resource type="Script" uid="uid://birwm1mehbaf6" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_scenario_lewd.gd" id="11_ii53i"]
+[ext_resource type="Script" uid="uid://c5hp0xphp2g2m" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_scenario_sleeping.gd" id="11_w14o8"]
+[ext_resource type="Script" uid="uid://bdd1qyyln2xr4" path="res://GrimDaysVN/scripts/sound/ovani_song_operator.gd" id="12_o26w7"]
+[ext_resource type="Script" uid="uid://cb00mftspuix5" path="res://GrimDaysVN/scripts/sound/set_audio_levels.gd" id="13_t4qrl"]
+[ext_resource type="Script" uid="uid://dcn0nfjx5i3tx" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_before_game.gd" id="15_cw5j1"]
+[ext_resource type="Script" uid="uid://1xnu82rdtbsq" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_battle.gd" id="15_ho8t6"]
+[ext_resource type="Script" uid="uid://dn1ubp3m8u3ei" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_init.gd" id="17_dd23t"]
+[ext_resource type="Script" uid="uid://bbk2m4xs6e46b" path="res://GrimDaysVN/scripts/_globals/_game_manager/game_states/game_manager_state_other.gd" id="17_uwse2"]
+[ext_resource type="Script" uid="uid://b6nmvanpqskln" path="res://GrimDaysVN/scripts/navigation/navigation_administrator.gd" id="24_2ved4"]
+[ext_resource type="Script" uid="uid://cygq650ysqfkp" path="res://GrimDaysVN/scripts/time/time_administrator.gd" id="24_7r5ln"]
+[ext_resource type="Script" uid="uid://1k3s5x5wfm5x" path="res://GrimDaysVN/scripts/navigation/navigation_director.gd" id="25_808vl"]
+[ext_resource type="Script" uid="uid://b3e3n73vpncd1" path="res://GrimDaysVN/scripts/time/time_director.gd" id="27_0umny"]
+[ext_resource type="Script" uid="uid://skgvw03l55ea" path="res://GrimDaysVN/scripts/time/time_operator.gd" id="28_syfw3"]
+[ext_resource type="Script" uid="uid://cwtgj4ynpgqlo" path="res://GrimDaysVN/scripts/time/calendar_operator.gd" id="30_ncnwx"]
+[ext_resource type="Script" uid="uid://dolt2gifo1adb" path="res://GrimDaysVN/scripts/game_event_flow_control/event_administrator.gd" id="35_f734g"]
+[ext_resource type="Script" uid="uid://42u5kwvfuxp2" path="res://GrimDaysVN/scripts/game_event_flow_control/event_director.gd" id="36_es3v6"]
+[ext_resource type="Script" uid="uid://c1mfbh5qtnlwg" path="res://GrimDaysVN/scripts/game_event_flow_control/quest_administrator.gd" id="39_qe5qs"]
+[ext_resource type="Script" uid="uid://3cwwsktj5qwe" path="res://GrimDaysVN/scripts/game_event_flow_control/quest_director.gd" id="40_78qq4"]
+
+[node name="GameManager" type="Node" unique_id=766685218 groups=["persist"]]
+script = ExtResource("1_12i1y")
+
+[node name="States" type="Node" parent="." unique_id=2006826841]
+script = ExtResource("2_qi7q5")
+
+[node name="Title" type="Node" parent="States" unique_id=1307795876]
+script = ExtResource("15_cw5j1")
+
+[node name="Text Input" type="Node" parent="States" unique_id=808656035]
+script = ExtResource("4_2gjn3")
+id = 15
+
+[node name="Paused" type="Node" parent="States" unique_id=458206274]
+script = ExtResource("5_8di37")
+id = 14
+
+[node name="Loading" type="Node" parent="States" unique_id=813105040]
+script = ExtResource("4_cduhb")
+id = 1
+
+[node name="Time Changing" type="Node" parent="States" unique_id=1361250143]
+script = ExtResource("8_b3tsf")
+id = 8
+
+[node name="Navigation" type="Node" parent="States" unique_id=1956975188]
+script = ExtResource("6_lshws")
+id = 9
+
+[node name="Computer Open" type="Node" parent="States" unique_id=1245680786]
+script = ExtResource("9_o4ah8")
+id = 11
+
+[node name="Scenario - Normal" type="Node" parent="States" unique_id=1585532008]
+script = ExtResource("9_7npdt")
+id = 2
+
+[node name="Scenario - Sequenced" type="Node" parent="States" unique_id=651808696]
+script = ExtResource("10_copw1")
+id = 5
+
+[node name="Scenario - Sleeping" type="Node" parent="States" unique_id=1550540058]
+script = ExtResource("11_w14o8")
+id = 3
+
+[node name="Scenario - Lewd" type="Node" parent="States" unique_id=2039282762]
+script = ExtResource("11_ii53i")
+id = 4
+
+[node name="Fighting" type="Node" parent="States" unique_id=1716872795]
+script = ExtResource("15_ho8t6")
+id = 12
+
+[node name="Other" type="Node" parent="States" unique_id=1026465946]
+script = ExtResource("17_uwse2")
+id = 13
+metadata/_custom_type_script = "uid://bbk2m4xs6e46b"
+
+[node name="Init" type="Node" parent="States" unique_id=1875261241]
+script = ExtResource("17_dd23t")
+id = 16
+metadata/_custom_type_script = "uid://bbk2m4xs6e46b"
+
+[node name="Rollback" type="Node" parent="." unique_id=1212797614 groups=["VNAdministrators"]]
+script = ExtResource("1_g1yv1")
+
+[node name="Rollback Director" type="Node" parent="Rollback" unique_id=254623404]
+script = ExtResource("3_500se")
+
+[node name="Rollback Operator" type="Node" parent="Rollback/Rollback Director" unique_id=898775744]
+script = ExtResource("3_3p5v6")
+
+[node name="Camera" type="Node" parent="." unique_id=965477972 groups=["VNAdministrators"]]
+script = ExtResource("3_mwmq7")
+
+[node name="Camera Director" type="Node" parent="Camera" unique_id=485066113 groups=["persist"]]
+script = ExtResource("4_wrpxt")
+
+[node name="Character" type="Node" parent="." unique_id=561531606 groups=["VNAdministrators"]]
+script = ExtResource("4_70671")
+
+[node name="Sprite Director" type="Node" parent="Character" unique_id=1884572650 groups=["persist"]]
+script = ExtResource("6_4abao")
+
+[node name="Dialogic" type="Node" parent="." unique_id=2018763244 groups=["VNAdministrators"]]
+script = ExtResource("8_ykemk")
+
+[node name="Navigation" type="Node" parent="." unique_id=1088307179 groups=["VNAdministrators"]]
+script = ExtResource("24_2ved4")
+
+[node name="Navigation Director" type="Node" parent="Navigation" unique_id=1025416565 groups=["persist"]]
+script = ExtResource("25_808vl")
+
+[node name="Time" type="Node" parent="." unique_id=281743766 groups=["VNAdministrators"]]
+script = ExtResource("24_7r5ln")
+
+[node name="Time Director" type="Node" parent="Time" unique_id=608482368 groups=["persist"]]
+script = ExtResource("27_0umny")
+
+[node name="TimeOperator" type="Node" parent="Time/Time Director" unique_id=1731286554]
+script = ExtResource("28_syfw3")
+
+[node name="CalendarOperator" type="Node" parent="Time/Time Director" unique_id=1475616340]
+script = ExtResource("30_ncnwx")
+
+[node name="Songs" type="Node" parent="." unique_id=925031005 groups=["VNAdministrators"]]
+script = ExtResource("10_o4s6w")
+
+[node name="Songs Director" type="Node" parent="Songs" unique_id=1911561819 groups=["persist"]]
+script = ExtResource("11_7h0tm")
+
+[node name="First" type="Node" parent="Songs/Songs Director" unique_id=963079203]
+script = ExtResource("12_o26w7")
+Volume = -80.0
+Bus = &"Ovani"
+
+[node name="Second" type="Node" parent="Songs/Songs Director" unique_id=1666091195]
+script = ExtResource("12_o26w7")
+Volume = -80.0
+Bus = &"Ovani"
+
+[node name="Set Audio Levels" type="Node" parent="Songs" unique_id=163582499]
+script = ExtResource("13_t4qrl")
+
+[node name="GameEvents" type="Node" parent="." unique_id=1984528533 groups=["VNAdministrators"]]
+script = ExtResource("35_f734g")
+
+[node name="GameEventsDirector" type="Node" parent="GameEvents" unique_id=1990219922]
+script = ExtResource("36_es3v6")
+
+[node name="GameQuests" type="Node" parent="." unique_id=806032219 groups=["VNAdministrators"]]
+script = ExtResource("39_qe5qs")
+
+[node name="QuestDirector" type="Node" parent="GameQuests" unique_id=383759266 node_paths=PackedStringArray("active_quest_holder", "completed_quest_holder", "failed_quest_holder")]
+script = ExtResource("40_78qq4")
+active_quest_holder = NodePath("Active")
+completed_quest_holder = NodePath("Completed")
+failed_quest_holder = NodePath("Failed")
+
+[node name="Active" type="Node" parent="GameQuests/QuestDirector" unique_id=885338857]
+
+[node name="Completed" type="Node" parent="GameQuests/QuestDirector" unique_id=217704510]
+
+[node name="Failed" type="Node" parent="GameQuests/QuestDirector" unique_id=2115523208]
+
+[node name="Shop" type="Node" parent="." unique_id=855350412]
+
+[node name="TimePlayedCounter" type="Timer" parent="." unique_id=700846406]
+unique_name_in_owner = true
+process_callback = 0
+autostart = true

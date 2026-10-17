@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://ds6logfac6eo"]
+
+[ext_resource type="Texture2D" uid="uid://d2a0q8eim7e0m" path="res://editor_only_debug/visuals/skill_icons/Warriorskill_07_nobg.png" id="1_4gt5g"]
+[ext_resource type="Resource" uid="uid://m88n81yt0g43" path="res://GrimDaysBattle/resources/actions/celine/slash_single_rank/slash_single_rank.tres" id="1_hwebw"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="1_ngtpc"]
+
+[resource]
+script = ExtResource("1_ngtpc")
+action = ExtResource("1_hwebw")
+id = &"slash_node"
+display_name = "Slash"
+icon = ExtResource("1_4gt5g")
+description = "When armed with a bladed weapon, you make an attack that has a good chance to cause bleeding on your target."
+row = 3
+maximum_rank = 5
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

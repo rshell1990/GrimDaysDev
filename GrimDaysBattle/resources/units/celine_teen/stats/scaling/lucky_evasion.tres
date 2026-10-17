@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://co5wfqiwn6qsx"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_2i5dt"]
+[ext_resource type="Curve" path="res://GrimDaysBattle/resources/stats/scaling/lucky_evasion_threshold_level_1_to_9.tres" id="2_x5nb6"]
+
+[resource]
+script = ExtResource("1_2i5dt")
+influenced_by = 80
+to_stat_maximum_curve = ExtResource("2_x5nb6")
+maximum = 5.0
+type = 390
+id = &"LuckyEvasion"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RankTemplate" format=3 uid="uid://y73d5jjonn5d"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_krwg4"]
+[ext_resource type="Resource" uid="uid://ch1day1uvqfy7" path="res://GrimDaysBattle/resources/actions/celine/beatdown_single_rank/beatdown_single_rank_ranks_1_effects.tres" id="1_lo0vx"]
+
+[resource]
+script = ExtResource("1_krwg4")
+level = 1
+cost = Dictionary[int, int]({
+220: 10
+})
+effects = ExtResource("1_lo0vx")
+id = &"beatdown_single_rank_ranks_1"
+metadata/_custom_type_script = "uid://o71l6u31qrs2"

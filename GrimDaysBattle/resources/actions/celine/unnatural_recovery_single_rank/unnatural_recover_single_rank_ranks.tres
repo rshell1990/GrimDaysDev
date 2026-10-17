@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RanksTemplate" format=3 uid="uid://cp2jfph4ndvlw"]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_hq31k"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="2_as3sx"]
+[ext_resource type="Resource" uid="uid://prt7xjn7hx3h" path="res://GrimDaysBattle/resources/actions/celine/unnatural_recovery_single_rank/unnatural_recover_single_rank_ranks_1.tres" id="2_wr1x5"]
+
+[resource]
+script = ExtResource("2_as3sx")
+generated = true
+rank_count = 5
+base_rank = ExtResource("2_wr1x5")
+cost_increase_per_rank = Dictionary[int, int]({
+230: 3
+})
+id = &"unnatural_recover_single_rank_ranks"
+metadata/_custom_type_script = "uid://cmooful7o2yxq"

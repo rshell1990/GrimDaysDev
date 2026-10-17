@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EffectResourceChangeTemplate" format=3 uid="uid://bg7evdirfwod"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_uex8q"]
+[ext_resource type="Texture2D" uid="uid://cd3ey8dxtokcs" path="res://editor_only_debug/visuals/skill_icons/Warlock_48_nobg.png" id="2_feb0p"]
+[ext_resource type="Script" uid="uid://dmeovq5uuuuy5" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_resource.gd" id="3_x4irj"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_change_resource.tscn" id="4_feb0p"]
+
+[resource]
+script = ExtResource("3_x4irj")
+amount = 0.02
+amount_mode = 2
+amount_by_rank = PackedFloat64Array(0.02, 0.025, 0.03, 0.035, 0.04)
+stat = 210
+duration = 3
+lifetime = 1
+tag = 10
+trigger = 800
+always_hits = true
+icon = ExtResource("2_feb0p")
+description = "Recover x% of maximum health at the end of the current round while active."
+template_scene = ExtResource("4_feb0p")
+duration_by_rank = PackedInt32Array(3, 3, 4, 4, 5)
+id = &"unnatural_recover_single_rank_ranks_1_effects_healing"
+metadata/_custom_type_script = "uid://dmeovq5uuuuy5"

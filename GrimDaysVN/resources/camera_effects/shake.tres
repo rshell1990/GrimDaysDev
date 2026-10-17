@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CameraFX" format=3 uid="uid://c6umb2g6muu5e"]
+
+[ext_resource type="PackedScene" uid="uid://cejqqwjwplrun" path="res://GrimDaysVN/scenes/camera/camera_shake.tscn" id="1_irkyi"]
+[ext_resource type="Script" uid="uid://2krb5cq0fhk1" path="res://GrimDaysVN/scripts/camera/resources/camera_effect.gd" id="2_pnjag"]
+
+[resource]
+script = ExtResource("2_pnjag")
+called = "shake"
+resource = ExtResource("1_irkyi")
+metadata/_custom_type_script = "uid://2krb5cq0fhk1"

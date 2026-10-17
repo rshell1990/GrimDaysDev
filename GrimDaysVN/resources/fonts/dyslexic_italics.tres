@@ -1,0 +1,10 @@
+[gd_resource type="FontVariation" format=3 uid="uid://dqm2ynvt553if"]
+
+[ext_resource type="FontFile" uid="uid://d3g28pejqn4rs" path="res://GrimDays/fonts/OpenDyslexic3-Regular.ttf" id="1_ldlbb"]
+
+[resource]
+base_font = ExtResource("1_ldlbb")
+variation_transform = Transform2D(1, 0.33, 0, 1, 0, 0)
+spacing_top = -8
+spacing_bottom = -8
+baseline_offset = -0.05

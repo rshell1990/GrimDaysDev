@@ -1,0 +1,6 @@
+[gd_resource type="FastNoiseLite" format=3 uid="uid://62hbi0ewjq0w"]
+
+[resource]
+noise_type = 3
+frequency = 0.027
+offset = Vector3(583.33, 0, 0)

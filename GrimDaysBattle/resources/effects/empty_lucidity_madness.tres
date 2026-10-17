@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EffectControlOverrideTemplate" format=3 uid="uid://crwk0foa6d1m2"]
+
+[ext_resource type="Script" uid="uid://bu87lbkekdplc" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_ai_controls.gd" id="1_rm7ne"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_madness.tscn" id="2_4w1jm"]
+
+[resource]
+script = ExtResource("1_rm7ne")
+duration = 2
+lifetime = 1
+kind = 300
+tag = 0
+template_scene = ExtResource("2_4w1jm")
+id = &"lucidity_madness"

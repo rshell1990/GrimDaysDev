@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://yd80m0wygg7y"]
+
+[ext_resource type="Script" uid="uid://c7g5bmvsy061q" path="res://GrimDaysVN/scripts/_globals/_observers/entity_signal_bus.gd" id="1_1ty6a"]
+
+[node name="VNEntitySignalBus" type="Node" unique_id=43566154]
+script = ExtResource("1_1ty6a")

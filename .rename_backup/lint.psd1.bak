@@ -1,0 +1,11 @@
+@{
+    Roots = @(
+        'dreams_of_celeste'
+        'dreams_of_celeste_battle'
+        'dreams_of_celeste_vn'
+        'editor_only_debug'
+    )
+    ExcludeDirectories = @('addons', '.godot', '.git', 'dreams_of_celeste/imported')
+    MaxLineLength = 120
+    MaxFileLines = 800
+}

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EffectStunTemplate" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_stun.gd" id="script"]
+
+[resource]
+script = ExtResource("script")
+id = &"bomb_freeze"
+target = 13
+kind = 100
+tag = 0
+trigger = 0
+lifetime = 1
+duration = 1
+stacking = 1
+stacking_across_sources = true
+description = "Frozen: cannot act until the next round boundary. Reapplication refreshes duration."

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://e1uydvv7d2ii"]
+
+[ext_resource type="Script" uid="uid://c6mky7i0cq82a" path="res://GrimDaysBattle/scripts/Unit/Runtime/unit.gd" id="1_6xqrm"]
+[ext_resource type="Script" uid="uid://7tiq7rdyticp" path="res://GrimDaysBattle/scripts/Unit/Runtime/unit_randomizer.gd" id="3_bklqu"]
+[ext_resource type="PackedScene" uid="uid://cfcmky65r261v" path="res://GrimDaysBattle/scenes/battle/effects.tscn" id="3_q5m1j"]
+[ext_resource type="Script" uid="uid://cckvc35xuxwg5" path="res://GrimDaysBattle/scripts/Unit/Runtime/unit_equipment_slot.gd" id="4_equipment"]
+
+[node name="Unit" type="Node" unique_id=1229106146]
+script = ExtResource("1_6xqrm")
+
+[node name="Effects" parent="." unique_id=1370223087 instance=ExtResource("3_q5m1j")]
+
+[node name="Randomizer" type="Node" parent="." unique_id=872313324]
+script = ExtResource("3_bklqu")
+
+[node name="Left Hand" type="Node" parent="." unique_id=1769984778]
+script = ExtResource("4_equipment")
+
+[node name="Left Ring" type="Node" parent="." unique_id=1649090293]
+script = ExtResource("4_equipment")
+slot = 1
+
+[node name="Right Hand" type="Node" parent="." unique_id=277686376]
+script = ExtResource("4_equipment")
+slot = 2
+
+[node name="Right Ring" type="Node" parent="." unique_id=1835135367]
+script = ExtResource("4_equipment")
+slot = 3
+
+[node name="Chest" type="Node" parent="." unique_id=1482262323]
+script = ExtResource("4_equipment")
+slot = 4
+
+[node name="Neck" type="Node" parent="." unique_id=1981383909]
+script = ExtResource("4_equipment")
+slot = 5
+
+[node name="Hands" type="Node" parent="." unique_id=1408034834]
+script = ExtResource("4_equipment")
+slot = 6

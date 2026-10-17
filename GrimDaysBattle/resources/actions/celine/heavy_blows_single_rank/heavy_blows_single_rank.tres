@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://o0y07vqbvbf6"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_afk05"]
+[ext_resource type="Resource" uid="uid://cxc0hc3r5nrs" path="res://GrimDaysBattle/resources/actions/celine/heavy_blows_single_rank/heavy_blows_single_rank_ranks.tres" id="2_2g8pw"]
+[ext_resource type="Texture2D" uid="uid://rjxbcx625uwh" path="res://editor_only_debug/visuals/skill_icons/Warriorskill_05_nobg.png" id="2_5uh4a"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="2_6kegs"]
+
+[resource]
+script = ExtResource("2_6kegs")
+display_name = "Heavy Blows"
+description = "Adds a chance to delay the target a turn to the combination of attacks."
+icon = ExtResource("2_5uh4a")
+attack_animation = &"Attacking (Basic) NO WEAPON"
+use_spine = true
+target = 3
+target_amount = 1
+type = 4
+ranks = ExtResource("2_2g8pw")
+id = &"heavy_blows_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://bblndfl8gd4mi"
+path="res://.godot/imported/Harlock.atlas-07eff703149be55216927a610c2f454e.spatlas"
+
+[deps]
+
+source_file="res://GrimDaysBattle/assets/spine/bandits/Harlock.atlas"
+dest_files=["res://.godot/imported/Harlock.atlas-07eff703149be55216927a610c2f454e.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

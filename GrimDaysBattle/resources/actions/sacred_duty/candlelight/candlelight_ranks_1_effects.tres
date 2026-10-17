@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3 uid="uid://dfji70d50f34i"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_pula2"]
+[ext_resource type="Resource" uid="uid://cjx5mu4jalf18" path="res://GrimDaysBattle/resources/effects/sacred_duty/candlelight_damage.tres" id="2_t0epp"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="3_8fmtl"]
+
+[resource]
+script = ExtResource("3_8fmtl")
+all = Array[ExtResource("1_pula2")]([ExtResource("2_t0epp")])
+id = &"candlelight_ranks_1_effects"

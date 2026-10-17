@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhsoq8qlornfs"]
+
+[ext_resource type="Script" uid="uid://b7dl7b16mcta3" path="res://content/scripts/ui/scriplets/Tootip/tooltip_trigger.gd" id="1_mc3tp"]
+
+[node name="Tooltip Trigger" type="Control" node_paths=PackedStringArray("timer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mc3tp")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2

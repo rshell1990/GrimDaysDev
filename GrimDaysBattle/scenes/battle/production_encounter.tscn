@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Battle/Runtime/battle_encounter_scene.gd" id="1_scene"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Battle/Runtime/battle_coordinator.gd" id="2_coordinator"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/production_visual_stage.tscn" id="3_stage"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Battle/Runtime/battle_encounter_flow.gd" id="4_flow"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Battle/Presentation/battle_action_menu.gd" id="5_menu"]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Battle/Presentation/battle_production_hud.gd" id="6_hud"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/ui/battle/active_ally_display.tscn" id="7_active"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/ui/battle/party_status_display.tscn" id="8_party"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/ui/battle/round_start_display.tscn" id="9_round"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/ui/battle/turn_order_display.tscn" id="10_order"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
+bg_color = Color(0.07, 0.08, 0.1, 0.9)
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+
+[sub_resource type="Theme" id="Theme_menu"]
+default_font_size = 32
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_menu")
+
+[node name="ProductionEncounter" type="Node"]
+script = ExtResource("1_scene")
+
+[node name="Coordinator" type="Node" parent="."]
+script = ExtResource("2_coordinator")
+
+[node name="VisualStage" parent="." instance=ExtResource("3_stage")]
+
+[node name="Flow" type="Node" parent="."]
+script = ExtResource("4_flow")
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="ActionMenu" type="PanelContainer" parent="Interface" node_paths=PackedStringArray("flow")]
+offset_left = 1600.0
+offset_top = 160.0
+offset_right = 1888.0
+offset_bottom = 248.0
+theme = SubResource("Theme_menu")
+script = ExtResource("5_menu")
+flow = NodePath("../../Flow")
+
+[node name="Content" type="VBoxContainer" parent="Interface/ActionMenu"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Status" type="Label" parent="Interface/ActionMenu/Content"]
+layout_mode = 2
+text = "Waiting for encounter"
+
+[node name="Actions" type="HBoxContainer" parent="Interface/ActionMenu/Content"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Back" type="Button" parent="Interface/ActionMenu/Content"]
+layout_mode = 2
+text = "Back"
+
+[node name="Retry" type="Button" parent="Interface/ActionMenu/Content"]
+visible = false
+layout_mode = 2
+text = "Try again"
+
+[node name="BattleHUD" type="Control" parent="Interface" node_paths=PackedStringArray("flow")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_hud")
+flow = NodePath("../../Flow")
+
+[node name="ActiveAlly" parent="Interface/BattleHUD" instance=ExtResource("7_active")]
+production_mode = true
+mouse_filter = 2
+
+[node name="PartyStatus" parent="Interface/BattleHUD" instance=ExtResource("8_party")]
+production_mode = true
+mouse_filter = 2
+
+[node name="RoundStart" parent="Interface/BattleHUD" instance=ExtResource("9_round")]
+production_mode = true
+mouse_filter = 2
+
+[node name="TurnOrder" parent="Interface/BattleHUD" instance=ExtResource("10_order")]
+production_mode = true
+mouse_filter = 2

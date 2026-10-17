@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://dlpm6olkq42kw"]
+
+[ext_resource type="FontFile" uid="uid://b8c5i7yjt0onm" path="res://GrimDays/fonts/Customregular.ttf" id="1_o55fp"]
+
+[resource]
+base_font = ExtResource("1_o55fp")
+variation_embolden = 1.45
+spacing_glyph = 5

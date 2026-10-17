@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://dod4kxylu3yoi"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_lxkbp"]
+
+[resource]
+script = ExtResource("1_lxkbp")
+type = 370
+id = &"Weight"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

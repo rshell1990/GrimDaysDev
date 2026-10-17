@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://3pp52rc1ckl5"]
+
+[ext_resource type="Script" uid="uid://bqibkdgb5tcab" path="res://GrimDaysVN/scripts/navigation/location_interactable_transfer.gd" id="1_vl0wa"]
+[ext_resource type="Script" uid="uid://dq546xu31tikm" path="res://GrimDaysVN/scripts/navigation/interactable_mouse_interaction.gd" id="2_syvem"]
+[ext_resource type="Script" uid="uid://clh3qf867ttlg" path="res://GrimDaysVN/scripts/navigation/interactable_texture_entered.gd" id="3_t3lpg"]
+[ext_resource type="Texture2D" uid="uid://f73wduiq2v2t" path="res://GrimDays/assets/visuals/ui/vn_gui_library/128 x 128 Map.png" id="4_5ko03"]
+[ext_resource type="Script" uid="uid://ctrxgg38mpeee" path="res://GrimDaysVN/scripts/navigation/interactable_texture_exited.gd" id="5_0nbld"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hanyh"]
+size = Vector3(3, 5, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2xmfe"]
+size = Vector3(3, 5, 0.1)
+
+[node name="exit_to_map" type="Sprite3D" node_paths=PackedStringArray("area", "extra_area")]
+shaded = true
+script = ExtResource("1_vl0wa")
+leads_to = &"PrimeMap"
+area = NodePath("Right")
+extra_area = NodePath("Left")
+
+[node name="Left" type="Area3D" parent="."]
+script = ExtResource("2_syvem")
+
+[node name="texture_entered" type="Node" parent="Left"]
+script = ExtResource("3_t3lpg")
+mouse_texture = ExtResource("4_5ko03")
+
+[node name="texture_exited" type="Node" parent="Left"]
+script = ExtResource("5_0nbld")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+shape = SubResource("BoxShape3D_hanyh")
+debug_color = Color(0.806897, 0.00229988, 0.992847, 0.42)
+
+[node name="Right" type="Area3D" parent="."]
+script = ExtResource("2_syvem")
+
+[node name="texture_entered" type="Node" parent="Right"]
+script = ExtResource("3_t3lpg")
+mouse_texture = ExtResource("4_5ko03")
+
+[node name="texture_exited" type="Node" parent="Right"]
+script = ExtResource("5_0nbld")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+shape = SubResource("BoxShape3D_2xmfe")
+debug_color = Color(0.806897, 0.00229988, 0.992847, 0.42)

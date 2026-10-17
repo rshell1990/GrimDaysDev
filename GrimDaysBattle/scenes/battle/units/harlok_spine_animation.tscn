@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://bgcu0umfw8o0p"]
+
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/scripts/Unit/Runtime/unit_2d_sprite.gd" id="1_fs4lx"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://jn01gxq0gs2r" path="res://GrimDaysBattle/assets/spine/harlok/harlok.tres" id="2_fs4lx"]
+[ext_resource type="Script" uid="uid://dfoqbeh1kpgy4" path="res://GrimDaysVN/scripts/base/spine_2d_override.gd" id="3_0gsb4"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="4_wd08p"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="5_q0yyc"]
+[ext_resource type="Texture2D" uid="uid://5qlr2yebapf3" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_1.png" id="6_lrxaf"]
+[ext_resource type="Texture2D" uid="uid://ci8675en50eis" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_2.png" id="7_r7tsi"]
+[ext_resource type="Texture2D" uid="uid://ch3aconym11n" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_3.png" id="8_85mrx"]
+[ext_resource type="Texture2D" uid="uid://qll6h8rsqb7l" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_4.png" id="9_ynqa2"]
+[ext_resource type="Texture2D" uid="uid://drprs0h7kocc5" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_5.png" id="10_npsct"]
+[ext_resource type="Texture2D" uid="uid://7kx7p3q5hfln" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_6.png" id="11_n844v"]
+[ext_resource type="Texture2D" uid="uid://dmmm6353tcpbp" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_7.png" id="12_jx6jm"]
+[ext_resource type="Texture2D" uid="uid://njgwbxsh6sgc" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_8.png" id="13_820oh"]
+[ext_resource type="Texture2D" uid="uid://byv3qkcwo6sqk" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_9.png" id="14_m6vhb"]
+[ext_resource type="Texture2D" uid="uid://db6psbyy8i1dk" path="res://GrimDays/assets/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect18/effect18_10.png" id="15_h7mob"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qe4go"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_lrxaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r7tsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_85mrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ynqa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_npsct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n844v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jx6jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_820oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_m6vhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h7mob")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Harlok" type="Sprite2D" unique_id=1808425687 node_paths=PackedStringArray("collision_area", "raycaster", "attack_particle")]
+centered = false
+script = ExtResource("1_fs4lx")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+attack_particle = NodePath("AttackAnimation")
+
+[node name="SpineSpriteOverride" type="SpineSprite" parent="." unique_id=2129072634]
+skeleton_data_res = ExtResource("2_fs4lx")
+preview_skin = "Default"
+preview_animation = "-- Empty --"
+preview_frame = false
+preview_time = 0.0
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2(0, 270)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_0gsb4")
+default_animation_name = "Idle"
+metadata/_custom_type_script = "uid://dfoqbeh1kpgy4"
+
+[node name="Appearance Area" parent="." unique_id=554828278 instance=ExtResource("4_wd08p")]
+show_behind_parent = true
+scale = Vector2(0.5, 0.5)
+
+[node name="8_way_raycasts" parent="." unique_id=1026974889 instance=ExtResource("5_q0yyc")]
+process_mode = 4
+show_behind_parent = true
+scale = Vector2(0.5, 0.5)
+
+[node name="AttackAnimation" type="AnimatedSprite2D" parent="." unique_id=1119568963]
+visible = false
+z_index = 5
+position = Vector2(800, 50)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_qe4go")

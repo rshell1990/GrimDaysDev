@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EffectFlatChangeStatTemplate" format=3 uid="uid://cwb7ekv3xwwl3"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_aivom"]
+[ext_resource type="Script" uid="uid://c5wi2c7iyh4pv" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_flat_combat_stat.gd" id="2_crt0v"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_stat_change.tscn" id="3_crt0v"]
+
+[resource]
+script = ExtResource("2_crt0v")
+flat_amount = 15.0
+stat = 310
+lifetime = 4
+tag = 70
+always_hits = true
+template_scene = ExtResource("3_crt0v")
+metadata/_custom_type_script = "uid://c5wi2c7iyh4pv"

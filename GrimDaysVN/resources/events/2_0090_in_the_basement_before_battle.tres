@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameEventSequence" format=3 uid="uid://d2aqobnd5h2th"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
+[ext_resource type="Resource" path="res://GrimDaysVN/dialogic/scripts/2_0090_party_shares_their_motives.dtl" id="2_timeline"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/2_0095_party_fights_lich_for_ember_void_blades.tres" id="3_next"]
+
+[resource]
+script = ExtResource("1_sequence")
+id = &"2_0090_in_the_basement_before_battle"
+only_called = true
+blocks_swap = true
+timeline = ExtResource("2_timeline")
+finishing_timeline = ExtResource("2_timeline")
+finished_event = ExtResource("3_next")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://dqfi7dgpwe1sv"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_0uyb2"]
+[ext_resource type="Curve" uid="uid://b28if5a8v0qta" path="res://GrimDaysBattle/resources/units/harlok/stats/scaling/buying_power-barter_needed_1-9_for_maximum.tres" id="2_o8dpd"]
+
+[resource]
+script = ExtResource("1_0uyb2")
+influenced_by = 100
+to_stat_maximum_curve = ExtResource("2_o8dpd")
+maximum = 100.0
+type = 500
+id = &"BuyingPower"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

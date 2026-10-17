@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VNItemTemplate" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/crafting/resources/item_template.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = &"nyx_gift_shield"
+display_name = "Alderian officer shield"
+description = "Alderian officer shield. Grants 8 Physical Resistance while equipped."
+category = 5
+max_stack = 1
+cash_value = 500
+battle_stats = {"330": 8.0}
+use_effects = []

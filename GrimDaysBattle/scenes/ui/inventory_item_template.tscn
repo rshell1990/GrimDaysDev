@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bgooxw6c8rbh3"]
+
+[ext_resource type="Texture2D" uid="uid://3gx2e1pxx44j" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Background_grey.png" id="1_f2fwy"]
+[ext_resource type="Texture2D" uid="uid://b0q3bm6cwgsi4" path="res://GrimDays/assets/visuals/ui/Weapons/Swords_01_R.png" id="2_fhxd3"]
+[ext_resource type="Texture2D" uid="uid://dcf6l7ojcrsr8" path="res://GrimDays/assets/visuals/ui/classic rpg gui/inventory_frame.png" id="3_3jfna"]
+
+[node name="Inventory Item" type="TextureRect"]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f2fwy")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Item Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fhxd3")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Item Frame" type="NinePatchRect" parent="Item Icon"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3jfna")

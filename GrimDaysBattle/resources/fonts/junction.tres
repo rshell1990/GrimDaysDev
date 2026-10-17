@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cpuwe58bh1xx5"]
+
+[ext_resource type="FontFile" uid="uid://n231m6uqsq6x" path="res://GrimDays/fonts/junction_bold.otf" id="1_k0i7w"]
+
+[resource]
+base_font = ExtResource("1_k0i7w")
+variation_embolden = 0.46
+baseline_offset = 0.04

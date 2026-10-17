@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://cusd457jtxvsn"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_64egn"]
+
+[resource]
+script = ExtResource("1_64egn")
+type = 60
+starting_amount = 4.0
+id = &"Willpower"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

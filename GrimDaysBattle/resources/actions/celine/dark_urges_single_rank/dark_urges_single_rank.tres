@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://dx03a8juy4xpp"]
+
+[ext_resource type="Resource" uid="uid://c0k53o40hsqfx" path="res://GrimDaysBattle/resources/actions/celine/dark_urges_single_rank/dark_urges_single_rank_ranks.tres" id="1_4ib0q"]
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_anq32"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="1_hc7ju"]
+[ext_resource type="Texture2D" uid="uid://bt122rjub8e8x" path="res://editor_only_debug/visuals/skill_icons/Aura_Homunculus_nb.png" id="1_ob7o7"]
+
+[resource]
+script = ExtResource("1_hc7ju")
+display_name = "Dark Urges"
+description = "Indulge yourself in the madness that has plagued you for all your life, for a limited time gain increased damage, but your Lucidity decreases by an increased amount at the same time."
+icon = ExtResource("1_ob7o7")
+type = 9
+risk_reward = 1
+ranks = ExtResource("1_4ib0q")
+id = &"dark_urges_single_rank"
+metadata/_custom_type_script = "uid://drlek0bnxlp8u"

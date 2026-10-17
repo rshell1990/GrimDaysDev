@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BattleSkillActionNode" format=3 uid="uid://pj5qr2amd68x"]
+
+[ext_resource type="Resource" uid="uid://bmn5g414x4o4n" path="res://GrimDaysBattle/resources/actions/celine/beatdown_single_rank/beatdown_single_rank.tres" id="1_g3xuw"]
+[ext_resource type="Texture2D" uid="uid://clm7jtd1nl1v2" path="res://editor_only_debug/visuals/ui/vn_gui_library/2000_Icons/500_skillicons/Skill_standart/Warriorskill_30.png" id="1_i7e1v"]
+[ext_resource type="Script" uid="uid://ci7bilmsj4v2f" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_action_node.gd" id="1_w2nf7"]
+
+[resource]
+script = ExtResource("1_w2nf7")
+action = ExtResource("1_g3xuw")
+id = &"beatdown_node"
+display_name = "Beatdown"
+icon = ExtResource("1_i7e1v")
+description = "Your unarmed attack sequence of straight punch, quick jab, and uppercut now has a chance to be extended with up to three additional punches. Each punch has an independent chance to trigger, with a lower chance for each additional punch."
+row = 2
+maximum_rank = 5
+previous_node = &"uppercut_node"
+composite = true
+metadata/_custom_type_script = "uid://ci7bilmsj4v2f"

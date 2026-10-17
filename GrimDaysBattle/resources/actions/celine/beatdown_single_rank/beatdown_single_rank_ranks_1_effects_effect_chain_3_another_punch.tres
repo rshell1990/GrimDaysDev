@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EffectTriggerAnotherEffect" format=3 uid="uid://75nifaw032um"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_ychfp"]
+[ext_resource type="Script" uid="uid://kt67j6wvubc8" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_another_effect.gd" id="2_kcigk"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_chain.tscn" id="3_ng5y3"]
+[ext_resource type="Resource" uid="uid://doxnb78o80akf" path="res://GrimDaysBattle/resources/actions/celine/beatdown_single_rank/beatdown_single_rank_ranks_1_effects_another_punch.tres" id="4_bq4xc"]
+
+[resource]
+script = ExtResource("2_kcigk")
+chance = 15
+chance_by_rank = PackedInt32Array(15, 25, 35, 40, 50)
+triggers = Array[ExtResource("1_ychfp")]([ExtResource("4_bq4xc")])
+target = 3
+kind = 200
+damage_type = 100
+tag = 0
+trigger = 200
+template_scene = ExtResource("3_ng5y3")
+id = &"beatdown_single_rank_ranks_1_effects_effect_chain_3_another_punch"
+metadata/_custom_type_script = "uid://kt67j6wvubc8"

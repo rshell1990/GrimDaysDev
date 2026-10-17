@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d2vhp5rqok1uc"]
+
+[ext_resource type="Texture2D" uid="uid://3gx2e1pxx44j" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Background_grey.png" id="1_oi6tg"]
+[ext_resource type="Script" uid="uid://gm05nwjfmltb" path="res://GrimDaysBattle/scripts/UI/unit_turn_display.gd" id="2_hvfsn"]
+[ext_resource type="Texture2D" uid="uid://bpkifborkk52t" path="res://GrimDays/assets/visuals/ui/UI MMORPG Dark Templar/Game Menu/Party Frame.png" id="3_2p1k2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f16qj"]
+texture = ExtResource("1_oi6tg")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eldt0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4qom"]
+texture = ExtResource("3_2p1k2")
+
+[node name="Unit Turn Display" type="Panel" unique_id=661578199 node_paths=PackedStringArray("portrait_holder")]
+clip_children = 2
+custom_minimum_size = Vector2(128, 128)
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.025
+anchor_right = 0.025
+anchor_bottom = 0.025
+offset_left = -48.0
+offset_top = -27.0
+offset_right = 80.0
+offset_bottom = 101.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_f16qj")
+script = ExtResource("2_hvfsn")
+portrait_holder = NodePath("Clipping Plane/Portrait")
+
+[node name="Clipping Plane" type="Panel" parent="." unique_id=1583055479]
+clip_children = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_eldt0")
+
+[node name="Portrait" type="TextureRect" parent="Clipping Plane" unique_id=809443683]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Frame" type="Panel" parent="." unique_id=1292907468]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_c4qom")

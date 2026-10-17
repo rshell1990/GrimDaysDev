@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://c46mli5vmss78"]
+
+[ext_resource type="Texture2D" uid="uid://b4ggaqhh6b3xu" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Chat/Buttons/Button Group Normal.png" id="1_qvik4"]
+[ext_resource type="Texture2D" uid="uid://1e4cxq56lgdr" path="res://GrimDays/assets/visuals/ui/gui/top_left/time_circle.webp" id="2_6hkpx"]
+[ext_resource type="FontVariation" uid="uid://h1x0mfuvikuu" path="res://GrimDaysVN/resources/fonts/cassius_bold.tres" id="3_6tr34"]
+[ext_resource type="Script" uid="uid://c26qdobmyhkew" path="res://GrimDaysVN/scripts/ui/scriplets/update_location_text.gd" id="4_location_text"]
+[ext_resource type="Texture2D" uid="uid://doow31xkd1ky4" path="res://GrimDays/assets/visuals/ui/UI MMORPG Dark Templar/Game Menu/Buttons/Button Normal.png" id="5_16s81"]
+[ext_resource type="Texture2D" uid="uid://cxnfj2sq3lx5" path="res://GrimDaysVN/visuals/characters/celine_teen/celine_teen_portrait.png" id="6_tjved"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/ui/scriplets/party_preparation_navigation_button.gd" id="7_party_preparation"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kh0q7"]
+texture = ExtResource("1_qvik4")
+region_rect = Rect2(0, 0, 107, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pe5hr"]
+texture = ExtResource("1_qvik4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_osm74"]
+texture = ExtResource("5_16s81")
+modulate_color = Color(0.86, 0.025799977, 0.86, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a2jsd"]
+load_path = "res://.godot/imported/Button Group Normal.png-0951a7679642a228b4c6abd5f24b9479.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8kv5n"]
+texture = SubResource("CompressedTexture2D_a2jsd")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t0584"]
+load_path = "res://.godot/imported/Button Group Normal.png-0951a7679642a228b4c6abd5f24b9479.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jqatv"]
+texture = SubResource("CompressedTexture2D_t0584")
+modulate_color = Color(1, 0.5, 0.6583333, 1)
+
+[node name="Navigation Overlay" type="Control" unique_id=370080834]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 823.0
+offset_bottom = 463.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1028742295]
+custom_minimum_size = Vector2(800, 150)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kh0q7")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=2045039429]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=1093746829]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer" unique_id=1265512914]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+texture = ExtResource("2_6hkpx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/TextureRect" unique_id=1871177165]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Current Location" type="Label" parent="Panel/MarginContainer/HBoxContainer" unique_id=969863639]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 80)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.1584723, 0.15847233, 0.1584723, 0.77254903)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_6tr34")
+theme_override_font_sizes/font_size = 30
+text = "Current Location"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_location_text")
+
+[node name="Party Preparation" type="Button" parent="." unique_id=781025020]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 0
+offset_left = 850.0
+offset_right = 1000.0
+offset_bottom = 150.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pe5hr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pe5hr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_osm74")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8kv5n")
+theme_override_styles/focus = SubResource("StyleBoxTexture_jqatv")
+disabled = true
+script = ExtResource("7_party_preparation")
+
+[node name="Margin" type="MarginContainer" parent="Party Preparation" unique_id=1175428860]
+mouse_filter = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Celine Portrait" type="TextureRect" parent="Party Preparation/Margin" unique_id=1351766705]
+mouse_filter = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("6_tjved")
+expand_mode = 5
+stretch_mode = 5

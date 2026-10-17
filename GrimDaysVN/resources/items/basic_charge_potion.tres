@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VNItemTemplate" format=3 uid="uid://dv7d1ipw20x08"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/crafting/resources/item_template.gd" id="5_r16jp"]
+
+[sub_resource type="Resource" id="Resource_ki5v8"]
+metadata/__load_path__ = "res://content/assets/placeholder/icon_potion_purple.png"
+
+[sub_resource type="Resource" id="Resource_1hkgy"]
+
+[resource]
+script = ExtResource("5_r16jp")
+id = 6
+display_name = "Basic Charge Potion"
+description = "Refined and processed ghostly materials make this basic charge booster.  For a short time it will generate extra charge per combat round.
+
+Can not be used while other effects are active."
+icon = SubResource("Resource_ki5v8")
+max_stack = 3
+cash_value = 1500
+positive_effects = [SubResource("Resource_1hkgy")]

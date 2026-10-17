@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://wr3xhdb6ja3c"
+path="res://.godot/imported/Harlock.skel-6baacf7713d2a3f20a3bb0db4ce2d0ce.spskel"
+
+[deps]
+
+source_file="res://GrimDaysBattle/assets/spine/bandits/Harlock.skel"
+dest_files=["res://.godot/imported/Harlock.skel-6baacf7713d2a3f20a3bb0db4ce2d0ce.spskel"]
+
+[params]
+

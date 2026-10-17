@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" format=3 uid="uid://stfv5o7qaeim"]
+
+[ext_resource type="FontFile" uid="uid://cy2aq2wfulm4b" path="res://GrimDays/fonts/Thorce-1497603/Thorce.ttf" id="1_6xa73"]
+
+[resource]
+base_font = ExtResource("1_6xa73")
+variation_embolden = 0.8
+spacing_glyph = 3
+spacing_top = 2
+spacing_bottom = 2
+baseline_offset = 0.125

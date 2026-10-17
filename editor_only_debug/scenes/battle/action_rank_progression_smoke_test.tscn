@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://editor_only_debug/scripts/debug/battle_smoke_tests/action_rank_progression_smoke_suite.gd" id="1"]
+
+[node name="ActionRankProgressionSmokeTest" type="Node"]
+script = ExtResource("1")
+
+[connection signal="ready" from="." to="." method="run"]

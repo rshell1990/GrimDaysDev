@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ActionTemplate" format=3 uid="uid://blnoib4ge24xx"]
+
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="1_u8rfj"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/actions/_basic/_basic_attack/basic_attack_ranks.tres" id="2_fgiy2"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="3_3of2r"]
+
+[resource]
+script = ExtResource("3_3of2r")
+display_name = "Basic Attack"
+attack_animation = &"Attacking (Basic) NO WEAPON"
+use_spine = true
+target = 3
+target_amount = 1
+type = 2
+ranks = ExtResource("2_fgiy2")
+id = &"basic_attack"

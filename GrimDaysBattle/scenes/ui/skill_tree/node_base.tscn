@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://bnjhny40o2err"]
+
+[ext_resource type="Texture2D" uid="uid://dawhk8hj04log" path="res://editor_only_debug/visuals/skill_icons/Skill_Punch_nb.png" id="1_pn8tc"]
+[ext_resource type="FontVariation" uid="uid://b1ymikdqcxbjb" path="res://GrimDays/fonts/answer_variant.tres" id="2_c2mr6"]
+[ext_resource type="Texture2D" uid="uid://cymqpihex0jfl" path="res://editor_only_debug/visuals/skill_icons/Skill_Plus_nb.png" id="3_rgr3u"]
+[ext_resource type="Texture2D" uid="uid://bpbgkhmmv174v" path="res://editor_only_debug/visuals/skill_icons/Skill_Minus_nb.png" id="4_c2mr6"]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/UI/skill_node_view.gd" id="5_controller"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh0q7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5ngi"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2mr6"]
+bg_color = Color(0.21, 0.044099994, 0.12152, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07, 0.07, 0.07, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgr3u"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak06i"]
+bg_color = Color(0.42, 0.08819999, 0.23750992, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63ugr"]
+bg_color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khvau"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Node Base" type="Control" unique_id=537154004]
+script = ExtResource("5_controller")
+custom_minimum_size = Vector2(144, 144)
+custom_maximum_size = Vector2(144, 144)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 192.0
+offset_bottom = 192.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+
+[node name="Icon Margin" type="MarginContainer" parent="." unique_id=255224350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="Icon Background" type="Panel" parent="Icon Margin" unique_id=1324664278]
+self_modulate = Color(0.15487596, 0.154876, 0.15487596, 1)
+clip_children = 2
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kh0q7")
+
+[node name="Node Icon" type="TextureRect" parent="Icon Margin/Icon Background" unique_id=511011176]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_pn8tc")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Icon Frame" type="Panel" parent="Icon Margin" unique_id=1052869675]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q5ngi")
+
+[node name="Rank Display" type="HBoxContainer" parent="." unique_id=2105119996]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Current Rank" type="Label" parent="Rank Display" unique_id=357788594]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.19, 0.19, 0.19, 0.70980394)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_c2mr6")
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="Seperator" type="Label" parent="Rank Display" unique_id=1279027983]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.19, 0.19, 0.19, 0.70980394)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_c2mr6")
+theme_override_font_sizes/font_size = 32
+text = "/"
+
+[node name="Max Rank" type="Label" parent="Rank Display" unique_id=1373029463]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.19, 0.19, 0.19, 0.70980394)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_c2mr6")
+theme_override_font_sizes/font_size = 32
+text = "10"
+
+[node name="Invest" type="Button" parent="." unique_id=1832309771]
+disabled = true
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c2mr6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rgr3u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ak06i")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_63ugr")
+theme_override_styles/focus = SubResource("StyleBoxFlat_khvau")
+icon = ExtResource("3_rgr3u")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Refund" type="Button" parent="." unique_id=1589580426]
+disabled = true
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_right = 24.0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c2mr6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rgr3u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ak06i")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_63ugr")
+theme_override_styles/focus = SubResource("StyleBoxFlat_khvau")
+icon = ExtResource("4_c2mr6")
+icon_alignment = 1
+expand_icon = true

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RanksTemplate" format=3]
+
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="1_rank"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="2_ranks"]
+[ext_resource type="Resource" uid="uid://bb0eka6nwnjdd" path="res://GrimDaysBattle/resources/actions/_basic/_basic_attack/basic_attack_rank_1.tres" id="3_rank_1"]
+
+[resource]
+script = ExtResource("2_ranks")
+all = Array[ExtResource("1_rank")]([ExtResource("3_rank_1")])
+id = &"basic_attack_ranks"

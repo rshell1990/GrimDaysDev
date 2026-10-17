@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="VNItemTemplate" format=3 uid="uid://dbu3jjx6bh7pj"]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/crafting/resources/item_template.gd" id="7_4drou"]
+
+[sub_resource type="Resource" id="Resource_b6jj4"]
+metadata/__load_path__ = "res://content/assets/placeholder/icon_bomb.png"
+
+[sub_resource type="Resource" id="Resource_cmq1v"]
+
+[sub_resource type="Resource" id="Resource_5qeyj"]
+
+[resource]
+script = ExtResource("7_4drou")
+id = 8
+display_name = "Basic Bomb"
+description = "Made from the remains of the refining process when lesser potions are synthesized.
+
+Deals a small amount of damage to the enemy immediately and then leaves them bleeding for a short period of time.
+
+"
+icon = SubResource("Resource_b6jj4")
+types = Array[int]([2, 3])
+max_stack = 10
+cash_value = 3000
+can_use_with_other = true
+negative_effects = [SubResource("Resource_cmq1v"), SubResource("Resource_5qeyj")]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameEventSequence" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
+[ext_resource type="Resource" path="res://GrimDaysVN/dialogic/scripts/3_0040_khalgan_reveals_he_is_mokas_father.dtl" id="2_timeline"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/3_0050_moka_finds_krill_at_khalgans_house.tres" id="3_next"]
+
+[resource]
+script = ExtResource("1_sequence")
+id = &"3_0040_khalgan_reveals_he_is_mokas_father"
+only_called = true
+blocks_swap = true
+timeline = ExtResource("2_timeline")
+finishing_timeline = ExtResource("2_timeline")
+finished_event = ExtResource("3_next")

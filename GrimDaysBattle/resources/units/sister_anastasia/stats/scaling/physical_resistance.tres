@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://bkq38tvk0ssnf"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_bqyun"]
+[ext_resource type="Curve" uid="uid://3whtiw4vx1ft" path="res://GrimDaysBattle/resources/stats/scaling/physical_resistance_threshold_level_1_to_9.tres" id="2_5cjje"]
+
+[resource]
+script = ExtResource("1_bqyun")
+influenced_by = 50
+to_stat_maximum_curve = ExtResource("2_5cjje")
+maximum = 20.0
+type = 330
+id = &"PhysicalResistance"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

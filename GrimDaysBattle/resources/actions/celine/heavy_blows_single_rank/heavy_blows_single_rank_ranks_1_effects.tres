@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EffectTemplates" format=3 uid="uid://dxalrws1l6hyw"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_p8d3w"]
+[ext_resource type="Resource" uid="uid://cels53xag6jnr" path="res://GrimDaysBattle/resources/actions/celine/heavy_blows_single_rank/heavy_blows_single_rank_ranks_1_effects_chance_to_delay_trigger.tres" id="2_doky7"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="2_mn587"]
+
+[resource]
+script = ExtResource("2_mn587")
+all = Array[ExtResource("1_p8d3w")]([ExtResource("2_doky7")])
+id = &"heavy_blows_single_rank_ranks_1_effects"
+metadata/_custom_type_script = "uid://dw0pgj3kb31c6"

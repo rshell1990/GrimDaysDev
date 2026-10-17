@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LevelingTierDefinition" format=3 uid="uid://bwy6oo7hg6g3m"]
+
+[ext_resource type="Script" uid="uid://cmldk6gn0vowq" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers.gd" id="1_uv5sb"]
+
+[resource]
+script = ExtResource("1_uv5sb")
+tier_name = "Tier 1"
+start_level = 1
+end_level = 9
+specialization = Array[int]([30, 40, 80])
+combat_base_grant = 8
+skill_points_base_grant = 10
+combat_per_level = 1
+skill_points_per_level = 2
+level_combat_growth = 1
+specialization_growth = 1
+id = &"GoonBTier1"

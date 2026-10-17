@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitScaleddStatTemplate" format=3 uid="uid://dsprhghjnesc8"]
+
+[ext_resource type="Script" uid="uid://b0jotjfogviuj" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_scaled_template.gd" id="1_xqcer"]
+
+[resource]
+script = ExtResource("1_xqcer")
+influenced_by = 40
+type = 340
+id = &"Accuracy"
+metadata/_custom_type_script = "uid://b0jotjfogviuj"

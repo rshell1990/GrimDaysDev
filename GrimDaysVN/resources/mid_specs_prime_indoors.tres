@@ -1,0 +1,32 @@
+[gd_resource type="Environment" format=3 uid="uid://ebdwxcoxh1ur"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yx4cn"]
+
+[sub_resource type="Sky" id="Sky_xc44c"]
+sky_material = SubResource("ProceduralSkyMaterial_yx4cn")
+
+[resource]
+background_mode = 1
+background_color = Color(0.0179006, 0.0179006, 0.0179006, 1)
+sky = SubResource("Sky_xc44c")
+sky_custom_fov = 97.9
+glow_enabled = true
+glow_levels/3 = 3.77
+glow_levels/4 = 3.35
+glow_levels/5 = 1.93
+glow_levels/6 = 3.31
+glow_strength = 0.35
+glow_mix = 0.188
+glow_bloom = 0.18
+glow_blend_mode = 0
+glow_hdr_threshold = 0.35
+glow_hdr_scale = 1.96
+glow_hdr_luminance_cap = 5.93
+glow_map_strength = 0.0
+fog_mode = 1
+fog_light_color = Color(0.409513, 0.2014, 0.53, 1)
+fog_light_energy = 0.81
+fog_density = 0.5362
+adjustment_enabled = true
+adjustment_brightness = 0.95
+adjustment_contrast = 1.05

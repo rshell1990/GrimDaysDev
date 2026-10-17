@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EffectFlatChangeStatTemplate" format=3 uid="uid://crnr8ub3rg3i6"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_d4vrw"]
+[ext_resource type="Texture2D" uid="uid://d2vl4022s04jh" path="res://editor_only_debug/visuals/skill_icons/skill_80_noBG.png" id="2_c5w0t"]
+[ext_resource type="Script" uid="uid://c5wi2c7iyh4pv" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_flat_combat_stat.gd" id="3_3org3"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_stat_change.tscn" id="4_jfugr"]
+
+[resource]
+script = ExtResource("3_3org3")
+flat_amount = 10.0
+stat = 380
+lifetime = 4
+tag = 70
+icon = ExtResource("2_c5w0t")
+description = "Critical Strike Chance increased by x%."
+template_scene = ExtResource("4_jfugr")
+id = &"dagger_critical_strike_buff"
+metadata/_custom_type_script = "uid://c5wi2c7iyh4pv"

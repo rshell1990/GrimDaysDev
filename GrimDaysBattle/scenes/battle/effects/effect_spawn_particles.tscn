@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://46fl8re2fnsd" path="res://GrimDaysBattle/scripts/Effects/Runtime/effect_spawn_particles.gd" id="1"]
+
+[node name="EffectSpawnParticles" type="Node"]
+script = ExtResource("1")

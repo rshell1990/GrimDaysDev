@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tier_definition.gd" id="script"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_node_definition.gd" id="node"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/nodes/shoulder_check.tres" id="shoulder_check"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/nodes/get_em.tres" id="get_em"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/nodes/thick_skin.tres" id="thick_skin"]
+
+[resource]
+script = ExtResource("script")
+column = 2
+minimum_stats = Dictionary[int, float]({300: 3.0})
+nodes = Array[ExtResource("node")]([ExtResource("shoulder_check"), ExtResource("get_em"), ExtResource("thick_skin")])

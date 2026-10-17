@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EquipmentWeaponTemplate" format=3 uid="uid://cmwj071nkgsjf"]
+
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="1_12oli"]
+[ext_resource type="Texture2D" uid="uid://c56gpadir71pg" path="res://editor_only_debug/visuals/ui/vn_gui_library/2000_Icons/500_weapons/Dagger_01.png" id="2_65t5r"]
+[ext_resource type="Script" uid="uid://cxj3ypxrtivpa" path="res://GrimDaysBattle/scripts/Items/Resources/weapon_template.gd" id="2_eq8jk"]
+[ext_resource type="Resource" uid="uid://crnr8ub3rg3i6" path="res://GrimDaysBattle/resources/effects/dagger_critical_strike_buff.tres" id="3_qm0io"]
+[ext_resource type="Resource" uid="uid://cwb7ekv3xwwl3" path="res://GrimDaysBattle/resources/effects/dagger_physical_damage_increase.tres" id="4_qm0io"]
+
+[resource]
+script = ExtResource("2_eq8jk")
+weapon_tags = Array[StringName]([&"bladed"])
+weight = 1
+equips_to = Array[int]([0])
+on_equip_effects = Array[ExtResource("1_12oli")]([ExtResource("3_qm0io"), ExtResource("4_qm0io")])
+display_name = "Simple Dagger"
+item_class = 4
+icon = ExtResource("2_65t5r")
+description = "A small bladed weapon that is easy to use, but not of very high quality."
+id = &"basic_dagger"
+metadata/_custom_type_script = "uid://cxj3ypxrtivpa"

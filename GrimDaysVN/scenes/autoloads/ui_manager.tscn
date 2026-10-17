@@ -1,0 +1,650 @@
+[gd_scene format=3 uid="uid://bmqf6sl83ghb0"]
+
+[ext_resource type="PackedScene" uid="uid://120l3m68wr4s" path="res://GrimDaysVN/scenes/ui/tooltip.tscn" id="1_j667v"]
+[ext_resource type="PackedScene" uid="uid://c0urx0pjyv4uy" path="res://GrimDaysVN/scenes/ui/in_game_ui.tscn" id="1_jda3x"]
+[ext_resource type="Script" uid="uid://cmsdd6ti87mdo" path="res://GrimDaysVN/scripts/ui/ui_director.gd" id="1_mcl8y"]
+[ext_resource type="PackedScene" uid="uid://c46mli5vmss78" path="res://GrimDaysVN/scenes/ui/navigation_overlay.tscn" id="4_jcyhq"]
+[ext_resource type="PackedScene" uid="uid://dt4hvxcfpi8qp" path="res://GrimDaysVN/scenes/ui/time_passage.tscn" id="9_j7cam"]
+[ext_resource type="Script" uid="uid://cuft3r82ctbw" path="res://GrimDaysVN/scripts/ui/fade_flag_operator.gd" id="11_d740x"]
+[ext_resource type="PackedScene" uid="uid://8sm5x6v68cdl" path="res://GrimDaysVN/scenes/ui/text_input_layer.tscn" id="12_25ogj"]
+[ext_resource type="Script" uid="uid://cu24lo1yfy3dx" path="res://GrimDaysVN/scripts/ui/secondary_font_operator.gd" id="13_bn0uw"]
+[ext_resource type="Script" uid="uid://dcpebi31fd5pd" path="res://GrimDaysVN/scripts/ui/scriplets/notification_director.gd" id="14_24a8u"]
+[ext_resource type="Script" uid="uid://dn3ybyymwayw2" path="res://GrimDaysVN/scripts/system_vram_management/loadable_color_rect.gd" id="15_3mjos"]
+[ext_resource type="PackedScene" uid="uid://dyqmbsi7xafte" path="res://GrimDaysVN/scenes/ui/notification_template.tscn" id="15_bcwu0"]
+[ext_resource type="FontVariation" uid="uid://ckuhjjft87b0j" path="res://GrimDaysVN/resources/fonts/elanor_bold.tres" id="16_72pby"]
+[ext_resource type="Script" uid="uid://dhqoygurw1dl3" path="res://GrimDaysVN/scripts/dialogic/dialogic_status.gd" id="16_xd6r0"]
+[ext_resource type="Script" uid="uid://c5xmkxne5ajbn" path="res://GrimDaysVN/scripts/ui/patch_notes_controller.gd" id="18_7xpk3"]
+[ext_resource type="Texture2D" uid="uid://dxvxlgiib2oyk" path="res://GrimDays/assets/visuals/ui/vn_gui_library/frame_background_greyscaled.png" id="19_xew6e"]
+[ext_resource type="Script" uid="uid://b5yq8ak513ovb" path="res://GrimDaysVN/scripts/ui/scriplets/automatically_color_panel.gd" id="20_as3le"]
+[ext_resource type="StyleBox" uid="uid://cem3yn4eoeklj" path="res://GrimDaysVN/resources/gui/frame.tres" id="21_sceqy"]
+[ext_resource type="PackedScene" uid="uid://7cte6jenv0fy" path="res://GrimDaysVN/scenes/ui/system_message.tscn" id="21_tgc0e"]
+[ext_resource type="FontVariation" uid="uid://dlpm6olkq42kw" path="res://GrimDaysVN/resources/gui/custom_regular_bold_variant.tres" id="26_taev1"]
+[ext_resource type="Script" uid="uid://h6rfq00lbj5s" path="res://GrimDaysVN/scripts/ui/scriplets/Settings/line_color.gd" id="26_vckoh"]
+[ext_resource type="StyleBox" uid="uid://c1wyko7hlbp0c" path="res://GrimDaysVN/resources/gui/green_back.tres" id="27_p2s40"]
+[ext_resource type="StyleBox" uid="uid://hto4ykwx0ngt" path="res://GrimDaysVN/resources/gui/green_back_hover.tres" id="28_ourye"]
+[ext_resource type="Script" uid="uid://pevt0auern8u" path="res://GrimDaysVN/scripts/ui/scriplets/menu_buttons.gd" id="29_hho48"]
+[ext_resource type="StyleBox" uid="uid://deraoib6rgva6" path="res://GrimDaysVN/resources/gui/default_UI.tres" id="30_8jyfu"]
+[ext_resource type="Script" uid="uid://ck1g8wnssov6s" path="res://GrimDaysVN/scripts/ui/title_card.gd" id="34_a8k5a"]
+[ext_resource type="Script" uid="uid://vnxnwshu06a3" path="res://GrimDaysVN/scripts/ui/full_screen_image_manager.gd" id="35_k4p28"]
+[ext_resource type="FontVariation" uid="uid://chteovppxif7j" path="res://GrimDaysVN/resources/fonts/elanor_.tres" id="35_q7wvo"]
+[ext_resource type="Script" uid="uid://b33menapwfd3d" path="res://GrimDaysVN/scripts/visual_effects/ghost_text_effect.gd" id="38_dnmjx"]
+[ext_resource type="Texture2D" uid="uid://t456cqxo3s84" path="res://GrimDays/assets/gui/loader/1.png" id="45_yp111"]
+[ext_resource type="Texture2D" uid="uid://mmqe1p25lvmo" path="res://GrimDays/assets/gui/loader/2.png" id="46_tgc0e"]
+[ext_resource type="Texture2D" uid="uid://vxndwckwko7s" path="res://GrimDays/assets/gui/loader/3.png" id="47_fig83"]
+[ext_resource type="Texture2D" uid="uid://bdau2a1ay06iu" path="res://GrimDays/assets/gui/loader/4.png" id="48_a50yi"]
+[ext_resource type="Texture2D" uid="uid://b5tve1n1gnb6m" path="res://GrimDays/assets/gui/loader/5.png" id="49_k7grb"]
+[ext_resource type="Texture2D" uid="uid://brjymkkkuw3y" path="res://GrimDays/assets/gui/loader/6.png" id="50_ahywt"]
+[ext_resource type="Texture2D" uid="uid://du041eqxrsfri" path="res://GrimDays/assets/gui/loader/7.png" id="51_nbeqs"]
+[ext_resource type="Texture2D" uid="uid://twm10yd7fuh4" path="res://GrimDays/assets/gui/loader/8.png" id="52_wbuc5"]
+[ext_resource type="Texture2D" uid="uid://b4vpnk0b27qu4" path="res://GrimDays/assets/gui/loader/9.png" id="53_vys18"]
+[ext_resource type="Texture2D" uid="uid://1u44ag1i8xrl" path="res://GrimDays/assets/gui/loader/10.png" id="54_hg7f1"]
+[ext_resource type="Texture2D" uid="uid://ch2l07a6vvow8" path="res://GrimDays/assets/gui/loader/11.png" id="55_a02uc"]
+[ext_resource type="Texture2D" uid="uid://crs4e6o847tr6" path="res://GrimDays/assets/gui/loader/12.png" id="56_1uutm"]
+[ext_resource type="Texture2D" uid="uid://dmi4u0oqneurm" path="res://GrimDays/assets/gui/loader/13.png" id="57_ei4et"]
+[ext_resource type="Texture2D" uid="uid://dh1ykb6ey2x7n" path="res://GrimDays/assets/gui/loader/14.png" id="58_ylm1m"]
+[ext_resource type="Texture2D" uid="uid://h7n8uwhvr1s8" path="res://GrimDays/assets/gui/loader/15.png" id="59_mmman"]
+[ext_resource type="Texture2D" uid="uid://p50xw2kcv4xq" path="res://GrimDays/assets/gui/loader/16.png" id="60_6ntjr"]
+[ext_resource type="Texture2D" uid="uid://b1uq4psbtc03c" path="res://GrimDays/assets/gui/loader/17.png" id="61_xtsqo"]
+[ext_resource type="Texture2D" uid="uid://bwev0xkkfc0ma" path="res://GrimDays/assets/gui/loader/18.png" id="62_ptbfl"]
+[ext_resource type="Texture2D" uid="uid://dr5lmux13b4dp" path="res://GrimDays/assets/gui/loader/19.png" id="63_j0wbj"]
+[ext_resource type="Texture2D" uid="uid://c10k38ls1xt1s" path="res://GrimDays/assets/gui/loader/20.png" id="64_4fdbm"]
+[ext_resource type="Texture2D" uid="uid://cby3tklo2s1k3" path="res://GrimDays/assets/gui/loader/21.png" id="65_vnb54"]
+[ext_resource type="Texture2D" uid="uid://cwd87knrebrju" path="res://GrimDays/assets/gui/loader/22.png" id="66_1jmh7"]
+[ext_resource type="Texture2D" uid="uid://dmoneds8l1qi" path="res://GrimDays/assets/gui/loader/23.png" id="67_ty0o5"]
+[ext_resource type="Texture2D" uid="uid://ds5akbftmpc1j" path="res://GrimDays/assets/gui/loader/24.png" id="68_828sd"]
+[ext_resource type="Texture2D" uid="uid://dy00rdsk0tq34" path="res://GrimDays/assets/gui/loader/25.png" id="69_cbssf"]
+[ext_resource type="Texture2D" uid="uid://ecshq67e4wfe" path="res://GrimDays/assets/gui/loader/26.png" id="70_8kgca"]
+[ext_resource type="Texture2D" uid="uid://bi2ljgat3k4lp" path="res://GrimDays/assets/gui/loader/27.png" id="71_0n6pj"]
+[ext_resource type="Texture2D" uid="uid://c7ydpdr0lc18f" path="res://GrimDays/assets/gui/loader/28.png" id="72_m6fdh"]
+[ext_resource type="Texture2D" uid="uid://bs6qr6bi62i8b" path="res://GrimDays/assets/gui/loader/29.png" id="73_hw61g"]
+[ext_resource type="Texture2D" uid="uid://d0whd5ewkrg6x" path="res://GrimDays/assets/gui/loader/30.png" id="74_1j6vs"]
+[ext_resource type="Texture2D" uid="uid://57e6d4vleuqf" path="res://GrimDays/assets/gui/loader/31.png" id="75_wbq5f"]
+[ext_resource type="Texture2D" uid="uid://b4aw10j5tfvtm" path="res://GrimDays/assets/gui/loader/32.png" id="76_q73g3"]
+[ext_resource type="Texture2D" uid="uid://baebsow6g8awf" path="res://GrimDays/assets/gui/loader/33.png" id="77_q8cu5"]
+[ext_resource type="Texture2D" uid="uid://b1b58m31u4g6" path="res://GrimDays/assets/gui/loader/34.png" id="78_t4rug"]
+[ext_resource type="Texture2D" uid="uid://bkg24ksxs6wr4" path="res://GrimDays/assets/gui/loader/35.png" id="79_qbex8"]
+[ext_resource type="Texture2D" uid="uid://be4behhrnaybx" path="res://GrimDays/assets/gui/loader/36.png" id="80_ec8xk"]
+[ext_resource type="Texture2D" uid="uid://px7pydcitiee" path="res://GrimDays/assets/gui/loader/37.png" id="81_70cmf"]
+[ext_resource type="Texture2D" uid="uid://pmodsvb6sjk7" path="res://GrimDays/assets/gui/loader/38.png" id="82_xmtqb"]
+[ext_resource type="Texture2D" uid="uid://dx48vaom4b4d3" path="res://GrimDays/assets/gui/loader/39.png" id="83_vejv3"]
+[ext_resource type="Texture2D" uid="uid://ci7dwccd4asxy" path="res://GrimDays/assets/gui/loader/40.png" id="84_3vukf"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_75huq"]
+script = ExtResource("38_dnmjx")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pe5hr"]
+blend_mode = 3
+
+[sub_resource type="Gradient" id="Gradient_3xe4w"]
+offsets = PackedFloat32Array(0.004983389, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kh0q7"]
+gradient = SubResource("Gradient_3xe4w")
+width = 1920
+height = 1080
+fill = 1
+fill_from = Vector2(0.48677886, 0.50213677)
+fill_to = Vector2(0.118990384, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xv5jo"]
+texture = ExtResource("19_xew6e")
+texture_margin_left = 50.0
+texture_margin_top = 50.0
+texture_margin_right = 50.0
+texture_margin_bottom = 50.0
+region_rect = Rect2(8, 8, 94, 94)
+modulate_color = Color(0.38, 0.38, 0.38, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kh0q7"]
+blend_mode = 3
+
+[sub_resource type="Gradient" id="Gradient_qpkeq"]
+offsets = PackedFloat32Array(0.004983389, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.3, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6ehko"]
+gradient = SubResource("Gradient_qpkeq")
+width = 1920
+height = 1080
+fill = 1
+fill_from = Vector2(0.48677886, 0.50213677)
+fill_to = Vector2(0.118990384, 1)
+
+[sub_resource type="Animation" id="Animation_j0j7v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dijw0"]
+resource_name = "throb"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i7541"]
+_data = {
+&"RESET": SubResource("Animation_j0j7v"),
+&"throb": SubResource("Animation_dijw0")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5y7e8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_yp111")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_tgc0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_fig83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_a50yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_k7grb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ahywt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_nbeqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_wbuc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_vys18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_hg7f1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_a02uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_1uutm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ei4et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ylm1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_mmman")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6ntjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_xtsqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ptbfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_j0wbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_4fdbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_vnb54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_1jmh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ty0o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_828sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_cbssf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_8kgca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_0n6pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_m6fdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_hw61g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_1j6vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_wbq5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_q73g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_q8cu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_t4rug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_qbex8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_ec8xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_70cmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_xmtqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_vejv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_3vukf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 60.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_8nbi7"]
+offsets = PackedFloat32Array(0.03185328, 0.30984557, 1)
+colors = PackedColorArray(0, 0, 0, 0.92941177, 0, 0, 0, 0.8039216, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i7ma3"]
+gradient = SubResource("Gradient_8nbi7")
+fill_from = Vector2(0, 0.34358975)
+fill_to = Vector2(0.52820516, 0.42222223)
+repeat = 2
+
+[node name="UI Director" type="CanvasLayer" unique_id=432939919 node_paths=PackedStringArray("patch_notes")]
+layer = 25
+script = ExtResource("1_mcl8y")
+patch_notes = NodePath("Patch Notes")
+
+[node name="Tooltip Operator" parent="." unique_id=504435037 instance=ExtResource("1_j667v")]
+
+[node name="Navigation Overlay Operator" parent="." unique_id=304531618 instance=ExtResource("4_jcyhq")]
+visible = false
+
+[node name="Time Passage Operator" parent="." unique_id=195685140 instance=ExtResource("9_j7cam")]
+unique_name_in_owner = true
+layer = 39
+
+[node name="Title Card" type="Control" parent="." unique_id=1686136419]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("34_a8k5a")
+
+[node name="background" type="ColorRect" parent="Title Card" unique_id=897413571]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3939969, 3.730133e-07, 0.071231045, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Title Card" unique_id=1339982508]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3137255)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 9
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("35_q7wvo")
+theme_override_fonts/bold_font = ExtResource("35_q7wvo")
+theme_override_fonts/bold_italics_font = ExtResource("35_q7wvo")
+theme_override_fonts/italics_font = ExtResource("35_q7wvo")
+theme_override_font_sizes/normal_font_size = 120
+theme_override_font_sizes/bold_font_size = 120
+theme_override_font_sizes/bold_italics_font_size = 120
+theme_override_font_sizes/italics_font_size = 100
+theme_override_font_sizes/mono_font_size = 120
+bbcode_enabled = true
+text = "[center][i]A few years later[ghost freq=3.0 span=100].[/ghost][ghost freq=3.2 span=100].[/ghost][ghost freq=3.4 span=100].[/ghost]"
+fit_content = true
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_75huq")]
+
+[node name="vignette" type="TextureRect" parent="Title Card" unique_id=1189254174]
+material = SubResource("CanvasItemMaterial_pe5hr")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_kh0q7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Full Screen Image" type="Control" parent="." unique_id=94141695]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("35_k4p28")
+images = Dictionary[String, String]({
+})
+
+[node name="Fade Flag" type="TextureRect" parent="." unique_id=981080721]
+modulate = Color(1, 1, 1, 0)
+z_index = 20
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 5
+stretch_mode = 5
+script = ExtResource("11_d740x")
+
+[node name="Screen Cover" type="ColorRect" parent="." unique_id=124237782]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("15_3mjos")
+metadata/_custom_type_script = "uid://dn3ybyymwayw2"
+
+[node name="Menu Operator" parent="." unique_id=2015136239 instance=ExtResource("1_jda3x")]
+visible = false
+
+[node name="TextInputLayer" parent="." unique_id=151896237 instance=ExtResource("12_25ogj")]
+visible = false
+
+[node name="SecondaryFontOperator" type="Control" parent="." unique_id=323626207]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_bn0uw")
+
+[node name="Notification Director" type="Control" parent="." unique_id=1280843714]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("14_24a8u")
+notification_template = ExtResource("15_bcwu0")
+system_message_template = ExtResource("21_tgc0e")
+
+[node name="Control" type="Control" parent="." unique_id=607977359]
+visible = false
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=1565813450]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -33.1667
+offset_right = 175.0
+offset_bottom = 33.1667
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("16_72pby")
+theme_override_font_sizes/font_size = 54
+text = "Dialogic State: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("16_xd6r0")
+
+[node name="Patch Notes" type="Control" parent="." unique_id=1302088353]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_7xpk3")
+
+[node name="ColorRect" type="ColorRect" parent="Patch Notes" unique_id=1990305160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.666667)
+
+[node name="Background2" type="Panel" parent="Patch Notes" unique_id=1286699973 node_paths=PackedStringArray("background", "frame")]
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -495.0
+offset_right = 800.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xv5jo")
+script = ExtResource("20_as3le")
+background = NodePath(".")
+frame = NodePath("Frame")
+
+[node name="MarginContainer" type="MarginContainer" parent="Patch Notes/Background2" unique_id=772890621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Patch Notes/Background2/MarginContainer" unique_id=1727167639]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Patch Notes/Background2/MarginContainer/VBoxContainer" unique_id=1869637880]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("16_72pby")
+theme_override_font_sizes/font_size = 100
+text = "Patch Notes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Patch Notes/Background2/MarginContainer/VBoxContainer" unique_id=195897798]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+script = ExtResource("26_vckoh")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Patch Notes/Background2/MarginContainer/VBoxContainer" unique_id=1841592571]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Patch Notes/Background2/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1699693943]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 100
+
+[node name="Frame" type="Panel" parent="Patch Notes/Background2" unique_id=1706614559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("21_sceqy")
+
+[node name="Return to Title" type="Button" parent="Patch Notes" unique_id=1262097912 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(425, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -212.5
+offset_top = -106.815
+offset_right = 212.5
+offset_bottom = -42.8149
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("26_taev1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("27_p2s40")
+theme_override_styles/pressed = ExtResource("27_p2s40")
+theme_override_styles/hover = ExtResource("28_ourye")
+theme_override_styles/disabled = ExtResource("27_p2s40")
+theme_override_styles/focus = ExtResource("27_p2s40")
+alignment = 2
+script = ExtResource("29_hho48")
+accent_color = Color(0.89411765, 0, 0, 1)
+default_color = Color(1, 1, 1, 1)
+label = NodePath("Return to Title Margin/Return to Title Label")
+
+[node name="Return to Title Margin" type="MarginContainer" parent="Patch Notes/Return to Title" unique_id=1879372715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 20
+
+[node name="Return to Title Label" type="Label" parent="Patch Notes/Return to Title/Return to Title Margin" unique_id=928752422]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("26_taev1")
+theme_override_font_sizes/font_size = 28
+text = "Return to Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Return to Title Frame" type="PanelContainer" parent="Patch Notes/Return to Title" unique_id=1221706083]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("30_8jyfu")
+
+[node name="Anger Vignete" type="TextureRect" parent="." unique_id=81372584]
+unique_name_in_owner = true
+visible = false
+material = SubResource("CanvasItemMaterial_kh0q7")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_6ehko")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Anger Vignete" unique_id=410014255]
+libraries/ = SubResource("AnimationLibrary_i7541")
+autoplay = &"throb"
+speed_scale = 0.33
+
+[node name="Rollback Indicator" type="AnimatedSprite2D" parent="." unique_id=1452991814]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 1, 0.55, 1)
+position = Vector2(1824, 98)
+sprite_frames = SubResource("SpriteFrames_5y7e8")
+autoplay = "default"
+frame = 4
+frame_progress = 0.979513
+
+[node name="DoorPeek" type="TextureRect" parent="." unique_id=1562498013]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_i7ma3")
+
+[connection signal="button_up" from="Patch Notes/Return to Title" to="Patch Notes" method="_on_quit_button_up"]

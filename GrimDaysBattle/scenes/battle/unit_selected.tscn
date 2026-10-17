@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://cx5huve5ucftr"]
+
+[ext_resource type="Script" uid="uid://cdrhxevejp6kg" path="res://GrimDaysBattle/scripts/UI/selected_unit.gd" id="1_fw6rp"]
+[ext_resource type="Texture2D" uid="uid://j38bgh1w511o" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/bar_button_mid.png" id="1_tnw1f"]
+[ext_resource type="Texture2D" uid="uid://yjyr2fb0ae7" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Hero_icon_frame_bg.png" id="2_kgs03"]
+[ext_resource type="Texture2D" uid="uid://q0rbi7p7w7vp" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Hero_icon_frame_rare.png" id="4_3l30l"]
+[ext_resource type="FontFile" uid="uid://fa3cdvpk7238" path="res://GrimDays/assets/visuals/ui/Font/Berry Rotunda.ttf" id="5_6p5lp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kgs03"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fw6rp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l30l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6p5lp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2e61p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5fld3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_30bkl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ddob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2vvc4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_laikj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wg35t"]
+
+[sub_resource type="FontVariation" id="FontVariation_2e61p"]
+base_font = ExtResource("5_6p5lp")
+variation_embolden = 1.0
+baseline_offset = 0.165
+
+[sub_resource type="FontVariation" id="FontVariation_5fld3"]
+base_font = ExtResource("5_6p5lp")
+variation_embolden = 0.43
+variation_transform = Transform2D(1.029, 0, 0, 1, 0, 0)
+spacing_glyph = 1
+baseline_offset = 0.165
+
+[node name="UnitSelected" type="Button" node_paths=PackedStringArray("portrait", "name_shadow", "name_foreground")]
+custom_minimum_size = Vector2(3840, 384)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = -696.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kgs03")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fw6rp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3l30l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6p5lp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2e61p")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5fld3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_30bkl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1ddob")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2vvc4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_laikj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wg35t")
+script = ExtResource("1_fw6rp")
+portrait = NodePath("Background Bar/Portrait Background/Portrait")
+name_shadow = NodePath("Background Bar/MarginContainer/Name Shadow")
+name_foreground = NodePath("Background Bar/MarginContainer/Name Shadow/Name")
+
+[node name="Background Bar" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(3600, 256)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.835
+anchor_bottom = 0.759
+offset_top = -120.0
+offset_right = 393.6
+offset_bottom = 36.544
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tnw1f")
+region_rect = Rect2(0, 0, 2048, 256)
+patch_margin_left = 354
+patch_margin_right = 354
+
+[node name="Portrait Background" type="TextureRect" parent="Background Bar"]
+clip_children = 2
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 92.0
+offset_top = -172.0
+offset_right = 452.0
+offset_bottom = 188.0
+grow_vertical = 2
+pivot_offset = Vector2(192, 192)
+texture = ExtResource("2_kgs03")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Portrait" type="TextureRect" parent="Background Bar/Portrait Background"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -176.0
+offset_right = 356.0
+offset_bottom = 164.0
+grow_vertical = 2
+pivot_offset = Vector2(192, 192)
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Portrait Frame" type="TextureRect" parent="Background Bar"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 84.0
+offset_top = -192.0
+offset_right = 468.0
+offset_bottom = 192.0
+grow_vertical = 2
+pivot_offset = Vector2(192, 192)
+texture = ExtResource("4_3l30l")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Background Bar"]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 32.0
+offset_right = 3220.0
+offset_bottom = 237.0
+
+[node name="Name Shadow" type="Label" parent="Background Bar/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_2e61p")
+theme_override_font_sizes/font_size = 132
+text = "Character Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Background Bar/MarginContainer/Name Shadow"]
+layout_mode = 2
+offset_right = 2712.0
+offset_bottom = 205.0
+size_flags_vertical = 1
+theme_override_fonts/font = SubResource("FontVariation_5fld3")
+theme_override_font_sizes/font_size = 132
+text = "Character Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

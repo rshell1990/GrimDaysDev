@@ -1,0 +1,22 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_percentage_combat_stat.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_stat_change.tscn" id="scene"]
+
+[resource]
+script = ExtResource("script")
+id = &"street_bullies_get_em_damage"
+template_scene = ExtResource("scene")
+percentage = 0.1
+percentage_by_rank = PackedFloat64Array(0.1, 0.125, 0.15, 0.175, 0.2)
+stat = 400
+duration = 2
+lifetime = 1
+stacking = 1
+stacking_across_sources = true
+target = 1
+kind = 0
+trigger = 300
+tag = 70
+description = "Increases the affected stat by x% for two round ends."
+

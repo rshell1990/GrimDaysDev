@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LucidityBreakOption" format=3 uid="uid://d21144hvj233j"]
+
+[ext_resource type="Resource" uid="uid://crwk0foa6d1m2" path="res://GrimDaysBattle/resources/effects/empty_lucidity_madness.tres" id="1_gwkkq"]
+[ext_resource type="Script" uid="uid://6q8v7bpra1at" path="res://GrimDaysBattle/scripts/Unit/Resources/lucidity_break_option.gd" id="2_65rdr"]
+
+[resource]
+script = ExtResource("2_65rdr")
+effect = ExtResource("1_gwkkq")

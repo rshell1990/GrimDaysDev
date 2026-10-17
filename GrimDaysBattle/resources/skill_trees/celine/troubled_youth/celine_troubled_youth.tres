@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BattleSkillTree" format=3 uid="uid://cqidbia56wbo6"]
+
+[ext_resource type="Script" uid="uid://r3a04ufm0lfk" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tree_definition.gd" id="2_xjenj"]
+[ext_resource type="Resource" uid="uid://dgrtwyba67utq" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/celine_troubled_youth_tier_1.tres" id="3_5dqql"]
+[ext_resource type="Script" uid="uid://djbq0oeujnwoq" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tier_definition.gd" id="3_qope8"]
+[ext_resource type="Resource" uid="uid://dkgsu2lrlwfvw" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/celine_troubled_youth_tier_2.tres" id="4_filj1"]
+[ext_resource type="Resource" uid="uid://p2maysbetu5s" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/celine_troubled_youth_tier_3.tres" id="5_kd461"]
+[ext_resource type="Resource" uid="uid://cyynpbwbh78he" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/celine_troubled_youth_tier_4.tres" id="6_vnv8j"]
+[ext_resource type="Resource" uid="uid://4r2awoux4ul3" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/celine_troubled_youth_tier_5.tres" id="7_noa8o"]
+
+[resource]
+script = ExtResource("2_xjenj")
+id = &"celine_troubled_youth"
+display_name = "Troubled Youth"
+tiers = Array[ExtResource("3_qope8")]([ExtResource("3_5dqql"), ExtResource("4_filj1"), ExtResource("5_kd461"), ExtResource("6_vnv8j"), ExtResource("7_noa8o")])
+metadata/_custom_type_script = "uid://r3a04ufm0lfk"

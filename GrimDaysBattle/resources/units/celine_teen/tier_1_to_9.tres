@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LevelingTierDefinition" format=3 uid="uid://cggshplr6gokj"]
+
+[ext_resource type="Script" uid="uid://cmldk6gn0vowq" path="res://GrimDaysBattle/scripts/Unit/Resources/attribute_point_leveling_tiers.gd" id="1_f5jqh"]
+
+[resource]
+script = ExtResource("1_f5jqh")
+tier_name = "Tier 1"
+start_level = 1
+end_level = 9
+specialization = Array[int]([70, 50, 30])
+combat_base_grant = 12
+non_combat_base_grant = 4
+skill_points_base_grant = 15
+combat_per_level = 2
+non_combat_per_level = 1
+skill_points_per_level = 3
+level_combat_growth = 1
+specialization_growth = 1
+id = &"CelineTier1"

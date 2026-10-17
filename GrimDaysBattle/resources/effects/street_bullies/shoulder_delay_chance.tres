@@ -1,0 +1,18 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_trigger_another_effect.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_trigger_chain.tscn" id="scene"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="effect"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/effects/street_bullies/shoulder_delay.tres" id="delay"]
+
+[resource]
+script = ExtResource("script")
+id = &"street_bullies_shoulder_delay_chance"
+template_scene = ExtResource("scene")
+chance = 10
+chance_by_rank = PackedInt32Array(10, 15, 20, 25, 30)
+target = 3
+kind = 200
+trigger = 200
+triggers = Array[ExtResource("effect")]([ExtResource("delay")])
+

@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://x6703tbmeti2"]
+
+[ext_resource type="Texture2D" uid="uid://3gx2e1pxx44j" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Background_grey.png" id="1_n03to"]
+[ext_resource type="Script" uid="uid://cn7fvdpn47ot8" path="res://GrimDaysBattle/scripts/UI/selectable_unit.gd" id="1_osofv"]
+[ext_resource type="Texture2D" uid="uid://kf0uu3w21nvv" path="res://GrimDays/assets/visuals/ui/Demonic_UI/UI_parts/Icon_frame2elite.png" id="2_osofv"]
+[ext_resource type="Texture2D" uid="uid://d31digrelerqn" path="res://GrimDays/assets/visuals/ui/classic rpg gui/Background_red.png" id="3_kf5ex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kgs03"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fw6rp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l30l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6p5lp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2e61p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5fld3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_30bkl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ddob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2vvc4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_laikj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wg35t"]
+
+[node name="Selectable_Unit" type="Button" node_paths=PackedStringArray("background", "portrait")]
+custom_minimum_size = Vector2(384, 384)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1536.0
+offset_bottom = -696.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.167, 0.167)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kgs03")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fw6rp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3l30l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6p5lp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2e61p")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5fld3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_30bkl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1ddob")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2vvc4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_laikj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wg35t")
+script = ExtResource("1_osofv")
+idle_background = ExtResource("1_n03to")
+hover_background = ExtResource("3_kf5ex")
+background = NodePath("Portrait Background")
+portrait = NodePath("Portrait Background/Portrait")
+
+[node name="Portrait Background" type="TextureRect" parent="."]
+clip_children = 2
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -176.0
+offset_right = 376.0
+offset_bottom = 184.0
+grow_vertical = 2
+pivot_offset = Vector2(192, 192)
+texture = ExtResource("1_n03to")
+expand_mode = 1
+
+[node name="Portrait" type="TextureRect" parent="Portrait Background"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -172.0
+offset_right = 352.0
+offset_bottom = 168.0
+grow_vertical = 2
+pivot_offset = Vector2(192, 192)
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Portrait Frame" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -188.0
+offset_right = 388.0
+offset_bottom = 196.0
+grow_vertical = 2
+pivot_offset = Vector2(192, 192)
+texture = ExtResource("2_osofv")
+expand_mode = 5
+stretch_mode = 4
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

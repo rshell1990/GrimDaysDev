@@ -1,0 +1,5 @@
+Puran's headman asked the party to find raiders who had taken villagers. In a cave, the group faced a captured cave troll and fought as a team for the first time.
+They found the missing survivors and learned the raiders were deserters, driven to violence by hunger and madness.
+Moka: We brought them home. That is what matters now.
+do UIDirector.show_story_party_preparation()
+[end_timeline]

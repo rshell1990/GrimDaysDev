@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GameEventBattle" format=3 uid="uid://qeeiqyajv6s8"]
+
+[ext_resource type="Script" uid="uid://cxh6j10sq05pt" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/battle_event.gd" id="1_event"]
+[ext_resource type="Script" uid="uid://bjm8hu372yam1" path="res://GrimDaysBattle/scripts/Unit/Resources/unit_template.gd" id="2_unit"]
+[ext_resource type="Script" uid="uid://csgy6f372s12y" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/action.gd" id="3_funuf"]
+[ext_resource type="Resource" uid="uid://bmechhvsr0ky8" path="res://GrimDaysBattle/resources/units/harlok/harlok_battle_unit_template.tres" id="3_harlok"]
+[ext_resource type="Resource" uid="uid://bohshous8v2s3" path="res://GrimDaysBattle/resources/units/goon_a/goon_a_battle_unit_template.tres" id="4_goon_a"]
+[ext_resource type="Resource" uid="uid://bhilwci38js1s" path="res://GrimDaysBattle/resources/units/goon_b/goon_b_battle_unit_template.tres" id="5_goon_b"]
+[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/2_0035_villagers_reward_party_for_rescue.tres" id="6_aftermath"]
+[ext_resource type="Script" uid="uid://dmclip8e16yhs" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Requirements/requirement.gd" id="8_v1w35"]
+
+[resource]
+script = ExtResource("1_event")
+foes = Array[ExtResource("2_unit")]([ExtResource("3_harlok"), ExtResource("4_goon_a"), ExtResource("5_goon_b")])
+finished_event = ExtResource("6_aftermath")
+require_victory = true
+battle_seed = 2032
+id = &"2_0032_fight_harlok_and_goons"
+only_called = true
+times = Array[int]([0, 1, 2, 3, 4, 5])

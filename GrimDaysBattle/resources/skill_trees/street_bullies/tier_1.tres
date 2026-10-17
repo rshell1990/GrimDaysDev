@@ -1,0 +1,12 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tier_definition.gd" id="script"]
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_node_definition.gd" id="node"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/nodes/cheap_shot.tres" id="cheap_shot"]
+[ext_resource type="Resource" path="res://GrimDaysBattle/resources/skill_trees/street_bullies/nodes/big_talk.tres" id="big_talk"]
+
+[resource]
+script = ExtResource("script")
+column = 0
+minimum_stats = Dictionary[int, float]({300: 1.0})
+nodes = Array[ExtResource("node")]([ExtResource("cheap_shot"), ExtResource("big_talk")])

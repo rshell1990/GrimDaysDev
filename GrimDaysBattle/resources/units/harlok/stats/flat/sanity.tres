@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStatTemplate" format=3 uid="uid://8db1ocw5en11"]
+
+[ext_resource type="Script" uid="uid://ckmjf2ew053pa" path="res://GrimDaysBattle/scripts/Stats/Resources/unit_stat_template.gd" id="1_xxi0f"]
+
+[resource]
+script = ExtResource("1_xxi0f")
+type = 1000
+starting_amount = 100.0
+id = &"Sanity"
+metadata/_custom_type_script = "uid://ckmjf2ew053pa"

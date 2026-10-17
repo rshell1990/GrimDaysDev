@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BattleSkillTier" format=3 uid="uid://dgrtwyba67utq"]
+
+[ext_resource type="Script" uid="uid://dcwo3oopfs7ky" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_node_definition.gd" id="1_ng5fm"]
+[ext_resource type="Resource" uid="uid://c82eibthn4fju" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/tier 1/straight_punch_node.tres" id="2_why7n"]
+[ext_resource type="Resource" uid="uid://dxmnxbu60b87" path="res://GrimDaysBattle/resources/skill_trees/celine/troubled_youth/tier 1/dark_urges.tres" id="3_bwoyf"]
+[ext_resource type="Script" uid="uid://djbq0oeujnwoq" path="res://GrimDaysBattle/scripts/Skills/Resources/skill_tier_definition.gd" id="4_ku0ul"]
+
+[resource]
+script = ExtResource("4_ku0ul")
+nodes = Array[ExtResource("1_ng5fm")]([ExtResource("2_why7n"), ExtResource("3_bwoyf")])
+minimum_stats = Dictionary[int, float]({
+300: 1.0
+})
+metadata/_custom_type_script = "uid://djbq0oeujnwoq"

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bvv3687gndefq"]
+
+[ext_resource type="Script" uid="uid://cxebx0jqkv4ff" path="res://GrimDaysBattle/scripts/UI/turn_order_display.gd" id="1_1e752"]
+[ext_resource type="PackedScene" uid="uid://d2vhp5rqok1uc" path="res://GrimDaysBattle/scenes/ui/battle/unit_turn_display.tscn" id="2_84bye"]
+[ext_resource type="Texture2D" uid="uid://b4ggaqhh6b3xu" path="res://GrimDays/assets/visuals/ui/vn_gui_library/UI MMORPG Dark Templar/Chat/Buttons/Button Group Normal.png" id="3_1e752"]
+
+[node name="Turn Order" type="Control" unique_id=632793488 node_paths=PackedStringArray("turn_bar")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_1e752")
+turn_bar = NodePath("Turn Bar Graphic/Portrait Holder")
+portrait_template = ExtResource("2_84bye")
+
+[node name="Turn Bar Graphic" type="NinePatchRect" parent="." unique_id=2022227619]
+custom_minimum_size = Vector2(1800, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_1e752")
+
+[node name="Portrait Holder" type="Panel" parent="Turn Bar Graphic" unique_id=1624550677]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Unit Template" parent="Turn Bar Graphic/Portrait Holder" unique_id=661578199 instance=ExtResource("2_84bye")]
+unique_name_in_owner = true
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -65.0
+offset_top = 0.0
+offset_right = 63.0
+offset_bottom = 128.0
+scale = Vector2(0.875, 0.875)
+
+[node name="Unit Template First" parent="Turn Bar Graphic/Portrait Holder" unique_id=1044342689 instance=ExtResource("2_84bye")]
+unique_name_in_owner = true
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -840.0
+offset_top = 0.0
+offset_right = -712.0
+offset_bottom = 128.0
+
+[node name="Unit Template Last" parent="Turn Bar Graphic/Portrait Holder" unique_id=1447203682 instance=ExtResource("2_84bye")]
+unique_name_in_owner = true
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 710.0
+offset_top = 0.0
+offset_right = 838.0
+offset_bottom = 128.0
+scale = Vector2(0.75, 0.75)

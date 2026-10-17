@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MainCharacterTemplate" format=3 uid="uid://cid0bfnxi5k1d"]
+
+[ext_resource type="Resource" uid="uid://blnoib4ge24xx" path="res://GrimDaysBattle/resources/actions/celine/basic_attack_spine_animation.tres" id="1_12kuc"]
+[ext_resource type="Resource" uid="uid://dxc6kpbvt3ulf" path="res://GrimDaysBattle/resources/units/celine_teen/celine_leveling_tiers.tres" id="2_368jl"]
+[ext_resource type="Resource" uid="uid://df4ev3n2t4b6s" path="res://GrimDaysBattle/resources/units/celine_teen/celine_starting_equipment.tres" id="2_swdbm"]
+[ext_resource type="PackedScene" uid="uid://dnf6bljfm8nj5" path="res://GrimDaysBattle/scenes/battle/units/celine_spine_animation.tscn" id="2_yfv7j"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="4_7ixhu"]
+[ext_resource type="Resource" uid="uid://bdh3cgflyalq4" path="res://GrimDaysBattle/resources/effects/celine_intrinsic/play_no_weapon_hit_animation_when_damaged.tres" id="5_12kuc"]
+[ext_resource type="Resource" uid="uid://6jhgss5tfgg8" path="res://GrimDaysBattle/resources/units/celine_teen/celine_stats.tres" id="5_368jl"]
+[ext_resource type="Resource" uid="uid://cuhint0jjfpyx" path="res://GrimDaysBattle/resources/units/celine_teen/celine_skill_tree_collection.tres" id="5_iuduq"]
+[ext_resource type="Texture2D" uid="uid://cxnfj2sq3lx5" path="res://GrimDaysVN/visuals/characters/celine_teen/celine_teen_portrait.png" id="5_yfv7j"]
+[ext_resource type="Resource" uid="uid://c51f6weq3ppe7" path="res://GrimDaysBattle/resources/effects/celine_intrinsic/play_no_weapon_defeat_animation_when_defeated.tres" id="6_m5hda"]
+[ext_resource type="Script" uid="uid://dqhu117ts1vp" path="res://GrimDaysBattle/scripts/Unit/Resources/main_character_template.gd" id="7_dbgl7"]
+[ext_resource type="Resource" uid="uid://d21144hvj233j" path="res://GrimDaysBattle/resources/zero_lucidity_effects/madness_effect_option.tres" id="7_eblut"]
+[ext_resource type="Script" uid="uid://6q8v7bpra1at" path="res://GrimDaysBattle/scripts/Unit/Resources/lucidity_break_option.gd" id="11_break_option"]
+
+[resource]
+script = ExtResource("7_dbgl7")
+lucidity_break_options = Array[ExtResource("11_break_option")]([ExtResource("7_eblut")])
+display_name = "Celine"
+unit_archetype = "Hybrid"
+permanent = true
+portrait = ExtResource("5_yfv7j")
+battle_sprite = ExtResource("2_yfv7j")
+basic_action_template = ExtResource("1_12kuc")
+skill_collection = ExtResource("5_iuduq")
+leveling_tiers = ExtResource("2_368jl")
+stats = ExtResource("5_368jl")
+intrinsic_effects = Array[ExtResource("4_7ixhu")]([ExtResource("5_12kuc"), ExtResource("6_m5hda")])
+equipment = ExtResource("2_swdbm")
+id = &"CelineTeen"
+metadata/_custom_type_script = "uid://dqhu117ts1vp"

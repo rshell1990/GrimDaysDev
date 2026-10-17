@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://djgqg4mn6b1e7"]
+
+[ext_resource type="Script" uid="uid://drckcnul2l13h" path="res://GrimDaysVN/scripts/visual_effects/screen_shaker.gd" id="1_xv1fp"]
+[ext_resource type="Script" uid="uid://bj7ce7ay7y85y" path="res://GrimDaysVN/scripts/visual_effects/control_screen_shake.gd" id="2_vlgwt"]
+
+[node name="ScreenShaker" type="CanvasLayer" unique_id=1398134141]
+script = ExtResource("1_xv1fp")
+
+[node name="ShakeShader" type="ColorRect" parent="." unique_id=1930428016]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.01, 0.01, 0.01, 0)
+script = ExtResource("2_vlgwt")
+metadata/_custom_type_script = "uid://dn3ybyymwayw2"

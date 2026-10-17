@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemTemplate" format=3 uid="uid://bckin647ng84k"]
+
+[ext_resource type="Script" uid="uid://c1plnji1kosw4" path="res://GrimDaysBattle/scripts/Items/Resources/item_template.gd" id="1_k6mi2"]
+[ext_resource type="Texture2D" uid="uid://jyidc1d2ode4" path="res://GrimDays/assets/visuals/ui/inventorypotionfoodandconsumableicons/PNG/Gold_Coin_R.png" id="2_bqjej"]
+
+[resource]
+script = ExtResource("1_k6mi2")
+display_name = "Money"
+item_class = 0
+stack_size = 999999999
+icon = ExtResource("2_bqjej")
+description = "Money, lovely money... you can get so many nice things with it."
+lootable = true
+id = &"coins"
+metadata/_custom_type_script = "uid://c1plnji1kosw4"

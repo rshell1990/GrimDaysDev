@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bebsjb0r62xkj"]
+
+[ext_resource type="Texture2D" uid="uid://64ly3rk2hd4d" path="res://editor_only_debug/visuals/placeholder/melia-battle-skin-placeholder.png" id="1_aetag"]
+[ext_resource type="Script" uid="uid://d356rim6md38y" path="res://GrimDaysBattle/_scripts/battle/unit/unit_2d_sprite.gd" id="2_4q30u"]
+[ext_resource type="PackedScene" uid="uid://50wslyl73vr4" path="res://GrimDaysBattle/scenes/battle/units/8_way_raycasts.tscn" id="2_v2cnb"]
+[ext_resource type="PackedScene" uid="uid://cy88r35ga8mmx" path="res://GrimDaysBattle/scenes/battle/units/appearance_area.tscn" id="3_4q30u"]
+[ext_resource type="Texture2D" uid="uid://4c7i3bvtb56t" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect8/effect8_1.png" id="5_qoibi"]
+[ext_resource type="Texture2D" uid="uid://bhil0oi5nbsno" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect8/effect8_2.png" id="6_xihlr"]
+[ext_resource type="Texture2D" uid="uid://yp6w1wm3y1a7" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect8/effect8_3.png" id="7_l1pkb"]
+[ext_resource type="Texture2D" uid="uid://gjqmtitdyk3x" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect8/effect8_4.png" id="8_bjbfb"]
+[ext_resource type="Texture2D" uid="uid://bvufc2jorl13o" path="res://editor_only_debug/visuals/particles/crunchpix-com-big-bang-111-2d-sprite-effects-pack-1/effect8/effect8_5.png" id="9_ff6gs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j371s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qoibi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xihlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l1pkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bjbfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ff6gs")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="melia_battle" type="Sprite2D" node_paths=PackedStringArray("collision_area", "raycaster", "attack_particle")]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_aetag")
+script = ExtResource("2_4q30u")
+collision_area = NodePath("Appearance Area")
+raycaster = NodePath("8_way_raycasts")
+attack_particle = NodePath("AttackAnimation")
+
+[node name="8_way_raycasts" parent="." instance=ExtResource("2_v2cnb")]
+
+[node name="Appearance Area" parent="." instance=ExtResource("3_4q30u")]
+position = Vector2(-16, -48)
+
+[node name="AttackAnimation" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(956.00006, -504)
+rotation = -0.16231562
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_j371s")
+frame = 6
+frame_progress = 1.0

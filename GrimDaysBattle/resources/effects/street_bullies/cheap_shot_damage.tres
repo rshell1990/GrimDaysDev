@@ -1,0 +1,21 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_scaling_combat_stat_change.gd" id="script"]
+[ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_scaled_stat_change.tscn" id="scene"]
+
+[resource]
+script = ExtResource("script")
+id = &"street_bullies_cheap_shot_damage"
+template_scene = ExtResource("scene")
+scales_from_sender = true
+scales_with_damage = true
+scales_with = 310
+scales_by = -1.05
+scales_by_by_rank = PackedFloat64Array(-1.05, -1.1, -1.15, -1.2, -1.25)
+stat = 210
+target = 3
+kind = 300
+damage_type = 100
+trigger = 200
+description = "Deals x% Physical Damage."
+
