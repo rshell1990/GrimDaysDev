@@ -12,9 +12,9 @@ const START_VOLUME: float = -40.0
 const STARTING_INTENSITY = 0.0
 ## Lookup table for song modes; keys select the corresponding stored values.
 const SONG_MODES: Dictionary = {
-    "short": DDOvaniSong.OvaniMode.Loop30,
-    "long": DDOvaniSong.OvaniMode.Loop60,
-    "intensity": DDOvaniSong.OvaniMode.Intensities
+    "short": DDOvaniSong.OvaniMode.LOOP_30,
+    "long": DDOvaniSong.OvaniMode.LOOP_60,
+    "intensity": DDOvaniSong.OvaniMode.INTENSITIES
 }
 
 ## ID of the song currently selected by this player.
@@ -40,7 +40,7 @@ func set_intensity(intensity: float, transitionTime: float):
         "[color=#0F5]Setting intensity to: ", str(intensity), " over ", str(transitionTime), " seconds.[/color]"
     )
     var tween = create_tween()
-    tween.tween_property(self, "Intensity", intensity, transitionTime)
+    tween.tween_property(self, "intensity", intensity, transitionTime)
 
 
 ## Use this to transition the current Decibel Volume over time. [br]
@@ -50,7 +50,7 @@ func set_volume(volume: float, transitionTime: float):
         "[color=#0F5]Setting volume to: ", str(volume), " over ", str(transitionTime), " seconds.[/color]"
     )
     var tween = create_tween()
-    tween.tween_property(self, "Volume", volume, transitionTime)
+    tween.tween_property(self, "volume", volume, transitionTime)
 
 
 ## Sets [code]playing[/code] to [code]final_song.id[/code].
@@ -63,7 +63,7 @@ func play(new_song) -> void:
     playing = final_song.id
     # if Volume < SOUND_TRESHOLD:
     # 	set_volume(START_VOLUME, VNAnimationTimes.SLOW)
-    PlaySongNow(final_song)
+    play_song_now(final_song)
 
 
 ## Accepts a song resource or loads one from a path, then adds it to the song queue.
@@ -74,10 +74,10 @@ func queue(new_song) -> void:
     SystemHelpers.print_rich("[color=#0F5]Queuing: ", str(final_song.id), ".[/color]")
     # if Volume < SOUND_TRESHOLD:
     # 	set_volume(START_VOLUME, VNAnimationTimes.SLOW)
-    QueueSong(final_song)
+    queue_song(final_song)
 
 
 ## Changes the first queued song's playback mode using the named mode lookup. Requires at least one
 ## queued song.
 func set_mode(new_mode) -> void:
-    QueuedSongs[0].SongMode = SONG_MODES[new_mode]
+    queued_songs[0].song_mode = SONG_MODES[new_mode]

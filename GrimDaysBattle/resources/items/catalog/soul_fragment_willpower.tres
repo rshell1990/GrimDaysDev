@@ -1,33 +1,32 @@
-[gd_resource type="Resource" script_class="ConsumableTemplate" load_steps=15 format=3]
+[gd_resource type="Resource" script_class="ConsumableTemplate" format=3 uid="uid://dchlvr74a1741"]
 
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/_Global/_resource_template.gd" id="1_base"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/item_template.gd" id="2_item"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/consumable_template.gd" id="3_consumable"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="20_action"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="21_rank"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="22_ranks"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="23_effects"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_flat_combat_stat.gd" id="24_stat_effect"]
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="2_fabpv"]
+[ext_resource type="Script" uid="uid://b7uvyhv5m5807" path="res://GrimDaysBattle/scripts/Items/Resources/consumable_template.gd" id="3_consumable"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="4_uq7r4"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="20_action"]
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="21_rank"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="22_ranks"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="23_effects"]
+[ext_resource type="Script" uid="uid://c5wi2c7iyh4pv" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_flat_combat_stat.gd" id="24_stat_effect"]
 [ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_stat_change.tscn" id="25_scene"]
 
 [sub_resource type="Resource" id="UseEffect"]
 script = ExtResource("24_stat_effect")
-id = &"soul_fragment_willpower_use_effect"
+flat_amount = 1
 stat = 60
+duration = 3
+lifetime = 1
 target = 13
-kind = 0
-trigger = 300
 tag = 50
+trigger = 300
 always_hits = true
 description = "Soul Fragment of Willpower. Increases Willpower by 1 for three rounds."
 template_scene = ExtResource("25_scene")
-flat_amount = 1
-duration = 3
-lifetime = 1
+id = &"soul_fragment_willpower_use_effect"
 
 [sub_resource type="Resource" id="UseEffects"]
 script = ExtResource("23_effects")
-all = Array[ExtResource("24_stat_effect")]([SubResource("UseEffect")])
+all = Array[ExtResource("4_uq7r4")]([SubResource("UseEffect")])
 id = &"soul_fragment_willpower_use_effects"
 
 [sub_resource type="Resource" id="UseRank"]
@@ -45,21 +44,19 @@ id = &"soul_fragment_willpower_use_ranks"
 script = ExtResource("20_action")
 display_name = "Use Soul Fragment of Willpower"
 description = "Soul Fragment of Willpower. Increases Willpower by 1 for three rounds."
-type = 9
-target = 0
 target_amount = 1
+type = 9
 always_hits = true
 ranks = SubResource("UseRanks")
 id = &"soul_fragment_willpower_use"
 
 [resource]
 script = ExtResource("3_consumable")
-id = &"soul_fragment_willpower"
-display_name = "Soul Fragment of Willpower"
-description = "Soul Fragment of Willpower. Increases Willpower by 1 for three rounds."
-item_class = 0
-stack_size = 99
-value = 100
-lootable = true
 usable_in_battle = true
 battle_actions = Array[ExtResource("20_action")]([SubResource("UseAction")])
+display_name = "Soul Fragment of Willpower"
+stack_size = 99
+description = "Soul Fragment of Willpower. Increases Willpower by 1 for three rounds."
+lootable = true
+value = 100
+id = &"soul_fragment_willpower"

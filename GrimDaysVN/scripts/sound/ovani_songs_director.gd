@@ -67,7 +67,7 @@ func relay_intensity(data: Dictionary) -> void:
 
 ## Changes the active song's intensity over the supplied transition duration.
 func set_intensity(intensity: float, speed: float) -> void:
-    active_player.FadeIntensity(intensity, speed)
+    active_player.set_intensity(intensity, speed)
 
 
 ## Reads volume and transition speed from command data and applies them only if a song player is
@@ -82,7 +82,7 @@ func relay_volume(data: Dictionary) -> void:
 
 ## Changes the active song's volume over the supplied transition duration.
 func set_volume(volume: float, speed: float) -> void:
-    active_player.FadeVolume(volume, speed)
+    active_player.set_volume(volume, speed)
 
 
 ## Changes the active song player's mode when a player is available.
@@ -162,8 +162,8 @@ func get_next_player():
     for operator in ovani_players:
         if operator != active_player:
             next_player = operator
-            next_player.Volume = MUTED
-            next_player.QueuedSongs.clear()
+            next_player.volume = MUTED
+            next_player.queued_songs.clear()
             break
     return next_player
 
@@ -172,29 +172,29 @@ func get_next_player():
 func clear_non_active_queues() -> void:
     for operator in ovani_players:
         if operator != active_player:
-            operator.QueuedSongs.clear()
+            operator.queued_songs.clear()
 
 
 ## Clears queued songs on every dynamic song player.
 func clear_all_queues() -> void:
     last_played = ""
     for operator in ovani_players:
-        operator.QueuedSongs.clear()
+        operator.queued_songs.clear()
 
 
 # TODO: Finish saving/loading for navigation director.
 ## Collects this object’s current last played, history, volume, intensity into a dictionary for
 ## saving or restoration.
 func _get_state() -> Dictionary:
-    if active_player and active_player.QueuedSongs.size() > 0 \
-            and active_player.QueuedSongs[0].id not in play_history:
-        play_history.append(active_player.QueuedSongs[0].id)
+    if active_player and active_player.queued_songs.size() > 0 \
+            and active_player.queued_songs[0].id not in play_history:
+        play_history.append(active_player.queued_songs[0].id)
     var data: Dictionary = {
         "last_played": active_player.playing \
                 if active_player and not active_player.playing.is_empty() else last_played,
         "history": play_history,
-        "volume": active_player.Volume if active_player != null else -80.0,
-        "intensity": active_player.Intensity if active_player != null else 0.0
+        "volume": active_player.volume if active_player != null else -80.0,
+        "intensity": active_player.intensity if active_player != null else 0.0
     }
     return data
 
@@ -220,8 +220,8 @@ func _on_load(data: Dictionary) -> void:
         active_player.play(
             Repositories.get_info(RepositoryTypes.SONGS, data.info[save_name]["last_played"])
         )
-        active_player.Volume = data.info[save_name]["volume"]
-        active_player.Intensity = data.info[save_name]["intensity"]
+        active_player.volume = data.info[save_name]["volume"]
+        active_player.intensity = data.info[save_name]["intensity"]
 
 
 ## Waits for a timer through [code]SystemHelpers[/code]; sets [code]active_player.Volume[/code] to
@@ -253,8 +253,8 @@ func restore(data: Dictionary) -> void:
             "[color=#5F0]" + name + " skipping playing the already playing song.[/color]",
             CustomLogger.LEVEL.MILD
         )
-    active_player.Volume = data.volume
-    active_player.Intensity = data.intensity
+    active_player.volume = data.volume
+    active_player.intensity = data.intensity
     last_played = data.last_played
     if data.has("history"):
         play_history = (

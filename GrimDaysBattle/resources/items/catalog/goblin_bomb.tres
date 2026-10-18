@@ -1,33 +1,31 @@
-[gd_resource type="Resource" script_class="ConsumableTemplate" load_steps=15 format=3]
+[gd_resource type="Resource" script_class="ConsumableTemplate" format=3 uid="uid://b1b7sf2dtxnn3"]
 
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/_Global/_resource_template.gd" id="1_base"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/item_template.gd" id="2_item"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/consumable_template.gd" id="3_consumable"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="20_action"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="21_rank"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="22_ranks"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="23_effects"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_resource.gd" id="24_res_effect"]
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="2_62ayv"]
+[ext_resource type="Script" uid="uid://b7uvyhv5m5807" path="res://GrimDaysBattle/scripts/Items/Resources/consumable_template.gd" id="3_consumable"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="4_amc3l"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="20_action"]
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="21_rank"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="22_ranks"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="23_effects"]
+[ext_resource type="Script" uid="uid://dmeovq5uuuuy5" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_resource.gd" id="24_res_effect"]
 [ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_change_resource.tscn" id="25_scene"]
 
 [sub_resource type="Resource" id="UseEffect"]
 script = ExtResource("24_res_effect")
-id = &"goblin_bomb_use_effect"
+amount = -28
 stat = 210
 target = 13
 kind = 200
+damage_type = 100
 trigger = 300
-tag = 20
 always_hits = true
 description = "Goblin bomb. Deals 28 physical damage to one foe."
 template_scene = ExtResource("25_scene")
-amount = -28
-amount_mode = 0
-damage_type = 100
+id = &"goblin_bomb_use_effect"
 
 [sub_resource type="Resource" id="UseEffects"]
 script = ExtResource("23_effects")
-all = Array[ExtResource("24_res_effect")]([SubResource("UseEffect")])
+all = Array[ExtResource("4_amc3l")]([SubResource("UseEffect")])
 id = &"goblin_bomb_use_effects"
 
 [sub_resource type="Resource" id="UseRank"]
@@ -45,21 +43,20 @@ id = &"goblin_bomb_use_ranks"
 script = ExtResource("20_action")
 display_name = "Use Goblin bomb"
 description = "Goblin bomb. Deals 28 physical damage to one foe."
-type = 4
 target = 3
 target_amount = 1
+type = 4
 always_hits = true
 ranks = SubResource("UseRanks")
 id = &"goblin_bomb_use"
 
 [resource]
 script = ExtResource("3_consumable")
-id = &"goblin_bomb"
-display_name = "Goblin bomb"
-description = "Goblin bomb. Deals 28 physical damage to one foe."
-item_class = 0
-stack_size = 99
-value = 200
-lootable = true
 usable_in_battle = true
 battle_actions = Array[ExtResource("20_action")]([SubResource("UseAction")])
+display_name = "Goblin bomb"
+stack_size = 99
+description = "Goblin bomb. Deals 28 physical damage to one foe."
+lootable = true
+value = 200
+id = &"goblin_bomb"

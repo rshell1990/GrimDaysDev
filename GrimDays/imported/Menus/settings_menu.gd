@@ -89,7 +89,7 @@ func _ready():
 	if ambient_slider:
 		ambient_slider.value = SM_Globals.user_prefs.ambient_volume
 	if dynamic_slider:
-		sfx_slider.value = SM_Globals.user_prefs.dynamic_volume
+		dynamic_slider.value = SM_Globals.user_prefs.dynamic_volume
 
 	if language_dropdown:
 		language_dropdown.selected = SM_Globals.user_prefs.language
@@ -132,8 +132,8 @@ func _on_monitor_option_selected(_value: int):
 
 ## Changes the music audio volume from the slider value and stores the preference.
 func _on_music_slider_value_changed(_value):
-	AudioServer.set_bus_volume_db(MUSIC_BUS_ID, linear_to_db(_value))
-	AudioServer.set_bus_mute(MUSIC_BUS_ID, _value < .05)
+	AudioServer.set_bus_volume_db(music_bus_id, linear_to_db(_value))
+	AudioServer.set_bus_mute(music_bus_id, _value < .05)
 	SM_Globals.user_prefs.music_volume = _value
 	SM_Globals.user_prefs.save()
 	music_slider.get_child(0).text = str(_value * 100) + "%"
@@ -331,16 +331,16 @@ func _on_censoring_dropdown_item_selected(index: int) -> void:
 
 ## Changes the ambient audio volume from the slider value and stores the preference.
 func _on_ambient_slider_value_changed(_value: float) -> void:
-	AudioServer.set_bus_volume_db(AMBIENT_BUS_ID, linear_to_db(_value))
-	AudioServer.set_bus_mute(AMBIENT_BUS_ID, _value < .05)
+	AudioServer.set_bus_volume_db(ambient_bus_id, linear_to_db(_value))
+	AudioServer.set_bus_mute(ambient_bus_id, _value < .05)
 	SM_Globals.user_prefs.ambient_volume = _value
 	SM_Globals.user_prefs.save()
 	ambient_slider.get_child(0).text = str(_value * 100) + "%"
 
 ## Changes the dynamic audio volume from the slider value and stores the preference.
 func _on_dynamic_slider_value_changed(_value: float) -> void:
-	AudioServer.set_bus_volume_db(DYNAMIC_BUS_ID, linear_to_db(_value))
-	AudioServer.set_bus_mute(DYNAMIC_BUS_ID, _value < .05)
+	AudioServer.set_bus_volume_db(dynamic_bus_id, linear_to_db(_value))
+	AudioServer.set_bus_mute(dynamic_bus_id, _value < .05)
 	SM_Globals.user_prefs.dynamic_volume = _value
 	SM_Globals.user_prefs.save()
 	dynamic_slider.get_child(0).text = str(_value * 100) + "%"
@@ -348,8 +348,8 @@ func _on_dynamic_slider_value_changed(_value: float) -> void:
 
 ## Changes the master audio volume from the slider value and stores the preference.
 func _on_master_slider_value_changed(_value: float) -> void:
-	AudioServer.set_bus_volume_db(MASTER_BUS_ID, linear_to_db(_value))
-	AudioServer.set_bus_mute(MASTER_BUS_ID, _value < .05)
+	AudioServer.set_bus_volume_db(master_bus_id, linear_to_db(_value))
+	AudioServer.set_bus_mute(master_bus_id, _value < .05)
 	SM_Globals.user_prefs.master_volume = _value
 	SM_Globals.user_prefs.save()
 	master_slider.get_child(0).text = str(_value * 100) + "%"

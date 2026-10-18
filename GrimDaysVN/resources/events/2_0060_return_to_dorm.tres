@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="GameEventSequence" format=3 uid="uid://bouhpo8n8oys0"]
 
-[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
-[ext_resource type="Resource" path="res://GrimDaysVN/dialogic/scripts/2_0060_moka_and_vera_visit_bathhouse.dtl" id="2_timeline"]
-[ext_resource type="Resource" path="res://GrimDaysVN/resources/events/2_0070_awakened.tres" id="3_next"]
-[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/action.gd" id="4_action"]
-[ext_resource type="Script" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/set_world_stage.gd" id="5_stage"]
+[ext_resource type="Script" uid="uid://c5gl6fnf4qdyb" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Event/sequence_event.gd" id="1_sequence"]
+[ext_resource type="Resource" uid="uid://cqj5d10k5l03w" path="res://GrimDaysVN/dialogic/scripts/2_0060_moka_and_vera_visit_bathhouse.dtl" id="2_timeline"]
+[ext_resource type="Resource" uid="uid://bnlyy251rmqh6" path="res://GrimDaysVN/resources/events/2_0070_awakened.tres" id="3_next"]
+[ext_resource type="Script" uid="uid://csgy6f372s12y" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/action.gd" id="4_action"]
+[ext_resource type="Script" uid="uid://dmclip8e16yhs" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Requirements/requirement.gd" id="5_kl1np"]
+[ext_resource type="Script" uid="uid://djrghg1kippry" path="res://GrimDaysVN/scripts/game_event_flow_control/resources/Actions/set_world_stage.gd" id="5_stage"]
 
 [sub_resource type="Resource" id="Resource_stage"]
 script = ExtResource("5_stage")
@@ -12,10 +13,10 @@ new_stage = 260
 
 [resource]
 script = ExtResource("1_sequence")
+finished_event = ExtResource("3_next")
 id = &"2_0060_return_to_dorm"
 only_called = true
-blocks_swap = true
 timeline = ExtResource("2_timeline")
 finishing_timeline = ExtResource("2_timeline")
 finishing_actions = Array[ExtResource("4_action")]([SubResource("Resource_stage")])
-finished_event = ExtResource("3_next")
+blocks_swap = true

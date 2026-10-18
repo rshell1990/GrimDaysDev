@@ -18,7 +18,7 @@ extends Node
 	get:
 		return volume;
 	set(value):
-		for psm in _soundManagers:
+		for psm in _sound_managers:
 			psm.volume = value;
 		volume = value;
 ## The current intensity of the playing OvaniSong
@@ -26,7 +26,7 @@ extends Node
 	get:
 		return intensity;
 	set(value):
-		for psm in _soundManagers:
+		for psm in _sound_managers:
 			psm.intensity = value;
 		intensity = value;
 ## Check this to preview how your [OvaniPlayer] and [OvaniSong]s sounds in the editor.
@@ -62,14 +62,14 @@ var _audio_player : AudioStreamPlayer:
 ## Use transition_time to govern how fast it fades to the next song.[br]
 ## Setting transition_time to -1 will use the current songs reverbTail to fade.
 func play_song_now(song : OvaniSong, _transition_time : float = -1):
-	if (len(QueuedSongs) > 0):
-		QueuedSongs.clear();
+	if (len(queued_songs) > 0):
+		queued_songs.clear();
 
-	QueuedSongs.append(song);
+	queued_songs.append(song);
 
 ## Adds the supplied song to this player's playback queue.
 func queue_song(song : OvaniSong):
-	QueuedSongs.append(song);
+	queued_songs.append(song);
 
 ## Playback object that can play and mix several audio layers at once.
 var _audio_stream_playback : AudioStreamPlaybackPolyphonic;
@@ -113,33 +113,33 @@ class PolySoundManager:
 	var reverb_tail : float;
 	var fade_in : float = -1;
 	var fade_out : float = -1;
-	var started_next_state : NextState = NextState.None;
+	var started_next_state : NextState = NextState.NONE;
 
 ## Starts the available intensity layers of a song and returns an object tracking their playback IDs
 ## and song length.
 func _construct_poly_sound_manager(song : OvaniSong) -> PolySoundManager:
 	var o : PolySoundManager = PolySoundManager.new();
-	o.MyStream = _audio_stream_playback;
+	o.my_stream = _audio_stream_playback;
 
 	if (song != null):
-		if (song.SongMode == OvaniSong.OvaniMode.Intensities):
-			o.ids.append(_audio_stream_playback.play_stream(song.Intensity1));
-			o.ids.append(_audio_stream_playback.play_stream(song.Intensity2));
-			o.ids.append(_audio_stream_playback.play_stream(song.Intensity3));
-			o.intensity = Intensity;
-			o.song_length = song.Intensity1.get_length();
-		elif (song.SongMode == OvaniSong.OvaniMode.Loop30):
-			o.ids.append(_audio_stream_playback.play_stream(song.Loop30));
+		if (song.song_mode == OvaniSong.OvaniMode.INTENSITIES):
+			o.ids.append(_audio_stream_playback.play_stream(song.intensity_1));
+			o.ids.append(_audio_stream_playback.play_stream(song.intensity_2));
+			o.ids.append(_audio_stream_playback.play_stream(song.intensity_3));
+			o.intensity = intensity;
+			o.song_length = song.intensity_1.get_length();
+		elif (song.song_mode == OvaniSong.OvaniMode.LOOP_30):
+			o.ids.append(_audio_stream_playback.play_stream(song.loop_30));
 			o.intensity = 0;
-			o.song_length = song.Loop30.get_length();
+			o.song_length = song.loop_30.get_length();
 		else:
-			o.ids.append(_audio_stream_playback.play_stream(song.Loop60));
+			o.ids.append(_audio_stream_playback.play_stream(song.loop_60));
 			o.intensity = 0;
-			o.song_length = song.Loop60.get_length();
-		o.reverb_tail = song.ReverbTail;
+			o.song_length = song.loop_60.get_length();
+		o.reverb_tail = song.reverb_tail;
 
 	o.volume = volume;
-	o.StartTime = _cur_time;
+	o.start_time = _cur_time;
 	return o;
 
 
@@ -163,7 +163,7 @@ func _ensure_playback():
 
 ## Stops the polyphonic stream and drops every reference to its server playback.
 func _release_playback():
-	_soundManagers.clear()
+	_sound_managers.clear()
 	_audio_stream_playback = null
 	if is_instance_valid(_audio_player):
 		_audio_player.stop()
@@ -186,7 +186,7 @@ var _time_int_fade_ended : float = 1;
 func fade_intensity(intensity : float, transition_time : float):
 	_time_int_fade_started = _cur_time
 	_time_int_fade_ended  = _cur_time + transition_time;
-	_start_int_fade_val = Intensity;
+	_start_int_fade_val = self.intensity;
 	_end_int_fade_val = intensity;
 
 ## Volume value at the beginning of the current volume fade.
@@ -202,72 +202,69 @@ var _time_vol_fade_ended : float = 1;
 func fade_volume(volume : float, transition_time : float):
 	_time_vol_fade_started = _cur_time
 	_time_vol_fade_ended  = _cur_time + transition_time;
-	_start_vol_fade_val = Volume;
+	_start_vol_fade_val = self.volume;
 	_end_vol_fade_val = volume;
 
 ## Elapsed time tracked by this audio player for fades and playback updates.
 var _cur_time : float = 500;
-## On each drawn frame, this function adds [code]_constructPolySoundManager(QueuedSongs[0])[/code]
-## to [code]_soundManagers[/code]; adds [code]_constructPolySoundManager(nextSong)[/code] to
-## [code]_soundManagers[/code]; removes [code]psm[/code] from [code]_soundManagers[/code]. It also
-## sets [code]psm.started_next_state[/code] to [code]NextState.StartedLoop;[/code].
+## Updates playback queues and sound managers; advances volume and intensity fades.
 func _process(delta):
-	if (Engine.is_editor_hint() && !PlayInEditor):
-		for psm in _soundManagers:
-			if (psm.started_next_state != NextState.StartedLoop):
-				psm.StartTime = (_cur_time - psm.SongLength) + 1;
+	if (Engine.is_editor_hint() && !play_in_editor):
+		for psm in _sound_managers:
+			if (psm.started_next_state != NextState.STARTED_LOOP):
+				psm.start_time = (_cur_time - psm.song_length) + 1;
 				psm.fade_out = 1;
-				psm.started_next_state = NextState.StartedLoop;
+				psm.started_next_state = NextState.STARTED_LOOP;
 
 	_cur_time += delta / Engine.time_scale;
 
 	# Intensity Fade Logic
-	if (_timeIntFadeStarted < _cur_time && _timeIntFadeEnded > _cur_time):
-		Intensity = lerp(_startIntFadeVal, _endIntFadeVal,
-			(_cur_time - _timeIntFadeStarted)/(_timeIntFadeEnded - _timeIntFadeStarted))
+	if (_time_int_fade_started < _cur_time && _time_int_fade_ended > _cur_time):
+		intensity = lerp(_start_int_fade_val, _end_int_fade_val,
+			(_cur_time - _time_int_fade_started)/(_time_int_fade_ended - _time_int_fade_started))
 	# Volume Fade Logic
-	if (_timeVolFadeStarted < _cur_time && _time_vol_fade_ended > _cur_time):
-		Volume = lerp(_startVolFadeVal, _end_vol_fade_val,
-			(_cur_time - _timeVolFadeStarted)/(_time_vol_fade_ended - _timeVolFadeStarted))
+	if (_time_vol_fade_started < _cur_time && _time_vol_fade_ended > _cur_time):
+		volume = lerp(_start_vol_fade_val, _end_vol_fade_val,
+			(_cur_time - _time_vol_fade_started)/(_time_vol_fade_ended - _time_vol_fade_started))
 
 	# Play queued songs logic
-	if (len(QueuedSongs) > 0):
-		if (len(_soundManagers) == 0 && (!Engine.is_editor_hint() || PlayInEditor)):
+	if (len(queued_songs) > 0):
+		if (len(_sound_managers) == 0 && (!Engine.is_editor_hint() || play_in_editor)):
 			_ensure_playback();
-			_soundManagers.append(_constructPolySoundManager(QueuedSongs[0]));
-		for psm in _soundManagers:
+			_sound_managers.append(_construct_poly_sound_manager(queued_songs[0]));
+		for psm in _sound_managers:
 			# handle fade in
-			var time_played : float = _cur_time - psm.StartTime;
-			if (psm.FadeIn != -1 && time_played < psm.FadeIn):
-				psm.Volume = linear_to_db((time_played / psm.FadeIn) * db_to_linear(Volume));
+			var time_played : float = _cur_time - psm.start_time;
+			if (psm.fade_in != -1 && time_played < psm.fade_in):
+				psm.volume = linear_to_db((time_played / psm.fade_in) * db_to_linear(volume));
 
 			# handle fade out
-			var remaining_time : float = -(_cur_time - (psm.StartTime + psm.SongLength));
+			var remaining_time : float = -(_cur_time - (psm.start_time + psm.song_length));
 			if (psm.fade_out != -1 && remaining_time < psm.fade_out):
-				psm.Volume = linear_to_db((remaining_time / psm.fade_out) * db_to_linear(Volume));
+				psm.volume = linear_to_db((remaining_time / psm.fade_out) * db_to_linear(volume));
 
 			if (remaining_time < psm.reverb_tail):
-				if (psm.started_next_state == NextState.None):
+				if (psm.started_next_state == NextState.NONE):
 
-					if (!Engine.is_editor_hint() || PlayInEditor):
+					if (!Engine.is_editor_hint() || play_in_editor):
 						var next_song : OvaniSong;
-						if (len(QueuedSongs) == 1):
-							next_song = QueuedSongs[0];
-							psm.started_next_state = NextState.StartedLoop;
+						if (len(queued_songs) == 1):
+							next_song = queued_songs[0];
+							psm.started_next_state = NextState.STARTED_LOOP;
 						else:
-							next_song = QueuedSongs[1];
-							psm.started_next_state = NextState.StartedDifferent;
-						_soundManagers.append(_constructPolySoundManager(next_song));
+							next_song = queued_songs[1];
+							psm.started_next_state = NextState.STARTED_DIFFERENT;
+						_sound_managers.append(_construct_poly_sound_manager(next_song));
 				if (remaining_time < 0):
-					_soundManagers.erase(psm);
-					for id in psm.Ids:
-						psm.MyStream.stop_stream(id);
-					if (psm.started_next_state == NextState.StartedDifferent):
-						var leaving_song : OvaniSong = QueuedSongs.pop_front()
-						if LoopQueue:
-							QueuedSongs.append(leaving_song);
+					_sound_managers.erase(psm);
+					for id in psm.ids:
+						psm.my_stream.stop_stream(id);
+					if (psm.started_next_state == NextState.STARTED_DIFFERENT):
+						var leaving_song : OvaniSong = queued_songs.pop_front()
+						if loop_queue:
+							queued_songs.append(leaving_song);
 						notify_property_list_changed();
 
 		return
-	if (len(_soundManagers) == 0 && _audio_stream_playback != null):
+	if (len(_sound_managers) == 0 && _audio_stream_playback != null):
 		_release_playback();

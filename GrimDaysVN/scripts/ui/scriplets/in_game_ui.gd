@@ -137,9 +137,14 @@ func return_to_title() -> void:
 
 ## Fades the menu's screen cover to the requested opacity and runs the supplied completion response.
 func animate_hiding_rect(alpha_to, on_fade_in = "save_load") -> void:
+    if alpha_to > Basics.TRANSPARENT:
+        hiding_rect.mouse_filter = Control.MOUSE_FILTER_STOP
+
     var tween = create_tween().set_ignore_time_scale(true)
     tween.set_ease(Tween.EASE_IN)
     await tween.tween_property(hiding_rect, "modulate:a", alpha_to, VNAnimationTimes.FAST).finished
+    if is_equal_approx(alpha_to, Basics.TRANSPARENT):
+        hiding_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
     if active_menu == null:
         return
     if on_fade_in == "save_load":

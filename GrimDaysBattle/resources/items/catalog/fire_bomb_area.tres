@@ -1,36 +1,33 @@
-[gd_resource type="Resource" script_class="ConsumableTemplate" load_steps=17 format=3]
+[gd_resource type="Resource" script_class="ConsumableTemplate" format=3 uid="uid://cov0qwkney1bv"]
 
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/_Global/_resource_template.gd" id="1_base"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/item_template.gd" id="2_item"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Items/Resources/consumable_template.gd" id="3_consumable"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="20_action"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="21_rank"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="22_ranks"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="23_effects"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_resource.gd" id="24_res_effect"]
+[ext_resource type="Script" uid="uid://bunfovvhflayl" path="res://GrimDaysBattle/scripts/Actions/Resources/action_equipment_requirement.gd" id="2_4ixgb"]
+[ext_resource type="Script" uid="uid://b7uvyhv5m5807" path="res://GrimDaysBattle/scripts/Items/Resources/consumable_template.gd" id="3_consumable"]
+[ext_resource type="Script" uid="uid://drlek0bnxlp8u" path="res://GrimDaysBattle/scripts/Actions/Resources/action.gd" id="20_action"]
+[ext_resource type="Script" uid="uid://o71l6u31qrs2" path="res://GrimDaysBattle/scripts/Actions/Resources/rank.gd" id="21_rank"]
+[ext_resource type="Script" uid="uid://cmooful7o2yxq" path="res://GrimDaysBattle/scripts/Actions/Resources/ranks.gd" id="22_ranks"]
+[ext_resource type="Script" uid="uid://dw0pgj3kb31c6" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_templates.gd" id="23_effects"]
+[ext_resource type="Script" uid="uid://dmeovq5uuuuy5" path="res://GrimDaysBattle/scripts/Effects/Resources/effect_change_resource.gd" id="24_res_effect"]
 [ext_resource type="PackedScene" path="res://GrimDaysBattle/scenes/battle/effects/effect_change_resource.tscn" id="25_scene"]
-[ext_resource type="Script" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="26_base_effect"]
+[ext_resource type="Script" uid="uid://hvp8lp41f6e0" path="res://GrimDaysBattle/scripts/Effects/Resources/_effect_template.gd" id="26_base_effect"]
 [ext_resource type="Resource" path="res://GrimDaysBattle/resources/effects/bombs/burn.tres" id="27_status"]
 
 [sub_resource type="Resource" id="UseEffect"]
 script = ExtResource("24_res_effect")
-id = &"fire_bomb_area_use_effect"
+amount = -12
 stat = 210
+effects_on_hit = [ExtResource("27_status")]
 target = 13
 kind = 200
+damage_type = 200
 trigger = 300
-tag = 20
 always_hits = true
 description = "Deals 12 magic damage to all foes and burns each for 4 magic damage at two round ends."
-effects_on_hit = Array[ExtResource("26_base_effect")]([ExtResource("27_status")])
 template_scene = ExtResource("25_scene")
-amount = -12
-amount_mode = 0
-damage_type = 200
+id = &"fire_bomb_area_use_effect"
 
 [sub_resource type="Resource" id="UseEffects"]
 script = ExtResource("23_effects")
-all = Array[ExtResource("24_res_effect")]([SubResource("UseEffect")])
+all = Array[ExtResource("26_base_effect")]([SubResource("UseEffect")])
 id = &"fire_bomb_area_use_effects"
 
 [sub_resource type="Resource" id="UseRank"]
@@ -48,21 +45,20 @@ id = &"fire_bomb_area_use_ranks"
 script = ExtResource("20_action")
 display_name = "Use Fire burst bomb"
 description = "Deals 12 magic damage to all foes and burns each for 4 magic damage at two round ends."
-type = 5
 target = 4
 target_amount = 1
+type = 5
 always_hits = true
 ranks = SubResource("UseRanks")
 id = &"fire_bomb_area_use"
 
 [resource]
 script = ExtResource("3_consumable")
-id = &"fire_bomb_area"
-display_name = "Fire burst bomb"
-description = "Deals 12 magic damage to all foes and burns each for 4 magic damage at two round ends."
-item_class = 0
-stack_size = 99
-value = 100
-lootable = true
 usable_in_battle = true
 battle_actions = Array[ExtResource("20_action")]([SubResource("UseAction")])
+display_name = "Fire burst bomb"
+stack_size = 99
+description = "Deals 12 magic damage to all foes and burns each for 4 magic damage at two round ends."
+lootable = true
+value = 100
+id = &"fire_bomb_area"
