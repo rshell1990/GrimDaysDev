@@ -47,6 +47,7 @@ DialogicRelay="*uid://defha4p4o57rj"
 ScreenShaker="*uid://djgqg4mn6b1e7"
 ReplayRecorder="*uid://bpfoa18rk1bqv"
 Profily="*uid://qmnu1ehm866e"
+ControllerInput="*res://GrimDaysVN/scripts/_globals/controller_input.gd"
 _mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
 
 [debug]
@@ -265,11 +266,13 @@ texture={
 accept={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(334.58594, 19.664063),"global_position":Vector2(346.58594, 79.66406),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
 back={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(299.71875, 9.6015625),"global_position":Vector2(311.71875, 69.60156),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
 dialogic_default_action={
@@ -294,7 +297,8 @@ debug_toggle={
 }
 toggle_menu_alt={
 "deadzone": 0.2,
-"events": []
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
+]
 }
 hide_textbox={
 "deadzone": 0.2,
